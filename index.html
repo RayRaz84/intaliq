@@ -1,0 +1,1090 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>School Course Studio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500;700;800&family=Noto+Naskh+Arabic:wght@400;700&display=swap">
+<style>:root{color-scheme:light}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+</head>
+<body>
+<style>
+:root{
+  --paper:#F2F5F6; --page:#FFFFFF; --board:#17595E; --board-deep:#0F4448;
+  --ink:#22303A; --ink-soft:#5A6B72; --amber:#F2A93B; --amber-soft:#FCEBC8;
+  --coral:#E4685F; --coral-soft:#FBE3E1; --wash:#E4EEEC; --line:#D9E0DE;
+  --good:#3E8E5A; --good-soft:#DDEFE3;
+  --disp:'Baloo Bhaijaan 2',system-ui,sans-serif;
+  --read:'Noto Naskh Arabic','Baloo Bhaijaan 2',serif;
+}
+*{box-sizing:border-box;margin:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--disp);font-size:16px;line-height:1.65}
+.rtl{direction:rtl}
+button{font-family:inherit;cursor:pointer}
+a{color:var(--board)}
+button:focus-visible,a:focus-visible{outline:3px solid var(--amber);outline-offset:2px;border-radius:8px}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+/* ---------- library hero ---------- */
+.hero{background:var(--board);color:#fff;padding:52px 22px 130px;text-align:center;position:relative;direction:ltr;
+  background-image:radial-gradient(#1E676C 1.6px,transparent 1.6px),radial-gradient(#1E676C 1.6px,transparent 1.6px);
+  background-size:34px 34px;background-position:0 0,17px 17px}
+.hero .eyebrow{font-size:12.5px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:#BFD9D7}
+.hero h1{font-size:clamp(30px,5vw,52px);font-weight:800;margin:8px 0 10px;text-wrap:balance}
+.hero p{max-width:62ch;margin:0 auto 20px;color:#DCEBE9;font-size:16.5px}
+.chip{display:inline-block;border:1.5px solid #7FAEAB;border-radius:999px;padding:6px 20px;font-size:12.5px;font-weight:800;letter-spacing:.1em;color:#EAF4F2;background:rgba(15,68,72,.5)}
+.lib{max-width:1080px;margin:-84px auto 0;padding:0 18px 60px;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:20px}
+.card{background:var(--page);border-radius:16px;box-shadow:0 4px 18px rgba(23,89,94,.10);padding:22px 24px;display:flex;flex-direction:column;gap:10px}
+.ucode{align-self:flex-start;background:linear-gradient(120deg,var(--board),#2E7E77);color:#fff;font-weight:800;font-size:12px;letter-spacing:.12em;border-radius:999px;padding:3px 14px}
+.card h2{font-size:21px;color:var(--board)}
+.card .ar{font-family:var(--read);font-size:23px;line-height:2;direction:rtl;text-align:right}
+.card .desc{font-size:14.5px;color:var(--ink-soft);flex:1}
+.btnrow{display:flex;gap:8px;flex-wrap:wrap}
+.pbtn{border:1.5px solid var(--board);border-radius:10px;background:var(--page);color:var(--board);font-weight:700;font-size:14.5px;padding:7px 18px;text-decoration:none}
+.pbtn.primary{background:var(--board);color:#fff}
+.pbtn:hover{background:var(--wash)}.pbtn.primary:hover{background:var(--board-deep)}
+.card.soon{opacity:.55}
+.card.soon .btnrow{display:none}
+.soonchip{align-self:flex-start;background:var(--wash);color:var(--ink-soft);border-radius:999px;font-size:12px;font-weight:800;padding:3px 14px}
+
+/* ---------- product views ---------- */
+.viewbar{background:var(--board);color:#fff;padding:14px 20px;direction:ltr}
+.viewbar-in{max-width:1020px;margin:0 auto;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.back{color:#fff;text-decoration:none;font-weight:800;font-size:14.5px;border:1.5px solid #5E9490;border-radius:10px;padding:5px 14px}
+.back:hover{background:var(--board-deep)}
+.viewbar .vt{font-weight:800;font-size:17px}
+.viewbar .vsub{color:#BFD9D7;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.viewbar .draft{margin-left:auto;background:var(--amber);color:#5C3E06;border-radius:999px;font-size:11.5px;font-weight:800;padding:3px 12px;letter-spacing:.06em}
+main{max-width:1020px;margin:0 auto;padding:26px 18px 80px}
+.view{display:none}.view.on{display:block}
+.lede{max-width:66ch;color:var(--ink-soft);font-size:15px;margin:2px 0 22px}
+.lede b{color:var(--ink)}
+
+.sheet{background:var(--page);border:1px solid var(--line);border-radius:14px;box-shadow:0 2px 10px rgba(23,89,94,.07);padding:26px 28px;margin:0 0 26px}
+.sheet-tag{display:inline-flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--wash);color:var(--board);font-weight:800;font-size:13px;border-radius:999px;padding:3px 14px;margin-bottom:12px}
+.sheet-tag .code{background:var(--board);color:#fff;border-radius:999px;padding:0 9px;font-size:11.5px;letter-spacing:.05em}
+.sheet h3{font-size:21px;color:var(--board);margin-bottom:4px}
+.sheet .note{font-size:13px;color:var(--ink-soft);max-width:70ch}
+.rubric{font-family:var(--read);font-weight:700;font-size:19px;color:var(--board)}
+
+.demo{background:var(--wash);border-radius:12px;padding:18px;margin-top:14px}
+.prompt{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.bubble{background:var(--page);border:2px solid var(--board);border-radius:14px;padding:6px 18px;font-family:var(--read);font-size:21px}
+.sayb{border:0;background:var(--board);color:#fff;width:38px;height:38px;border-radius:50%;font-size:17px;flex:none}
+.sayb:hover{background:var(--board-deep)}
+.facegrid,.pairrow{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.face{border:3px solid transparent;background:var(--page);border-radius:14px;padding:8px 10px 4px;text-align:center;transition:transform .12s}
+.face:hover{transform:translateY(-2px)}
+.face.good{border-color:var(--good);background:var(--good-soft)}
+.face.bad{animation:sh .3s}
+@keyframes sh{25%{transform:translateX(4px)}75%{transform:translateX(-4px)}}
+.face svg{width:74px;height:74px}
+.face .nm{font-family:var(--read);font-size:15px;font-weight:700}
+.done{display:none;background:var(--good-soft);color:var(--good);font-weight:800;border-radius:10px;padding:8px 16px;margin-top:12px}
+.done.show{display:inline-block}
+.vign{display:flex;gap:14px;flex-wrap:wrap}
+.vcard{background:var(--page);border:3px solid transparent;border-radius:14px;padding:10px;width:150px}
+.vcard.good{border-color:var(--good);background:var(--good-soft)}
+.vcard.bad{animation:sh .3s}
+.stage{position:relative;width:126px;height:96px;background:#fff;border:1px solid var(--line);border-radius:10px;overflow:hidden;margin:0 auto;display:block}
+.walker{animation:walk 2.6s linear infinite}
+@keyframes walk{0%{transform:translateX(96px)}70%,100%{transform:translateX(30px)}}
+.blinkeye{animation:blink 2.2s infinite}
+@keyframes blink{0%,90%,100%{opacity:1}95%{opacity:.15}}
+.pop{animation:popb 1.8s infinite}
+@keyframes popb{0%,100%{transform:scale(.7);opacity:.3}45%,60%{transform:scale(1);opacity:1}}
+.heart{font-size:26px;opacity:.15;transition:opacity .3s}
+.heart.show{opacity:1}
+.minis{display:flex;gap:12px;flex-wrap:wrap}
+.mini{background:var(--page);border:3px solid transparent;border-radius:12px;padding:8px;text-align:center;width:118px}
+.mini.good{border-color:var(--good);background:var(--good-soft)}
+.mini.bad{animation:sh .3s}
+.mini svg{width:90px;height:74px}
+.yn{display:flex;gap:10px;margin-top:10px}
+.ynb{font-family:var(--read);font-size:19px;font-weight:700;background:var(--page);border:2px solid var(--line);border-radius:10px;padding:4px 22px}
+.ynb.good{border-color:var(--good);background:var(--good-soft)}
+.ynb.bad{border-color:var(--coral);background:var(--coral-soft)}
+.plines p{font-family:var(--read);font-size:21px;line-height:2.2;display:flex;align-items:center;gap:10px}
+
+.panels{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:14px}
+.stpanel{background:var(--page);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.stpanel .art{background:#fff;padding:10px;display:flex;justify-content:center}
+.stpanel .art svg{width:100%;max-width:280px;height:130px}
+.stpanel .txt{padding:12px 16px;font-family:var(--read);font-size:19.5px;line-height:2.25}
+.stpanel .no{background:var(--board);color:#fff;font-weight:800;font-size:12px;padding:1px 10px;display:inline-block;border-radius:0 0 8px 0}
+.popup{border:3px dashed var(--amber);background:var(--amber-soft);border-radius:14px;padding:16px 20px;margin-top:18px;direction:ltr;text-align:left;max-width:62ch}
+.popup h4{font-weight:800;color:#8A5E10}
+.popup p{font-size:15px;line-height:1.8}
+.popup .ar{font-family:var(--read);font-weight:700}
+.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:14px}
+.act{background:var(--page);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.act .rubric{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.act .ico{width:30px;height:30px;border-radius:8px;background:var(--wash);display:inline-flex;align-items:center;justify-content:center;font-size:15px}
+.act ul{list-style:none;font-family:var(--read);font-size:19px;line-height:2.3;padding:0}
+.blank{display:inline-block;min-width:76px;border-bottom:2px solid var(--ink-soft)}
+.roster{background:var(--page);border:2px solid var(--board);border-radius:12px;padding:16px 22px;max-width:330px;font-family:var(--read);font-size:19px;line-height:2.2}
+.roster h4{font-family:var(--read);color:var(--board);font-size:21px;text-align:center;border-bottom:2px solid var(--wash);padding-bottom:6px;margin-bottom:8px}
+.roster ol{padding-inline-start:24px}
+.photo{background:repeating-linear-gradient(45deg,var(--wash),var(--wash) 8px,#EFF4F2 8px,#EFF4F2 16px);border:1px dashed var(--ink-soft);border-radius:10px;height:110px;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-size:13px;text-align:center;padding:8px}
+
+.nb{background:var(--page);border:1px solid var(--line);border-radius:12px;padding:20px 24px;margin-top:14px;
+    background-image:repeating-linear-gradient(transparent 0,transparent 42px,var(--wash) 42px,var(--wash) 44px)}
+.nb .arabic{font-family:var(--read);font-size:21px;line-height:2.6}
+.nb .slot{display:inline-block;min-width:90px;border-bottom:2px dotted var(--coral)}
+.bank{border:2px solid var(--board);border-radius:12px;padding:10px 16px;margin-top:10px;background:var(--wash);font-family:var(--read);font-size:19px;line-height:2.1}
+.bank .bl{font-family:var(--read);font-size:15px;font-weight:700;color:var(--board);display:block;margin-bottom:2px}
+.bank span.w{display:inline-block;background:var(--page);border:1px solid var(--line);border-radius:8px;padding:1px 12px;margin:3px 4px}
+.nbgrid{width:100%;border-collapse:collapse;margin-top:12px;font-family:var(--read);font-size:18px}
+.nbgrid th,.nbgrid td{border:1.5px solid var(--board);padding:8px 10px;text-align:center;height:42px}
+.nbgrid th{background:var(--wash);font-size:17px}
+.nbpics{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+.nbpic{position:relative;background:#fff;border:1px solid var(--line);border-radius:8px;padding:4px}
+.nbpic svg{width:84px;height:70px;display:block}
+.nbpic b{position:absolute;top:2px;inset-inline-start:2px;background:var(--board);color:#fff;font-size:10px;border-radius:5px;padding:0 6px}
+.nbline{display:flex;align-items:baseline;gap:10px}
+.nbno{font-family:var(--disp);font-weight:800;color:var(--board);font-size:14px;flex:none}
+.drawbox{border:2px dashed var(--line);border-radius:10px;height:90px;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);font-size:13px;background:var(--page);margin-top:8px}
+
+.ccards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:14px}
+.ccard{background:var(--page);border-top:6px solid var(--board);border-inline:1px solid var(--line);border-bottom:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.ccard .rubric{margin-bottom:6px}
+.ccard p{font-size:14.5px;color:var(--ink-soft);line-height:1.8}
+.ccard p b{color:var(--ink)}
+
+/* ---------- practice engine ---------- */
+.dotrow{display:flex;gap:6px;flex-wrap:wrap;margin:4px 0 12px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--line)}
+.dot.done{background:var(--good)}.dot.now{background:var(--amber)}
+.prhub{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.hubcard{background:var(--wash);border:2px solid var(--line);border-radius:14px;padding:22px;text-align:center;display:flex;flex-direction:column;gap:8px}
+.hubcard:hover{border-color:var(--board)}
+.hubar{font-family:var(--read);font-size:26px;font-weight:700;color:var(--board)}
+.hubext{font-size:13.5px;color:var(--ink-soft);direction:ltr}
+.xcard{display:flex;flex-direction:column;align-items:center;gap:10px;padding:8px}
+.ximg{width:120px;height:100px}.timg{width:84px;height:70px}.pimg{width:150px;height:125px}.himg{width:110px;height:92px}.simg{width:76px;height:64px;flex:none}
+.xar{font-family:var(--read);font-size:29px;font-weight:700;line-height:1.9;text-align:center;max-width:24ch}
+.xg{color:var(--ink-soft);direction:ltr;font-size:14px}
+.xctx{background:var(--wash);border-radius:10px;padding:6px 16px;font-size:20px}
+.xrow{display:flex;gap:12px;align-items:center;margin-top:6px}
+.nm.big{font-family:var(--read);font-size:20px;padding:6px 10px;max-width:20ch}
+.helpbox{margin-top:14px;background:var(--amber-soft);border:2px dashed var(--amber);border-radius:12px;padding:12px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.readpage p{margin-bottom:4px}
+.glossb{width:28px;height:28px;font-size:12px;vertical-align:middle}
+.linepool{display:flex;flex-direction:column;gap:8px}
+.lineopt{text-align:right;background:var(--page);border:2px solid var(--line);border-radius:10px;padding:8px 14px;font-size:19px}
+.lineopt.good{border-color:var(--good);background:var(--good-soft)}
+.lineopt.bad{animation:sh .3s}
+.seqlist{display:flex;flex-direction:column;gap:8px;margin:10px 0}
+.seqrow{display:flex;gap:10px;align-items:center;background:var(--page);border:1px solid var(--line);border-radius:10px;padding:6px 10px}
+.seqar{font-size:17px;flex:1}
+.seqbtns{display:flex;gap:4px;direction:ltr}
+.gap{color:var(--coral);font-weight:700;letter-spacing:2px}
+mark{background:var(--amber-soft);border-radius:4px;padding:0 2px}
+.donebig{font-family:var(--read);font-size:32px;color:var(--good);font-weight:700;margin-bottom:8px}
+.picseq{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.picfr{position:relative;background:#fff;border:1px solid var(--line);border-radius:10px;padding:6px}
+.picfr svg{width:118px;height:98px;display:block}
+.picfr b{position:absolute;top:4px;inset-inline-start:4px;background:var(--board);color:#fff;font-size:11px;border-radius:6px;padding:0 7px}
+.storyprose{margin-top:14px}
+.storyprose p{font-size:21px;line-height:2.4;margin-bottom:14px;max-width:64ch}
+footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);font-size:12.5px;direction:ltr}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<!-- SC-034, amended by SC-053: the house figure style. One ink, ONE stroke weight (3), two values only
+     (black line on white — no greys, no accent colours), faces made of dots and one line, identity
+     carried by a single fixed marker per character. Named characters have faces; generic demonstration
+     figures do not. -->
+<!-- ============ faces: dots, a hooked nose, one line for the mouth (drawn at head centre) ============ -->
+<g id="fc-eyes"><circle cx="-4.2" cy="-2.2" r="1.7" fill="#2A3440"/><circle cx="4.2" cy="-2.2" r="1.7" fill="#2A3440"/></g>
+<g id="fc-nose" stroke="#2A3440" stroke-width="2" fill="none" stroke-linecap="round"><path d="M0 0.6 q2.7 2.3 -0.5 3.3"/></g>
+<g id="face-n"><use href="#fc-eyes"/><use href="#fc-nose"/><path d="M-3.6 7.6 H3.6" stroke="#2A3440" stroke-width="2" stroke-linecap="round" fill="none"/></g>
+<g id="face-h"><use href="#fc-eyes"/><use href="#fc-nose"/><path d="M-4.4 6.2 q4.4 4.4 8.8 0" stroke="#2A3440" stroke-width="2" stroke-linecap="round" fill="none"/></g>
+<g id="face-t"><use href="#fc-eyes"/><use href="#fc-nose"/><ellipse cx="0" cy="7.8" rx="2.5" ry="3.1" fill="none" stroke="#2A3440" stroke-width="2"/></g>
+<g id="face-q"><use href="#fc-eyes"/><use href="#fc-nose"/><path d="M-4.2 8.4 q4.2 -3.8 8.4 0" stroke="#2A3440" stroke-width="2" stroke-linecap="round" fill="none"/><path d="M-6.4 -6.6 l4.2 1.6 M6.4 -6.6 l-4.2 1.6" stroke="#2A3440" stroke-width="1.8" stroke-linecap="round" fill="none"/></g>
+<!-- glasses variants: the lenses are the eyes, so only nose and mouth are added -->
+<g id="face-gn"><use href="#fc-nose"/><path d="M-3.6 7.6 H3.6" stroke="#2A3440" stroke-width="2" stroke-linecap="round" fill="none"/></g>
+<g id="face-gt"><use href="#fc-nose"/><ellipse cx="0" cy="7.8" rx="2.5" ry="3.1" fill="none" stroke="#2A3440" stroke-width="2"/></g>
+<g id="face-gh"><use href="#fc-nose"/><path d="M-4.4 6.2 q4.4 4.4 8.8 0" stroke="#2A3440" stroke-width="2" stroke-linecap="round" fill="none"/></g>
+<!-- shared bodies -->
+<g id="fig-body" stroke="#2A3440" stroke-width="3" stroke-linecap="round" fill="none"><path d="M50 30 V62 M50 38 L32 52 M50 38 L68 52 M50 62 L38 90 M50 62 L62 90"/></g>
+<g id="fig-body-tall" stroke="#2A3440" stroke-width="3" stroke-linecap="round" fill="none"><path d="M50 23 V60 M50 31 L32 45 M50 31 L68 45 M50 60 L38 93 M50 60 L62 93"/></g>
+<!-- main cast: لينا (side bundles) · عمر (spikes) · سارة (hijab) · هدى (tall + glasses + bun) · رنا (bob) -->
+<g id="av-lina"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="11" fill="none" stroke="#2A3440" stroke-width="3"/><circle cx="36" cy="25" r="5" fill="#2A3440"/><circle cx="64" cy="25" r="5" fill="#2A3440"/><use href="#face-n" x="50" y="18"/></g></g>
+<g id="av-lina-q"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="11" fill="none" stroke="#2A3440" stroke-width="3"/><circle cx="36" cy="25" r="5" fill="#2A3440"/><circle cx="64" cy="25" r="5" fill="#2A3440"/><use href="#face-q" x="50" y="18"/></g></g>
+<g id="av-lina-happy"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="11" fill="none" stroke="#2A3440" stroke-width="3"/><circle cx="36" cy="25" r="5" fill="#2A3440"/><circle cx="64" cy="25" r="5" fill="#2A3440"/><use href="#face-h" x="50" y="18"/></g></g>
+<g id="av-lina-talk"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="11" fill="none" stroke="#2A3440" stroke-width="3"/><circle cx="36" cy="25" r="5" fill="#2A3440"/><circle cx="64" cy="25" r="5" fill="#2A3440"/><use href="#face-t" x="50" y="18"/></g></g>
+<g id="av-omar"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="11" fill="none" stroke="#2A3440" stroke-width="3"/><path d="M43 8 L40 3 M50 6.5 L50 1 M57 8 L60 3" stroke="#2A3440" stroke-width="3" stroke-linecap="round" fill="none"/><use href="#face-n" x="50" y="18"/></g></g>
+<g id="av-omar-happy"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="11" fill="none" stroke="#2A3440" stroke-width="3"/><path d="M43 8 L40 3 M50 6.5 L50 1 M57 8 L60 3" stroke="#2A3440" stroke-width="3" stroke-linecap="round" fill="none"/><use href="#face-h" x="50" y="18"/></g></g>
+<g id="av-sara"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="14.5" fill="none" stroke="#2A3440" stroke-width="3"/><circle cx="50" cy="19" r="8.5" fill="none" stroke="#2A3440" stroke-width="2.4"/><path d="M38 29 q-4 10 2 14 M62 29 q4 10 -2 14" stroke="#2A3440" stroke-width="3" stroke-linecap="round" fill="none"/><use href="#face-n" x="50" y="17"/></g></g>
+<g id="av-sara-happy"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="14.5" fill="none" stroke="#2A3440" stroke-width="3"/><circle cx="50" cy="19" r="8.5" fill="none" stroke="#2A3440" stroke-width="2.4"/><path d="M38 29 q-4 10 2 14 M62 29 q4 10 -2 14" stroke="#2A3440" stroke-width="3" stroke-linecap="round" fill="none"/><use href="#face-h" x="50" y="17"/></g></g>
+<g id="av-huda"><use href="#fig-body-tall"/><g transform="translate(50 12) scale(1.25) translate(-50 -12)"><circle cx="50" cy="12" r="10" fill="none" stroke="#2A3440" stroke-width="3"/><circle cx="50" cy="1" r="3.5" fill="#2A3440"/><g stroke="#2A3440" stroke-width="2" fill="none"><circle cx="45.5" cy="12" r="3.2"/><circle cx="55.5" cy="12" r="3.2"/><line x1="48.7" y1="12" x2="52.3" y2="12"/></g><use href="#face-gn" x="50" y="13"/></g></g>
+<g id="av-huda-talk"><use href="#fig-body-tall"/><g transform="translate(50 12) scale(1.25) translate(-50 -12)"><circle cx="50" cy="12" r="10" fill="none" stroke="#2A3440" stroke-width="3"/><circle cx="50" cy="1" r="3.5" fill="#2A3440"/><g stroke="#2A3440" stroke-width="2" fill="none"><circle cx="45.5" cy="12" r="3.2"/><circle cx="55.5" cy="12" r="3.2"/><line x1="48.7" y1="12" x2="52.3" y2="12"/></g><use href="#face-gt" x="50" y="13"/></g></g>
+<!-- parallel cast: فريدة (grandmother: stoop + bun + glasses + shawl + cane) · كريم (curls) · مها (high tie) · زيد (flat cap) -->
+<g id="av-farida"><g stroke="#2A3440" stroke-width="3" stroke-linecap="round" fill="none"><path d="M52 26 q-5 16 -3 34 M50 34 L34 47 M50 34 L66 48 M49 60 L38 91 M49 60 L60 91"/><path d="M36 37 q15 -11 29 2"/><path d="M63 45 q7 -4 9 3 L74 91"/></g><g transform="translate(53 16) scale(1.25) translate(-53 -16)"><circle cx="53" cy="16" r="10" fill="none" stroke="#2A3440" stroke-width="3"/><circle cx="60" cy="5" r="3.5" fill="#2A3440"/><g stroke="#2A3440" stroke-width="2" fill="none"><circle cx="48.5" cy="16" r="3.2"/><circle cx="58.5" cy="16" r="3.2"/><line x1="51.7" y1="16" x2="55.3" y2="16"/></g><use href="#face-gn" x="53" y="17"/></g></g>
+<g id="av-farida-happy"><g stroke="#2A3440" stroke-width="3" stroke-linecap="round" fill="none"><path d="M52 26 q-5 16 -3 34 M50 34 L34 47 M50 34 L66 48 M49 60 L38 91 M49 60 L60 91"/><path d="M36 37 q15 -11 29 2"/><path d="M63 45 q7 -4 9 3 L74 91"/></g><g transform="translate(53 16) scale(1.25) translate(-53 -16)"><circle cx="53" cy="16" r="10" fill="none" stroke="#2A3440" stroke-width="3"/><circle cx="60" cy="5" r="3.5" fill="#2A3440"/><g stroke="#2A3440" stroke-width="2" fill="none"><circle cx="48.5" cy="16" r="3.2"/><circle cx="58.5" cy="16" r="3.2"/><line x1="51.7" y1="16" x2="55.3" y2="16"/></g><use href="#face-gh" x="53" y="17"/></g></g>
+<g id="av-rana"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="11" fill="none" stroke="#2A3440" stroke-width="3"/><path d="M38 19 a12 12 0 0 1 24 0 v10 l-4 0 v-8 a8 8 0 0 0 -16 0 v8 l-4 0 Z" fill="#2A3440"/><use href="#face-n" x="50" y="19"/></g></g>
+<g id="av-rana-happy"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="11" fill="none" stroke="#2A3440" stroke-width="3"/><path d="M38 19 a12 12 0 0 1 24 0 v10 l-4 0 v-8 a8 8 0 0 0 -16 0 v8 l-4 0 Z" fill="#2A3440"/><use href="#face-h" x="50" y="19"/></g></g>
+<g id="av-karim"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="11" fill="none" stroke="#2A3440" stroke-width="3"/><path d="M38 10 a4.5 4.5 0 0 1 8 -3 a4.5 4.5 0 0 1 8 0 a4.5 4.5 0 0 1 8 4" stroke="#2A3440" stroke-width="3" stroke-linecap="round" fill="none"/><use href="#face-n" x="50" y="18"/></g></g>
+<g id="av-karim-q"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="11" fill="none" stroke="#2A3440" stroke-width="3"/><path d="M38 10 a4.5 4.5 0 0 1 8 -3 a4.5 4.5 0 0 1 8 0 a4.5 4.5 0 0 1 8 4" stroke="#2A3440" stroke-width="3" stroke-linecap="round" fill="none"/><use href="#face-q" x="50" y="18"/></g></g>
+<g id="av-maha"><use href="#fig-body"/><g transform="translate(50 18) scale(1.25) translate(-50 -18)"><circle cx="50" cy="18" r="11" fill="none" stroke="#2A3440" stroke-width="3"/><circle cx="50" cy="2" r="4" fill="#2A3440"/><line x1="50" y1="6" x2="50" y2="9" stroke="#2A3440" stroke-width="2.6"/><use href="#face-n" x="50" y="18"/></g></g>
+<g id="av-zayd"><use href="#fig-body"/><g transform="translate(50 19) scale(1.25) translate(-50 -19)"><circle cx="50" cy="18" r="11" fill="none" stroke="#2A3440" stroke-width="3"/><path d="M37 10 q13 -11 26 0 h8 l-2 4 H37 Z" fill="#2A3440"/><use href="#face-n" x="50" y="19"/></g></g>
+<!-- generic demonstration figure: no face, because it is an action, not a person -->
+<g id="fig-walk" stroke="#2A3440" stroke-width="3" stroke-linecap="round" fill="none"><circle cx="14" cy="8" r="7"/><path d="M14 15 V30 M14 20 L4 26 M14 20 L26 17 M14 30 L5 44 M14 30 L24 42"/></g>
+<!-- fixed object iconography -->
+<g id="obj-list"><rect x="4" y="2" width="30" height="40" rx="3" fill="#fff" stroke="#2A3440" stroke-width="3"/><line x1="10" y1="12" x2="28" y2="12" stroke="#2A3440" stroke-width="3.4"/><line x1="10" y1="21" x2="28" y2="21" stroke="#2A3440" stroke-width="2.2"/><line x1="10" y1="30" x2="28" y2="30" stroke="#2A3440" stroke-width="2.2"/></g>
+<g id="obj-pen"><path d="M6 27 L31 12 l7 6 -25 15 Z" fill="#fff" stroke="#2A3440" stroke-width="3" stroke-linejoin="round"/><path d="M38 18 l7 -3 -3 7 Z" fill="#2A3440"/></g>
+<g id="obj-chair" stroke="#2A3440" stroke-width="3" stroke-linecap="round" fill="none"><path d="M8 44 V6 M8 26 H34 M34 26 V44 M12 26 V22 M30 26 V22"/></g>
+<g id="obj-door"><rect x="3" y="3" width="26" height="86" rx="2" fill="none" stroke="#2A3440" stroke-width="3"/><line x1="10" y1="3" x2="10" y2="89" stroke="#2A3440" stroke-width="2"/><circle cx="23" cy="48" r="2.6" fill="#2A3440"/></g>
+<g id="obj-star"><path d="M0 -13 l4 9 10 1 -7.5 7 2 10 -8.5 -5 -8.5 5 2 -10 -7.5 -7 10 -1 Z" fill="#2A3440"/></g>
+<!-- verb vignettes -->
+<g id="vg-enter"><g transform="translate(80,6)"><use href="#obj-door"/></g><g transform="translate(24,44)"><use href="#fig-walk"/></g><path d="M56 68 l16 0 -5 -5 m5 5 -5 5" stroke="#2A3440" stroke-width="3" fill="none" stroke-linecap="round"/></g>
+<g id="vg-see"><g transform="translate(12,38)"><use href="#fig-walk"/></g><line x1="40" y1="50" x2="88" y2="34" stroke="#2A3440" stroke-width="2.4" stroke-dasharray="5 4"/><circle cx="98" cy="30" r="10" fill="none" stroke="#2A3440" stroke-width="3"/></g>
+<g id="vg-say"><g transform="translate(12,42)"><use href="#fig-walk"/></g><rect x="44" y="14" width="52" height="28" rx="12" fill="#fff" stroke="#2A3440" stroke-width="3"/><circle cx="58" cy="28" r="3" fill="#2A3440"/><circle cx="70" cy="28" r="3" fill="#2A3440"/><circle cx="82" cy="28" r="3" fill="#2A3440"/></g>
+<g id="vg-sadiq"><g transform="translate(0,20) scale(.6)"><use href="#av-sara-happy"/></g><g transform="translate(36,20) scale(.6)"><use href="#av-lina-happy"/></g><g transform="translate(72,20) scale(.6)"><use href="#av-rana-happy"/></g></g>
+<g id="vg-like"><g transform="translate(6,8) scale(.68)"><use href="#av-lina-happy"/></g><g transform="translate(83,42)"><use href="#obj-star"/></g><g transform="translate(84,56) scale(.7)"><use href="#obj-list"/></g></g>
+<!-- main-story frames -->
+<g id="sc-door"><g transform="translate(2,4)"><use href="#obj-door"/></g><g transform="translate(26,12) scale(.7)"><use href="#av-lina"/></g><g transform="translate(54,34) scale(.42)"><use href="#av-omar"/></g><g transform="translate(72,34) scale(.42)"><use href="#av-sara"/></g><g transform="translate(90,34) scale(.42)"><use href="#av-rana"/></g><g transform="translate(96,72) scale(.46)"><use href="#obj-chair"/></g></g>
+<g id="sc-list"><g transform="translate(6,10) scale(.7)"><use href="#av-lina"/></g><g transform="translate(66,20) scale(1.4)"><use href="#obj-list"/></g></g>
+<g id="sc-alone"><g transform="translate(34,10) scale(.8)"><use href="#av-lina-q"/></g><circle cx="22" cy="34" r="10" fill="none" stroke="#2A3440" stroke-width="2.4" stroke-dasharray="4 4"/><circle cx="100" cy="34" r="10" fill="none" stroke="#2A3440" stroke-width="2.4" stroke-dasharray="4 4"/></g>
+<g id="sc-huda"><g fill="none" stroke="#2A3440" stroke-width="3"><rect x="64" y="0" width="46" height="26" rx="3"/><path d="M72 10 h30 M72 18 h20" stroke-width="2"/></g><g transform="translate(66,28) scale(.72)"><use href="#av-huda-talk"/></g><g transform="translate(6,30) scale(.68)"><use href="#av-lina-q"/></g></g>
+<g id="sc-omar"><g transform="translate(8,12) scale(.8)"><use href="#av-lina"/></g><g transform="translate(64,12) scale(.8)"><use href="#av-omar-happy"/></g></g>
+<g id="sc-sara"><g transform="translate(8,12) scale(.8)"><use href="#av-lina"/></g><g transform="translate(64,12) scale(.8)"><use href="#av-sara-happy"/></g></g>
+<g id="sc-end"><g transform="translate(0,24) scale(.5)"><use href="#av-sara-happy"/></g><g transform="translate(28,24) scale(.5)"><use href="#av-lina-happy"/></g><g transform="translate(56,24) scale(.5)"><use href="#av-rana-happy"/></g><g transform="translate(84,24) scale(.5)"><use href="#av-omar-happy"/></g><g transform="translate(46,76) scale(.44)"><use href="#obj-chair"/></g></g>
+<g id="sc-tariq"><g transform="translate(4,12) scale(.75)"><use href="#av-omar-happy"/></g><g transform="translate(66,20) scale(1.3)"><use href="#obj-list"/></g></g>
+<!-- parallel-story frames -->
+<g id="sc-party"><g stroke="#2A3440" stroke-width="2.4" fill="none"><circle cx="20" cy="14" r="8" fill="#fff"/><circle cx="42" cy="9" r="8" fill="#fff"/><path d="M20 22 q-2 10 2 16 M42 17 q2 10 -2 16"/></g><path d="M74 66 h40 M79 66 v20 M109 66 v20" fill="none" stroke="#2A3440" stroke-width="3" stroke-linecap="round"/><rect x="84" y="54" width="20" height="12" rx="2" fill="#fff" stroke="#2A3440" stroke-width="2.2"/><line x1="94" y1="54" x2="94" y2="48" stroke="#2A3440" stroke-width="2"/><circle cx="94" cy="46" r="2" fill="#2A3440"/><g transform="translate(4,28) scale(.66)"><use href="#av-farida-happy"/></g><g transform="translate(42,32) scale(.6)"><use href="#av-karim"/></g></g>
+<g id="sc-mix"><g transform="translate(2,22) scale(.7)"><use href="#av-farida"/></g><text x="58" y="36" font-size="30" fill="#2A3440" font-family="sans-serif">؟</text><g transform="translate(70,32) scale(.55)"><use href="#av-zayd"/></g><g transform="translate(94,32) scale(.55)"><use href="#av-maha"/></g></g>
+<g id="sc-zayd"><g transform="translate(0,16) scale(.72)"><use href="#av-farida-happy"/></g><g transform="translate(51,35) scale(.72)"><use href="#obj-star"/></g><g transform="translate(52,22) scale(.66)"><use href="#av-maha"/></g><g transform="translate(92,34) scale(.5)"><use href="#av-zayd"/></g></g>
+<g id="av-karim-pen"><use href="#av-karim"/><g transform="translate(61,7) scale(.4)"><use href="#obj-pen"/></g></g>
+<g id="av-karim-pen-q"><use href="#av-karim-q"/><g transform="translate(61,7) scale(.4)"><use href="#obj-pen"/></g></g>
+<g id="sc-pen1"><g transform="translate(2,4)"><use href="#obj-door"/></g><g transform="translate(22,14) scale(.66)"><use href="#av-karim-pen"/></g><g transform="translate(56,36) scale(.4)"><use href="#av-farida"/></g><g transform="translate(76,36) scale(.4)"><use href="#av-maha"/></g><g transform="translate(94,36) scale(.4)"><use href="#av-zayd"/></g></g>
+<g id="sc-pen2"><g transform="translate(0,18) scale(.62)"><use href="#av-karim-pen-q"/></g><g transform="translate(42,30) scale(.44)"><use href="#av-maha"/></g><g transform="translate(68,30) scale(.44)"><use href="#av-zayd"/></g><g transform="translate(94,30) scale(.44)"><use href="#av-farida"/></g><circle cx="58" cy="92" r="6" fill="none" stroke="#2A3440" stroke-width="2.4" stroke-dasharray="4 3"/><circle cx="84" cy="92" r="6" fill="none" stroke="#2A3440" stroke-width="2.4" stroke-dasharray="4 3"/><circle cx="110" cy="92" r="6" fill="none" stroke="#2A3440" stroke-width="2.4" stroke-dasharray="4 3"/></g>
+<g id="sc-pen3"><g transform="translate(2,20) scale(.7)"><use href="#av-karim-pen-q"/></g><text x="16" y="16" font-size="24" fill="#2A3440" font-family="sans-serif">؟</text><rect x="60" y="14" width="56" height="32" rx="14" fill="#fff" stroke="#2A3440" stroke-width="3"/><path d="M62 42 l-9 9 12 -2 Z" fill="#fff" stroke="#2A3440" stroke-width="2.2"/><text x="88" y="37" font-size="18" fill="#2A3440" text-anchor="middle" font-family="Noto Naskh Arabic">أَنَا!</text><g transform="translate(74,58) scale(.85)"><use href="#obj-pen"/></g></g>
+</defs></svg>
+
+<!-- ================= LIBRARY (home) ================= -->
+<section class="view on" id="v-home">
+  <div class="hero">
+    <div class="eyebrow">The School Course · Level 1</div>
+    <h1>Review Library</h1>
+    <p>A four-skill communicative Arabic course. Each unit: the Student book, and its interactive Digital supplement.</p>
+    <span class="chip">DRAFT · AWAITS OWNER GATE REVIEW · NOT BINDING</span>
+  </div>
+  <div class="lib">
+    <div class="card">
+      <span class="ucode">UNIT 1</span>
+      <h2>Who Are You?</h2>
+      <div class="ar" lang="ar">تَدْخُلُ لِينَا. لَيْسَ لَهَا صَدِيقٌ... وَعِنْدَهَا قَائِمَةٌ.</div>
+      <p class="desc">A new girl, a class list she can read, and faces she can't match — introductions, possession, and the first four verbs.</p>
+      <div class="btnrow">
+        <a class="pbtn" href="#unit-01/student">Student</a>
+        <a class="pbtn primary" href="#unit-01/practice">Digital</a>
+        <a class="pbtn" href="#unit-01/notebook">Notebook</a>
+      </div>
+    </div>
+    <div class="card soon">
+      <span class="ucode">UNIT 2</span>
+      <h2>Where Is It?</h2>
+      <div class="ar" lang="ar">أَيْنَ...؟</div>
+      <p class="desc">The lost-object quest — location language, place by place.</p>
+      <span class="soonchip">IN DESIGN</span>
+    </div>
+    <div class="card soon">
+      <span class="ucode">UNIT 3</span>
+      <h2>I Have, I Want</h2>
+      <div class="ar" lang="ar">أُرِيدُ...</div>
+      <p class="desc">Possession completed as a system; the want-and-obstacle engine.</p>
+      <span class="soonchip">IN DESIGN</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRACTICE (engine) ================= -->
+<section class="view" id="v-practice">
+  <div class="viewbar"><div class="viewbar-in"><a class="back" href="#">← Library</a><div><div class="vt" id="pr-title"></div><div class="vsub" id="pr-sub"></div></div><span class="draft">DRAFT</span></div></div>
+  <main class="rtl">
+    <div id="pr-dots" class="dotrow" style="direction:ltr"></div>
+    <div class="sheet"><div id="pr-stage"></div></div>
+  </main>
+</section>
+
+<!-- ================= STUDENT ================= -->
+<section class="view" id="v-student">
+  <div class="viewbar"><div class="viewbar-in"><a class="back" href="#">← Library</a><div><div class="vt">Unit 1 · Student book</div><div class="vsub">illustrations → reading → activities</div></div><span class="draft">DRAFT</span></div></div>
+  <main class="rtl">
+
+  <div class="sheet">
+    <span class="sheet-tag"><span class="rubric" lang="ar">اُنْظُرْ!</span></span>
+    <h3>Illustrations</h3>
+    <p class="note" style="direction:ltr">The picture part opens the unit: the labelled phrase scene (SC-038 — words are met inside phrases, never alone), then the story's pictures in order. Meaning first, text after. Stick-figure art per SC-034.</p>
+    <div class="demo" style="background:var(--page);border:1px solid var(--line)">
+      <svg viewBox="0 0 900 290" style="width:100%;height:auto" role="img" aria-label="labeled scene, stick-figure art">
+        <rect width="900" height="290" fill="#FFFFFF"/>
+        <rect x="30" y="30" width="200" height="120" rx="8" fill="#17595E"/><text x="130" y="95" font-size="30" fill="#fff" text-anchor="middle" font-family="Noto Naskh Arabic">مَرْحَبًا</text>
+        <g transform="translate(300,40)"><use href="#av-omar"/></g><text x="350" y="162" font-size="20" text-anchor="middle" font-family="Noto Naskh Arabic">هٰذَا وَلَدٌ</text>
+        <g transform="translate(430,40)"><use href="#av-sara"/></g><text x="480" y="162" font-size="20" text-anchor="middle" font-family="Noto Naskh Arabic">هٰذِهِ بِنْتٌ</text>
+        <g transform="translate(560,40)"><use href="#av-huda"/></g><text x="610" y="162" font-size="20" text-anchor="middle" font-family="Noto Naskh Arabic">هٰذِهِ هُدَى</text>
+        <g transform="translate(700,60) scale(1.3)"><use href="#obj-list"/></g><text x="725" y="162" font-size="20" text-anchor="middle" font-family="Noto Naskh Arabic">هٰذِهِ قَائِمَةٌ</text>
+        <text x="450" y="216" font-size="21" text-anchor="middle" font-family="Noto Naskh Arabic" fill="#17595E">تَدْخُلُ لِينَا · تَرَى لِينَا الْقَائِمَةَ · تَقُولُ لِينَا: «أَهْلًا!»</text>
+        <text x="450" y="256" font-size="21" text-anchor="middle" font-family="Noto Naskh Arabic" fill="#17595E">تُحِبُّ لِينَا الْقَائِمَةَ · عِنْدَهَا قَائِمَةٌ ✓ · لَيْسَ لَهَا صَدِيقٌ ✗ · لِي صَدِيقَاتٌ</text>
+      </svg>
+    </div>
+    <div class="picseq">
+      <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-door"/></svg><b>1</b></span>
+      <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-list"/></svg><b>2</b></span>
+      <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-huda"/></svg><b>3</b></span>
+      <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-omar"/></svg><b>4</b></span>
+      <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-sara"/></svg><b>5</b></span>
+      <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-end"/></svg><b>6</b></span>
+    </div>
+    <div class="helpbox" style="margin-top:16px"><span class="rubric" lang="ar">نُعِيدُ الْقِصَّةَ بِالصُّوَرِ</span>
+      <span class="note" style="direction:ltr;margin:0">C4, printed where it happens (SC-049): the class retells the story from these six pictures, learner-led. No preparation, no separate teacher page — the rubric sits on the strip it uses.</span></div>
+  </div>
+
+  <div class="sheet">
+    <span class="sheet-tag"><span class="rubric" lang="ar">قَائِمَةُ لِينَا</span></span>
+    <h3>The reading · paragraph story · 136 words</h3>
+    <div class="storyprose arabic" lang="ar">
+      <p>تَدْخُلُ لِينَا. لَيْسَ لَهَا صَدِيقٌ... وَعِنْدَهَا قَائِمَةٌ. تَقُولُ لِينَا: «السَّلَامُ عَلَيْكُمْ! أَنَا لِينَا.» يَقُولُ عُمَر وَسَارَة وَرَنَا: «وَعَلَيْكُمُ السَّلَامُ!»</p>
+      <p>تَرَى لِينَا الْقَائِمَةَ. هُنَاكَ اسْمٌ: «عُمَر». وَهُنَاكَ اسْمٌ: «سَارَة». تَقُولُ لِينَا: «مَنْ عُمَر؟ وَمَنْ سَارَة؟»</p>
+      <p>تَرَى لِينَا هُدَى وَتَقُولُ: «هٰذِهِ سَارَة!» تَقُولُ هُدَى: «لَا! لَا! لَيْسَ اسْمِي سَارَة! أَنَا هُدَى!» تَقُولُ لِينَا: «لَا؟... أَهْلًا يَا هُدَى!» لَيْسَ لَهَا صَدِيقٌ.</p>
+      <p>تَرَى لِينَا وَلَدًا. تَقُولُ: «أَنْتَ عُمَر!» يَقُولُ الْوَلَدُ: «نَعَمْ! أَنَا عُمَر! وَمَنْ أَنْتِ؟» تَقُولُ لِينَا: «أَنَا لِينَا.» يَقُولُ عُمَر: «أَهْلًا يَا لِينَا!»</p>
+      <p>تَرَى لِينَا بِنْتًا. تَقُولُ: «وَأَنْتِ سَارَة!» تَقُولُ الْبِنْتُ: «نَعَمْ! أَنَا سَارَة!» يَرَى عُمَر الْقَائِمَةَ وَيَقُولُ: «هُنَاكَ اسْمٌ: "طَارِق"! لِي صَدِيقٌ: طَارِق!»</p>
+      <p>تَرَى سَارَة الْقَائِمَةَ وَتَقُولُ: «هُنَاكَ اسْمٌ: "لِينَا"! مَنْ هِيَ؟» تَقُولُ لِينَا: «أَنَا! أَنَا لِينَا!» تَقُولُ سَارَة: «أَهْلًا يَا لِينَا! لِينَا صَدِيقَتِي!» وَتَقُولُ رَنَا: «وَلِي صَدِيقَةٌ: لِينَا!» تُحِبُّ لِينَا... الْقَائِمَةَ! تَقُولُ لِينَا: «أَنَا لِينَا... وَلِي صَدِيقَاتٌ!»</p>
+    </div>
+    <div class="popup"><h4>Look — no “is”!</h4><p>Arabic doesn’t need a word for <i>is</i>: <span class="ar" lang="ar">أَنَا لِينَا</span> = I (am) Lina. <span class="ar" lang="ar">هٰذَا عُمَر</span> = This (is) Omar.<br>The pointing word matches the person: <span class="ar" lang="ar">هٰذَا</span> for a boy or a man, <span class="ar" lang="ar">هٰذِهِ</span> for a girl or a woman.</p></div>
+  </div>
+
+  <div class="sheet">
+    <h3>Comprehension activities</h3>
+    <div class="acts">
+      <div class="act"><div class="rubric"><span class="ico">🔗</span><span lang="ar">اِقْرَأْ وَصِلْ</span></div>
+        <ul lang="ar"><li>هٰذَا وَلَدٌ. ○</li><li>هٰذِهِ بِنْتٌ. ○</li><li>عِنْدِي قَائِمَةٌ. ○</li><li>هٰذِهِ هُدَى. ○</li><li>أَنَا عُمَر. ○</li></ul></div>
+      <div class="act"><div class="rubric"><span class="ico">✓✗</span><span lang="ar">صَحٌّ أَمْ خَطَأٌ؟ أَرِنِي</span></div>
+        <ul lang="ar"><li>1 · سَارَة بِنْتٌ. ⬜</li><li>2 · عُمَر بِنْتٌ. ⬜</li><li>3 · هٰذِهِ هُدَى. ⬜</li><li>4 · لِينَا صَدِيقَةُ سَارَة. ⬜</li></ul>
+        <p class="note" style="direction:ltr">Judge, then circle the picture number that proves it.</p></div>
+      <div class="act"><div class="rubric"><span class="ico">💬</span><span lang="ar">مَنْ يَقُولُ؟</span></div>
+        <ul lang="ar"><li>«لَا! لَا! أَنَا هُدَى!»</li><li>«عِنْدِي قَائِمَةٌ.»</li><li>«لِي صَدِيقٌ: طَارِق!»</li><li>«أَنَا! أَنَا لِينَا!»</li><li>«وَلِي صَدِيقَةٌ: لِينَا!»</li></ul></div>
+      <div class="act"><div class="rubric"><span class="ico">✏️</span><span lang="ar">اِخْتَرْ وَاكْتُبْ</span></div>
+        <ul lang="ar"><li>اِسْمِي <span class="blank"></span>.</li><li>أَنَا صَدِيقُ/صَدِيقَةُ <span class="blank"></span>.</li><li>عِنْدِي <span class="blank"></span>. (قَائِمَةٌ · قَلَمٌ)</li><li>لِي <span class="blank"></span>. (صَدِيقٌ · صَدِيقَةٌ · صَدِيقَاتٌ)</li><li>هٰذَا/هٰذِهِ <span class="blank"></span>.</li></ul></div>
+      <div class="act"><div class="rubric"><span class="ico">🔢</span><span lang="ar">رَتِّبْ</span></div>
+        <ul lang="ar"><li>⬜ تَقُولُ هُدَى: «لَا! لَا! أَنَا هُدَى!»</li><li>⬜ تَدْخُلُ لِينَا.</li><li>⬜ تَقُولُ لِينَا: «أَنَا لِينَا... وَلِي صَدِيقَاتٌ!»</li><li>⬜ تَرَى لِينَا الْقَائِمَةَ.</li></ul>
+        <p class="note" style="direction:ltr">Write 1–4 in the boxes.</p></div>
+      <div class="act"><div class="rubric"><span class="ico">🔍</span><span lang="ar">اِبْحَثْ فِي النَّصِّ</span></div>
+        <ul lang="ar"><li>1 · أَيْنَ «لَيْسَ لَهَا صَدِيقٌ»؟ ✏️✏️</li><li>2 · أَيْنَ «لِينَا» فِي الْقَائِمَةِ؟ ✏️</li><li>3 · مَاذَا تُحِبُّ لِينَا؟ ✏️</li></ul>
+        <p class="note" style="direction:ltr">Find and underline the line in the story.</p></div>
+    </div>
+  </div>
+
+  <div class="sheet">
+    <span class="sheet-tag"><span class="rubric" lang="ar">مَنْ أَنْتَ يَا قَلَم؟</span></span>
+    <h3>The second reading · 66 words · <b>past tense</b></h3>
+    <p class="note" style="direction:ltr"><b>SC-041.</b> Reading 1 is always narrated in the present; reading 2 is always narrated in the past — <span lang="ar">دَخَلَ · قَالَ · رَأَى</span>. Dialogue stays in the present, as narrative does in any language. Absurdity is licensed: this one ends with a talking pen.</p>
+    <div class="picseq">
+      <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-pen1"/></svg><b>1</b></span>
+      <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-pen2"/></svg><b>2</b></span>
+      <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-pen3"/></svg><b>3</b></span>
+    </div>
+    <div class="storyprose arabic" lang="ar">
+      <p>دَخَلَ كَرِيم وَقَالَ: «السَّلَامُ عَلَيْكُمْ!» قَالَتْ فَرِيدَة وَمَهَا وَزَيْد: «وَعَلَيْكُمُ السَّلَامُ!»</p>
+      <p>قَالَ كَرِيم: «مَنْ عِنْدَهُ قَلَمٌ؟» قَالَتْ مَهَا: «لَا! لَيْسَ عِنْدِي قَلَمٌ!» قَالَ زَيْد: «لَا! لَيْسَ عِنْدِي قَلَمٌ!» قَالَتْ فَرِيدَة: «لَا! لَيْسَ عِنْدِي قَلَمٌ!» قَالَ كَرِيم: «مَنْ عِنْدَهُ قَلَمٌ؟»</p>
+      <p>قَالَ قَلَمٌ: «أَنَا! أَنَا قَلَمٌ!» رَأَى كَرِيم الْقَلَمَ وَقَالَ: «مَنْ... مَنْ أَنْتَ؟» قَالَ الْقَلَمُ: «أَنَا قَلَمُ كَرِيم! وَلِي صَدِيقٌ: كَرِيم!» قَالَتْ فَرِيدَة: «نَعَمْ يَا كَرِيم... هُنَاكَ قَلَمٌ!»</p>
+    </div>
+    <div class="acts">
+      <div class="act"><div class="rubric"><span class="ico">🔗</span><span lang="ar">اِقْرَأْ وَصِلْ</span></div>
+        <ul lang="ar"><li>دَخَلَ كَرِيم. ○</li><li>مَنْ عِنْدَهُ قَلَمٌ؟ ○</li><li>لِي صَدِيقٌ: كَرِيم! ○</li></ul>
+        <p class="note" style="direction:ltr">…matched to the three pictures above.</p></div>
+      <div class="act"><div class="rubric"><span class="ico">💬</span><span lang="ar">مَنْ يَقُولُ؟</span></div>
+        <ul lang="ar"><li>«مَنْ عِنْدَهُ قَلَمٌ؟»</li><li>«أَنَا! أَنَا قَلَمٌ!»</li><li>«نَعَمْ يَا كَرِيم... هُنَاكَ قَلَمٌ!»</li></ul>
+        <p class="note" style="direction:ltr">Four faces to choose from — and one of them is <b>the pen</b>.</p></div>
+      <div class="act"><div class="rubric"><span class="ico">✓✗</span><span lang="ar">صَحٌّ أَمْ خَطَأٌ؟</span></div>
+        <ul lang="ar"><li>1 · دَخَلَ كَرِيم. ⬜</li><li>2 · مَهَا: عِنْدَهَا قَلَمٌ. ⬜</li><li>3 · لِلْقَلَمِ صَدِيقٌ: كَرِيم. ⬜</li></ul></div>
+      <div class="act"><div class="rubric"><span class="ico">⚖️</span><span lang="ar">اِخْتَرْ</span></div>
+        <ul lang="ar"><li>(صورة 1) دَخَلَ كَرِيم / رَأَى كَرِيم</li><li>(صورة 3) أَنَا قَلَمٌ / أَنَا وَلَدٌ</li></ul>
+        <p class="note" style="direction:ltr">Circle what the picture shows.</p></div>
+      <div class="act"><div class="rubric"><span class="ico">🕐</span><span lang="ar">الْآنَ أَمْ قَبْلُ؟</span></div>
+        <ul lang="ar"><li>تَدْخُلُ لِينَا. ⬜</li><li>دَخَلَ كَرِيم. ⬜</li><li>تَقُولُ سَارَة. ⬜</li><li>قَالَ زَيْد. ⬜</li></ul>
+        <p class="note" style="direction:ltr"><b>New set (SC-041):</b> sort the lines into the two readings — story 1 (now) or story 2 (before)? No rule is stated; the learner sorts by ear.</p></div>
+      <div class="act"><div class="rubric"><span class="ico">🔢</span><span lang="ar">رَتِّبْ</span></div>
+        <ul lang="ar"><li>⬜ قَالَ قَلَمٌ: «أَنَا! أَنَا قَلَمٌ!»</li><li>⬜ دَخَلَ كَرِيم.</li><li>⬜ قَالَتْ مَهَا: «لَا!»</li></ul>
+        <p class="note" style="direction:ltr">Write 1–3 in the boxes.</p></div>
+    </div>
+  </div>
+
+  <div class="sheet">
+    <h3>Functional text + authentic corner</h3>
+    <div class="panels" style="grid-template-columns:auto 1fr">
+      <div><div class="roster" lang="ar"><h4>قَائِمَةُ الصَّفِّ</h4>المُعَلِّمَة: هُدَى<ol><li>آدَم</li><li>رَنَا</li><li>سَارَة</li><li>طَارِق</li><li>عُمَر</li><li>لِينَا</li><li>نُور</li><li>بَدْر</li></ol></div></div>
+      <div>
+        <p class="note" style="margin-bottom:10px"><b lang="ar">اِسْتَعْمِلِ النَّصَّ</b> — circle the three story names · find the name with no face in the class picture · write your favourite character's number.</p>
+        <div class="rubric" lang="ar" style="margin-bottom:8px">عَرَبِيَّةٌ حَوْلَنَا</div>
+        <div class="acts" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr))">
+          <div class="photo">real shop sign photo<br>(to be sourced)</div>
+          <div class="photo">school door sign photo</div>
+          <div class="photo">street name plate photo</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </main>
+  <div class="sheet" id="cando">
+    <span class="sheet-tag"><span class="rubric" lang="ar">أَسْتَطِيعُ!</span></span>
+    <h3>What I can do · the unit's last page</h3>
+    <p class="note" style="direction:ltr">Unit 1's can-do statements (SC-049), and the design decision inside them: at Novice Low a learner cannot read <i>"I can introduce myself"</i> in Arabic, and English is not available — the pop-up is the book's only English. So the page <b>shows the function instead of naming it</b>. Each line is a sentence the learner can now actually say, with a tick box. Ticking «أَنَا ___» <i>is</i> "I can introduce myself." The English can-do wording lives where it belongs — in the committee-facing alignment appendix, per the framework's §7.</p>
+    <div class="acts" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+      <div class="act"><div class="rubric"><span class="ico">💬</span><span lang="ar">أَتَكَلَّمُ</span></div>
+        <ul lang="ar"><li>«السَّلَامُ عَلَيْكُمْ! أَنَا <span class="blank"></span>.» ⬜</li><li>«مَنْ أَنْتَ؟» ⬜</li><li>«هٰذَا وَلَدٌ. هٰذِهِ بِنْتٌ.» ⬜</li><li>«عِنْدِي قَلَمٌ.» ⬜</li><li>«لَيْسَ عِنْدِي قَلَمٌ.» ⬜</li><li>«لِي صَدِيقٌ / صَدِيقَةٌ: <span class="blank"></span>.» ⬜</li></ul></div>
+      <div class="act"><div class="rubric"><span class="ico">📖</span><span lang="ar">أَقْرَأُ</span></div>
+        <ul lang="ar"><li>«قَائِمَةُ لِينَا» ⬜</li><li>«مَنْ أَنْتَ يَا قَلَم؟» ⬜</li><li>«قَائِمَةُ الصَّفِّ» ⬜</li><li>هُنَاكَ اسْمٌ فِي الْقَائِمَةِ. ⬜</li></ul>
+        <p class="note" style="direction:ltr">The two readings and the roster, named. Ticking one is "I can read a short story built from familiar language" — the framework's interpretive-reading can-do, performed.</p></div>
+      <div class="act"><div class="rubric"><span class="ico">✍️</span><span lang="ar">أَكْتُبُ</span></div>
+        <ul lang="ar"><li>«اُكْتُبِ الْقِصَّةَ» ⬜</li><li>«قِصَّتِي الْمُوَازِيَةُ» ⬜</li><li>«قِصَّتِي» ⬜</li><li>«دَوْرِي» ⬜</li></ul>
+        <p class="note" style="direction:ltr">The four notebook pages by their own names — so the book's last page and the notebook's contents are the same list.</p></div>
+    </div>
+    <p class="note" style="direction:ltr;margin-top:12px"><b>Chrome admitted here, recorded per SC-046:</b> أَسْتَطِيعُ · أَتَكَلَّمُ · أَقْرَأُ · أَكْتُبُ — four words, page furniture, learned once by icon.</p>
+  </div>
+
+</section>
+
+<!-- ================= NOTEBOOK ================= -->
+<section class="view" id="v-note">
+  <div class="viewbar"><div class="viewbar-in"><a class="back" href="#">← Library</a><div><div class="vt">Unit 1 · Notebook</div><div class="vsub">Phase 4 · the output ladder</div></div><span class="draft">DRAFT</span></div></div>
+  <main class="rtl">
+  <p class="lede" style="direction:ltr"><b>Ten pages: write the story you read → write your parallel story → write your own → show it.</b> Every page is completable by a student alone (P-3); each retell is titled <span lang="ar">اُكْتُبِ الْقِصَّةَ</span> plus the story's own name, and its <span lang="ar">بَنْكُ الْكَلِمَاتِ</span> supplies the missing word. Every frame prints the possessive split correctly — <span lang="ar">عِنْدَ</span> for things, <span lang="ar">لِـ</span> for people (SC-039).</p>
+
+  <div class="sheet"><span class="sheet-tag"><span class="rubric" lang="ar">دَفْتَرِي</span></span><h3>Opener · page 1</h3>
+    <div class="nb"><p class="arabic" lang="ar" style="font-size:28px;text-align:center">دَفْتَرِي</p>
+    <p class="arabic" lang="ar" style="text-align:center">اِسْمِي <span class="slot" style="min-width:180px"></span></p>
+    <div class="acts" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr));margin-top:16px">
+      <div class="act" style="text-align:center"><div style="font-size:22px">🖼️</div><div class="rubric" lang="ar">اُكْتُبِ الْقِصَّةَ</div><div style="font-size:22px">⬜</div></div>
+      <div class="act" style="text-align:center"><div style="font-size:22px">✍️</div><div class="rubric" lang="ar">قِصَّتِي الْمُوَازِيَةُ</div><div style="font-size:22px">⬜</div></div>
+      <div class="act" style="text-align:center"><div style="font-size:22px">📖</div><div class="rubric" lang="ar">قِصَّتِي</div><div style="font-size:22px">⬜</div></div>
+      <div class="act" style="text-align:center"><div style="font-size:22px">🙋</div><div class="rubric" lang="ar">دَوْرِي</div><div style="font-size:22px">⬜</div></div>
+    </div>
+    <p class="note" style="direction:ltr;margin-top:10px">A tick-box per finished page — the notebook's only progress device. No scores anywhere in the course.</p></div></div>
+
+  <div class="sheet"><span class="sheet-tag"><span class="code">N1 أ</span> <span class="rubric" lang="ar">اُكْتُبِ الْقِصَّةَ: «قَائِمَةُ لِينَا»</span></span><h3>Write the story · story 1 · <b>present</b> · pages 2–3</h3>
+    <div class="nbpics">
+      <span class="nbpic"><svg viewBox="0 0 120 100"><use href="#sc-door"/></svg><b>1</b></span>
+      <span class="nbpic"><svg viewBox="0 0 120 100"><use href="#sc-list"/></svg><b>2</b></span>
+      <span class="nbpic"><svg viewBox="0 0 120 100"><use href="#sc-huda"/></svg><b>3</b></span>
+      <span class="nbpic"><svg viewBox="0 0 120 100"><use href="#sc-omar"/></svg><b>4</b></span>
+      <span class="nbpic"><svg viewBox="0 0 120 100"><use href="#sc-sara"/></svg><b>5</b></span>
+      <span class="nbpic"><svg viewBox="0 0 120 100"><use href="#sc-end"/></svg><b>6</b></span>
+    </div>
+    <div class="nb"><p class="arabic" lang="ar">
+      <span class="nbline"><span class="nbno">1</span><span>تَدْخُلُ <span class="slot"></span>. لَيْسَ <span class="slot"></span> صَدِيقٌ.</span></span><br>
+      <span class="nbline"><span class="nbno">2</span><span>تَرَى لِينَا <span class="slot"></span>.</span></span><br>
+      <span class="nbline"><span class="nbno">3</span><span>تَقُولُ هُدَى: «لَا! لَا! أَنَا <span class="slot"></span>!»</span></span><br>
+      <span class="nbline"><span class="nbno">4</span><span>تَقُولُ لِينَا: «أَنْتَ <span class="slot"></span>!»</span></span><br>
+      <span class="nbline"><span class="nbno">5</span><span>يَقُولُ عُمَر: «<span class="slot"></span> صَدِيقٌ: طَارِق!»</span></span><br>
+      <span class="nbline"><span class="nbno">6</span><span>تَقُولُ لِينَا: «أَنَا لِينَا... وَ<span class="slot"></span> صَدِيقَاتٌ!»</span></span>
+    </p>
+    <div class="bank"><span class="bl">بَنْكُ الْكَلِمَاتِ</span><br>
+      <span class="w">لِينَا</span><span class="w">لَهَا</span><span class="w">الْقَائِمَةَ</span><span class="w">هُدَى</span><span class="w">عُمَر</span><span class="w">لِي</span><span class="w">لَهَا</span></div>
+    <p class="note" style="direction:ltr">One slot per line at the U1 tier — the frame carries the sentence, the learner supplies the load-bearing chunk. Line 1 carries two because <span lang="ar">لَيْسَ لَهَا</span> is the story's spine.</p></div></div>
+
+  <div class="sheet"><span class="sheet-tag"><span class="code">N1 ب</span> <span class="rubric" lang="ar">اُكْتُبِ الْقِصَّةَ: «مَنْ أَنْتَ يَا قَلَم؟»</span></span><h3>Write the story · story 2 · <b>past</b> · page 4</h3>
+    <div class="nbpics">
+      <span class="nbpic"><svg viewBox="0 0 120 100"><use href="#sc-pen1"/></svg><b>1</b></span>
+      <span class="nbpic"><svg viewBox="0 0 120 100"><use href="#sc-pen2"/></svg><b>2</b></span>
+      <span class="nbpic"><svg viewBox="0 0 120 100"><use href="#sc-pen3"/></svg><b>3</b></span>
+    </div>
+    <div class="nb"><p class="arabic" lang="ar">
+      <span class="nbline"><span class="nbno">1</span><span><span class="slot"></span> كَرِيم وَقَالَ: «السَّلَامُ عَلَيْكُمْ!»</span></span><br>
+      <span class="nbline"><span class="nbno">2</span><span>قَالَ كَرِيم: «<span class="slot"></span> عِنْدَهُ قَلَمٌ؟»</span></span><br>
+      <span class="nbline"><span class="nbno">3</span><span>قَالَتْ مَهَا: «لَا!» لَيْسَ <span class="slot"></span> قَلَمٌ.</span></span><br>
+      <span class="nbline"><span class="nbno">4</span><span><span class="slot"></span> كَرِيم الْقَلَمَ.</span></span><br>
+      <span class="nbline"><span class="nbno">5</span><span>قَالَ الْقَلَمُ: «أَنَا <span class="slot"></span> كَرِيم!»</span></span>
+    </p>
+    <div class="bank"><span class="bl">بَنْكُ الْكَلِمَاتِ</span><br>
+      <span class="w">دَخَلَ</span><span class="w">مَنْ</span><span class="w">عِنْدَهَا</span><span class="w">رَأَى</span><span class="w">قَلَمُ</span></div>
+    <p class="note" style="direction:ltr"><b>The past forms are printed in the bank, never built by the learner</b> — supported retrieval, not production. This is the only page in the unit where the learner writes a past-tense form, and it is a copy from a bank.</p></div></div>
+
+  <div class="sheet"><span class="sheet-tag"><span class="code">N2</span> <span class="rubric" lang="ar">قِصَّتِي الْمُوَازِيَةُ</span></span><h3>My parallel story · pages 5–6</h3>
+    <div class="nb"><p class="arabic" lang="ar" style="font-size:24px;text-align:center">قَائِمَةُ <span class="slot" style="min-width:150px"></span></p>
+    <p class="arabic" lang="ar">
+      يَدْخُلُ / تَدْخُلُ <span class="slot"></span>.<br>
+      هُنَاكَ اسْمٌ: «<span class="slot"></span>». وَهُنَاكَ اسْمٌ: «<span class="slot"></span>».<br>
+      يَقُولُ / تَقُولُ: «مَنْ <span class="slot"></span>؟»<br>
+      <span class="slot"></span> صَدِيقِي. / <span class="slot"></span> صَدِيقَتِي.
+    </p>
+    <div class="drawbox"><span class="rubric" lang="ar">اُرْسُمْ صَفَّكَ</span></div>
+    <p class="arabic" lang="ar" style="margin-top:8px">هٰذِهِ صَفْحَتِي! <span style="font-size:15px;color:#5A6B72">⬜</span></p>
+    <p class="note" style="direction:ltr">That last line is <b>C3 (SC-049)</b>: when the page is finished the learner shows it to a partner and says it. The classroom format is a line on the page it presents — no prep, no separate product.<br>The same story, about the learner's real classroom, using the names collected in the survey on page 8. The last line prints both forms: a boy completes <span lang="ar">صَدِيقِي</span>, a girl completes <span lang="ar">صَدِيقَتِي</span> — SC-036 is carried by the frame itself, with no rule stated.</p></div></div>
+
+  <div class="sheet"><span class="sheet-tag"><span class="code">N3</span> <span class="rubric" lang="ar">قِصَّتِي</span></span><h3>My own story · page 7</h3>
+    <div class="nb"><p class="arabic" lang="ar">
+      يَدْخُلُ / تَدْخُلُ <span class="slot"></span>.<br>
+      عِنْدَهُ / عِنْدَهَا <span class="slot"></span>.<br>
+      لَهُ / لَهَا <span class="slot"></span>.<br>
+      يَقُولُ / تَقُولُ: «<span class="slot" style="min-width:170px"></span>».
+    </p>
+    <div class="bank"><span class="bl">أَشْيَاءُ</span><br><span class="w">قَلَمٌ</span><span class="w">قَائِمَةٌ</span>
+      <br><span class="bl">أَشْخَاصٌ</span><br><span class="w">صَدِيقٌ</span><span class="w">صَدِيقَةٌ</span><span class="w">صَدِيقَاتٌ</span></div>
+    <div class="drawbox"><span class="rubric" lang="ar">اُرْسُمْ</span></div>
+    <p class="note" style="direction:ltr">The freest rung at U1, and the page where the possessive split is <b>produced</b> rather than read: the bank is split into things and people, so choosing the right line is choosing the right preposition. Nothing says why.</p></div></div>
+
+  <div class="sheet"><span class="sheet-tag"><span class="code">S6</span> <span class="rubric" lang="ar">دَوْرِي</span></span><h3>Name poster · page 8 · feeds the classroom share (C3)</h3>
+    <div class="nb"><p class="arabic" lang="ar" style="font-size:23px">هٰذَا أَنَا. اِسْمِي <span class="slot" style="min-width:150px"></span>.<br>لِي صَدِيقٌ / صَدِيقَةٌ: <span class="slot" style="min-width:150px"></span>.</p>
+    <div class="drawbox" style="height:130px"><span class="rubric" lang="ar">اُرْسُمْ نَفْسَكَ</span></div></div></div>
+
+  <div class="sheet"><span class="sheet-tag"><span class="code">C1</span> <span class="rubric" lang="ar">اِسْأَلْ أَصْدِقَاءَكَ</span></span><h3>Survey grid · page 9 · filled in class, used on page 5</h3>
+    <div class="nb" style="background-image:none">
+      <p class="arabic" lang="ar" style="text-align:center;font-size:21px">«مَنْ أَنْتَ؟» · «مَنْ عِنْدَهُ قَلَمٌ؟»</p>
+      <table class="nbgrid">
+        <tr><th>الِاسْمُ</th><th>عِنْدَهُ / عِنْدَهَا قَلَمٌ</th><th>عِنْدَهُ / عِنْدَهَا قَائِمَةٌ</th></tr>
+        <tr><td>1</td><td></td><td></td></tr>
+        <tr><td>2</td><td></td><td></td></tr>
+        <tr><td>3</td><td></td><td></td></tr>
+        <tr><td>4</td><td></td><td></td></tr>
+        <tr><td>5</td><td></td><td></td></tr>
+      </table>
+      <p class="arabic" lang="ar" style="text-align:center;font-size:19px;margin-top:10px">اِسْأَلْ. اُكْتُبِ الِاسْمَ. ✓</p>
+      <p class="note" style="direction:ltr">Two licensed questions, five real classmates, ticks not sentences. The names collected here are the raw material for N2 — the notebook feeds itself. <b>C1's whole instruction is that one Arabic line (SC-049)</b> — there is no teacher page and none is needed.</p></div></div>
+
+  <div class="sheet" style="opacity:.6"><span class="sheet-tag"><span class="code">N4</span> <span class="rubric" lang="ar">هَلْ تَذْكُرُ؟</span></span><h3>Do you remember? · page 10 · <b>empty at Unit 1 by design</b></h3>
+    <div class="nb"><p class="arabic" lang="ar" style="text-align:center;font-size:22px">🕐</p>
+    <p class="note" style="direction:ltr;text-align:center">The delayed-retrieval page draws only on <b>earlier</b> units, so Unit 1's is deliberately blank — it carries the format's icon and its promise. The first real one is in Unit 2.</p></div></div>
+
+  </main>
+</section>
+
+<footer>The School Course · Level 1 Review Library · drafts per SC-023–49 · stick-figure art direction per SC-034 · this page republishes at the same link with every unit build. Deep links: #unit-01/student · #unit-01/practice · #unit-01/notebook · (#unit-01p/practice — internal engine reuse test, unlisted)</footer>
+
+<script>
+/* The School Course — online supplement: input & vocabulary engine (Phase 1 core)
+   DOM-independent: unit data + normalization + activity generation + QC.
+   Authoritative Arabic source: SCHOOL_COURSE_U1_MAIN_STORY.md v5 / UNIT1_BUILD §1 (SC-023..041).
+   Rules: canonical Arabic is never rewritten; language status gates activity families;
+   spoiler stages gate visibility; failing activities are suppressed, never shown. */
+(function(root){
+"use strict";
+
+/* ---------------- language status permissions ---------------- */
+const STATUS = {
+  NEW_CORE_TARGET:      {explore:1, recog:1, context:1, eitheror:1, comp:1, seq:1, findit:1, retrieval:1},
+  RECYCLED_CORE_TARGET: {explore:1, recog:1, context:1, eitheror:1, comp:1, seq:1, findit:1, retrieval:1},
+  COMPREHENSIBLE_SUPPORT:{explore:1, recog:1, context:1, eitheror:1, comp:1, seq:1, findit:1, retrieval:0},
+  RECOGNITION_ONLY:     {explore:1, recog:1, context:1, eitheror:0, comp:1, seq:0, findit:0, retrieval:0}
+};
+
+/* ---------------- unit data (authoritative references) ---------------- */
+/* Sentences carry canonical Arabic verbatim. Items reference sentences; activities reference both.
+   spoiler_stage: 0 arrival · 1 the mix-up · 2 omar & sara found · 3 the discovery. */
+
+const UNIT_01 = {
+  unit_id:"unit-01", title:"مَنْ أَنْتَ؟", audio:{verified:false},
+  cast:[
+    {id:"lina", ar:"لِينَا", img:"av-lina"},
+    {id:"omar", ar:"عُمَر", img:"av-omar"},
+    {id:"sara", ar:"سَارَة", img:"av-sara"},
+    {id:"huda", ar:"هُدَى", img:"av-huda"},
+    {id:"rana", ar:"رَنَا", img:"av-rana"}
+  ],
+  items:[
+    {id:"salam",  ar:"السَّلَامُ عَلَيْكُمْ", status:"NEW_CORE_TARGET", gloss:"hello (greeting)", img:null, dim:"greeting", phrase:"السَّلَامُ عَلَيْكُمْ!", hl:"السَّلَامُ عَلَيْكُمْ"},
+    {id:"reply",  ar:"وَعَلَيْكُمُ السَّلَامُ", status:"RECOGNITION_ONLY", gloss:"(the reply)", img:null, dim:"greeting", phrase:"وَعَلَيْكُمُ السَّلَامُ!", hl:"وَعَلَيْكُمُ السَّلَامُ"},
+    {id:"ahlan",  ar:"أَهْلًا", status:"NEW_CORE_TARGET", gloss:"welcome!", img:null, dim:"greeting", phrase:"أَهْلًا يَا لِينَا!", hl:"أَهْلًا"},
+    {id:"ana",    ar:"أَنَا", status:"NEW_CORE_TARGET", gloss:"I", img:null, dim:"person", phrase:"أَنَا لِينَا.", hl:"أَنَا"},
+    {id:"walad",  ar:"وَلَدٌ", status:"NEW_CORE_TARGET", gloss:"a boy", img:"av-omar", dim:"person", phrase:"هٰذَا وَلَدٌ.", hl:"وَلَدٌ"},
+    {id:"bint",   ar:"بِنْتٌ", status:"NEW_CORE_TARGET", gloss:"a girl", img:"av-sara", dim:"person", phrase:"هٰذِهِ بِنْتٌ.", hl:"بِنْتٌ"},
+    {id:"sadiq",  ar:"صَدِيقٌ", status:"NEW_CORE_TARGET", gloss:"a friend", img:"vg-sadiq", dim:"person", phrase:"لِينَا صَدِيقَتِي!", hl:"صَدِيقَتِي"},
+    {id:"qaima",  ar:"قَائِمَةٌ", status:"COMPREHENSIBLE_SUPPORT", gloss:"a list", img:"obj-list", dim:"object", phrase:"هٰذِهِ قَائِمَةٌ.", hl:"قَائِمَةٌ"},
+    {id:"qalam",  ar:"قَلَمٌ", status:"COMPREHENSIBLE_SUPPORT", gloss:"a pen", img:"obj-pen", dim:"object", phrase:"هٰذَا قَلَمٌ.", hl:"قَلَمٌ"},
+    {id:"inda",   ar:"عِنْدَهَا", status:"NEW_CORE_TARGET", gloss:"she has (a thing)", img:null, dim:"possession", phrase:"عِنْدَهَا قَائِمَةٌ.", hl:"عِنْدَهَا"},
+    {id:"li",     ar:"لِي", status:"NEW_CORE_TARGET", gloss:"I have (people)", img:"vg-sadiq", dim:"possession", phrase:"لِي صَدِيقَاتٌ!", hl:"لِي"},
+    {id:"laysa",  ar:"لَيْسَ", status:"NEW_CORE_TARGET", gloss:"is not / has no", img:null, dim:"possession", phrase:"لَيْسَ لَهَا صَدِيقٌ.", hl:"لَيْسَ"},
+    {id:"laha",   ar:"لَهَا", status:"NEW_CORE_TARGET", gloss:"she has (a person)", img:null, dim:"possession", phrase:"لَهَا صَدِيقَةٌ.", hl:"لَهَا"},
+    {id:"yadkhul",ar:"تَدْخُلُ", status:"NEW_CORE_TARGET", gloss:"(she) enters", img:"vg-enter", dim:"action", phrase:"تَدْخُلُ لِينَا.", hl:"تَدْخُلُ"},
+    {id:"yara",   ar:"تَرَى", status:"NEW_CORE_TARGET", gloss:"(she) sees", img:"vg-see", dim:"action", phrase:"تَرَى لِينَا الْقَائِمَةَ.", hl:"تَرَى"},
+    {id:"yaqul",  ar:"تَقُولُ", status:"NEW_CORE_TARGET", gloss:"(she) says", img:"vg-say", dim:"action", phrase:"تَقُولُ لِينَا: «أَهْلًا!»", hl:"تَقُولُ"},
+    {id:"yuhibb", ar:"تُحِبُّ", status:"NEW_CORE_TARGET", gloss:"(she) likes", img:"vg-like", dim:"action", phrase:"تُحِبُّ لِينَا الْقَائِمَةَ.", hl:"تُحِبُّ"},
+    {id:"hunaka", ar:"هُنَاكَ", status:"NEW_CORE_TARGET", gloss:"there is", img:null, dim:"existence", phrase:"هُنَاكَ قَائِمَةٌ.", hl:"هُنَاكَ"},
+    {id:"man",    ar:"مَنْ؟", status:"NEW_CORE_TARGET", gloss:"who?", img:null, dim:"question", phrase:"مَنْ عُمَر؟", hl:"مَنْ"},
+    {id:"ism",    ar:"اسْمٌ", status:"NEW_CORE_TARGET", gloss:"a name", img:"obj-list", dim:"object", phrase:"هُنَاكَ اسْمٌ: «عُمَر».", hl:"اسْمٌ"}
+  ],
+  sentences:[
+    {id:"m01", ar:"تَدْخُلُ لِينَا.", stage:0, items:["yadkhul"], img:"sc-door"},
+    {id:"m02", ar:"لَيْسَ لَهَا صَدِيقٌ... وَعِنْدَهَا قَائِمَةٌ.", stage:0, items:["laysa","inda","sadiq","qaima"], img:"sc-door"},
+    {id:"m03", ar:"تَقُولُ لِينَا: «السَّلَامُ عَلَيْكُمْ! أَنَا لِينَا.»", stage:0, items:["yaqul","salam","ana"], img:"sc-door"},
+    {id:"m04", ar:"يَقُولُ عُمَر وَسَارَة وَرَنَا: «وَعَلَيْكُمُ السَّلَامُ!»", stage:0, items:["reply"], img:"sc-door"},
+    {id:"m05", ar:"تَرَى لِينَا الْقَائِمَةَ.", stage:0, items:["yara","qaima"], img:"sc-list"},
+    {id:"m06", ar:"هُنَاكَ اسْمٌ: «عُمَر». وَهُنَاكَ اسْمٌ: «سَارَة».", stage:0, items:["hunaka","ism"], img:"sc-list"},
+    {id:"m07", ar:"تَقُولُ لِينَا: «مَنْ عُمَر؟ وَمَنْ سَارَة؟»", stage:0, items:["yaqul","man"], img:"sc-list"},
+    {id:"m08", ar:"تَرَى لِينَا هُدَى وَتَقُولُ: «هٰذِهِ سَارَة!»", stage:1, items:["yara","yaqul"], img:"sc-huda"},
+    {id:"m09", ar:"تَقُولُ هُدَى: «لَا! لَا! لَيْسَ اسْمِي سَارَة! أَنَا هُدَى!»", stage:1, items:["yaqul","ana","laysa","ism"], img:"sc-huda"},
+    {id:"m10", ar:"تَقُولُ لِينَا: «لَا؟... أَهْلًا يَا هُدَى!»", stage:1, items:["ahlan"], img:"sc-huda"},
+    {id:"m10b",ar:"لَيْسَ لَهَا صَدِيقٌ.", stage:1, items:["laysa","laha","sadiq"], img:"sc-alone"},
+    {id:"m11", ar:"تَرَى لِينَا وَلَدًا. تَقُولُ: «أَنْتَ عُمَر!»", stage:1, items:["yara","walad"], img:"sc-omar"},
+    {id:"m12", ar:"يَقُولُ الْوَلَدُ: «نَعَمْ! أَنَا عُمَر! وَمَنْ أَنْتِ؟»", stage:1, items:["yaqul","walad","man"], img:"sc-omar"},
+    {id:"m14", ar:"تَرَى لِينَا بِنْتًا. تَقُولُ: «وَأَنْتِ سَارَة!»", stage:2, items:["yara","bint"], img:"sc-sara"},
+    {id:"m15", ar:"تَقُولُ الْبِنْتُ: «نَعَمْ! أَنَا سَارَة!»", stage:2, items:["yaqul","bint"], img:"sc-sara"},
+    {id:"m15b",ar:"يَرَى عُمَر الْقَائِمَةَ وَيَقُولُ: «هُنَاكَ اسْمٌ: \"طَارِق\"! لِي صَدِيقٌ: طَارِق!»", stage:2, items:["yara","yaqul","hunaka","ism","sadiq","qaima","li"], img:"sc-tariq"},
+    {id:"m16", ar:"تَرَى سَارَة الْقَائِمَةَ وَتَقُولُ: «هُنَاكَ اسْمٌ: \"لِينَا\"! مَنْ هِيَ؟»", stage:3, items:["yara","yaqul","hunaka","ism","man","qaima"], img:"sc-end"},
+    {id:"m17", ar:"«أَنَا! أَنَا لِينَا!»", stage:3, items:["ana"], img:"sc-end"},
+    {id:"m18", ar:"«أَهْلًا يَا لِينَا! لِينَا صَدِيقَتِي!»", stage:3, items:["ahlan","sadiq"], img:"sc-end"},
+    {id:"m18b",ar:"وَتَقُولُ رَنَا: «وَلِي صَدِيقَةٌ: لِينَا!»", stage:3, items:["yaqul","sadiq","li"], img:"sc-end"},
+    {id:"m19", ar:"تُحِبُّ لِينَا... الْقَائِمَةَ!", stage:3, items:["yuhibb","qaima"], img:"sc-end"},
+    {id:"m20", ar:"تَقُولُ لِينَا: «أَنَا لِينَا... وَلِي صَدِيقَاتٌ!»", stage:3, items:["yaqul","ana","li","sadiq"], img:"sc-end"}
+  ],
+  readings:[
+    {id:"main", role:"main", title:"قَائِمَةُ لِينَا", sentence_ids:["m01","m02","m03","m04","m05","m06","m07","m08","m09","m10","m10b","m11","m12","m14","m15","m15b","m16","m17","m18","m18b","m19","m20"]}
+  ],
+  /* authored contrast metadata (spec §13): every alternative is canonical or owner-authored unit language */
+  contrasts:[
+    {id:"c1", stage:0, img:"sc-list",  a:"عِنْدَهَا قَائِمَةٌ", b:"لَيْسَ عِنْدَهَا قَائِمَةٌ", correct:"a", support:"m05", dim:"possession"},
+    {id:"c2", stage:0, img:"sc-alone", a:"لَيْسَ لَهَا صَدِيقٌ", b:"لَهَا صَدِيقٌ", correct:"a", support:"m02", dim:"possession"},
+    {id:"c3", stage:1, img:"sc-huda",  a:"هٰذِهِ هُدَى", b:"هٰذِهِ سَارَة", correct:"a", support:"m09", dim:"person"},
+    {id:"c4", stage:2, img:"sc-omar",  a:"هٰذَا عُمَر", b:"هٰذِهِ سَارَة", correct:"a", support:"m12", dim:"person"},
+    {id:"c5", stage:3, img:"sc-end",   a:"لَهَا صَدِيقَاتٌ", b:"لَيْسَ لَهَا صَدِيقٌ", correct:"a", support:"m20", dim:"possession"}
+  ],
+  /* true/false + who-says facts; wording is canonical text or owner-authored unit language */
+  facts:[
+    {id:"f1", stage:2, ar:"سَارَة بِنْتٌ.", truth:true,  support:"m15", dim:"person"},
+    {id:"f2", stage:2, ar:"عُمَر بِنْتٌ.", truth:false, support:"m12", dim:"person"},
+    {id:"f3", stage:1, ar:"هٰذِهِ هُدَى.", truth:true,  support:"m09", img:"av-huda", dim:"person"},
+    {id:"f4", stage:3, ar:"لِينَا صَدِيقَةُ سَارَة.", truth:true, support:"m18", dim:"person"}
+  ],
+  whosays:[
+    {id:"w1", stage:1, quote:"«لَا! لَا! لَيْسَ اسْمِي سَارَة! أَنَا هُدَى!»", speaker:"huda", support:"m09"},
+    {id:"w2", stage:0, quote:"«السَّلَامُ عَلَيْكُمْ! أَنَا لِينَا.»", speaker:"lina", support:"m03"},
+    {id:"w3", stage:2, quote:"«لِي صَدِيقٌ: طَارِق!»", speaker:"omar", support:"m15b"},
+    {id:"w4", stage:3, quote:"«أَنَا! أَنَا لِينَا!»", speaker:"lina", support:"m17"},
+    {id:"w5", stage:3, quote:"«وَلِي صَدِيقَةٌ: لِينَا!»", speaker:"rana", support:"m18b"}
+  ],
+  events:[ /* sequencing units: meaningful events, picture-first */
+    {id:"e1", order:1, stage:0, img:"sc-door", sentence:"m01"},
+    {id:"e2", order:2, stage:0, img:"sc-list", sentence:"m05"},
+    {id:"e3", order:3, stage:1, img:"sc-huda", sentence:"m09"},
+    {id:"e4", order:4, stage:3, img:"sc-end",  sentence:"m20"}
+  ],
+  findit:[
+    {id:"fi1", stage:0, img:"sc-list",  prompt_gloss:"Which line says she has NO friend?", answer:"m02", pool:["m01","m02","m03","m07"]},
+    {id:"fi2", stage:1, img:"sc-huda",  prompt_gloss:"Which line shows the guess was WRONG?", answer:"m09", pool:["m08","m09","m10","m10b","m11"]},
+    {id:"fi3", stage:3, img:"sc-end",   prompt_gloss:"Which line shows what لينا loves?", answer:"m19", pool:["m17","m18","m19","m20"]}
+  ],
+  retrieval:[ /* missing-word choice: blank + choices are canonical surface forms from this unit */
+    {id:"r1", stage:0, sentence:"m05", blank:"الْقَائِمَةَ", choices:["الْقَائِمَةَ","وَلَدًا","بِنْتًا"], img:"sc-list", item:"qaima"},
+    {id:"r2", stage:1, sentence:"m11", blank:"وَلَدًا", choices:["الْقَائِمَةَ","وَلَدًا","بِنْتًا"], img:"sc-omar", item:"walad"},
+    {id:"r3", stage:0, sentence:"m02", blank:"صَدِيقٌ", choices:["صَدِيقٌ","قَائِمَةٌ"], img:"sc-alone", item:"sadiq"}
+  ]
+};
+
+/* second data unit — the parallel story packaged independently: proves cross-unit reuse (spec §27).
+   Items debuted in unit-01 arrive here as RECYCLED_CORE_TARGET. */
+const UNIT_01P = {
+  unit_id:"unit-01p", title:"مَنْ أَنْتَ يَا قَلَم؟", audio:{verified:false},
+  /* SC-041: the unit's SECOND reading is narrated in the PAST; dialogue stays present, as narrative does. */
+  cast:[
+    {id:"karim",   ar:"كَرِيم", img:"av-karim-pen"},
+    {id:"farida",  ar:"فَرِيدَة", img:"av-farida"},
+    {id:"maha",    ar:"مَهَا", img:"av-maha"},
+    {id:"zayd",    ar:"زَيْد", img:"av-zayd"},
+    {id:"qalam_c", ar:"الْقَلَمُ", img:"obj-pen"}
+  ],
+  items:[
+    {id:"salam",  ar:"السَّلَامُ عَلَيْكُمْ", status:"RECYCLED_CORE_TARGET", gloss:"hello (greeting)", img:null, dim:"greeting", phrase:"السَّلَامُ عَلَيْكُمْ!", hl:"السَّلَامُ عَلَيْكُمْ"},
+    {id:"dakhala",ar:"دَخَلَ", status:"NEW_CORE_TARGET", gloss:"(he) entered — past of يَدْخُلُ", img:"vg-enter", dim:"action", phrase:"دَخَلَ كَرِيم.", hl:"دَخَلَ"},
+    {id:"qala",   ar:"قَالَ", status:"NEW_CORE_TARGET", gloss:"(he) said — past of يَقُولُ", img:"vg-say", dim:"action", phrase:"قَالَ كَرِيم: «أَنَا!»", hl:"قَالَ"},
+    {id:"raa",    ar:"رَأَى", status:"NEW_CORE_TARGET", gloss:"(he) saw — past of يَرَى", img:"vg-see", dim:"action", phrase:"رَأَى كَرِيم الْقَلَمَ.", hl:"رَأَى"},
+    {id:"qalam",  ar:"قَلَمٌ", status:"COMPREHENSIBLE_SUPPORT", gloss:"a pen", img:"obj-pen", dim:"object", phrase:"هٰذَا قَلَمٌ.", hl:"قَلَمٌ"},
+    {id:"inda",   ar:"عِنْدَهُ", status:"RECYCLED_CORE_TARGET", gloss:"he has (a thing)", img:null, dim:"possession", phrase:"عِنْدَهُ قَلَمٌ.", hl:"عِنْدَهُ"},
+    {id:"man",    ar:"مَنْ؟", status:"RECYCLED_CORE_TARGET", gloss:"who?", img:null, dim:"question", phrase:"مَنْ عِنْدَهُ قَلَمٌ؟", hl:"مَنْ"},
+    {id:"hunaka", ar:"هُنَاكَ", status:"RECYCLED_CORE_TARGET", gloss:"there is", img:null, dim:"existence", phrase:"هُنَاكَ قَلَمٌ!", hl:"هُنَاكَ"},
+    {id:"ana",    ar:"أَنَا", status:"RECYCLED_CORE_TARGET", gloss:"I", img:null, dim:"person", phrase:"أَنَا قَلَمٌ!", hl:"أَنَا"},
+    {id:"sadiq",  ar:"صَدِيقٌ", status:"RECYCLED_CORE_TARGET", gloss:"a friend", img:"vg-sadiq", dim:"person", phrase:"لِي صَدِيقٌ: كَرِيم!", hl:"صَدِيقٌ"},
+    {id:"laysa",  ar:"لَيْسَ", status:"RECYCLED_CORE_TARGET", gloss:"is not / has no", img:null, dim:"possession", phrase:"لَيْسَ عِنْدِي قَلَمٌ!", hl:"لَيْسَ"},
+    {id:"li",     ar:"لِي", status:"RECYCLED_CORE_TARGET", gloss:"I have (a person)", img:"vg-sadiq", dim:"possession", phrase:"لِي صَدِيقٌ: كَرِيم!", hl:"لِي"}
+  ],
+  sentences:[
+    {id:"r01", ar:"دَخَلَ كَرِيم وَقَالَ: «السَّلَامُ عَلَيْكُمْ!»", stage:0, items:["dakhala","qala","salam"], img:"sc-pen1"},
+    {id:"r02", ar:"قَالَتْ فَرِيدَة وَمَهَا وَزَيْد: «وَعَلَيْكُمُ السَّلَامُ!»", stage:0, items:[], img:"sc-pen1"},
+    {id:"r03", ar:"قَالَ كَرِيم: «مَنْ عِنْدَهُ قَلَمٌ؟»", stage:0, items:["qala","man","inda","qalam"], img:"sc-pen2"},
+    {id:"r04", ar:"قَالَتْ مَهَا: «لَا! لَيْسَ عِنْدِي قَلَمٌ!»", stage:1, items:["laysa","qalam"], img:"sc-pen2"},
+    {id:"r05", ar:"قَالَ زَيْد: «لَا! لَيْسَ عِنْدِي قَلَمٌ!»", stage:1, items:["qala","laysa","qalam"], img:"sc-pen2"},
+    {id:"r06", ar:"قَالَتْ فَرِيدَة: «لَا! لَيْسَ عِنْدِي قَلَمٌ!»", stage:1, items:["laysa","qalam"], img:"sc-pen2"},
+    {id:"r07", ar:"قَالَ كَرِيم: «مَنْ عِنْدَهُ قَلَمٌ؟»", stage:1, items:["qala","man"], img:"sc-pen2"},
+    {id:"r08", ar:"قَالَ قَلَمٌ: «أَنَا! أَنَا قَلَمٌ!»", stage:2, items:["qala","ana","qalam"], img:"sc-pen3"},
+    {id:"r09", ar:"رَأَى كَرِيم الْقَلَمَ وَقَالَ: «مَنْ... مَنْ أَنْتَ؟»", stage:2, items:["raa","qala","man"], img:"sc-pen3"},
+    {id:"r10", ar:"قَالَ الْقَلَمُ: «أَنَا قَلَمُ كَرِيم! وَلِي صَدِيقٌ: كَرِيم!»", stage:2, items:["qala","ana","sadiq","li"], img:"sc-pen3"},
+    {id:"r11", ar:"قَالَتْ فَرِيدَة: «نَعَمْ يَا كَرِيم... هُنَاكَ قَلَمٌ!»", stage:2, items:["hunaka","qalam"], img:"sc-pen3"}
+  ],
+  readings:[{id:"parallel", role:"parallel", title:"مَنْ أَنْتَ يَا قَلَم؟", sentence_ids:["r01","r02","r03","r04","r05","r06","r07","r08","r09","r10","r11"]}],
+  contrasts:[
+    {id:"rc1", stage:0, img:"sc-pen1", a:"دَخَلَ كَرِيم", b:"رَأَى كَرِيم", correct:"a", support:"r01", dim:"action"},
+    {id:"rc2", stage:2, img:"sc-pen3", a:"أَنَا قَلَمٌ", b:"أَنَا وَلَدٌ", correct:"a", support:"r08", dim:"person"},
+    {id:"rc3", stage:2, img:"sc-pen3", a:"هُنَاكَ قَلَمٌ", b:"هُنَاكَ وَلَدٌ", correct:"a", support:"r11", dim:"existence"},
+    {id:"rc4", stage:1, img:"sc-pen2", a:"لَيْسَ عِنْدِي قَلَمٌ", b:"عِنْدِي قَلَمٌ", correct:"a", support:"r04", dim:"possession"}
+  ],
+  facts:[
+    {id:"rf1", stage:0, ar:"دَخَلَ كَرِيم.", truth:true, support:"r01", img:"vg-enter", dim:"action"},
+    {id:"rf2", stage:1, ar:"عِنْدَهَا قَلَمٌ.", truth:false, support:"r04", img:"av-maha", dim:"possession"},
+    {id:"rf3", stage:2, ar:"لِلْقَلَمِ صَدِيقٌ: كَرِيم.", truth:true, support:"r10", img:"obj-pen", dim:"person"}
+  ],
+  whosays:[
+    {id:"rw1", stage:0, quote:"«مَنْ عِنْدَهُ قَلَمٌ؟»", speaker:"karim", support:"r03"},
+    {id:"rw2", stage:2, quote:"«أَنَا قَلَمُ كَرِيم!»", speaker:"qalam_c", support:"r10"},
+    {id:"rw3", stage:2, quote:"«نَعَمْ يَا كَرِيم... هُنَاكَ قَلَمٌ!»", speaker:"farida", support:"r11"}
+  ],
+  events:[
+    {id:"re1", order:1, stage:0, img:"sc-pen1", sentence:"r01"},
+    {id:"re2", order:2, stage:1, img:"sc-pen2", sentence:"r04"},
+    {id:"re3", order:3, stage:2, img:"sc-pen3", sentence:"r08"}
+  ],
+  findit:[
+    {id:"rfi1", stage:2, img:"sc-pen3", prompt_gloss:"Which line does the PEN say?", answer:"r08", pool:["r03","r04","r08","r09"]}
+  ],
+  retrieval:[
+    {id:"rr1", stage:2, sentence:"r08", blank:"أَنَا", choices:["أَنَا","هُوَ"], img:"obj-pen", item:"ana"}
+  ]
+};
+
+/* ---------------- normalization ---------------- */
+function normalize(u){
+  const S={}, I={}, C={};
+  u.sentences.forEach(s=>S[s.id]=s);
+  u.items.forEach(i=>I[i.id]=i);
+  (u.cast||[]).forEach(c=>C[c.id]=c);
+  return {unit:u, S, I, C};
+}
+
+/* ---------------- generation (activities reference data; no Arabic is composed here) ---------------- */
+function gen(u){
+  const n=normalize(u), acts=[];
+  const push=(a)=>acts.push(a);
+
+  /* F1 explore — meaning establishment (all statuses permit) */
+  u.items.forEach(it=>{
+    const ctx=u.sentences.find(s=>s.items.includes(it.id));
+    push({activity_id:`${u.unit_id}_explore_${it.id}`, unit_id:u.unit_id, type:"explore", stage:"input",
+      difficulty:"supported", spoiler_stage:ctx?ctx.stage:0, item:it.id, sentence_ref:ctx?ctx.id:null});
+  });
+
+  /* F2 arabic→picture / F3 picture→arabic — items with images, meaningfully distinct dims */
+  const imgItems=u.items.filter(i=>i.img && STATUS[i.status].recog);
+  imgItems.forEach(it=>{
+    const distract=imgItems.filter(o=>o.id!==it.id && o.img!==it.img).slice(0,2);
+    if(distract.length>=1){
+      push({activity_id:`${u.unit_id}_a2p_${it.id}`, unit_id:u.unit_id, type:"arabic_to_picture", stage:"recognition",
+        difficulty:"supported", spoiler_stage:0, item:it.id, choices:[it.id,...distract.map(d=>d.id)], correct:it.id});
+      push({activity_id:`${u.unit_id}_p2a_${it.id}`, unit_id:u.unit_id, type:"picture_to_arabic", stage:"recognition",
+        difficulty:"supported", spoiler_stage:0, item:it.id, choices:[it.id,...distract.map(d=>d.id)], correct:it.id});
+    }
+  });
+
+  /* F4 meaning in context — highlight item inside canonical sentence, choose gloss */
+  u.sentences.forEach(s=>s.items.forEach(iid=>{
+    const it=n.I[iid]; if(!it||!STATUS[it.status].context) return;
+    if(!wordRe(stripQ(it.ar)).test(s.ar)) return;          /* whole-word match, not substring (SC-047) */
+    const glossPool=u.items.filter(o=>o.id!==iid && o.dim!==it.dim).slice(0,2);
+    if(glossPool.length<2) return;
+    push({activity_id:`${u.unit_id}_ctx_${s.id}_${iid}`, unit_id:u.unit_id, type:"meaning_in_context", stage:"recognition",
+      difficulty:"supported", spoiler_stage:s.stage, sentence_ref:s.id, item:iid,
+      choices:[iid,...glossPool.map(g=>g.id)], correct:iid});
+  }));
+
+  /* F5 either/or — authored contrasts */
+  (u.contrasts||[]).forEach(c=>push({activity_id:`${u.unit_id}_eo_${c.id}`, unit_id:u.unit_id, type:"either_or",
+    stage:"comprehension", difficulty:"supported", spoiler_stage:c.stage, contrast:c.id, support:c.support}));
+
+  /* F6 comprehension — TF + who-says */
+  (u.facts||[]).forEach(f=>push({activity_id:`${u.unit_id}_tf_${f.id}`, unit_id:u.unit_id, type:"true_false",
+    stage:"comprehension", difficulty:"supported", spoiler_stage:f.stage, fact:f.id, support:f.support}));
+  (u.whosays||[]).forEach(w=>push({activity_id:`${u.unit_id}_ws_${w.id}`, unit_id:u.unit_id, type:"who_says",
+    stage:"comprehension", difficulty:"supported", spoiler_stage:w.stage, quote:w.id, support:w.support}));
+
+  /* F7 sequencing — events, button ordering */
+  if((u.events||[]).length>=3){
+    const maxStage=Math.max(...u.events.map(e=>e.stage));
+    push({activity_id:`${u.unit_id}_seq_events`, unit_id:u.unit_id, type:"sequence", stage:"rereading",
+      difficulty:"familiar", spoiler_stage:maxStage, events:u.events.map(e=>e.id)});
+  }
+
+  /* F8 find it in the story */
+  (u.findit||[]).forEach(f=>push({activity_id:`${u.unit_id}_find_${f.id}`, unit_id:u.unit_id, type:"find_it",
+    stage:"rereading", difficulty:"familiar", spoiler_stage:f.stage, findit:f.id}));
+
+  /* F9 listening — only with verified audio (spec: suppressed otherwise) */
+  if(u.audio && u.audio.verified){ /* generators would go here; none generated without verified audio */ }
+
+  /* F10 supported retrieval — core items only, gated at runtime by prior comprehension */
+  (u.retrieval||[]).forEach(r=>{
+    const it=n.I[r.item];
+    if(!it || !STATUS[it.status].retrieval) return;       /* support/recognition never productively tested */
+    push({activity_id:`${u.unit_id}_ret_${r.id}`, unit_id:u.unit_id, type:"retrieval", stage:"retrieval",
+      difficulty:"retrieval", spoiler_stage:r.stage, retrieval:r.id, requires:"comprehension_done"});
+  });
+
+  return acts;
+}
+
+function stripQ(t){return t.replace(/[؟?]/g,"").trim();}
+/* SC-047: match an item as a WHOLE word (optionally after a وَ prefix).
+   Without this, لِي matches inside لِينَا and the highlight lands on the name. */
+function wordRe(s){
+  const e=String(s).replace(/[.*+?^${}()|[\]\\]/g,"\\$&");
+  return new RegExp("(^|[\\s«»\"،:.!؟\\-])((?:وَ)?"+e+")(?=$|[\\s«»\"،:.!؟\\-])");
+}
+
+/* ---------------- QC (spec §23): verify or suppress ---------------- */
+function qc(u, acts){
+  const n=normalize(u), ok=[], failed=[];
+  const fail=(a,why)=>failed.push({id:a.activity_id, why});
+  acts.forEach(a=>{
+    try{
+      if(a.sentence_ref && !n.S[a.sentence_ref]) return fail(a,"missing sentence ref");
+      if(a.item && !n.I[a.item]) return fail(a,"missing item ref");
+      if(a.item){ const _it=n.I[a.item];                                   /* SC-038: phrase carriers */
+        if(_it.hl && !(_it.phrase||"").includes(_it.hl)) return fail(a,"hl not verbatim in phrase"); }
+      if(a.choices){
+        if(new Set(a.choices).size!==a.choices.length) return fail(a,"duplicate choices");
+        if(!a.choices.includes(a.correct)) return fail(a,"correct not in choices");
+        if(a.choices.length<2) return fail(a,"too few choices");
+      }
+      if(a.type==="who_says"){                                            /* SC-052: a printed quote is quoted verbatim */
+        const w=(u.whosays||[]).find(x=>x.id===a.quote);
+        if(!w) return fail(a,"missing whosays data");
+        const sup=n.S[w.support];
+        if(!sup) return fail(a,"missing support sentence");
+        if(!sup.ar.includes(String(w.quote).replace(/^«|»$/g,"")))
+          return fail(a,"quote not verbatim in its support sentence");
+      }
+      if(a.type==="retrieval"){
+        const r=(u.retrieval||[]).find(x=>x.id===a.retrieval);
+        if(!r) return fail(a,"missing retrieval data");
+        const s=n.S[r.sentence];
+        if(!s) return fail(a,"missing sentence");
+        if(!s.ar.includes(r.blank)) return fail(a,"blank not in canonical sentence");   /* Arabic never altered */
+        if(!r.choices.includes(r.blank)) return fail(a,"answer not in choices");
+        if(new Set(r.choices).size!==r.choices.length) return fail(a,"dup choices");
+      }
+      if(a.type==="either_or"){
+        const c=(u.contrasts||[]).find(x=>x.id===a.contrast);
+        if(!c || !n.S[c.support]) return fail(a,"contrast/support missing");
+        if(c.a===c.b) return fail(a,"degenerate contrast");
+      }
+      if(a.type==="true_false"){
+        const f=(u.facts||[]).find(x=>x.id===a.fact);
+        if(!f || !n.S[f.support]) return fail(a,"fact/support missing");
+        if(f.stage < n.S[f.support].stage) return fail(a,"support spoils later stage");
+      }
+      if(a.type==="who_says"){
+        const w=(u.whosays||[]).find(x=>x.id===a.quote);
+        if(!w || !n.C[w.speaker] || !n.S[w.support]) return fail(a,"whosays refs missing");
+        if(!n.S[w.support].ar.includes(w.quote.replace(/[«»]/g,"").slice(0,6))) {/* soft check */}
+      }
+      if(a.type==="find_it"){
+        const f=(u.findit||[]).find(x=>x.id===a.findit);
+        if(!f) return fail(a,"findit missing");
+        if(!f.pool.includes(f.answer)) return fail(a,"answer not in pool");
+        if(f.pool.some(p=>!n.S[p])) return fail(a,"pool sentence missing");
+        if(f.pool.some(p=>n.S[p].stage>f.stage)) return fail(a,"pool spoils later stage");
+      }
+      if(a.type==="sequence"){
+        const evs=(u.events||[]);
+        if(evs.some(e=>!n.S[e.sentence])) return fail(a,"event sentence missing");
+      }
+      ok.push(a);
+    }catch(e){ fail(a,"exception: "+e.message); }
+  });
+  return {ok, failed};
+}
+
+/* ---------------- reading-practice sequence selection (spec §10/§11) ---------------- */
+function sequenceFor(u, readingId, sessionStage, comprehensionDone){
+  const {ok}=qc(u, gen(u));
+  const vis=a=>a.spoiler_stage<=sessionStage;
+  const seq=[];
+  seq.push(...ok.filter(a=>a.type==="explore").slice(0,6));
+  seq.push(...ok.filter(a=>a.type==="arabic_to_picture"&&vis(a)));
+  seq.push({activity_id:`${u.unit_id}_read_${readingId}`, unit_id:u.unit_id, type:"read", stage:"encounter", spoiler_stage:sessionStage});
+  seq.push(...ok.filter(a=>a.type==="either_or"&&vis(a)));
+  seq.push(...ok.filter(a=>(a.type==="true_false"||a.type==="who_says")&&vis(a)));
+  seq.push(...ok.filter(a=>a.type==="find_it"&&vis(a)));
+  seq.push(...ok.filter(a=>a.type==="sequence"&&vis(a)));
+  if(comprehensionDone) seq.push(...ok.filter(a=>a.type==="retrieval"&&vis(a)));
+  return seq;
+}
+
+const API={UNITS:{ "unit-01":UNIT_01, "unit-01p":UNIT_01P }, STATUS, normalize, gen, qc, sequenceFor, wordRe};
+if(typeof module!=="undefined"&&module.exports) module.exports=API;
+root.SC_ENGINE=API;
+})(typeof window!=="undefined"?window:globalThis);
+
+/* ---- practice player (DOM layer over SC_ENGINE) ---- */
+const SCP=(function(){
+  const E=window.SC_ENGINE;
+  let U=null,N=null,queue=[],qi=0,sessionStage=0,compDone=false,phase="";
+  const $=id=>document.getElementById(id);
+  const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+  const say=t=>{try{if(!window.speechSynthesis)return;const u=new SpeechSynthesisUtterance(String(t).replace(/[«»"]/g,''));u.lang='ar-SA';u.rate=.85;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}};
+  const img=(id,cls)=>id?`<svg class="${cls||'timg'}" viewBox="0 0 120 100" aria-hidden="true"><use href="#${id}"/></svg>`:"";
+  /* SC-038: an item is met inside a phrase whenever one exists; hl marks the target inside it */
+  const ph=it=>it.phrase||it.ar;
+  const phHL=it=>{const p=esc(ph(it)),h=it.hl?esc(it.hl):null;
+    return (h&&p.indexOf(h)>=0)?p.replace(h,`<mark>${h}</mark>`):p;};
+
+  function mount(unitId){
+    U=E.UNITS[unitId];N=E.normalize(U);sessionStage=0;compDone=false;queue=[];qi=0;
+    $("pr-title").textContent=U.title;
+    $("pr-sub").textContent=unitId==="unit-01p"?"Engine reuse test — second data unit":"Unit practice · المنصّة";
+    hub();
+  }
+  function hub(){
+    $("pr-stage").innerHTML=`
+      <div class="prhub">
+        <button class="hubcard" data-h="vocab"><span class="hubar" lang="ar">الْمُفْرَدَات</span><span class="hubext">Vocabulary practice — meet, recognize, and meet again</span></button>
+        <button class="hubcard" data-h="reading"><span class="hubar" lang="ar">الْقِرَاءَة</span><span class="hubext">Reading practice — read, understand, reread, retrieve</span></button>
+      </div>
+      <p class="note" style="direction:ltr;margin-top:14px">Audio: browser preview voice only — recorded audio not yet verified, so listening activities are suppressed by rule. One task at a time; wrong answers bring more Arabic, never just an ✗.</p>`;
+    $("pr-stage").querySelectorAll(".hubcard").forEach(b=>b.addEventListener("click",()=>start(b.dataset.h)));
+    dots();
+  }
+  function start(which){
+    phase=which;
+    const {ok}=E.qc(U,E.gen(U));
+    const vis=a=>a.spoiler_stage<=sessionStage;
+    if(which==="vocab"){
+      queue=[...ok.filter(a=>a.type==="explore").slice(0,6),
+             ...ok.filter(a=>a.type==="arabic_to_picture"),
+             ...ok.filter(a=>a.type==="picture_to_arabic"),
+             ...ok.filter(a=>a.type==="meaning_in_context"&&vis(a)).slice(0,4)];
+    }else{
+      queue=[...ok.filter(a=>a.type==="explore").slice(0,4),
+             ...ok.filter(a=>a.type==="arabic_to_picture").slice(0,3),
+             {type:"read"},
+             "POST"];
+    }
+    qi=0;render();
+  }
+  function postComp(){
+    const {ok}=E.qc(U,E.gen(U));
+    const vis=a=>a.spoiler_stage<=sessionStage;
+    const post=[...ok.filter(a=>a.type==="either_or"&&vis(a)),
+                ...ok.filter(a=>(a.type==="true_false"||a.type==="who_says")&&vis(a)),
+                ...ok.filter(a=>a.type==="find_it"&&vis(a)),
+                ...ok.filter(a=>a.type==="sequence"&&vis(a))];
+    compDone=true;
+    const ret=ok.filter(a=>a.type==="retrieval"&&vis(a));
+    return [...post,...ret];
+  }
+  function dots(){
+    $("pr-dots").innerHTML=queue.length?queue.map((_,i)=>`<span class="dot${i<qi?' done':i===qi?' now':''}"></span>`).join(""):"";
+  }
+  function next(){qi++;if(qi<queue.length&&queue[qi]==="POST"){queue.splice(qi,1,...postComp());}
+    if(qi>=queue.length){finish();return;}render();}
+  function finish(){
+    $("pr-stage").innerHTML=`<div class="donebig" lang="ar">أَحْسَنْت! ✔</div><p class="note" style="direction:ltr">Sequence complete.</p><button class="pbtn primary" id="pr-again">Back to pathways</button>`;
+    $("pr-again").addEventListener("click",hub);dots();
+  }
+  function frame(inner,help){ $("pr-stage").innerHTML=inner+`<div id="pr-help" class="helpbox" hidden></div>`; dots();
+    if(help)window._prHelp=help; }
+  function wrong(btn,supportSid,supportImg){
+    btn.classList.add("bad");setTimeout(()=>btn.classList.remove("bad"),350);
+    const h=$("pr-help");const s=supportSid?N.S[supportSid]:null;
+    h.innerHTML=`${supportImg?img(supportImg,'himg'):''}${s?`<p class="arabic" lang="ar">${esc(s.ar)}</p>`:""}<button class="sayb" aria-label="listen">🔊</button>`;
+    h.hidden=false;
+    h.querySelector(".sayb").addEventListener("click",()=>s&&say(s.ar));
+    if(s)say(s.ar);
+  }
+  function right(btn){btn.classList.add("good");setTimeout(next,650);}
+
+  const R={};
+  R.explore=a=>{const it=N.I[a.item],s=a.sentence_ref?N.S[a.sentence_ref]:null;
+    frame(`<div class="xcard">${img(it.img,'ximg')}<div class="xar" lang="ar">${phHL(it)}</div>
+      <div class="xg">${esc(it.gloss)}</div>
+      ${s&&s.stage<=sessionStage&&s.ar!==ph(it)?`<div class="xctx arabic" lang="ar">${esc(s.ar)}</div>`:""}
+      <div class="xrow"><button class="sayb" id="x-say" aria-label="listen">🔊</button>
+      <button class="pbtn primary" id="x-next">التَّالِي ←</button></div></div>`);
+    $("x-say").addEventListener("click",()=>say(ph(it)));$("x-next").addEventListener("click",next);say(ph(it));};
+  R.arabic_to_picture=a=>{const it=N.I[a.item];
+    frame(`<div class="prompt"><button class="sayb" id="t-say">🔊</button><span class="bubble" lang="ar">${phHL(it)}</span></div>
+      <div class="facegrid">${shuffle(a.choices).map(c=>`<button class="face" data-c="${c}">${img(N.I[c].img)}</button>`).join("")}</div>`);
+    $("t-say").addEventListener("click",()=>say(ph(it)));say(ph(it));
+    bindChoices(a.correct,c=>N.I[c].img?null:null,a.sentence_ref,it.img);};
+  R.picture_to_arabic=a=>{const it=N.I[a.item];
+    frame(`<div class="prompt">${img(it.img,'pimg')}</div>
+      <div class="facegrid">${shuffle(a.choices).map(c=>`<button class="face" data-c="${c}"><div class="nm big" lang="ar">${esc(ph(N.I[c]))}</div></button>`).join("")}</div>`);
+    bindChoices(a.correct,null,null,it.img);};
+  R.meaning_in_context=a=>{const it=N.I[a.item],s=N.S[a.sentence_ref];
+    const hl=esc(s.ar).replace(E.wordRe(esc(it.ar.replace(/[؟?]/g,"").trim())),(m,p,w)=>p+`<mark>${w}</mark>`);
+    frame(`<p class="arabic big rtl" lang="ar">${hl}</p><div class="facegrid">${shuffle(a.choices).map(c=>`<button class="face" data-c="${c}"><div class="nm">${esc(N.I[c].gloss)}</div></button>`).join("")}</div>`);
+    bindChoices(a.correct,null,a.sentence_ref,s.img);};
+  R.either_or=a=>{const c=(U.contrasts||[]).find(x=>x.id===a.contrast);
+    frame(`<div class="prompt">${img(c.img,'pimg')}</div>
+      <div class="facegrid">${shuffle([["a",c.a],["b",c.b]]).map(([k,t])=>`<button class="face" data-c="${k}"><div class="nm big" lang="ar">${esc(t)}</div></button>`).join("")}</div>`);
+    bindChoices(c.correct,null,c.support,c.img);};
+  R.true_false=a=>{const f=(U.facts||[]).find(x=>x.id===a.fact);
+    frame(`<div class="prompt">${f.img?img(f.img,'pimg'):""}<span class="bubble" lang="ar">${esc(f.ar)}</span></div>
+      <div class="yn"><button class="ynb" data-c="t" lang="ar">صَحّ</button><button class="ynb" data-c="f" lang="ar">خَطَأ</button></div>`);
+    bindChoices(f.truth?"t":"f",null,f.support,f.img||N.S[f.support].img);};
+  R.who_says=a=>{const w=(U.whosays||[]).find(x=>x.id===a.quote);
+    frame(`<div class="prompt"><button class="sayb" id="t-say">🔊</button><span class="bubble" lang="ar">${esc(w.quote)}</span></div>
+      <div class="facegrid">${shuffle(U.cast.map(c=>c.id)).map(c=>`<button class="face" data-c="${c}">${img(N.C[c].img)}<div class="nm" lang="ar">${esc(N.C[c].ar)}</div></button>`).join("")}</div>`);
+    $("t-say").addEventListener("click",()=>say(w.quote));
+    bindChoices(w.speaker,null,w.support,null);};
+  R.read=()=>{const rd=U.readings[0];
+    const upTo=st=>rd.sentence_ids.map(id=>N.S[id]).filter(s=>s.stage<=st);
+    const draw=()=>{const vis=upTo(sessionStage);
+      frame(`<div class="readpage rtl">${vis.map(s=>`<p class="arabic" lang="ar" data-s="${s.id}">${esc(s.ar)} <button class="glossb sayb" data-say="${esc(s.ar)}" aria-label="listen">🔊</button></p>`).join("")}
+        <div class="xrow" style="direction:ltr">${sessionStage<3?`<button class="pbtn primary" id="rd-more" lang="ar">تَابِعْ ←</button>`:`<button class="pbtn primary" id="rd-done" lang="ar">التَّالِي ←</button>`}</div></div>`);
+      $("pr-stage").querySelectorAll("[data-say]").forEach(b=>b.addEventListener("click",()=>say(b.dataset.say)));
+      const m=$("rd-more");if(m)m.addEventListener("click",()=>{sessionStage++;draw();});
+      const d=$("rd-done");if(d)d.addEventListener("click",next);};
+    draw();};
+  R.find_it=a=>{const f=(U.findit||[]).find(x=>x.id===a.findit);
+    frame(`<div class="prompt">${img(f.img,'pimg')}<span class="hubext" style="max-width:34ch">${esc(f.prompt_gloss)}</span></div>
+      <div class="linepool rtl">${shuffle(f.pool.slice()).map(sid=>`<button class="lineopt arabic" lang="ar" data-c="${sid}">${esc(N.S[sid].ar)}</button>`).join("")}</div>`);
+    bindChoices(f.answer,null,f.answer,f.img);};
+  R.sequence=a=>{let order=shuffle((U.events||[]).map(e=>e.id));
+    const draw=()=>{frame(`<p class="note" style="direction:ltr">Put the story in order — use the arrows, then check.</p>
+      <div class="seqlist">${order.map((eid,i)=>{const e=U.events.find(x=>x.id===eid);
+        return `<div class="seqrow">${img(e.img,'simg')}<span class="arabic seqar" lang="ar">${esc(N.S[e.sentence].ar)}</span>
+        <span class="seqbtns"><button class="pbtn" data-up="${i}" aria-label="move up">▲</button><button class="pbtn" data-dn="${i}" aria-label="move down">▼</button></span></div>`;}).join("")}
+      </div><button class="pbtn primary" id="seq-check" lang="ar">تَحَقَّقْ ✓</button>`);
+      $("pr-stage").querySelectorAll("[data-up]").forEach(b=>b.addEventListener("click",()=>{const i=+b.dataset.up;if(i>0){[order[i-1],order[i]]=[order[i],order[i-1]];draw();}}));
+      $("pr-stage").querySelectorAll("[data-dn]").forEach(b=>b.addEventListener("click",()=>{const i=+b.dataset.dn;if(i<order.length-1){[order[i+1],order[i]]=[order[i],order[i+1]];draw();}}));
+      $("seq-check").addEventListener("click",()=>{
+        const good=order.every((eid,i)=>U.events.find(x=>x.id===eid).order===i+1);
+        if(good){$("seq-check").classList.add("good");setTimeout(next,650);}
+        else wrong($("seq-check"),U.events[0].sentence,U.events[0].img);});};
+    draw();};
+  R.retrieval=a=>{const r=(U.retrieval||[]).find(x=>x.id===a.retrieval),s=N.S[r.sentence];
+    const gap=esc(s.ar).replace(esc(r.blank),'<span class="gap">____</span>');
+    frame(`<div class="prompt">${img(r.img,'pimg')}</div><p class="arabic big rtl" lang="ar">${gap}</p>
+      <div class="facegrid">${shuffle(r.choices.slice()).map(c=>`<button class="face" data-c="${c}"><div class="nm big" lang="ar">${esc(c)}</div></button>`).join("")}</div>`);
+    bindChoices(r.blank,null,r.sentence,r.img);};
+
+  function bindChoices(correct,_,supportSid,supportImg){
+    $("pr-stage").querySelectorAll("[data-c]").forEach(b=>b.addEventListener("click",()=>{
+      if(b.dataset.c===String(correct))right(b);else wrong(b,supportSid,supportImg);
+    }));
+  }
+  function render(){const a=queue[qi];dots();
+    if(a==="POST"){queue.splice(qi,1,...postComp());return render();}
+    (R[a.type]||(()=>next()))(a);}
+  function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+  return {mount};
+})();
+
+/* ---- hash router ---- */
+const ROUTES={'unit-01/practice':'v-practice','unit-01p/practice':'v-practice','unit-01/student':'v-student','unit-01/notebook':'v-note'};
+function route(){
+  const h=location.hash.replace(/^#/,'');
+  let id='v-home',key=null;
+  for(const k in ROUTES){if(h===k||h.startsWith(k+'/')){id=ROUTES[k];key=k;break;}}
+  document.querySelectorAll('.view').forEach(v=>v.classList.toggle('on',v.id===id));
+  if(id==='v-practice'&&key)SCP.mount(key.split('/')[0]);
+  window.scrollTo({top:0});
+}
+window.addEventListener('hashchange',route);route();
+</script>
+
+
+</body>
+</html>
