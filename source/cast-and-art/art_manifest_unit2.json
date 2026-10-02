@@ -1,0 +1,696 @@
+{
+ "status": "ISSUED 2026-10-01 — the only authority for the Unit 2 art package, with INTALIQ1_ART_PACKAGE_SPEC.md",
+ "return_rules": [
+  "one PNG per slot id, named exactly as 'file' says, sizes per spec §2",
+  "pure white #FFFFFF background; no text, letters, numerals or glyphs inside any image",
+  "each file shows only what its own slot says — never a crop from a larger sheet, never a neighbouring slot's picture",
+  "fill 'delivered' with the filename, or leave it null with a 'note' saying why — never substitute",
+  "deliver assets/art/ + this file only; no index.html, no 404.html, no teacher.html"
+ ],
+ "unit": "unit-02",
+ "issued": "2026-10-01",
+ "authority": "INTALIQ1_UNIT2_VISUAL_PLAN.md (frozen texts SC-095/SC-102) · SC-111 style · INTALIQ1_ART_PACKAGE_SPEC.md",
+ "reconciliation_note": "The plan predates SC-097 in two rows: every 'Sara' below is خَدِيجَة, and the figure in obj-photo wears two plaits, not a hijab. Applied here.",
+ "sizes": {
+  "frame": "590x490 PNG",
+  "phrase": "512x432 PNG",
+  "face_object": "400x400 PNG"
+ },
+ "slots": [
+  {
+   "id": "u2-s1-1",
+   "file": "unit2/u2-s1-1.png",
+   "kind": "frame",
+   "story": "«أَيْنَ مِفْتَاحِي؟»",
+   "paragraphs": "0",
+   "event": "كَرِيم has a big bag; in it a book, a pen and the house key",
+   "show": "كَرِيم (neutral), the big bag open, book, pen and key visible inside it",
+   "must_not_show": "—",
+   "risks": "three objects in the bag must read as three distinct icons; nothing else in frame",
+   "delivered": null
+  },
+  {
+   "id": "u2-s1-2",
+   "file": "unit2/u2-s1-2.png",
+   "kind": "frame",
+   "story": "«أَيْنَ مِفْتَاحِي؟»",
+   "paragraphs": "1–3",
+   "event": "On the way home he sees a key on the ground",
+   "show": "كَرِيم (questioning) walking, the bag closed on his shoulder; a key on the floor line ahead of him; a house with a door far right",
+   "must_not_show": "the bag's contents",
+   "risks": "the key on the ground must be the same drawing as frame 1's key — deliberately",
+   "delivered": null
+  },
+  {
+   "id": "u2-s1-3",
+   "file": "unit2/u2-s1-3.png",
+   "kind": "frame",
+   "story": "«أَيْنَ مِفْتَاحِي؟»",
+   "paragraphs": "4",
+   "event": "He puts the key in his bag and decides to ask زَيْد",
+   "show": "كَرِيم's hand placing the key into the (closed-flap) bag; a small \"?\" is not drawn — the question is in the text",
+   "must_not_show": "the bag's interior",
+   "risks": "keep the bag flap up so the interior stays unseen",
+   "delivered": null
+  },
+  {
+   "id": "u2-s1-4",
+   "file": "unit2/u2-s1-4.png",
+   "kind": "frame",
+   "story": "«أَيْنَ مِفْتَاحِي؟»",
+   "paragraphs": "5–6",
+   "event": "زَيْد, at his door: no, my key is in my bag",
+   "show": "كَرِيم holding up the key at زَيْد's door; زَيْد (flat cap) in the doorway with his small bag on his shoulder, patting it",
+   "must_not_show": "—",
+   "risks": "two bags in frame: كَرِيم's big, زَيْد's small; the key is in كَرِيم's hand, not زَيْد's",
+   "delivered": null
+  },
+  {
+   "id": "u2-s1-5",
+   "file": "unit2/u2-s1-5.png",
+   "kind": "frame",
+   "story": "«أَيْنَ مِفْتَاحِي؟»",
+   "paragraphs": "7–8",
+   "event": "مَهَا: my key is under the book",
+   "show": "كَرِيم at مَهَا's door with the key up; مَهَا (hair tie) in the doorway; beside her, on the floor line, a book with a key's bow peeping from under it",
+   "must_not_show": "—",
+   "risks": "مَهَا and the book must not overlap; the peeping key must be small but the same drawing; sensitivity: two children at a doorway, no touch, ordinary distance",
+   "delivered": null
+  },
+  {
+   "id": "u2-s1-6",
+   "file": "unit2/u2-s1-6.png",
+   "kind": "frame",
+   "story": "«أَيْنَ مِفْتَاحِي؟»",
+   "paragraphs": "9–11",
+   "event": "عُمَر: my key is on the door — and you?",
+   "show": "كَرِيم at عُمَر's door; عُمَر (spikes, happy) pointing at a key hanging on the door; كَرِيم pointing at his own bag",
+   "must_not_show": "—",
+   "risks": "three keys exist in the story by now (found, عُمَر's, كَرِيم's-in-bag): only two in frame — كَرِيم's hand and the door",
+   "delivered": null
+  },
+  {
+   "id": "u2-s1-7",
+   "file": "unit2/u2-s1-7.png",
+   "kind": "frame",
+   "story": "«أَيْنَ مِفْتَاحِي؟»",
+   "paragraphs": "12–15",
+   "event": "كَرِيم comes home; a cat at the door",
+   "show": "كَرِيم walking toward his own house (same house as frame 2); the cat sitting upright at the door, neutral, looking at nothing",
+   "must_not_show": "any hint that the cat knows: no cat looking at the key, no cat looking at the bag, no cat mouth open",
+   "risks": "the cat's marker must be legible at strip size (ears + tail)",
+   "delivered": null
+  },
+  {
+   "id": "u2-s1-8",
+   "file": "unit2/u2-s1-8.png",
+   "kind": "frame",
+   "story": "«أَيْنَ مِفْتَاحِي؟»",
+   "paragraphs": "16–21",
+   "event": "The reveal: the bag holds book and pen but no key; the key in his hand is his own; he laughs; both go in",
+   "show": "كَرِيم (laughing) with the bag open showing book and pen only, the key in his other hand; the cat (`-talk`) beside him; the door ajar",
+   "must_not_show": "—",
+   "risks": "the open bag must clearly show *two* objects where frame 1 showed three — that gap is the whole reveal; nothing else in frame",
+   "delivered": null
+  },
+  {
+   "id": "u2-s2-1",
+   "file": "unit2/u2-s2-1.png",
+   "kind": "frame",
+   "story": "«صُورَةُ رَزَان وَخَدِيجَة»",
+   "paragraphs": "0–3",
+   "event": "رَزَان has a picture of herself and خَدِيجَة; puts it in her bag; sets off",
+   "show": "رَزَان (happy) holding `obj-photo` (its two tiny figures: bundles + two plaits), her bag open beside her",
+   "must_not_show": "خَدِيجَة herself",
+   "risks": "the photo's tiny figures must read as the two girls at strip size — bundles and two plaits only, no faces",
+   "delivered": null
+  },
+  {
+   "id": "u2-s2-2",
+   "file": "unit2/u2-s2-2.png",
+   "kind": "frame",
+   "story": "«صُورَةُ رَزَان وَخَدِيجَة»",
+   "paragraphs": "4–5",
+   "event": "At خَدِيجَة's house — calls — خَدِيجَة isn't there",
+   "show": "رَزَان (talking) at a house with the door closed; nothing else",
+   "must_not_show": "خَدِيجَة anywhere; the photo",
+   "risks": "a closed door must read as \"nobody\" — no window, no second figure",
+   "delivered": null
+  },
+  {
+   "id": "u2-s2-3",
+   "file": "unit2/u2-s2-3.png",
+   "kind": "frame",
+   "story": "«صُورَةُ رَزَان وَخَدِيجَة»",
+   "paragraphs": "6–7",
+   "event": "رَنَا: خَدِيجَة went to your house",
+   "show": "رَنَا (bob, talking) pointing back along the floor line the way رَزَان came; رَزَان (questioning)",
+   "must_not_show": "خَدِيجَة",
+   "risks": "رَنَا's pointing arm must point away from خَدِيجَة's house, toward رَزَان's",
+   "delivered": null
+  },
+  {
+   "id": "u2-s2-4",
+   "file": "unit2/u2-s2-4.png",
+   "kind": "frame",
+   "story": "«صُورَةُ رَزَان وَخَدِيجَة»",
+   "paragraphs": "8–10",
+   "event": "Back home — not here either — رَزَان is sad",
+   "show": "رَزَان (sad variant) at her own house, door closed; her bag on her shoulder",
+   "must_not_show": "خَدِيجَة",
+   "risks": "the sad mouth line is the only expression change in the strip; nothing else \"sad\" (no rain, no tear)",
+   "delivered": null
+  },
+  {
+   "id": "u2-s2-5",
+   "file": "unit2/u2-s2-5.png",
+   "kind": "frame",
+   "story": "«صُورَةُ رَزَان وَخَدِيجَة»",
+   "paragraphs": "11–14",
+   "event": "Back at خَدِيجَة's house — خَدِيجَة is there — رَزَان gives her the picture",
+   "show": "خَدِيجَة (happy) at her open door; رَزَان (happy) holding out `obj-photo`",
+   "must_not_show": "خَدِيجَة's own picture — خَدِيجَة's hands are empty or one hand on the doorframe",
+   "risks": "two identical-marker-bearing girls plus a photo of them: keep the photo small and held out between them",
+   "delivered": null
+  },
+  {
+   "id": "u2-s2-6",
+   "file": "unit2/u2-s2-6.png",
+   "kind": "frame",
+   "story": "«صُورَةُ رَزَان وَخَدِيجَة»",
+   "paragraphs": "15–19",
+   "event": "خَدِيجَة gives her one too — the same picture — both laugh",
+   "show": "Both girls (happy), each holding a `obj-photo` identical to the other's, held up side by side",
+   "must_not_show": "—",
+   "risks": "the two photos must be the same drawing, same size — the joke is identity; no hearts, no hug (SC-027): they stand apart, each holding a picture",
+   "delivered": null
+  },
+  {
+   "id": "u2-va-2",
+   "file": "unit2/u2-va-2.png",
+   "kind": "frame",
+   "story": "Version A of Story 1 (S11 spot-the-change)",
+   "show": "identical to u2-s1-2 except: the key is UNDER a book on the ground, not bare on it",
+   "must_not_show": "any other change",
+   "delivered": null
+  },
+  {
+   "id": "u2-va-7",
+   "file": "unit2/u2-va-7.png",
+   "kind": "frame",
+   "story": "Version A of Story 1",
+   "show": "identical to u2-s1-7 except: the cat sits ON that book",
+   "must_not_show": "any other change",
+   "delivered": null
+  },
+  {
+   "id": "u2-vb-1",
+   "file": "unit2/u2-vb-1.png",
+   "kind": "frame",
+   "story": "Version B (parallel to Story 1 in Story 2's cast)",
+   "show": "رَزَان (questioning) sees a pen on the ground; floor line; nothing else",
+   "must_not_show": "the key; the photo; hearts; any face on the bird beyond two dots",
+   "delivered": null
+  },
+  {
+   "id": "u2-vb-2",
+   "file": "unit2/u2-vb-2.png",
+   "kind": "frame",
+   "story": "Version B (parallel to Story 1 in Story 2's cast)",
+   "show": "رَزَان at خَدِيجَة's door holding up the pen; خَدِيجَة (two plaits) in the doorway",
+   "must_not_show": "the key; the photo; hearts; any face on the bird beyond two dots",
+   "delivered": null
+  },
+  {
+   "id": "u2-vb-3",
+   "file": "unit2/u2-vb-3.png",
+   "kind": "frame",
+   "story": "Version B (parallel to Story 1 in Story 2's cast)",
+   "show": "رَزَان at رَنَا's door holding up the pen; رَنَا (bob) in the doorway",
+   "must_not_show": "the key; the photo; hearts; any face on the bird beyond two dots",
+   "delivered": null
+  },
+  {
+   "id": "u2-vb-4",
+   "file": "unit2/u2-vb-4.png",
+   "kind": "frame",
+   "story": "Version B (parallel to Story 1 in Story 2's cast)",
+   "show": "رَزَان at عُمَر's door holding up the pen; عُمَر (spikes) in the doorway",
+   "must_not_show": "the key; the photo; hearts; any face on the bird beyond two dots",
+   "delivered": null
+  },
+  {
+   "id": "u2-vb-5",
+   "file": "unit2/u2-vb-5.png",
+   "kind": "frame",
+   "story": "Version B (parallel to Story 1 in Story 2's cast)",
+   "show": "رَزَان walking home; a bird sitting on the door (two dots, no nose, short tail fan)",
+   "must_not_show": "the key; the photo; hearts; any face on the bird beyond two dots",
+   "delivered": null
+  },
+  {
+   "id": "u2-vb-6",
+   "file": "unit2/u2-vb-6.png",
+   "kind": "frame",
+   "story": "Version B (parallel to Story 1 in Story 2's cast)",
+   "show": "رَزَان (happy/laughing) at her door, pen in hand; the bird still on the door",
+   "must_not_show": "the key; the photo; hearts; any face on the bird beyond two dots",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-01",
+   "file": "unit2/u2-ph-01.png",
+   "kind": "phrase",
+   "phrase": "أَيْنَ الْمِفْتَاحُ؟",
+   "show": "كَرِيم (questioning), empty hands up; no key anywhere",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-02",
+   "file": "unit2/u2-ph-02.png",
+   "kind": "phrase",
+   "phrase": "فِي الْحَقِيبَةِ",
+   "show": "the bag open, the key inside",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-03",
+   "file": "unit2/u2-ph-03.png",
+   "kind": "phrase",
+   "phrase": "عَلَى الْبَابِ",
+   "show": "the door with the key hanging on it",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-04",
+   "file": "unit2/u2-ph-04.png",
+   "kind": "phrase",
+   "phrase": "تَحْتَ الْكِتَابِ",
+   "show": "the book on the floor line, the key's bow peeping from under it",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-05",
+   "file": "unit2/u2-ph-05.png",
+   "kind": "phrase",
+   "phrase": "أَنَا هُنَا!",
+   "show": "رَزَان (talking), one arm raised, at a door",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-06",
+   "file": "unit2/u2-ph-06.png",
+   "kind": "phrase",
+   "phrase": "يَذْهَبُ إِلَى الْبَيْتِ",
+   "show": "generic faceless walker (`fig-walk`) → arrow → house",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-07",
+   "file": "unit2/u2-ph-07.png",
+   "kind": "phrase",
+   "phrase": "أَذْهَبُ إِلَى بَيْتِكِ",
+   "show": "رَزَان walking → arrow → a house with خَدِيجَة in its doorway",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-08",
+   "file": "unit2/u2-ph-08.png",
+   "kind": "phrase",
+   "phrase": "يَرْجِعُ إِلَى بَيْتِهِ",
+   "show": "generic walker with a curved return arrow → house",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-09",
+   "file": "unit2/u2-ph-09.png",
+   "kind": "phrase",
+   "phrase": "أَضَعُ مِفْتَاحِي فِي حَقِيبَتِي",
+   "show": "a hand placing the key into the bag (no face in frame — first person is the reader)",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-10",
+   "file": "unit2/u2-ph-10.png",
+   "kind": "phrase",
+   "phrase": "هٰذَا مِفْتَاحٌ",
+   "show": "the key alone",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-11",
+   "file": "unit2/u2-ph-11.png",
+   "kind": "phrase",
+   "phrase": "هٰذِهِ حَقِيبَةٌ",
+   "show": "the bag alone",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-12",
+   "file": "unit2/u2-ph-12.png",
+   "kind": "phrase",
+   "phrase": "هٰذَا كِتَابٌ",
+   "show": "the book alone",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-13",
+   "file": "unit2/u2-ph-13.png",
+   "kind": "phrase",
+   "phrase": "هٰذَا بَابٌ",
+   "show": "the door alone",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-14",
+   "file": "unit2/u2-ph-14.png",
+   "kind": "phrase",
+   "phrase": "هٰذِهِ صُورَةٌ",
+   "show": "the photo alone (its two tiny figures inside)",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-15",
+   "file": "unit2/u2-ph-15.png",
+   "kind": "phrase",
+   "phrase": "هٰذَا بَيْتٌ",
+   "show": "the house alone",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-16",
+   "file": "unit2/u2-ph-16.png",
+   "kind": "phrase",
+   "phrase": "عَلَى الْأَرْضِ",
+   "show": "the key on the floor line",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-17",
+   "file": "unit2/u2-ph-17.png",
+   "kind": "phrase",
+   "phrase": "هٰذَا قِطٌّ",
+   "show": "the cat alone, sitting",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-18",
+   "file": "unit2/u2-ph-18.png",
+   "kind": "phrase",
+   "phrase": "رَزَان حَزِينَةٌ",
+   "show": "رَزَان, the sad variant, alone",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "u2-ph-19",
+   "file": "unit2/u2-ph-19.png",
+   "kind": "phrase",
+   "phrase": "هٰذِهِ لَكِ",
+   "show": "a hand holding out the photo toward the viewer",
+   "must_not_show": "any person the phrase does not name; any text",
+   "delivered": null
+  },
+  {
+   "id": "obj-key",
+   "file": "common/obj-key.png",
+   "kind": "object",
+   "show": "a round bow, a straight shank, two teeth — the single key drawing used everywhere",
+   "delivered": null
+  },
+  {
+   "id": "obj-bag",
+   "file": "common/obj-bag.png",
+   "kind": "object",
+   "show": "school bag: rounded rectangle, one flap, one strap (زَيْد's size)",
+   "delivered": null
+  },
+  {
+   "id": "obj-bag-big",
+   "file": "common/obj-bag-big.png",
+   "kind": "object",
+   "show": "the same bag drawn larger — كَرِيم's",
+   "delivered": null
+  },
+  {
+   "id": "obj-book",
+   "file": "common/obj-book.png",
+   "kind": "object",
+   "show": "closed book, spine left, two lines on the cover (never lined like the قَائِمَة)",
+   "delivered": null
+  },
+  {
+   "id": "obj-pen",
+   "file": "common/obj-pen.png",
+   "kind": "object",
+   "show": "the Unit 1 pen",
+   "delivered": null
+  },
+  {
+   "id": "obj-door",
+   "file": "common/obj-door.png",
+   "kind": "object",
+   "show": "the Unit 1 door",
+   "delivered": null
+  },
+  {
+   "id": "obj-house",
+   "file": "common/obj-house.png",
+   "kind": "object",
+   "show": "door + a roof line only",
+   "delivered": null
+  },
+  {
+   "id": "obj-photo",
+   "file": "common/obj-photo.png",
+   "kind": "object",
+   "show": "a print: rectangle with thick lower border; inside, two tiny figures — رَزَان's two low side bundles and خَدِيجَة's two plaits; no faces",
+   "delivered": null
+  },
+  {
+   "id": "av-karim",
+   "file": "common/av-karim.png",
+   "kind": "face",
+   "marker": "three crown curls",
+   "expression": "neutral",
+   "delivered": null
+  },
+  {
+   "id": "av-karim-q",
+   "file": "common/av-karim-q.png",
+   "kind": "face",
+   "marker": "three crown curls",
+   "expression": "q",
+   "delivered": null
+  },
+  {
+   "id": "av-karim-laugh",
+   "file": "common/av-karim-laugh.png",
+   "kind": "face",
+   "marker": "three crown curls",
+   "expression": "laugh",
+   "delivered": null
+  },
+  {
+   "id": "av-zayd",
+   "file": "common/av-zayd.png",
+   "kind": "face",
+   "marker": "flat cap",
+   "expression": "neutral",
+   "delivered": null
+  },
+  {
+   "id": "av-maha",
+   "file": "common/av-maha.png",
+   "kind": "face",
+   "marker": "high hair tie / topknot",
+   "expression": "neutral",
+   "delivered": null
+  },
+  {
+   "id": "av-omar",
+   "file": "common/av-omar.png",
+   "kind": "face",
+   "marker": "three upward spikes",
+   "expression": "neutral",
+   "delivered": null
+  },
+  {
+   "id": "av-omar-happy",
+   "file": "common/av-omar-happy.png",
+   "kind": "face",
+   "marker": "three upward spikes",
+   "expression": "happy",
+   "delivered": null
+  },
+  {
+   "id": "av-razan",
+   "file": "common/av-razan.png",
+   "kind": "face",
+   "marker": "two low side bundles",
+   "expression": "neutral",
+   "delivered": null
+  },
+  {
+   "id": "av-razan-q",
+   "file": "common/av-razan-q.png",
+   "kind": "face",
+   "marker": "two low side bundles",
+   "expression": "q",
+   "delivered": null
+  },
+  {
+   "id": "av-razan-sad",
+   "file": "common/av-razan-sad.png",
+   "kind": "face",
+   "marker": "two low side bundles",
+   "expression": "sad",
+   "delivered": null
+  },
+  {
+   "id": "av-razan-happy",
+   "file": "common/av-razan-happy.png",
+   "kind": "face",
+   "marker": "two low side bundles",
+   "expression": "happy",
+   "delivered": null
+  },
+  {
+   "id": "av-razan-talk",
+   "file": "common/av-razan-talk.png",
+   "kind": "face",
+   "marker": "two low side bundles",
+   "expression": "talk",
+   "delivered": null
+  },
+  {
+   "id": "av-khadija",
+   "file": "common/av-khadija.png",
+   "kind": "face",
+   "marker": "two plaits, one each side, hanging to the shoulder (SC-097 — not a hijab)",
+   "expression": "neutral",
+   "delivered": null
+  },
+  {
+   "id": "av-khadija-happy",
+   "file": "common/av-khadija-happy.png",
+   "kind": "face",
+   "marker": "two plaits, one each side, hanging to the shoulder (SC-097 — not a hijab)",
+   "expression": "happy",
+   "delivered": null
+  },
+  {
+   "id": "av-khadija-talk",
+   "file": "common/av-khadija-talk.png",
+   "kind": "face",
+   "marker": "two plaits, one each side, hanging to the shoulder (SC-097 — not a hijab)",
+   "expression": "talk",
+   "delivered": null
+  },
+  {
+   "id": "av-rana",
+   "file": "common/av-rana.png",
+   "kind": "face",
+   "marker": "dark bob with side panels",
+   "expression": "neutral",
+   "delivered": null
+  },
+  {
+   "id": "av-rana-talk",
+   "file": "common/av-rana-talk.png",
+   "kind": "face",
+   "marker": "dark bob with side panels",
+   "expression": "talk",
+   "delivered": null
+  },
+  {
+   "id": "av-qitt",
+   "file": "common/av-qitt.png",
+   "kind": "face",
+   "marker": "ears + curled tail",
+   "expression": "neutral",
+   "delivered": null
+  },
+  {
+   "id": "av-qitt-talk",
+   "file": "common/av-qitt-talk.png",
+   "kind": "face",
+   "marker": "ears + curled tail",
+   "expression": "talk",
+   "delivered": null
+  },
+  {
+   "id": "fig-walk",
+   "file": "common/fig-walk.png",
+   "kind": "generic",
+   "show": "faceless walking figure (no eyes, no mouth) — the action figure for phrases 6 and 8",
+   "delivered": null
+  }
+ ],
+ "sheets": [
+  {
+   "character": "karim",
+   "file": "sheets/karim.png",
+   "must_show": "every expression variant listed above, the marker named in writing, the clothing colour named in writing (one of #2F7D78 · #D3A344 · #D97668) — this sheet is what enters the Cast Bible"
+  },
+  {
+   "character": "zayd",
+   "file": "sheets/zayd.png",
+   "must_show": "every expression variant listed above, the marker named in writing, the clothing colour named in writing (one of #2F7D78 · #D3A344 · #D97668) — this sheet is what enters the Cast Bible"
+  },
+  {
+   "character": "maha",
+   "file": "sheets/maha.png",
+   "must_show": "every expression variant listed above, the marker named in writing, the clothing colour named in writing (one of #2F7D78 · #D3A344 · #D97668) — this sheet is what enters the Cast Bible"
+  },
+  {
+   "character": "omar",
+   "file": "sheets/omar.png",
+   "must_show": "every expression variant listed above, the marker named in writing, the clothing colour named in writing (one of #2F7D78 · #D3A344 · #D97668) — this sheet is what enters the Cast Bible"
+  },
+  {
+   "character": "razan",
+   "file": "sheets/razan.png",
+   "must_show": "every expression variant listed above, the marker named in writing, the clothing colour named in writing (one of #2F7D78 · #D3A344 · #D97668) — this sheet is what enters the Cast Bible"
+  },
+  {
+   "character": "khadija",
+   "file": "sheets/khadija.png",
+   "must_show": "every expression variant listed above, the marker named in writing, the clothing colour named in writing (one of #2F7D78 · #D3A344 · #D97668) — this sheet is what enters the Cast Bible"
+  },
+  {
+   "character": "rana",
+   "file": "sheets/rana.png",
+   "must_show": "every expression variant listed above, the marker named in writing, the clothing colour named in writing (one of #2F7D78 · #D3A344 · #D97668) — this sheet is what enters the Cast Bible"
+  },
+  {
+   "character": "qitt",
+   "file": "sheets/qitt.png",
+   "must_show": "every expression variant listed above, the marker named in writing, the clothing colour named in writing (one of #2F7D78 · #D3A344 · #D97668) — this sheet is what enters the Cast Bible"
+  }
+ ],
+ "build_side_mappings_not_for_the_tool": {
+  "notebook N1 أ": "u2-s1-1…8 in order",
+  "notebook N1 ب": "u2-s2-1…6",
+  "Version A frames 1,3,4,5,6,8": "reuse u2-s1-* files",
+  "engine items": "per visual plan §7 — fi→u2-ph-02, ala→u2-ph-03, tahta→u2-ph-04, huna→u2-ph-05, ayna→u2-ph-01, dhahab→u2-ph-06, rajaa→u2-ph-08, wadaa→u2-ph-09, ard→u2-ph-16, hazina→u2-ph-18, objects→obj-*, cast→av-*",
+  "engine sentences": "paragraph → its frame id"
+ }
+}
