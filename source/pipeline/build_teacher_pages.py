@@ -10,8 +10,12 @@ Rules this generator enforces, by construction:
   * NOT linked from the student Studio — this script never touches school_course_studio.html;
   * counts (words, activities) are read from the engine, never typed by hand.
 
-Outputs: intaliq1_teacher_pages.html (artifact body, no skeleton) and
-         Intaliq1_Teacher_Pages.html (standalone, wrapped).
+Outputs: intaliq1_teacher_pages.artifact-body.html (body, no skeleton — the build wraps it into teacher.html) and
+         intaliq1_teacher_pages.standalone.html (wrapped, for direct opening).
+         (The two names differ by more than letter case — audit 2026-10-10 §11: the old pair collided on a
+          case-insensitive filesystem.)
+Phase order (owner's decision, SC-119): input → reading → consolidation AND scaffolded interaction (C1) →
+notebook output → fuller communication and transfer (C3, C4).
 """
 import json, subprocess, html, datetime, pathlib, sys, re
 
@@ -22,13 +26,14 @@ ENGINE = HERE / "engine_core.js"
 NODE = r'''
 const fs=require("fs");const src=fs.readFileSync(process.argv[1],"utf8");
 const g={};(new Function("globalThis",src+";return globalThis;"))(g);const E=g.SC_ENGINE;const out={};
-for(const [k,u] of Object.entries(E.UNITS)){const acts=E.gen(u);const q=E.qc(u,acts);const c=E.canonCheck(u);
- out[k]={title:u.title,words:c.words,canon_ok:c.ok,ok:q.ok.length,failed:q.failed.length};}
+for(const [k,u] of Object.entries(E.UNITS)){const acts=E.gen(u);const q=E.qc(u,acts);const c=E.canonCheck(u);const d=E.deliverable(u);
+ const vocab=E.pathway(u,"vocab",0).length, reading=E.pathway(u,"reading",0).length-2+1+E.postReading(u,3,true).length;
+ out[k]={title:u.title,words:c.words,canon_ok:c.ok,ok:q.ok.length,failed:q.failed.length,blocked:!d.ok,vocab,reading};}
 process.stdout.write(JSON.stringify(out));
 '''
 meta = json.loads(subprocess.check_output(["node", "-e", NODE, str(ENGINE)], text=True))
 for k, v in meta.items():
-    assert v["canon_ok"] and v["failed"] == 0, f"{k}: engine not clean — refuse to build a teacher's page on a failing unit"
+    assert v["canon_ok"] and v["failed"] == 0 and not v["blocked"], f"{k}: engine not clean — refuse to build a teacher's page on a failing unit"
 
 # ---------- 2 · per-unit data (no answers anywhere) ----------
 UNITS = [
@@ -36,68 +41,69 @@ UNITS = [
   n=1, label="Unit 1", ar="الْوَحْدَةُ ١", status="Frozen · Unit 1 is the pre-calibration unit (SC-093)",
   r1=dict(key="unit-01", title="قَائِمَةُ رَزَان", tense="present", frames=6),
   r2=dict(key="unit-01p", title="مَنْ أَنْتَ يَا قَلَم؟", tense="past", frames=3),
-  pictures="Illustrated (house style, SC-034).",
+  pictures="In-house stick figures (SC-034); rich-cartoon redraw queued (SC-113). No verified audio: there are no listening tasks.",
   flow=[
    ("Input", "The learner, alone",
-    ["Digital · الْمُفْرَدَات — hear-and-tap practice on the unit's words, verbs and possession (A1–A4).",
+    ["Digital · الْمُفْرَدَات — every core item met, recognised and met again in a sentence ({v1} tasks, planned sequence).",
      "Textbook · اُنْظُرْ! — the labelled phrase scene (B1) and the six-frame strip."],
-    "Shared devices at the top of class, or the picture spread where there are none. Do not explain the words; the pictures and audio do that."),
+    "Shared devices at the top of class, or the picture spread where there are none. Do not explain the words; the pictures and phrases do that. Sound is the browser's preview voice on request only — recorded audio is not yet verified, so nothing here is a listening task."),
    ("Reading", "The learner (the class may read together)",
-    ["Reading 1 «قَائِمَةُ رَزَان» — {w1} words, present narration — then its sets: اِقْرَأْ وَصِلْ · صَحٌّ أَمْ خَطَأٌ؟ أَرِنِي · مَنْ يَقُولُ؟ · اِخْتَرْ وَاكْتُبْ · رَتِّبْ · اِبْحَثْ فِي النَّصِّ. Digital · الْقِرَاءَة ١ ({a1} activities).",
-     "Reading 2 «مَنْ أَنْتَ يَا قَلَم؟» — {w2} words, past narration, dialogue in the present — then its sets, ending with الْآنَ أَمْ قَبْلُ؟ (sort lines into the present story or the past story, by ear). Digital · الْقِرَاءَة ٢ ({a2} activities)."],
+    ["Reading 1 «قَائِمَةُ رَزَان» — {w1} words, present narration — then its sets: اِقْرَأْ وَصِلْ · صَحٌّ أَمْ خَطَأٌ؟ أَرِنِي · مَنْ يَقُولُ؟ · اِخْتَرْ وَاكْتُبْ · رَتِّبْ · اِبْحَثْ فِي النَّصِّ. Digital · الْقِرَاءَة ١ ({p1} tasks selected from {a1} generated).",
+     "Reading 2 «مَنْ أَنْتَ يَا قَلَم؟» — {w2} words, past narration, dialogue in the present — then its sets, ending with الْآنَ أَمْ قَبْلُ؟ (sort each line into story 1 or story 2 — the titles are the categories). Digital · الْقِرَاءَة ٢ ({p2} tasks selected from {a2} generated)."],
     "Readings are read cold — there is no oral pre-telling in this course. Every set is self-checking against the page it sits on; nothing to mark."),
-   ("Consolidation", "The learner",
+   ("Consolidation and scaffolded interaction", "The learner; then the class, with you facilitating",
     ["The pop-up «Look — no “is”!» — the book's only English (LC-4: one per unit, no rule drilled).",
-     "قَائِمَةُ الصَّفِّ — the class roll as functional text (اِسْتَعْمِلِ النَّصَّ); عَرَبِيَّةٌ حَوْلَنَا — the authentic-print corner.",
-     "أَسْتَطِيعُ! — the unit's last page: can-do lines the learner ticks by saying them."],
-    "Read the pop-up once with the class if asked; do not extend it into a grammar lesson."),
+     "قَائِمَةُ الصَّفِّ — the class roll as functional text (اِسْتَعْمِلِ النَّصَّ), with the named row of faces; أَسْتَطِيعُ! — the can-do page the learner ticks by saying the lines.",
+     "C1 · اِسْأَلْ أَصْدِقَاءَكَ — notebook p. 9: «مَنْ أَنْتَ؟ / مَنْ أَنْتِ؟» · «هَلْ عِنْدَكَ / عِنْدَكِ قَلَمٌ؟» · «هَلْ عِنْدَكَ / عِنْدَكِ قَائِمَةٌ؟» — rehearsed from the printed line, then asked of five real classmates. Its names feed p. 5."],
+    "Scaffolded interaction comes BEFORE notebook writing (owner's decision, SC-119): run C1 here, not after the notebook. A learner who missed it completes p. 5 from the printed class list instead."),
    ("Output", "The learner, alone — begun in class, finishable at home",
     ["Notebook p. 2–3 · اُكْتُبِ الْقِصَّةَ: «قَائِمَةُ رَزَان» — six frames, one line per frame, bank printed (Captions rung, SC-096).",
      "Notebook p. 4 · اُكْتُبِ الْقِصَّةَ: «مَنْ أَنْتَ يَا قَلَم؟» — three frames; the past forms are copied from the bank, never built.",
-     "Notebook p. 5–6 · قِصَّتِي الْمُوَازِيَةُ — the same story about the learner's real class, using the names from the survey on p. 9.",
-     "Notebook p. 7 · قِصَّتِي — starters and a split bank (things / people). p. 8 · دَوْرِي — the name poster.",
+     "Notebook p. 5–6 · قِصَّتِي الْمُوَازِيَةُ — the same story about the learner's real class, using the names collected in C1.",
+     "Notebook p. 7 · قِصَّتِي — starters, printed models for every choice, a split bank (things / people / a line to say). p. 8 · دَوْرِي — the name poster, which prepares the share.",
      "Notebook p. 10 · هَلْ تَذْكُرُ؟ — blank at Unit 1 by design (it draws on earlier units only)."],
-    "Sequence note: p. 5 needs the names collected on p. 9 — run the C1 survey before learners start the parallel story."),
-   ("Communication", "The teacher facilitates — zero prep, no props",
-    ["C4 · نُعِيدُ الْقِصَّةَ بِالصُّوَرِ — printed under the six-frame strip in the book.",
-     "C1 · اِسْأَلْ أَصْدِقَاءَكَ — notebook p. 9: «مَنْ أَنْتَ؟» · «مَنْ عِنْدَهُ قَلَمٌ؟»",
-     "C3 · هٰذِهِ صَفْحَتِي! — the last line of p. 6, and the poster on p. 8."],
-    "Everything here runs on pages the unit has already produced. Nothing is made, cut or printed."),
+    "Every page here is completable alone (P-3). Do not mark; the pages are shown, not graded."),
+   ("Fuller communication and transfer", "The teacher facilitates — zero prep, no props",
+    ["C3 · هٰذِهِ صَفْحَتِي! — the last line of p. 6, and the poster on p. 8: show a partner, who asks one question.",
+     "C4 · نُعِيدُ الْقِصَّةَ بِالصُّوَرِ — printed under the six-frame strip in the book; run it here, after both readings, not when the strip is first met.",
+     "Transfer — the same language in a new small situation: a classmate's pen, a list of another class."],
+    "Everything here runs on pages the unit has already produced. Nothing is made, cut or printed. At the Captions rung you cue each frame of C4 and the class supplies the language."),
   ],
-  c3_example="«مَنْ هٰذَا؟» · «عِنْدَكَ قَلَمٌ؟»",
+  c3_example="«مَنْ هٰذَا؟» · «هَلْ عِنْدَكَ قَلَمٌ؟»",
   notes=[]),
  dict(
-  n=2, label="Unit 2", ar="الْوَحْدَةُ ٢", status="Frozen (revision 6) · texts signed off (SC-105) · Gate B closes on the pop-up · illustrations held",
+  n=2, label="Unit 2", ar="الْوَحْدَةُ ٢", status="Frozen (revision 6) · texts signed off (SC-105) · Gate B closes on the pop-up · rich-cartoon illustrations live (SC-113, SC-117)",
   r1=dict(key="unit-02", title="أَيْنَ مِفْتَاحِي؟", tense="present", frames=8),
   r2=dict(key="unit-02p", title="صُورَةُ رَزَان وَخَدِيجَة", tense="past", frames=6),
-  pictures="Not yet illustrated — strips print as empty numbered frames until the hold is lifted.",
+  pictures="Rich-cartoon illustrations, 69 accepted files (SC-113; bag corrected SC-117). No verified audio: there are no listening tasks.",
   flow=[
    ("Input", "The learner, alone",
-    ["Digital · الْمُفْرَدَات — hear-and-tap practice on the unit's items.",
+    ["Digital · الْمُفْرَدَات — every core item met, recognised and met again in a sentence ({v1} tasks, planned sequence).",
      "Textbook · اُنْظُرْ وَاقْرَأْ! — the phrase page (B0): nineteen numbered phrases, each as the story prints it.",
-     "The strips (8 + 6 frames) and the preview panel — pictures pending."],
-    "Until the pictures land, phase 1 rests on the phrase page and the digital practice alone. Do not draw the frames yourself; the illustration plan governs them."),
+     "The strips (8 + 6 frames) and the preview panel — rich-cartoon frames live."],
+    "Shared devices at the top of class, or the phrase page and strips where there are none. Sound is the browser's preview voice on request only — no verified audio, so no listening tasks."),
    ("Reading", "The learner (the class may read together)",
-    ["Reading 1 «أَيْنَ مِفْتَاحِي؟» — {w1} words, present narration — then: صَحٌّ أَمْ خَطَأٌ؟ أَرِنِي · مَنْ يَقُولُ؟ · أَجِبْ (the last two questions have no answer in the text: the learner invents one) · نَفْسُ الْقِصَّةِ... وَ (Version A / B, retold from the pictures). Digital · الْقِرَاءَة ١ ({a1} activities).",
-     "Reading 2 «صُورَةُ رَزَان وَخَدِيجَة» — {w2} words, past narration, dialogue in the present — then: مَنْ يَقُولُ؟ · رَتِّبْ · الْآنَ أَمْ قَبْلُ؟ (sort lines into the now-story or the before-story, by ear). Digital · الْقِرَاءَة ٢ ({a2} activities)."],
+    ["Reading 1 «أَيْنَ مِفْتَاحِي؟» — {w1} words, present narration — then: صَحٌّ أَمْ خَطَأٌ؟ أَرِنِي · مَنْ يَقُولُ؟ · أَجِبْ (the last two questions have no answer in the text: the learner invents one) · نَفْسُ الْقِصَّةِ... وَ (Version A / B, retold from the pictures). Digital · الْقِرَاءَة ١ ({p1} tasks selected from {a1} generated).",
+     "Reading 2 «صُورَةُ رَزَان وَخَدِيجَة» — {w2} words, past narration, dialogue in the present — then: مَنْ يَقُولُ؟ · رَتِّبْ · الْآنَ أَمْ قَبْلُ؟ (sort each line into story 1 or story 2 — the titles are the categories). Digital · الْقِرَاءَة ٢ ({p2} tasks selected from {a2} generated)."],
     "Read cold, as in Unit 1. The «invent it» answers are the learner's own — there is nothing to correct."),
-   ("Consolidation", "The learner",
+   ("Consolidation and scaffolded interaction", "The learner; then the class, with you facilitating",
     ["اِقْرَأْ. ثُمَّ اقْرَأْ. — the recombination page: ten one-breath texts from the unit's words; read, then read again.",
      "وَأَنْتَ؟ وَأَنْتِ؟ — Unit 2's ten personal questions, added to Unit 1's set; answered from the phrase page, never scored.",
-     "The pop-up «Look — now, or before?» — proposed (SC-105), awaiting the owner's word; the book's only English."],
-    "Ask the personal questions aloud, in Arabic, one at a time; accept one-word answers from the phrase page."),
+     "The pop-up «Look — now, or before?» — proposed (SC-105), awaiting the owner's word; the book's only English.",
+     "C1 · اِسْأَلْ أَصْدِقَاءَكَ — notebook p. 9: «أَيْنَ تَضَعُ مِفْتَاحَكَ؟» · «إِلَى أَيْنَ تَذْهَبُ؟» — asked of real classmates; its answers feed p. 5."],
+    "Ask the personal questions aloud, in Arabic, one at a time; accept one-word answers from the phrase page. Scaffolded interaction comes before the notebook (SC-119): run C1 here."),
    ("Output", "The learner, alone — begun in class, finishable at home",
     ["Notebook p. 2–3 · اُكْتُبِ الْقِصَّةَ: «أَيْنَ مِفْتَاحِي؟» — eight frames, one line per frame, bank printed (Captions rung).",
      "Notebook p. 4 · اُكْتُبِ الْقِصَّةَ: «صُورَةُ رَزَان وَخَدِيجَة» — six frames; the three past forms are in the bank and copied.",
      "Notebook p. 5–6 · قِصَّتِي الْمُوَازِيَةُ — four swaps: the finder, the friend visited (from the p. 9 survey), where the key is kept, and who is at the door (drawn).",
      "Notebook p. 7 · قِصَّتِي — the location sentence produced: thing · preposition · place from a split bank. p. 8 · دَوْرِي — my key.",
      "Notebook p. 10 · هَلْ تَذْكُرُ؟ — the first real one: four Unit 1 faces and lines."],
-    "Same sequence note as Unit 1: run the p. 9 survey before p. 5."),
-   ("Communication", "The teacher facilitates — zero prep, no props",
-    ["C4 · نُعِيدُ الْقِصَّةَ بِالصُّوَرِ — under the eight-frame strip (rubric added in Studio Version 39; the frames are still empty).",
-     "C1 · اِسْأَلْ أَصْدِقَاءَكَ — notebook p. 9: «أَيْنَ تَضَعُ مِفْتَاحَكَ؟» · «إِلَى أَيْنَ تَذْهَبُ؟»",
-     "C3 · هٰذِهِ صَفْحَتِي! — the last line of p. 6, and the key poster on p. 8."],
-    "Until the strip is illustrated, C4 can run from the phrase-page pictures' order of events only if the class has read the story; otherwise hold C4 for the pictures."),
+    "The p. 9 survey was run in the previous phase; p. 5 uses its answers. A learner who missed it writes p. 5 from the phrase page's people."),
+   ("Fuller communication and transfer", "The teacher facilitates — zero prep, no props",
+    ["C3 · هٰذِهِ صَفْحَتِي! — the last line of p. 6, and the key poster on p. 8: show a partner, who asks one question.",
+     "C4 · نُعِيدُ الْقِصَّةَ بِالصُّوَرِ — under the eight-frame strip (rich-cartoon frames live since Version 43); run it after both readings.",
+     "Transfer — the same language in a new small situation: where a classmate keeps a thing; the way to another room."],
+    "Everything here runs on pages the unit has already produced. At the Captions rung you cue each frame of C4 and the class supplies the language."),
   ],
   c3_example="«أَيْنَ مِفْتَاحُكَ؟» · «مَنْ عِنْدَ الْبَابِ؟»",
   notes=[]),
@@ -105,22 +111,23 @@ UNITS = [
   n=3, label="Unit 3", ar="الْوَحْدَةُ ٣", status="Revision 1 · Gate A approved (SC-109) · Gate B pending · illustrations held",
   r1=dict(key="unit-03", title="مَنْ عِنْدَهُ الْكُرَةُ؟", tense="present", frames=8),
   r2=dict(key="unit-03p", title="هَدِيَّةُ رَزَان", tense="past", frames=6),
-  pictures="Not yet illustrated — strips print as empty numbered frames until the hold is lifted.",
+  pictures="Not yet illustrated — strips print as empty numbered frames until Gate B freezes the texts (SC-113). No verified audio: there are no listening tasks.",
   flow=[
    ("Input", "The learner, alone",
-    ["Digital · الْمُفْرَدَات — hear-and-tap practice on the unit's items.",
+    ["Digital · الْمُفْرَدَات — every core item met, recognised and met again in a sentence ({v1} tasks, planned sequence).",
      "Textbook · اُنْظُرْ وَاقْرَأْ! — the phrase page (B0): eighteen numbered phrases, each as the story prints it.",
-     "The strips (8 + 6 frames) — pictures pending."],
-    "Until the pictures land, phase 1 rests on the phrase page and the digital practice alone."),
+     "The strips (8 + 6 frames) — pictures follow the Gate B freeze."],
+    "Until the pictures land (after Gate B), phase 1 rests on the phrase page and the digital practice alone. No verified audio, so no listening tasks."),
    ("Reading", "The learner (the class may read together)",
-    ["Reading 1 «مَنْ عِنْدَهُ الْكُرَةُ؟» — {w1} words, present narration — then: صَحٌّ أَمْ خَطَأٌ؟ أَرِنِي · مَنْ يَقُولُ؟ · أَجِبْ (the last two questions are invented) · نَفْسُ الْقِصَّةِ... وَ (Version A / B). Digital · الْقِرَاءَة ١ ({a1} activities).",
-     "Reading 2 «هَدِيَّةُ رَزَان» — {w2} words, past narration, dialogue in the present — then: مَنْ يَقُولُ؟ · رَتِّبْ · الْآنَ أَمْ قَبْلُ؟. Digital · الْقِرَاءَة ٢ ({a2} activities)."],
+    ["Reading 1 «مَنْ عِنْدَهُ الْكُرَةُ؟» — {w1} words, present narration — then: صَحٌّ أَمْ خَطَأٌ؟ أَرِنِي · مَنْ يَقُولُ؟ · أَجِبْ (the last two questions are invented) · نَفْسُ الْقِصَّةِ... وَ (Version A / B). Digital · الْقِرَاءَة ١ ({p1} tasks selected from {a1} generated).",
+     "Reading 2 «هَدِيَّةُ رَزَان» — {w2} words, past narration, dialogue in the present — then: مَنْ يَقُولُ؟ · رَتِّبْ · الْآنَ أَمْ قَبْلُ؟. Digital · الْقِرَاءَة ٢ ({p2} tasks selected from {a2} generated)."],
     "Read cold. The family words are met inside the story before anyone names them; do not pre-teach the list."),
-   ("Consolidation", "The learner",
+   ("Consolidation and scaffolded interaction", "The learner; then the class, with you facilitating",
     ["اِقْرَأْ. ثُمَّ اقْرَأْ. — the recombination page, ten texts.",
      "وَأَنْتَ؟ وَأَنْتِ؟ — Unit 3's ten personal questions, added to the cumulative set.",
-     "The pop-up «Look — the ending says whose!» — the book's only English; proposed, confirmed at Gate B."],
-    "Ask the personal questions in Arabic, one at a time. «مَنْ فِي بَيْتِكَ؟» takes any true answer, including «أَنَا وَأُمِّي» or «قِطٌّ» — nothing on any page requires a family shape."),
+     "The pop-up «Look — the ending says whose!» — the book's only English; proposed, confirmed at Gate B.",
+     "C1 · اِسْأَلْ أَصْدِقَاءَكَ — notebook p. 9, find someone who has: «هَلْ عِنْدَكَ أَخٌ؟ · أُخْتٌ؟ · كُرَةٌ؟ · قِطٌّ؟» — asked of real classmates; its answers feed p. 5."],
+    "Ask the personal questions in Arabic, one at a time. «مَنْ فِي بَيْتِكَ؟» takes any true answer, including «أَنَا وَأُمِّي» or «قِطٌّ» — nothing on any page requires a family shape. Scaffolded interaction comes before the notebook (SC-119): run C1 here."),
    ("Output", "The learner, alone — begun in class, finishable at home",
     ["Notebook p. 2–3 · اُكْتُبِ الْقِصَّةَ: «مَنْ عِنْدَهُ الْكُرَةُ؟» — eight frames, two slots per line, bank shuffled and over-full (Frames rung, first use).",
      "Notebook p. 4 · اُكْتُبِ الْقِصَّةَ: «هَدِيَّةُ رَزَان» — six frames; the past forms are in the bank and copied.",
@@ -128,27 +135,27 @@ UNITS = [
      "Notebook p. 7 · قِصَّتِي — starters, no bank. p. 8 · دَوْرِي — my family, two lines and a drawing.",
      "Notebook p. 10 · هَلْ تَذْكُرُ؟ — four Unit 2 lines."],
     "This is the first unit with no bank on p. 5–7. Expect it to be slower; if learners cannot supply a whole line unassisted, note it on the pilot sheet — the ladder moves the rung to Unit 5 on that evidence, not on impression."),
-   ("Communication", "The teacher facilitates — zero prep, no props",
-    ["C4 · نُعِيدُ الْقِصَّةَ بِالصُّوَرِ — under the eight-frame strip; learner-led, one picture each (Frames rung).",
-     "C1 · اِسْأَلْ أَصْدِقَاءَكَ — notebook p. 9, find someone who has: «عِنْدَكَ أَخٌ؟ · أُخْتٌ؟ · كُرَةٌ؟ · قِطٌّ؟»",
-     "C3 · هٰذِهِ صَفْحَتِي! — p. 6, and the family poster on p. 8 presented as a two-line exchange."],
-    "Run p. 9 before p. 5, as always. The poster is shared with a partner, not the whole class, unless the child wants to."),
+   ("Fuller communication and transfer", "The teacher facilitates — zero prep, no props",
+    ["C3 · هٰذِهِ صَفْحَتِي! — p. 6, and the family poster on p. 8 presented as a two-line exchange.",
+     "C4 · نُعِيدُ الْقِصَّةَ بِالصُّوَرِ — under the eight-frame strip; learner-led, one picture each (Frames rung); after both readings.",
+     "Transfer — the same language in a new small situation: who has what in another family; a gift for someone at school."],
+    "The survey ran in phase 3, before p. 5. The poster is shared with a partner, not the whole class, unless the child wants to."),
   ],
   c3_example="«مَنْ هٰذَا؟» · «عِنْدَكَ أَخٌ؟»",
   notes=[]),
 ]
 
 PROCEDURES = {
- "C1": ("اِسْأَلْ أَصْدِقَاءَكَ", "Ask your friends — the survey", [
-   "Notebook open at p. 9. Read the two printed questions aloud once, in Arabic; do not translate them.",
-   "Learners stand, ask five classmates, write each name and tick the column that fits the answer.",
-   "Stop when every grid has five names. Those names are used on p. 5 — so this runs before the parallel story."]),
+ "C1": ("اِسْأَلْ أَصْدِقَاءَكَ", "Ask your friends — the survey (Phase 3, before the notebook)", [
+   "Notebook open at p. 9. Read the printed questions aloud once, in Arabic, and the two answer models («عِنْدِي…» ✓ · «لَيْسَ عِنْدِي…» ✗); do not translate them.",
+   "Learners stand, ask five classmates — the name, the pen, the list — write each name and tick ✓ or ✗ in each column.",
+   "Stop when every grid has five names. Those names are used on p. 5, so this runs before the parallel story; a learner who missed it uses the printed class list on p. 5."]),
  "C3": ("هٰذِهِ صَفْحَتِي", "Share your page", [
    "In pairs. The learner holds up the finished page (p. 5–6 or the poster on p. 8) and says the printed line: «هٰذِهِ صَفْحَتِي!»",
    "The partner points to one thing on the page and asks one question from the unit's own set — for this unit, e.g. {c3ex}.",
    "Swap roles. If there is a wall, the pages go on it; nothing is marked."]),
- "C4": ("نُعِيدُ الْقِصَّةَ", "Story circle — the retell", [
-   "Books open at the strip. Point to frame 1 and wait; the class says what happens.",
+ "C4": ("نُعِيدُ الْقِصَّةَ", "Story circle — the retell (Phase 5, after both readings)", [
+   "Books open at the strip. Point to frame 1 and wait; the class says what happens — at the Captions rung you cue the frames, the class supplies the language.",
    "Write on the board only what the class says, as they say it. Do not supply or correct toward the printed text.",
    "Move to the next frame once a sentence has been said for this one. The story ends when the strip does."]),
 }
@@ -171,7 +178,7 @@ def ar(s): return f'<bdi lang="ar" class="ar">{html.escape(s)}</bdi>'
 
 def render_unit(u):
     m1, m2 = meta[u["r1"]["key"]], meta[u["r2"]["key"]]
-    fill = dict(w1=m1["words"], w2=m2["words"], a1=m1["ok"], a2=m2["ok"])
+    fill = dict(w1=m1["words"], w2=m2["words"], a1=m1["ok"], a2=m2["ok"], v1=m1["vocab"], p1=m1["reading"], p2=m2["reading"])
     out = [f'''
 <section class="unit" id="unit-{u["n"]:02d}">
  <header class="uhead">
@@ -180,13 +187,13 @@ def render_unit(u):
   <dl class="facts">
    <div><dt>Reading 1</dt><dd>{ar(u["r1"]["title"])} — {m1["words"]} words, {u["r1"]["tense"]} · {u["r1"]["frames"]} frames</dd></div>
    <div><dt>Reading 2</dt><dd>{ar(u["r2"]["title"])} — {m2["words"]} words, {u["r2"]["tense"]} · {u["r2"]["frames"]} frames</dd></div>
-   <div><dt>Digital</dt><dd>{m1["ok"]} + {m2["ok"]} generated activities, QC clean</dd></div>
+   <div><dt>Digital</dt><dd>{m1["ok"]} + {m2["ok"]} generated (QC clean); a learner's planned pathways select {m1["vocab"]} vocabulary + {m1["reading"]} reading-1 + {m2["reading"]} reading-2 tasks</dd></div>
    <div><dt>Pictures</dt><dd>{esc(u["pictures"])}</dd></div>
    <div><dt>Status</dt><dd>{esc(u["status"])}</dd></div>
   </dl>
  </header>
 
- <h3>The unit flow <small>five phases, in the order the course requires (meaning → reading → output → talk)</small></h3>
+ <h3>The unit flow <small>five phases, in the order the course requires (meaning → reading → consolidation and scaffolded interaction → output → fuller communication and transfer; SC-119)</small></h3>
  <ol class="flow">''']
     for i, (name, who, pages, note) in enumerate(u["flow"], 1):
         items = "".join(f"<li>{esc(p.format(**fill))}</li>" for p in pages)
@@ -283,8 +290,8 @@ studio = (HERE / "school_course_studio.html")
 if studio.exists():
     assert "teacher_pages" not in studio.read_text(encoding="utf-8"), "the Studio must not link the teacher's page (SC-104)"
 
-(HERE / "intaliq1_teacher_pages.html").write_text(page, encoding="utf-8")
-(HERE / "Intaliq1_Teacher_Pages.html").write_text(
+(HERE / "intaliq1_teacher_pages.artifact-body.html").write_text(page, encoding="utf-8")
+(HERE / "intaliq1_teacher_pages.standalone.html").write_text(
     '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body>'
     + page + "</body></html>", encoding="utf-8")
 print("built:", {k: (v["words"], v["ok"]) for k, v in meta.items()}, "bytes:", len(page.encode("utf-8")))

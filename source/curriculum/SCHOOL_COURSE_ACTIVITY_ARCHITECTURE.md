@@ -10,7 +10,7 @@
 
 **P-2 — The communication test.** Completing any activity perfectly must tell someone something — about the story, the learner, or a classmate. Display-of-form activities do not exist.
 
-**P-3 — Phases 1–4 are independent (SC-024/025).** Every platform, textbook, and notebook format is completable by a student alone: the platform speaks, the textbook shows, the notebook frames. The test, applied to every proposed activity: *could a student alone in a room finish this with only the products in front of them?* An activity that needs a teacher's voice, hands, or judgment to complete belongs to phase 5 or does not exist. (v1's S1 listen-and-point failed this test and was removed — its listening job lives on the platform.)
+**P-3 — Input, reading and writing are independent (SC-024/025; precised SC-119).** Every platform, textbook, and notebook format is completable by a student alone: the platform speaks, the textbook shows, the notebook frames. The test, applied to every proposed activity: *could a student alone in a room finish this with only the products in front of them?* An activity that needs a teacher's voice, hands, or judgment to complete belongs to phase 5 or does not exist. (v1's S1 listen-and-point failed this test and was removed — its listening job lives on the platform.) ⟨**SC-119**⟩ The one exception is named, not hidden: **scaffolded interaction (C1, phase 3) needs classmates** — it is rehearsed from printed language and asked of real people, and its answers feed the notebook; the independence law therefore reads *phases 1, 2 and 4 alone; phase 3's survey with the class; phase 5 with the class*. A learner absent for the survey has a printed alternative on the page it feeds (N2): the parallel story is written about the printed class list instead of the collected names.
 
 **P-4 — Zero prep, zero props (SC-024).** No format may require the teacher or student to make, cut, print, or gather anything. All materials are the platform, the textbook, the notebook, and the people in the room.
 
@@ -28,11 +28,11 @@
 |---|---|---|---|
 | **1 · Input** | Platform (mainly) + textbook input pages | The student, alone | Meaning made: hear-and-tap words, verbs, possession; story preview |
 | **2 · Reading** | Textbook | The student (class may read together) | The main story, then the parallel story; comprehension formats |
-| **3 · Consolidation** | Textbook | The student | Manipulation formats; the grammar pop-up; functional text; authentic corner |
-| **4 · Output** | **The notebook** | The student, alone | The output ladder: guided retell → parallel story → own story |
-| **5 · Communication** | Classroom | Teacher facilitates, zero prep | Interpersonal formats using completed book/notebook pages and the people present |
+| **3 · Consolidation and scaffolded interaction** ⟨SC-119⟩ | Textbook, then the classroom | The student; then the class, teacher facilitating | Manipulation formats; the grammar pop-up; functional text; authentic corner; **then C1, the survey — rehearsed from the printed line, asked of real classmates — whose answers the notebook will use** |
+| **4 · Output** | **The notebook** | The student, alone | The output ladder: guided retell → parallel story (from the survey's names) → own story → the share prepared |
+| **5 · Fuller communication and transfer** ⟨SC-119⟩ | Classroom | Teacher facilitates, zero prep | C3 (show a partner, who asks), C4 (the retell), the cumulative personal questions, and the same language reused in a new small situation — using completed pages and the people present |
 
-The order is law (meaning before reading, reading before output, output before interpersonal performance); pacing within it is free. A student who misses class can complete phases 1–4 entirely alone — by design.
+The order is law — meaning before reading; reading before output; **scaffolded interaction, including C1, before the notebook writing that depends on it; Phase 5 reserved for fuller communication and transfer** (owner's decision, carried forward from the 2026-10 source package and recorded as **SC-119**; SC-024's "output precedes interpersonal communication" is precised, not reversed: the *survey* is scaffolded interaction, not the fuller communication of phase 5). Pacing within it is free. A student who misses class completes phases 1, 2 and 4 alone; phase 3's survey needs the class (see P-3 for the absent learner).
 
 ## 3. The catalog
 
@@ -67,9 +67,9 @@ The order is law (meaning before reading, reading before output, output before i
 
 **S6 · دَوْرِي (My Turn) moves to the notebook** as the make-and-display piece feeding C3.
 
-### C — Classroom communicative formats (phase 5; teacher facilitates; zero prep, prop-free)
+### C — Classroom communicative formats (C1 in phase 3, C3–C4 in phase 5 ⟨SC-119⟩; teacher facilitates; zero prep, prop-free)
 
-**C1 · Ask your friends · اِسْأَلْ أَصْدِقَاءَكَ** — the survey, its grid printed in the notebook; the data collected is real names and answers.
+**C1 · Ask your friends · اِسْأَلْ أَصْدِقَاءَكَ** — the survey, its grid printed in the notebook; the data collected is real names and answers. **Phase 3** (scaffolded interaction): it runs before the notebook page that uses its names. Its printed questions address the classmate directly in the second person, with masculine and feminine forms side by side and the answer models printed, and every column has a question that elicits it (Unit 1 repaired 2026-10-10, audit B5).
 **C2 · Half and half · نِصْفٌ وَنِصْفٌ** — paired information gap; the A and B halves are printed pages in the textbook (printed ≠ props; nothing is made).
 **C3 · Share your page · هٰذِهِ صَفْحَتِي** — learners present their N2/N3/S6 pages to a partner, a group, or the wall; the course's presentational moment, powered entirely by work already done.
 **C4 · Story circle · نُعِيدُ الْقِصَّةَ** — the class retells the story from the book's own panels, learner-led, teacher writing on the board only what the class says.
@@ -86,9 +86,11 @@ The order is law (meaning before reading, reading before output, output before i
 | ~~Teacher book~~ | **Cancelled (SC-045).** Answer keys are **not produced at all (SC-048)** — the formats are self-checking against the page they sit on. |
 | *Teacher's page* ⟨SC-104⟩ — **not a product** | One page per unit, generated at freeze (`tools/build_teacher_pages.py`), at a separate address the student Studio never links to. Carries **only**: the unit flow (the five phases above mapped to that unit's pages), the C1 · C3 · C4 procedures at three lines or fewer each, and the pilot's observation prompts (§8). English allowed. **No keys** (SC-048 stands), no code, no login, no claim of secrecy — its safety is that it contains nothing a learner could use to skip a page. The learner-facing rubrics printed on the C-format pages (SC-049) stay; the page carries the procedure they cannot. This closes the facilitation question SC-045 left open. |
 
+**Classroom posters ⟨SC-114, 2026-10-10⟩.** One poster per question word (`مَنْ · أَيْنَ · هَلْ · مَاذَا · مَا …`), Arabic only, the word large over one model question quoted verbatim from a reading the class has read, with a picture in the course style. A poster is a **classroom instrument, not a product**: the product shape (Digital · Textbook · Notebook, SC-096) is unchanged; posters are generated at freeze beside the teacher's page (SC-104), reached only from it, hung before Phase 1 and left up cumulatively, never used as a prop by any activity (P-4 holds: nothing to prepare beyond printing), never a drill, never assessed. They scaffold the early exposure of question words that SC-114 licenses as support; they teach nothing. Spec: `INTALIQ1_QUESTION_WORD_POSTERS.md`.
+
 ## 5. The standard unit flow (sessions map onto phases, not the reverse)
 
-Phase 1 at the top of class on shared devices (or B1–B2 where devices are absent) → phase 2–3 across the middle sessions with the pop-up after the main story → phase 4 begun in class, finishable at home (it is independent by design) → phase 5 closing the unit, running entirely on what the unit produced.
+Phase 1 at the top of class on shared devices (or B1–B2 where devices are absent) → phase 2–3 across the middle sessions with the pop-up after the main story and **the survey (C1) at the end of phase 3** → phase 4 begun in class, finishable at home (it is independent by design; the parallel story uses the survey's names) → phase 5 closing the unit — C3, C4, the personal questions, transfer — running entirely on what the unit produced ⟨SC-119⟩.
 
 ## 6. Platform engine rules (SC-028 — the online-supplement governance source per the engine spec §29)
 

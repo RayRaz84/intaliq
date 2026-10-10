@@ -1,3 +1,7 @@
+> **Numbering note (SC-118, 2026-10-10).** The register entries this file cites by the repository copy's numbers are, in the governing project register: repository SC-114 → **SC-115** (Version 43 build), SC-115 → **SC-116** (Version A compositing), SC-116 → **SC-117** (brown bag, Version 44). The register is appended only in the project; this copy is an export.
+>
+> **Scope since Version 45 (SC-120).** `build_studio_art.cjs` is now the whole Text build: it also embeds `engine_core.js` into the Studio wholesale, regenerates the `<!-- gen:… -->` blocks from engine data, runs the teacher-page generator and writes `teacher.html`, and refuses on any undeliverable unit. See `INTALIQ_DEPLOYMENT.md` §Building. Build Version 45 with `INTALIQ_STUDIO_VERSION=45 node source/pipeline/build_studio_art.cjs`.
+
 # Unit 2 Art Build
 
 The final Text integration stage consumes `art_assets_map.json` and `source/cast-and-art/unit2_art_bindings.json`. It regenerates canonical Unit 2 data, copies its assignments into the engine, removes the earlier runtime assignment patch, and emits the Studio review version. Frozen prose is not edited.

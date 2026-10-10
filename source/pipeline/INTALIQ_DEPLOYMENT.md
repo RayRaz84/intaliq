@@ -1,6 +1,6 @@
 # Intaliq (School Course Studio) — public deployment
 
-*Recorded 2026-09-12. Delivery fix only; the book's content is unchanged. **Updated 2026-09-26** for Studio Version 40 and the teacher's page (SC-104).*
+*Recorded 2026-09-12. Delivery fix only; the book's content is unchanged. **Updated 2026-09-26** for Studio Version 40 and the teacher's page (SC-104). **Updated 2026-10-10** for the one-command Text build, Version 45 and the extended release gate (SC-120).*
 
 **Public URL:** https://rayraz84.github.io/intaliq/
 **Source repo:** https://github.com/RayRaz84/intaliq (public, owner RayRaz84, branch `main`, GitHub Pages "deploy from a branch", root)
@@ -21,14 +21,25 @@ The claude.ai artifact link requires a Claude session; external reviewers hit a 
 ## Updating ⟨procedure from 2026-09-29⟩
 A local clone of the repo lives on the owner's Mac at `~/Documents/Documents - Work’s MacBook Air/GitHub/intaliq` (curly apostrophe in the folder name), next to the Book 1 repo, which is unrelated and never touched. At each freeze the Cowork session regenerates `deploy/` from `claude/tools/school_course_studio.html` and `claude/tools/intaliq1_teacher_pages.html`, writes `index.html`, `404.html` and `teacher.html` into that clone through the linked-computer bridge, and verifies them there (`git status`, version chip, `teacher.html` never referenced by `index.html`). The owner then tells the Mac session (Claude Code, signed in to `gh` as RayRaz84): *"push the Intaliq site"* with a commit message — it stages only those three files, commits, and pushes `main`. Pages rebuilds in about a minute. The cloud session cannot push itself (github.com is refused by its network policy). The zip route (`Add file → Upload files` on the repo page) remains the fallback.
 
-**Version now written to the clone:** Studio 42 — Units 1–3, teacher's page for all three units. **Version on the public site:** whatever was last pushed.
+**Version now built (2026-10-10):** Studio **45** — the Unit 1 corrective pass (SC-120); the public site shows **44** until the Publisher pushes. **Version on the public site:** whatever was last pushed.
+
+## Building ⟨SC-120, 2026-10-10⟩ — the sources, not the outputs
+The deployable files are **generated**; an edit made to `index.html`, `404.html` or `teacher.html` alone is overwritten by the next build. The authoritative sources are `source/pipeline/engine_core.js` (the engine and all unit data), `source/pipeline/school_course_studio.html` (the Studio source — its embedded engine is replaced by `engine_core.js` at build and its `<!-- gen:… -->` blocks are regenerated from the engine), `source/pipeline/build_teacher_pages.py` (the teacher's page) and `source/units/unit2/unit02_data.js` (from `build_unit02.py`). One command builds everything, from the repository root:
+
+```
+INTALIQ_STUDIO_VERSION=45 node source/pipeline/build_studio_art.cjs
+python3 source/pipeline/verify_release.py <folder-with-index-404-teacher-assets> 45
+```
+
+The build refuses when any unit is undeliverable (a unit-level QC failure), when the Unit 2 art inventory or hashes disagree with the manifest, when the Studio mentions the teacher page, or when a forbidden string (first-person gender self-categorisation, SC-021) is printed. It writes `source/pipeline/build_report.json` with per-unit words, generated and planned-pathway counts.
 
 ## Known limitations
 - Two webfonts (Noto Naskh Arabic, Baloo Bhaijaan 2; the teacher's page also uses Source Serif 4 / Source Sans 3) load from fonts.googleapis.com; system fallbacks are declared.
 - "Audio" is the browser's built-in speech synthesis, not recorded audio; voice quality depends on the visitor's OS.
-- The site is public and unlisted, not private. Unit 2's picture frames are empty by standing instruction until the illustrations are authorized.
+- The site is public and unlisted, not private. Unit 2's frames carry the accepted rich-cartoon art (SC-113); Unit 1's are in-house SVG pending the redraw; Unit 3's are empty until its Gate B freeze.
+- There is **no recorded, verified audio and therefore no listening task** anywhere; the 🔊 buttons are the browser's preview voice on request. Listening is Batch 4 work (Unit 1 Build §9.5).
 
 
-## Release check before every push (added 2026-10-01)
+## Release check before every push (added 2026-10-01; extended 2026-10-10, SC-120)
 
-`tools/verify_release.py deploy/ <version>` serves the deploy folder exactly as GitHub Pages serves it, opens every Studio route in a real browser, screenshots each one (`verify_shots/`, contact sheet `verify_sheet.png`) and writes `verify_report.md`. **Blockers** (exit 1, no push): a route with no view mounted · any broken image · any `assets/` path referenced but missing · any link or mention of `teacher.html` in the Studio (SC-104) · the words "answer key" (SC-048) · a version chip that is not the expected version · console errors or failed requests from the site's own files. **Warnings** (listed, judged by eye): art files used more than once · "illustration pending" / "not yet commissioned" / "PROPOSED" counts · external resources unreachable from the workspace (fonts; fine on Pages). The Editor then looks at the contact sheet before writing the files into the clone. Charter §8's "rendered-page verification and presence inventory before any release" is this script plus that look.
+`tools/verify_release.py deploy/ <version>` serves the deploy folder exactly as GitHub Pages serves it, opens every Studio route in a real browser, screenshots each one (`verify_shots/`, contact sheet `verify_sheet.png`) and writes `verify_report.md`. **Blockers** (exit 1, no push): a route with no view mounted · any broken image · any `assets/` path referenced but missing · any link or mention of `teacher.html` in the Studio (SC-104) · the words "answer key" (SC-048) · a version chip that is not the expected version · console errors or failed requests from the site's own files. **Warnings** (listed, judged by eye): art files used more than once · "illustration pending" / "not yet commissioned" / "PROPOSED" counts · external resources unreachable from the workspace (fonts; fine on Pages). **Extended (SC-120):** every digital pathway of every unit is **walked to its end** in the browser (a pathway that stops is a blocker — the Unit 1 Reading 1 crash would have been caught); Unit 1's print-style tasks are checked for their response resources and for quotation drift from the printed story; an unresolved `<use href="#…">` and a review note visible in the learner view are blockers; `index.html` and `404.html` must be identical and `teacher.html` present; and **mutation tests** run against the engine extracted from `index.html` — a canon, form, membership or audio-flag mutation must leave the unit undeliverable, and the unmodified unit must deliver. The Editor then looks at the contact sheet before writing the files into the clone. Charter §8's "rendered-page verification and presence inventory before any release" is this script plus that look.

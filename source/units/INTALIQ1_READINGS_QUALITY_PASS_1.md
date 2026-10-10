@@ -1,0 +1,39 @@
+# Intaliq 1 — Readings quality pass 1 (the six built readings, read as an Arabic editor)
+
+*Editor · 2026-10-10 · under SC-113 ("focus on making sure all other parts of the book is good including the readings"). Texts read: Unit 1 «قَائِمَةُ رَزَان» v8 and «مَنْ أَنْتَ يَا قَلَم؟» (engine canon, SC-059); Unit 2 «أَيْنَ مِفْتَاحِي؟» and «صُورَةُ رَزَان وَخَدِيجَة» (revision 6, frozen SC-095); Unit 3 «مَنْ عِنْدَهُ الْكُرَةُ؟» and «هَدِيَّةُ رَزَان» (revision 1, SC-110, not frozen). This pass is the "native-ear" reading the Unit 1 reviewer brief said had never been done: vocalization, agreement, collocation, register, discourse — not the CR arithmetic, which the production records already carry.*
+
+## 1 · The verdict in one paragraph
+
+All six readings are correct Arabic. No agreement error, no wrong case ending, no collocation a native reader would reject, no calque. The two Unit 2 readings are the best prose in the book: the cat exchange and the crossed-paths joke both land, and the sentences read like Arabic rather than like an inventory. Unit 3's two readings are nearly there; they carry **one register fault repeated three times and one clarity gap at the exchange**, both fixable inside the licensed envelope before Gate B. Unit 1 carries one vocalization slip in a title. Everything else below is observation, not a defect.
+
+## 2 · Findings that need a change
+
+**F-1 · Unit 3 Story 1 — three yes/no questions without هَلْ.** «يَا لَيْلَى، عِنْدَكِ الْكُرَةُ؟» · «يَا أُمِّي، عِنْدَكِ كِتَابِي؟» · «يَا أَبِي، عِنْدَكَ قَلَمُ أُمِّي؟». A yes/no question carried by intonation alone is colloquial; written MSA marks it with هَلْ (or أَ). Unit 2 prints هَلْ correctly in every such question («هَلْ هٰذَا مِفْتَاحُكَ؟»), and هَلْ is licensed (Grammar Ledger, Alhawary 7.1.1 p. 133), so Unit 3 dropping it is a register regression, not an economy. **Fix:** «هَلْ عِنْدَكِ الْكُرَةُ؟» · «هَلْ عِنْدَكِ كِتَابِي؟» · «هَلْ عِنْدَكَ قَلَمُ أُمِّي؟». Cost: +3 words (161), three more encounters of a licensed function word; CR-1 unchanged.
+
+**Status ⟨2026-10-10⟩: APPLIED under SC-114** — the owner ruled *"USE هَلْ and any question word freely"*; Unit 3 Story 1 is revision 2 in `INTALIQ1_UNIT3_STORY_DRAFTS.md` (161 words, machine-counted); the apparatus yes/no questions take `هَلْ` likewise; question words are free as support from first exposure (function-word progression §6), scaffolded by classroom posters (`INTALIQ1_QUESTION_WORD_POSTERS.md`). Not yet in the Studio: Version 45 follows Unit 3's Gate B (SC-118; Version 44 is the live brown-bag build).
+
+**F-2 · Unit 3 Story 1 — the key's hand-over is elided.** «يَأْخُذُ يُوسُف الْمِفْتَاحَ وَيُعْطِيهِ أَبُوهُ الْقَلَمَ.» Yusuf takes the key from under the cat and, in the same sentence, his father hands him the pen — but the key never visibly reaches the father. A child reading at this level will ask when the key changed hands; the exchange chain (the unit's engine, C · Exchange) has a missing link at its first joint. The natural repair uses the accusative of أب (أَبَاهُ), which is not licensed. **Fix inside the licence:** «يَأْخُذُ يُوسُف الْمِفْتَاحَ. «يَا أَبِي، الْمِفْتَاحُ!» يُعْطِيهِ أَبُوهُ الْقَلَمَ.» — the hand-over is spoken, every form already printed in the unit. Cost: +3 words; the picture for that frame shows the key held out.
+
+**F-3 · Unit 1 parallel reading — the title's vocative.** «مَنْ أَنْتَ يَا قَلَم؟» A single definite common noun after يَا takes the damma: «يَا قَلَمُ». Unit 3 prints it correctly («يَا قِطُّ!»); the Unit 1 title does not. Names are printed without case endings by house convention, but قَلَم is not a name. **Fix:** «مَنْ أَنْتَ يَا قَلَمُ؟» in the engine title field, the Studio, the outcomes chart and the teacher's page. Unit 1 is frozen "as built" (SC-093), so this is an owner's call; it is a vocalization correction, not a text change.
+
+## 3 · Observations the owner should know about, no change proposed
+
+**O-1 · Unit 2 Story 2, the crossed-paths line.** «قَالَتْ خَدِيجَة: «رَزَان! أَنَا أَذْهَبُ إِلَى بَيْتِكِ!» قَالَتْ رَزَان: «وَأَنَا أَذْهَبُ إِلَى بَيْتِكِ!»» Under the tense law (E-2: narration past, dialogue present) the girls say "I'm going to your house" at the moment they meet; a native speaker would more often say ذَهَبْتُ ("I went"). It works as the joke it is — each was on her way to the other — and the owner reviewed this story at SC-095, so it stands. It is the one place in the six readings where the tense law shows.
+
+**O-2 · Unit 3 Story 1, «يَعِيشُ الْقِطُّ بِجَانِبِ الْبَابِ».** "The cat lives beside the door" is a deliberate comic exaggeration that puts the target verb to work; a plainer يَجْلِسُ is not licensed. Acceptable, and the illustration should make the joke visible (the cat permanently installed by the door).
+
+**O-3 · Unit 1 main story, «هٰذِهِ سَارَة!» said to Huda.** Razan points at Huda and announces "This is Sara!" rather than "You are Sara"; later she addresses Omar as «أَنْتَ عُمَر!». Both are natural — the first is a guess announced to the room, the second a direct address — and the contrast is good variety, not inconsistency.
+
+**O-4 · Compound subjects with a singular verb** («يَقُولُ عُمَر وَسَارَة وَرَنَا», «قَالَتْ فَرِيدَة وَمَهَا وَزَيْد»). Correct MSA: a verb before its subjects agrees with the first conjunct. No change.
+
+**O-5 · Unit 3 Story 2, «أَخُو خَدِيجَة» and «أَخُوكِ».** The construct and suffixed forms of أَخ (the five nouns) are used correctly. The Grammar Ledger should carry the form as licensed-in-construct (nominative only) so that Unit 4 does not reach for أَخَا / أَخِي-oblique without a ruling; a ledger note, not a text change.
+
+**O-6 · Proper names unvocalized at the end** (رَزَان · كَرِيم · زَيْد · يُوسُف) in every reading. This is the house convention and it is applied consistently, including in construct («بَيْتِ زَيْد», «قَلَمُ أُمِّي» where the noun is declined and the name is not). Consistent; no change.
+
+## 4 · Story-level reading (the owner's test: would you enjoy reading these?)
+
+Unit 2 Story 1 is the model: a real want, a key that is the same key, four doors, a cat that knows, a reveal in the bag. Unit 2 Story 2 is slight but charming and its ending (two identical photographs) is the kind of resonance the standard asks for. Unit 3 Story 1's exchange chain is a good engine for a possession unit and the cat's theft is the right closing beat; its only weakness is F-2. Unit 3 Story 2 is the quietest of the six — a gift given away to the small brother — and its final sentence («ذَهَبَتْ … وَالْهَدِيَّةُ مَعَهَا… وَرَجَعَتْ … وَالْكُرَةُ مَعَهَا») is the best single sentence in the book. Unit 1's two readings are, as SC-093 says, pre-calibration: correct, serviceable, visibly built from an inventory in a way the later units are not; they stand as built.
+
+## 5 · What this pass did not cover, and what comes next
+
+Not covered: the apparatus (S-sets, C-formats, phrase pages, recombination pages, personal questions), the notebooks, the platform's generated activities, the teacher's pages, the Alhawary 14.10 p. 258 check, the owed frequency lookups. Each is a pass of its own, in this order: **(1)** Unit 3 Gate B — the owner's word on the two texts with F-1 and F-2 applied, the titles and the pop-up; freeze; **(2)** the Unit 2 pop-up ruling (SC-105, still open); **(3)** apparatus pass, Units 1–3, against the Activity Architecture — every S-set's stems checked as canon substrings, every C-format's rubric present, the phrase pages against the readings; **(4)** notebook pass against the output-ladder schedule (Captions U1–2, Frames U3); **(5)** a by-eye sample of the engine's generated activities per unit (QC proves structure, not sense); **(6)** teacher's pages regenerated after any text change; **(7)** Version 43. — F-1 applied (SC-114)

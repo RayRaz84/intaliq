@@ -1,6 +1,6 @@
 # Unit 1 Build — «مَنْ أَنْتَ؟» remaining components (draft v1)
 
-*The School Course · Level 1 · Unit 1 · companion to `SCHOOL_COURSE_U1_MAIN_STORY.md` · **status: both readings APPROVED by the owner 2026-09-10 (SC-048)**; the rest of the build is draft pending panel calibration · every reading swept against the SC-016 core; every activity is a catalog instance*
+*The School Course · Level 1 · Unit 1 · companion to `SCHOOL_COURSE_U1_MAIN_STORY.md` · **status: both readings APPROVED by the owner 2026-09-10 (SC-048)**; the rest of the build is draft pending panel calibration · every reading swept against the SC-016 core; every activity is a catalog instance · **§§1–8 are the build history; §9 (2026-10-10, SC-120) records the corrective pass and is the current operative state of the apparatus — where §§4–6 and §9 differ, §9 governs.***
 
 ---
 
@@ -82,7 +82,7 @@ Three photographed real items (owner to source or commission photography; requir
 > Arabic doesn't need a word for *is*: **أَنَا رَزَان** = I (am) Razanne. **هٰذَا عُمَر** = This (is) Omar.
 > And the pointing word matches the person: **هٰذَا** for a boy or a man, **هٰذِهِ** for a girl or a woman.
 
-*(Three lines. The only English in the book.)*
+*(Three lines. The only English in the book.)* ⟨**Narrowed 2026-10-10, §9 P1:** "In these present-tense sentences Arabic has no separate word for am / is …"; the pointing word "matches the person or thing it points at … and for قَائِمَةٌ, a 'she' word: هٰذِهِ قَائِمَةٌ".⟩
 
 ## 5. Textbook activity sets (SC-032: quantity is generous — 6 sets per reading, 12 + corner across the unit; every one completable by a student alone per SC-025; every prompt and option is a phrase or sentence, never a bare word, per SC-038)
 
@@ -136,7 +136,7 @@ Three photographed real items (owner to source or commission photography; requir
 - **C4 · نُعِيدُ الْقِصَّةَ** — **the rubric «نُعِيدُ الْقِصَّةَ بِالصُّوَرِ» is printed under the main story's six-picture strip (SC-049)**, which is the only thing the format uses. The class retells from those pictures, learner-led; the teacher writes only what the class says.
 - *(C2 Half-and-half is not rotated into U1 — three communicative sets suffice; its printed halves debut in a later unit.)*
 
-**Phase flow, applied:** Phase 1: A1–A6 on shared devices at the top of class (or B1–B2 alone where devices are absent) · Phase 2: main story + S2, S3, S8 · Phase 3: pop-up → S4 → parallel story → roster + S12 → S13 corner · Phase 4: N1 → N2 → N3 (begun in class, finishable at home — independent by design) · Phase 5: C1 → C4 → C3 closes the unit on the learners' own pages.
+**Phase flow, applied:** ⟨**SUPERSEDED by §9 (SC-119), preserved as history**⟩ Phase 1: A1–A6 on shared devices at the top of class (or B1–B2 alone where devices are absent) · Phase 2: main story + S2, S3, S8 · Phase 3: pop-up → S4 → parallel story → roster + S12 → S13 corner · Phase 4: N1 → N2 → N3 (begun in class, finishable at home — independent by design) · Phase 5: C1 → C4 → C3 closes the unit on the learners' own pages.
 
 ## 7. Art brief — the house figure style (SC-034, completed by SC-053)
 
@@ -157,3 +157,50 @@ Because several unit facts live *only* in the art, the following are binding, no
 ## 8. QC status
 
 Sweeps run: every token of both stories and the roster against SC-016 core + supports (one violation caught and fixed in drafting: عِنْدَهَا in an S1 read-aloud line — the envelope binds teacher read-aloud text too) · support caps: main story 2 (قائمة، يا) · parallel 2 (يا; اسمُهُ avoided by design) · roster 1 (معلمة) · encounter floors: all sixteen core items now clear ≥6 across readings + activities (وَلَد: story 1 + parallel 1 + S1/S2/S3/S4/S5 ≥ 4 more) · text-type audit: both stories are short connected simple sentences, Novice profile ✓ · dignity test: both laughs situational; فريدة is corrected warmly and wins the last moment ✓. **Owed before panel:** owner read · native-ear collocation pass · B&P eye-pass on the core (standing) · rendered-page turn once pages exist.
+
+## 9. Corrective pass — 2026-10-10 (audit batches 1–3; **SC-120**, Studio Version 45)
+
+*Source of the findings: `INTALIQ1_Unit1_Instructional_Audit_2026-10-10.md` (the instructional auditor). Both frozen stories and the accepted illustrations are untouched. Everything below was made in the authoritative sources — `source/pipeline/engine_core.js`, `source/pipeline/school_course_studio.html`, `source/pipeline/build_teacher_pages.py`, `source/pipeline/build_studio_art.cjs`, `source/pipeline/verify_release.py` — and the site regenerated from them.*
+
+### 9.1 · Phase flow, applied (SC-119 — the owner's decision, carried forward)
+
+Phase 1 **input**: A-formats on shared devices (or B1–B2 alone) — the Digital vocabulary pathway now meets every core item once (explore), recognises every pictured item both ways, and gives every unpictured core item one meaning-in-context task (48 planned tasks for Reading 1's items) · Phase 2 **reading**: Reading 1 with S2, S3, S8, S4, S7, S9; Reading 2 with its six sets · Phase 3 **consolidation and scaffolded interaction**: pop-up → roster + S12 (with the named row of faces) → can-do page → **C1, the survey**, rehearsed from the printed line and asked of five classmates · Phase 4 **output**: N1 أ → N1 ب → N2 (from the survey's names; a learner who missed C1 uses the printed class list) → N3 → S6 · Phase 5 **fuller communication and transfer**: C3 (a partner asks one question) → C4 (the retell, teacher cueing the frames at the Captions rung) → the same language in a new small situation. The notebook's lede, the reviewer tour, the teacher's page and Activity Architecture §2 say the same thing.
+
+### 9.2 · Delivery (Batch 1)
+
+- **B1.** The main reading's membership is rebuilt from the sentence inventory (m00–m20, 24 sentences, in order); `qc()` fails a unit whose reading lists an unknown id, a duplicate, omits a live sentence, or goes backwards in spoiler stage. The renderer no longer dereferences a missing sentence.
+- **B2.** Unit-level QC failures (canon, form, licence, membership, orphan, audio flag) make the unit **undeliverable**: `qc().ok` is empty, `sequenceFor()` and `pathway()` return nothing, the hub disables the unit's cards and says why, and the build refuses to run. A **form-licence table** (`FORM_LICENCE`, Units 1 and 1p, transcribed from the Grammar and Vocabulary Ledgers at the SC-059/SC-075 state) is checked beside the canon, so writing a form into the canon does not license it. Units 2–3 have no table yet (reported in QC notes; owed to their build scripts).
+- **I1.** The fixed `slice()` prefixes are replaced by a documented coverage plan (`pathway()` in the engine); the hub shows planned counts; the teacher's page distinguishes generated inventory from selected pathway tasks.
+- Wrong-answer feedback on picture→Arabic shows the item's phrase (or its sentence once read); picture distractors prefer a different meaning dimension so a single girl is never set against the two-girl icon.
+- `audio.verified` set without clip bindings is a unit-level failure; the F9 branch is marked **not built**.
+
+### 9.3 · The approved unit made usable (Batch 2)
+
+- **S2 اِقْرَأْ وَصِلْ** — the five response pictures are printed as a lettered row (أ–هـ); «أَنَا عُمَر» replaced by the story's «أَنَا رَزَان» so no two sentences share a picture. Reading 2's three sentences match the three strip frames by number.
+- **S8 مَنْ يَقُولُ؟** — both readings: the faces (five for Reading 1; four faces and the pen for Reading 2) are printed as a numbered row and **the quotations are generated at build from the engine's `whosays` table**, each a verbatim substring of its support sentence (SC-052). The three stale quotations («لَا! لَا! أَنَا هُدَى!» · «عِنْدِي قَائِمَةٌ.» · «وَلِي صَدِيقَةٌ: رَزَان!») are gone.
+- **S7 رَتِّبْ** — both readings generated from the engine's `events`, each line verbatim («قَالَتْ مَهَا: «لَا!»» had been truncated; Huda's correction had been spliced).
+- **S3 / S9 / S14** — Arabic response rubrics replace the English instructions (✓ or ✗ and the frame number; underline; sort into story 1 or 2 — the **titles** are the categories, not "by ear").
+- **اِخْتَرْ** (Reading 2) — «أَنَا وَلَدٌ» retired as a distractor (SC-021), here and in digital contrast rc2 → «أَنَا كَرِيم». The build refuses if the string reappears.
+- **S12 roster** — criterion corrected ("the names the story mentions": five, not three); a labelled row of the seven drawn children gives the name-to-face reference the gap task needs.
+- **C1 survey** — three questions, one per column, addressed to the classmate: «مَنْ أَنْتَ؟ / مَنْ أَنْتِ؟» · «هَلْ عِنْدَكَ / عِنْدَكِ قَلَمٌ؟» · «هَلْ عِنْدَكَ / عِنْدَكِ قَائِمَةٌ؟», with the answer models «عِنْدِي قَلَمٌ.» ✓ · «لَيْسَ عِنْدِي قَلَمٌ.» ✗; columns «قَلَمٌ ✓/✗» · «قَائِمَةٌ ✓/✗». The teacher's C1 procedure matches.
+- **Can-do** — «هُنَاكَ اسْمٌ فِي الْقَائِمَةِ» → «هُنَاكَ اسْمٌ: «رَزَان»!» (فِي is Unit 2's).
+- **C4** — a small Arabic timing cue beside the rubric («بَعْدَ الْقِرَاءَةِ»); rung-specific leadership stated on the teacher's page.
+
+### 9.4 · Disclosures (Batch 3) — Unit 1 is the pre-calibration unit (SC-093) and stands as built
+
+| Disclosure | Status |
+|---|---|
+| Reading 2 at **71 words** against CR-3's 80-word floor | grandfathered (SC-093); not padded |
+| **No sound-first preparation**: the station (A1–A4) assumed verified audio; none exists | not built — Batch 4; the hub and teacher's page say so |
+| **Tense-state exception**: «كَرِيم... لَيْسَ عِنْدَهُ قَلَمٌ» is narrated outside dialogue; SC-095 (later) moves such states into dialogue | recorded, not rewritten |
+| **N1 ب line 2b** narrates «لَيْسَ عِنْدَهَا قَلَمٌ» about مَهَا where the story has her first-person denial | supported retell, disclosed on the page |
+| **Apparatus-only forms** in N2/N3: يَدْخُلُ · عِنْدَهُ (SC-023 pairs) · **لَهُ** (لِـ family, SC-039 — masculine not printed in either reading; **licence to confirm in the Chunk Inventory**) · the construct صَدِيقُ / صَدِيقَةُ (S4, SC-018 R-7) | printed models added above N3's frames; licence row owed |
+| **Chrome admitted** (SC-046): اُكْتُبِ الْحَرْفَ · رَقْمُ الصُّورَةِ · رَقْمُ الْوَجْهِ · ضَعْ خَطًّا · بَعْدَ الْقِرَاءَةِ · الْأَسْمَاءُ فِي الْقِصَّةِ · مَنْ لَيْسَ فِي الصُّورَةِ · رَقْمُ شَخْصِيَّتِي · هَلْ (SC-114) | recorded here |
+| **Lexical vs grammatical permission** (I5): the three past-form cards keep their lexical status and carry `g: G-input_first · output: copied` — the form licence is the card's `forms` array plus `FORM_LICENCE` | implemented in the engine |
+| **Counts**: 124 + 75 generated; **48 vocabulary + 41 Reading-1 + 22 Reading-2 tasks** selected per planned pathway; both pathways walked to the end by the release gate | reported, never typed |
+| **Authentic corner**: three placeholders, no task | not delivered — Batch 4 |
+| **Review commentary** on learner pages is marked `.rev` and hidden in the default learner view (a toggle shows it); Unit 2–3 pages not yet marked | Unit 1 done; Units 2–3 owed |
+
+### 9.5 · Not done, by instruction (Batch 4 — completion work)
+
+**Verified listening** requires: recorded clips per sentence and per phrase, bound in the unit data (`audio.clips`), verified by ear against the canon; a listening generator family (F9) — hear-and-tap on phrases, hear-and-order, hear-the-speaker — with an accessible replay control; selection into the vocabulary and reading pathways; the station spec's sound-first sequence rebuilt on real clips; the teacher's page wording lifted from "no listening" only then. **The authentic corner** requires: three real photographs (shop sign with a name, door sign, street plate — never mock realia), the three recognition tasks of §3 printed, and a picture–task fit check. Neither is claimed. No voice, platform or licensing decision is taken here; if the clip source needs one, it is the owner's.

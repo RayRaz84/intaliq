@@ -1,16 +1,16 @@
-# Unit 3 — Story drafts, revision 1 (stages 8–10 under SC-109)
+# Unit 3 — Story drafts, revision 2 (stages 8–10 under SC-109; F-1 applied under SC-114)
 
-*Editor · 2026-09-28 · drafted inside the approved design space (`INTALIQ1_UNIT3_GATE_A_BRIEF.md` rev 1, SC-109). Every count below is machine-counted at the moment it is stated (SC-050, `u3_measure.py`). Texts are candidates until Gate B; the thirty-line Story Standard audit (§8) is written here, before the owner is asked to sign (SC-105).*
+*Editor · 2026-09-28, revision 2 on 2026-10-10 · drafted inside the approved design space (`INTALIQ1_UNIT3_GATE_A_BRIEF.md` rev 1, SC-109). Every count below is machine-counted at the moment it is stated (SC-050, `u3_measure.py`; the revision-2 recount by the same tokenizer, which reproduces 158 / 118 on the revision-1 texts). Texts are candidates until Gate B; the thirty-line Story Standard audit (§8) is written here, before the owner is asked to sign (SC-105). **Revision log: §9.***
 
 ---
 
-## Story 1 — «مَنْ عِنْدَهُ الْكُرَةُ؟» · present · يُوسُف · one house, one door · **158 words**
+## Story 1 — «مَنْ عِنْدَهُ الْكُرَةُ؟» · present · يُوسُف · one house, one door · **161 words** (revision 2, 2026-10-10)
 
 هُنَاكَ وَلَدٌ اسْمُهُ يُوسُف. يَعِيشُ يُوسُف فِي بَيْتٍ كَبِيرٍ. فِي الْبَيْتِ أُمُّهُ وَأَبُوهُ وَأُخْتُهُ الصَّغِيرَةُ لَيْلَى. وَفِي الْبَيْتِ قِطٌّ كَبِيرٌ أَيْضًا. يَعِيشُ الْقِطُّ بِجَانِبِ الْبَابِ.
 
 يَقُولُ يُوسُف: «أُرِيدُ الْكُرَةَ! أَيْنَ الْكُرَةُ؟ الْكُرَةُ لَيْسَتْ مَعِي. مَنْ عِنْدَهُ الْكُرَةُ؟»
 
-يَذْهَبُ يُوسُف إِلَى أُخْتِهِ. «يَا لَيْلَى، عِنْدَكِ الْكُرَةُ؟»
+يَذْهَبُ يُوسُف إِلَى أُخْتِهِ. «يَا لَيْلَى، هَلْ عِنْدَكِ الْكُرَةُ؟»
 
 تَقُولُ لَيْلَى: «نَعَمْ، الْكُرَةُ عِنْدِي. وَأَنْتَ، مَاذَا تُرِيدُ؟»
 
@@ -20,11 +20,11 @@
 
 «كِتَابِي؟ كِتَابِي لَيْسَ عِنْدِي. أُمِّي عِنْدَهَا كِتَابِي.»
 
-يَذْهَبُ يُوسُف إِلَى أُمِّهِ. «يَا أُمِّي، عِنْدَكِ كِتَابِي؟»
+يَذْهَبُ يُوسُف إِلَى أُمِّهِ. «يَا أُمِّي، هَلْ عِنْدَكِ كِتَابِي؟»
 
 تَقُولُ أُمُّهُ: «نَعَمْ، كِتَابُكَ عِنْدِي. وَأَنَا أَحْتَاجُ إِلَى قَلَمِي. أَبُوكَ عِنْدَهُ قَلَمِي.»
 
-يَذْهَبُ يُوسُف إِلَى الْبَابِ. أَبُوهُ هُنَاكَ. «يَا أَبِي، عِنْدَكَ قَلَمُ أُمِّي؟»
+يَذْهَبُ يُوسُف إِلَى الْبَابِ. أَبُوهُ هُنَاكَ. «يَا أَبِي، هَلْ عِنْدَكَ قَلَمُ أُمِّي؟»
 
 يَقُولُ أَبُوهُ: «نَعَمْ، الْقَلَمُ مَعِي. وَأَنَا أَحْتَاجُ إِلَى مِفْتَاحِي. أَيْنَ مِفْتَاحِي؟ لَيْسَ عِنْدِي!»
 
@@ -48,10 +48,10 @@
 | **The absurd element (CR-9)** | **the cat — twice.** It is the last link of the chain (the key is under it) and the turn of the ending (it takes the ball and leaves). It costs no new word: `قِطّ` is Unit 2's. Not Unit 2's talking cat: this one never speaks. |
 | **Anchor** | the ball (`كُرَة`, support) — one object, one holder at every beat. |
 | **Information structure** | the reader and يُوسُف learn each holder together; the cat by the door is planted in paragraph 1 (`يَعِيشُ الْقِطُّ بِجَانِبِ الْبَابِ`) so the reveal is earned, not supplied. |
-| **Repetition mechanism** | «عِنْدَكَ / عِنْدَكِ ___؟» → «نَعَمْ، ___ عِنْدِي. وَأَنَا أَحْتَاجُ إِلَى ___. [person] عِنْدَهُ / عِنْدَهَا ___.» three times, three people, three objects — `عِنْدَ` in 1st, 2nd and 3rd person, affirmative and negative; then the chain unwound with `يُعْطِي / تُعْطِي` + object pronoun ×5. |
+| **Repetition mechanism** | «هَلْ عِنْدَكَ / عِنْدَكِ ___؟» → «نَعَمْ، ___ عِنْدِي. وَأَنَا أَحْتَاجُ إِلَى ___. [person] عِنْدَهُ / عِنْدَهَا ___.» three times, three people, three objects — `عِنْدَ` in 1st, 2nd and 3rd person, affirmative and negative; then the chain unwound with `يُعْطِي / تُعْطِي` + object pronoun ×5. |
 | **People introduced (CR-10)** | يُوسُف — a boy who wants the ball, in a big house. لَيْلَى — his little sister, who has it. His mother — has the book, needs her pen. His father — at the door, has the pen, lost his key. The cat — big, lives by the door. |
-| **Cast for attribution (CR-12)** | one boy, two women, one man: `يَقُولُ / تَقُولُ` and `يُعْطِيهِ / تُعْطِيهِ / يُعْطِيهَا` carry the turns; name density **9.5%** (15 / 158). |
-| **First / second person** | `أُرِيدُ` ×4 · `أَحْتَاجُ إِلَى` ×3 · `عِنْدِي` ×4 · `عِنْدَكِ` ×2 · `عِنْدَكَ` ×1 · `مَعِي` ×3 · `كِتَابِي / كِتَابُكَ / كِتَابَكَ` · `أُمِّي · أَبِي · أَبُوكَ` · `تُرِيدُ` ×1. |
+| **Cast for attribution (CR-12)** | one boy, two women, one man: `يَقُولُ / تَقُولُ` and `يُعْطِيهِ / تُعْطِيهِ / يُعْطِيهَا` carry the turns; name density **9.3%** (15 / 161). |
+| **First / second person** | `أُرِيدُ` ×4 · `أَحْتَاجُ إِلَى` ×3 · `عِنْدِي` ×4 · `هَلْ عِنْدَكِ` ×2 · `هَلْ عِنْدَكَ` ×1 · `مَعِي` ×3 · `كِتَابِي / كِتَابُكَ / كِتَابَكَ` · `أُمِّي · أَبِي · أَبُوكَ` · `تُرِيدُ` ×1. |
 | **Dignity** | nobody is foolish: each person has something and needs something, which is the ordinary condition of a house; the father lost a key, as fathers do; the boy solves it. The cat is not a joke; it is simply where the key is, and then where the ball is. |
 | **Resonance** | the last line is the first line, said to the cat. |
 | **Why still interesting if every word is understood** | because the reader wants the chain to close, and then it opens again. |
@@ -153,11 +153,11 @@ Every possession line is true when spoken; each object has exactly one holder at
 
 | Measure | Story 1 | Story 2 | Rule |
 |---|---|---|---|
-| Running words | **158** (15 names) | **118** (24 names) | CR-3: 120–250 · 80–150 — both inside |
-| Known by lemma vs. Units 1–2 (report) | 65.7 % | 68.1 % | report only |
-| **Known by lemma vs. Units 1–2 + Story 1 + phrase page (gate)** | — | **98.9 %** | CR-1 ≥ 80 % — **PASS** |
-| Name density | 9.5 % | 20 % | rule 19; Story 2's same-gender pair by story reason (SC-036) |
-| Encounters, both readings: `عِنْدَ` 15 · `مَعَ` 9 · `أُمّ` 8 · `أَعْطَى` 7 · `أَب` 6 · `لَيْسَ` 6 · `أُرِيدُ / تُرِيدُ` 5 · `أُخْت` 3 · `أَخ` 3 · `أَخَذَ` 3 · `اِحْتَاجَ` 3 · `عَاشَ` 3 · `بِجَانِبِ` 3 · support `كُرَة` 15 · `هَدِيَّة` 6 · `صَغِير` 5 · `مَاذَا` 1 | | | CR-2 floors: ≥ 3 in the debut reading met for every core item and target verb; ≥ 8 with apparatus — `أُخْت · أَخ · أَخَذَ · اِحْتَاجَ · عَاشَ` reach 8 through the recombination page and the personal questions (§6) |
+| Running words | **161** (15 names; rev 2, 2026-10-10) | **118** (24 names) | CR-3: 120–250 · 80–150 — both inside |
+| Known by lemma vs. Units 1–2 (report) | 65.7 % (rev 1; not re-run for rev 2 — `هَلْ` was printed in Unit 2 Story 1 (SC-095) and counts as known, so the figure can only rise; re-run at freeze) | 68.1 % | report only |
+| **Known by lemma vs. Units 1–2 + Story 1 + phrase page (gate)** | — | **98.9 %** (unaffected by rev 2: Story 2 is unchanged and prints no `هَلْ`; the change only enlarges the known set) | CR-1 ≥ 80 % — **PASS** |
+| Name density | 9.3 % | 20 % | rule 19; Story 2's same-gender pair by story reason (SC-036) |
+| Encounters, both readings: `عِنْدَ` 15 · `مَعَ` 9 · `أُمّ` 8 · `أَعْطَى` 7 · `أَب` 6 · `لَيْسَ` 6 · `أُرِيدُ / تُرِيدُ` 5 · `أُخْت` 3 · `أَخ` 3 · `أَخَذَ` 3 · `اِحْتَاجَ` 3 · `عَاشَ` 3 · `بِجَانِبِ` 3 · support `كُرَة` 15 · `هَدِيَّة` 6 · `صَغِير` 5 · `مَاذَا` 1 · `هَلْ` 3 (rev 2) | | | CR-2 floors: ≥ 3 in the debut reading met for every core item and target verb; ≥ 8 with apparatus — `أُخْت · أَخ · أَخَذَ · اِحْتَاجَ · عَاشَ` reach 8 through the recombination page and the personal questions (§6) |
 
 ---
 
@@ -173,6 +173,8 @@ Every possession line is true when spoken; each object has exactly one holder at
 | `يَأْخُذُ · أَخَذَ` · `أَحْتَاجُ إِلَى` · `يَعِيشُ` | target verbs | 13.4.3 p. 193 · 13.4.5 p. 197 (Form VIII meanings to locate) |
 | `تُرِيدُ` (2sg) | licensed by the brief's CH-22; V13's owed encounter paid | 4.1.3.1 p. 80 |
 | `مَاذَا` | **support inside CH-22** ahead of Unit 6, once | 7.1.5 p. 136 · SC-109 item 4 |
+| `هَلْ` ×3 (Story 1, rev 2) + recombination text 2 + five personal questions | **support ahead of its Unit 4 headline — SC-114** (question words free from first exposure); second printing in the course after Unit 2 Story 1 (SC-095) | 7.1.1 p. 133 (read by eye, SC-106) · rank **lookup owed** (Author's Page §9) |
+| `مَا` ×1 (apparatus only: the invent question «مَا اسْمُ الْقِطِّ؟», §6) | **support — SC-114**; printed in revision 1 without a disclosure row, which this row repairs | citation **owed** (7.1.x to read by eye at first use in a reading) · rank **lookup owed** |
 | `كُرَة · هَدِيَّة · صَغِير (صَغِيرٌ · الصَّغِيرُ · الصَّغِيرَةُ)` | support | lookup owed |
 | `بِجَانِبِ` ×3 | support (SC-103) | 8.2 p. 147; `جَانِب` rank owed |
 | `نَظَرَ · نَظَرَتْ` (past) | support story verb, first past forms (home U4) | 13.4.1 p. 189 |
@@ -182,7 +184,7 @@ Every possession line is true when spoken; each object has exactly one holder at
 | `أَيْضًا · وَلٰكِنْ · هُنَاكَ · هُنَا · كَبِير · قِطّ · مِفْتَاح · كِتَاب · قَلَم · بَيْت · بَاب · أَرْض` | recycled support / core, unchanged | — |
 | **Not printed, deliberately:** `جَدّ · جَدَّة · أَمَامَ · وَالِد · عَادَ · أَكَلَ · حَجَر · خُبْز · جَوْعَان` | — | — |
 
-**Support count: 4 lexical (`كُرَة · هَدِيَّة · صَغِير · بِجَانِبِ`) + 1 in-chunk (`مَاذَا`) + 1 story verb in a new form (`نَظَرَ`, past).** Owed lookups: 10 (`أُمّ · أَب · أَخ · أَعْطَى · أَخَذَ · اِحْتَاجَ · عَاشَ · كُرَة · هَدِيَّة · صَغِير`) + `جَانِب`. Band overrun: **0**.
+**Support count: 4 lexical (`كُرَة · هَدِيَّة · صَغِير · بِجَانِبِ`) + 1 in-chunk (`مَاذَا`) + 2 question words under SC-114 (`هَلْ` in the readings, `مَا` in the apparatus) + 1 story verb in a new form (`نَظَرَ`, past).** Owed lookups: 10 (`أُمّ · أَب · أَخ · أَعْطَى · أَخَذَ · اِحْتَاجَ · عَاشَ · كُرَة · هَدِيَّة · صَغِير`) + `جَانِب` + `هَلْ` + `مَا`. Band overrun: **0**.
 
 ---
 
@@ -192,7 +194,7 @@ Every possession line is true when spoken; each object has exactly one holder at
 
 **Recombination page (S10) — ten texts:**
 1. عِنْدَ لَيْلَى كُرَةٌ. الْكُرَةُ فِي حَقِيبَتِهَا. وَالْحَقِيبَةُ مَعَهَا.
-2. «عِنْدَكَ قَلَمٌ؟» «لَا، لَيْسَ عِنْدِي قَلَمٌ. قَلَمِي عِنْدَ أُخْتِي.»
+2. «هَلْ عِنْدَكَ قَلَمٌ؟» «لَا، لَيْسَ عِنْدِي قَلَمٌ. قَلَمِي عِنْدَ أُخْتِي.»
 3. هٰذَا أَبِي. عِنْدَهُ مِفْتَاحٌ كَبِيرٌ. الْمِفْتَاحُ مَعَهُ.
 4. أُمُّ كَرِيم عِنْدَهَا كِتَابٌ صَغِيرٌ. تُعْطِي الْكِتَابَ لِكَرِيم. يَضْحَكُ كَرِيم.
 5. «مَاذَا تُرِيدُ يَا زَيْد؟» «أُرِيدُ كُرَةً!» «الْكُرَةُ عِنْدَ أَخِي.»
@@ -204,7 +206,7 @@ Every possession line is true when spoken; each object has exactly one holder at
 
 *Text 8 gives خَدِيجَة's brother, not رَزَان's family; text 10 is the learner's own family, unnamed.*
 
-**Personal questions (A9) — ten, added to the cumulative set:** مَنْ فِي بَيْتِكَ؟ · عِنْدَكَ أَخٌ؟ · عِنْدَكَ أُخْتٌ؟ · مَاذَا تُرِيدُ؟ · عِنْدَكَ كُرَةٌ؟ · تَحْتَاجُ إِلَى قَلَمٍ؟ · أَيْنَ تَعِيشُ؟ · مَعَ مَنْ تَعِيشُ؟ · مَعَ مَنْ تَذْهَبُ إِلَى الْبَيْتِ؟ · عِنْدَكَ هَدِيَّةٌ لِأُمِّكَ؟
+**Personal questions (A9) — ten, added to the cumulative set:** مَنْ فِي بَيْتِكَ؟ · هَلْ عِنْدَكَ أَخٌ؟ · هَلْ عِنْدَكَ أُخْتٌ؟ · مَاذَا تُرِيدُ؟ · هَلْ عِنْدَكَ كُرَةٌ؟ · هَلْ تَحْتَاجُ إِلَى قَلَمٍ؟ · أَيْنَ تَعِيشُ؟ · مَعَ مَنْ تَعِيشُ؟ · مَعَ مَنْ تَذْهَبُ إِلَى الْبَيْتِ؟ · هَلْ عِنْدَكَ هَدِيَّةٌ لِأُمِّكَ؟ *(the five yes/no questions take `هَلْ` under SC-114, rev 2)*
 
 **Version A / B (S11):** A — same cast, one element changed: the key is under the *sister*, not the cat. B — setting and object changed: at school, a boy wants a *pen*; it is with the teacher's cat.
 
@@ -238,13 +240,13 @@ Every possession line is true when spoken; each object has exactly one holder at
 | Rule 22 (SC-074) | **PASS** — five dimensions |
 | Blueprint 28, seven headings | comprehension ✓ · CI/TPRS ✓ (circle-able: *who has the ball? the book? does he need the pen?*) · narrative ✓ (chain and turn; choice and reversal) · logic ✓ (object-state tables) · language ✓ · engagement — the owner's call · restraint ✓ (band 5, zero overrun) |
 
-**Reports:** band 5 (+0) · support 4 + 1 + 1 · owed lookups 10 + `جَانِب` · name density 9.5 % / 20 % · running words 158 / 118.
+**Reports:** band 5 (+0) · support 4 + 1 + 2 + 1 · owed lookups 10 + `جَانِب` + `هَلْ` + `مَا` · name density 9.3 % / 20 % · running words 161 / 118.
 
-**Not done:** illustrations (held); the visual plan follows freeze; `جَانِب` and the three family-noun ranks remain owed.
+**Not done:** illustrations (the Unit 3 frames follow the freeze, SC-111/SC-113); the visual plan follows freeze; `جَانِب` and the three family-noun ranks remain owed; **F-2** (the key hand-over in the unwinding paragraph, readings pass) awaits the owner's word and is not applied here.
 
 ---
 
-## 8 · Gate B audit — the Story Standard, criterion by criterion (SC-031), revision 1 texts
+## 8 · Gate B audit — the Story Standard, criterion by criterion (SC-031), revision 1 texts — **re-read against revision 2 on 2026-10-10: every verdict stands** (three `هَلْ` change no beat, no holder, no support load; criterion 16 is improved, since a yes/no question now carries its particle)
 
 *Written before the owner is asked to sign (SC-105). One-line verdicts.*
 
@@ -282,3 +284,14 @@ Every possession line is true when spoken; each object has exactly one holder at
 | 30 | Narrative independence | **PASS** — knowing every word, you still want the chain to close | **PASS** — knowing every word, you still want to see what she does |
 
 **Result:** 29 PASS + 1 N-A per story; criteria 6, 10, 11 pass in both; no disclosures beyond §5.
+
+---
+
+## 9 · Revision log
+
+| Rev | Date | Ruling | Change | Story 1 | Story 2 |
+|---|---|---|---|---:|---:|
+| 1 | 2026-09-28 | SC-109 | drafted, built (Studio Version 42), measured, audited | 158 | 118 |
+| 2 | 2026-10-10 | **SC-114** (F-1 of `INTALIQ1_READINGS_QUALITY_PASS_1.md`) | `هَلْ` added to the three yes/no questions يُوسُف asks («هَلْ عِنْدَكِ الْكُرَةُ؟» · «هَلْ عِنْدَكِ كِتَابِي؟» · «هَلْ عِنْدَكَ قَلَمُ أُمِّي؟»); the six yes/no questions of the apparatus (recombination text 2, five personal questions) take `هَلْ` likewise; `هَلْ` and `مَا` disclosed in §5; name density recounted 9.3 % | **161** | 118 |
+
+**Not yet in the engine or the Studio.** The live build (Version 44, SC-117 — an art correction) still carries revision 1; the engine `canon`, the Studio student page, the phrase page, the sets and the teacher's page are rebuilt once as **Version 45** (SC-118) after Gate B closes, so that F-2, the titles and the pop-up — still owed to the owner (SC-110) — land in the same build. Until then the printed product and this file deliberately differ, and this log is the record of it.

@@ -1,0 +1,47 @@
+{
+  "version": 45,
+  "units": {
+    "unit-01": {
+      "words": 138,
+      "generated": 124,
+      "blocked": false,
+      "vocab": 48,
+      "reading": 41
+    },
+    "unit-01p": {
+      "words": 71,
+      "generated": 75,
+      "blocked": false,
+      "vocab": 29,
+      "reading": 22
+    },
+    "unit-02": {
+      "words": 172,
+      "generated": 226,
+      "blocked": false,
+      "vocab": 66,
+      "reading": 50
+    },
+    "unit-02p": {
+      "words": 114,
+      "generated": 141,
+      "blocked": false,
+      "vocab": 36,
+      "reading": 39
+    },
+    "unit-03": {
+      "words": 158,
+      "generated": 158,
+      "blocked": false,
+      "vocab": 40,
+      "reading": 38
+    },
+    "unit-03p": {
+      "words": 118,
+      "generated": 110,
+      "blocked": false,
+      "vocab": 33,
+      "reading": 29
+    }
+  }
+}

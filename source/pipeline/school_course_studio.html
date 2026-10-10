@@ -151,6 +151,10 @@ main{max-width:1020px;margin:0 auto;padding:26px 18px 80px}
 .prhub{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
 .hubcard{background:var(--wash);border:2px solid var(--line);border-radius:14px;padding:22px;text-align:center;display:flex;flex-direction:column;gap:8px}
 .hubcard:hover{border-color:var(--board)}
+.hubcard[disabled]{opacity:.45;cursor:not-allowed}
+/* learner view (audit 2026-10-10 I6): review commentary is marked .rev and hidden unless the reviewer switches it on */
+body.learner .rev{display:none!important}
+.viewtoggle{position:fixed;right:12px;bottom:12px;z-index:9;font:600 12px/1 system-ui,sans-serif;background:var(--wash);border:1px solid var(--line);border-radius:999px;padding:8px 12px;cursor:pointer;direction:ltr}
 .hubar{font-family:var(--read);font-size:26px;font-weight:700;color:var(--board)}
 .hubext{font-size:13.5px;color:var(--ink-soft);direction:ltr}
 .xcard{display:flex;flex-direction:column;align-items:center;gap:10px;padding:8px}
@@ -336,7 +340,7 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
     <h1>Review Library</h1>
     <p>A story-first Arabic course for ages 8–13: two stories a unit, read before anything is explained, with a digital practice engine and a writing notebook built from the same text. This is the review build — every page here is generated from the frozen readings.</p>
     <div class="actions"><a class="hbtn" href="#tour">Overview for reviewers</a><a class="hbtn ghost" href="#unit-03/student">Open Unit 3</a></div>
-    <p style="margin-top:14px"><span class="chip">REVIEW BUILD · NOT YET APPROVED · VERSION 44</span></p>
+    <p style="margin-top:14px"><span class="chip">REVIEW BUILD · NOT YET APPROVED · VERSION 45</span></p>
   </div>
   <div class="lib">
     <div class="card">
@@ -438,13 +442,13 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
   <main style="direction:ltr">
     <div class="sheet">
       <h3>How a unit runs</h3>
-      <p class="note">Five phases, in an order that is law: meaning before reading, reading before output, output before interpersonal performance. A student who misses class can complete phases 1–4 alone.</p>
+      <p class="note">Five phases, in an order that is law: meaning before reading; reading before output; <b>scaffolded interaction — the survey — before the writing that uses its answers</b>; fuller communication and transfer last (owner's decision, SC-119). A student who misses class can complete the input, reading and writing phases alone; the survey needs classmates, and an absent learner completes the parallel story from the printed class list instead.</p>
       <div class="steps" style="margin-top:14px">
         <div class="step"><div class="k">1 · meaning</div><h4>Phrase page and picture strip</h4><p>Every new item is met inside a phrase, with a picture. The strip tells the story before the text does.</p><div class="ar" lang="ar">أَيْنَ الْمِفْتَاحُ؟ · فِي الْحَقِيبَةِ</div></div>
         <div class="step"><div class="k">2 · reading</div><h4>Story 1, in the present</h4><p>120–250 words; each core structure at least eight times across question, statement and negation. One earned emotion word; one absurd turn.</p><div class="ar" lang="ar">هُنَاكَ قِطٌّ عِنْدَ الْبَابِ...</div></div>
-        <div class="step"><div class="k">3 · consolidation</div><h4>Activities and Story 2, in the past</h4><p>Read-match, judge and point, who says, order, text hunts; then a second, different story narrated in the past — at least 80% of its words already known.</p><div class="ar" lang="ar">ذَهَبَتْ رَزَان إِلَى بَيْتِ خَدِيجَة.</div></div>
-        <div class="step"><div class="k">4 · output</div><h4>The notebook</h4><p>Copy the story, then a parallel story, then your own, then show it. Past forms are copied from a bank, never built, until Unit 8 teaches the system.</p><div class="ar" lang="ar">أَضَعُ مِفْتَاحِي ___.</div></div>
-        <div class="step"><div class="k">5 · interpersonal</div><h4>Personal questions and the survey</h4><p>A cumulative set of second-person questions, asked every unit; a survey grid whose answers feed the next writing page.</p><div class="ar" lang="ar">أَيْنَ تَضَعُ مِفْتَاحَكَ؟</div></div>
+        <div class="step"><div class="k">3 · consolidation + interaction</div><h4>Activities, Story 2 in the past, and the survey</h4><p>Read-match, judge and point, who says, order, text hunts; a second, different story narrated in the past — at least 80% of its words already known; then the survey (C1), rehearsed from printed language, asked of real classmates.</p><div class="ar" lang="ar">هَلْ عِنْدَكَ قَلَمٌ؟</div></div>
+        <div class="step"><div class="k">4 · output</div><h4>The notebook</h4><p>Copy the story, then a parallel story built from the survey's names, then your own, then prepare a share. Past forms are copied from a bank, never built, until Unit 8 teaches the system.</p><div class="ar" lang="ar">أَضَعُ مِفْتَاحِي ___.</div></div>
+        <div class="step"><div class="k">5 · communication</div><h4>Share, retell, transfer</h4><p>Show your page to a partner who asks one question (C3); retell the story from the strip (C4); the cumulative personal questions; the same language in a new, small situation.</p><div class="ar" lang="ar">أَيْنَ تَضَعُ مِفْتَاحَكَ؟</div></div>
       </div>
     </div>
     <div class="sheet">
@@ -460,9 +464,9 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
     <div class="sheet">
       <h3>What keeps it honest</h3>
       <div class="ccards" style="grid-template-columns:repeat(auto-fit,minmax(340px,1fr))">
-        <div class="ccard"><div class="rubric">The canon guard</div><p>The printed text is the single source. The engine <b>fails the unit</b> if its data no longer reproduces the story word for word, and a card may only claim a form the story actually prints.</p></div>
+        <div class="ccard"><div class="rubric">The canon guard</div><p>The printed text is the single source. The engine <b>fails the unit</b> if its data no longer reproduces the story word for word, if its reading omits or misnames a sentence, or if a card claims a form the story does not print or the ledger does not license — and a failed unit <b>delivers nothing</b>: its practice is withheld, not degraded.</p></div>
         <div class="ccard"><div class="rubric">Counted, not felt</div><p>Vocabulary is licensed per unit with a frequency rank from a published dictionary or an explicit <b>"lookup owed"</b> — never "high frequency" from intuition. Story 2 is measured against what came before: <b>91% known</b> in Unit 2.</p></div>
-        <div class="ccard"><div class="rubric">A register of rulings</div><p>Ninety-six numbered, dated decisions govern the build. Nothing is operational until it is recorded, and every rule change cascades to the pages it touches in the same pass.</p></div>
+        <div class="ccard"><div class="rubric">A register of rulings</div><p>More than a hundred numbered, dated decisions govern the build. Nothing is operational until it is recorded, and every rule change cascades to the pages it touches in the same pass.</p></div>
         <div class="ccard"><div class="rubric">Performance, never proficiency</div><p>Outward claims use the ACTFL performance formula within taught domains, anchored per mode, calibrated by a panel and superseded by learner work when it exists.</p></div>
       </div>
     </div>
@@ -491,7 +495,7 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
   <div class="sheet">
     <span class="sheet-tag"><span class="rubric" lang="ar">اُنْظُرْ!</span></span>
     <h3>Illustrations</h3>
-    <p class="note" style="direction:ltr">The picture part opens the unit: the labelled phrase scene (SC-038 — words are met inside phrases, never alone), then the story's pictures in order. Meaning first, text after. Stick-figure art per SC-034.</p>
+    <p class="note rev" style="direction:ltr">The picture part opens the unit: the labelled phrase scene (SC-038 — words are met inside phrases, never alone), then the story's pictures in order. Meaning first, text after. In-house stick-figure art (SC-034); the rich-cartoon redraw (SC-113) is queued behind the owner's Unit 1 slot list.</p>
     <div class="demo" style="background:var(--page);border:1px solid var(--line)">
       <svg viewBox="0 0 900 290" style="width:100%;height:auto" role="img" aria-label="labeled scene, stick-figure art">
         <rect width="900" height="290" fill="#FFFFFF"/>
@@ -512,8 +516,8 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
       <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-sara"/></svg><b>5</b></span>
       <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-end"/></svg><b>6</b></span>
     </div>
-    <div class="helpbox" style="margin-top:16px"><span class="rubric" lang="ar">نُعِيدُ الْقِصَّةَ بِالصُّوَرِ</span>
-      <span class="note" style="direction:ltr;margin:0">C4, printed where it happens (SC-049): the class retells the story from these six pictures, learner-led. No preparation; the rubric sits on the strip it uses. The teacher's page (SC-104) is a separate, unlinked instrument and carries the procedure.</span></div>
+    <div class="helpbox" style="margin-top:16px"><span class="rubric" lang="ar">نُعِيدُ الْقِصَّةَ بِالصُّوَرِ</span> <span class="rubric" lang="ar" style="opacity:.75">— بَعْدَ الْقِرَاءَةِ</span>
+      <span class="note rev" style="direction:ltr;margin:0">C4, printed where it happens (SC-049). <b>Timing:</b> the rubric sits on the strip it uses, but the retell runs in Phase 5, after both readings — the small Arabic cue beside it («بَعْدَ الْقِرَاءَةِ», after the reading) says so to a cold reader. <b>Who leads (Captions rung, SC-096):</b> the teacher cues each frame; the class supplies the language — not "learner-led" in the free sense the later rungs use. The teacher's page (SC-104) carries the procedure.</span></div>
   </div>
 
   <div class="sheet">
@@ -535,34 +539,43 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
       <p>تَرَى سَارَة الْقَائِمَةَ وَتَقُولُ: «هُنَاكَ اسْمٌ: &quot;رَزَان&quot;! مَنْ هِيَ؟» تَقُولُ رَزَان: «أَنَا! أَنَا رَزَان!» تَقُولُ سَارَة: «أَهْلًا يَا رَزَان! لِي صَدِيقَةٌ: رَزَان!»</p>
       <p>وَتَقُولُ رَنَا: «وَأَنَا! لِي صَدِيقَةٌ!» تُحِبُّ رَزَان... الْقَائِمَةَ! تَقُولُ رَزَان: «أَنَا رَزَان... وَلِي صَدِيقَاتٌ!»</p>
     </div>
-    <div class="popup"><h4>Look — no “is”!</h4><p>Arabic doesn’t need a word for <i>is</i>: <span class="ar" lang="ar">أَنَا رَزَان</span> = I (am) Razanne. <span class="ar" lang="ar">هٰذَا عُمَر</span> = This (is) Omar.<br>The pointing word matches the person: <span class="ar" lang="ar">هٰذَا</span> for a boy or a man, <span class="ar" lang="ar">هٰذِهِ</span> for a girl or a woman.</p></div>
+    <div class="popup"><h4>Look — no “is”!</h4><p>In these present-tense sentences Arabic has no separate word for <i>am / is</i>: <span class="ar" lang="ar">أَنَا رَزَان</span> = I (am) Razanne. <span class="ar" lang="ar">هٰذَا عُمَر</span> = This (is) Omar.<br>The pointing word matches the person or thing it points at: <span class="ar" lang="ar">هٰذَا</span> for a boy or a man, <span class="ar" lang="ar">هٰذِهِ</span> for a girl or a woman — and for <span class="ar" lang="ar">قَائِمَةٌ</span>, a “she” word: <span class="ar" lang="ar">هٰذِهِ قَائِمَةٌ</span>.</p></div>
   </div>
 
   <div class="sheet">
     <h3>Comprehension activities</h3>
     <div class="acts">
-      <div class="act"><div class="rubric"><span class="ico">🔗</span><span lang="ar">اِقْرَأْ وَصِلْ</span></div>
-        <ul lang="ar"><li>هٰذَا وَلَدٌ. ○</li><li>هٰذِهِ بِنْتٌ. ○</li><li>عِنْدِي قَائِمَةٌ. ○</li><li>هٰذِهِ هُدَى. ○</li><li>أَنَا عُمَر. ○</li></ul></div>
-      <div class="act"><div class="rubric"><span class="ico">✓✗</span><span lang="ar">صَحٌّ أَمْ خَطَأٌ؟ أَرِنِي</span></div>
-        <ul lang="ar"><li>1 · سَارَة بِنْتٌ. ⬜</li><li>2 · عُمَر بِنْتٌ. ⬜</li><li>3 · هٰذِهِ هُدَى. ⬜</li><li>4 · رَزَان صَدِيقَةُ سَارَة. ⬜</li></ul>
-        <p class="note" style="direction:ltr">Judge, then circle the picture number that proves it.</p></div>
-      <div class="act"><div class="rubric"><span class="ico">💬</span><span lang="ar">مَنْ يَقُولُ؟</span></div>
-        <ul lang="ar"><li>«لَا! لَا! أَنَا هُدَى!»</li><li>«عِنْدِي قَائِمَةٌ.»</li><li>«لِي صَدِيقٌ: طَارِق!»</li><li>«أَنَا! أَنَا رَزَان!»</li><li>«وَلِي صَدِيقَةٌ: رَزَان!»</li></ul></div>
+      <div class="act"><div class="rubric"><span class="ico">🔗</span><span lang="ar">اِقْرَأْ وَصِلْ</span> <span class="rubric" lang="ar" style="opacity:.75">— اُكْتُبِ الْحَرْفَ ○</span></div>
+        <!-- B4 (audit 2026-10-10): the five response pictures are printed as a lettered row; the learner writes the letter in ○. «أَنَا عُمَر» was replaced by «أَنَا رَزَان» so no two sentences share a picture. -->
+        <div class="picseq" aria-label="response pictures, lettered">
+          <span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 0) scale(.9)"><use href="#av-huda"/></g></svg><b lang="ar">أ</b></span>
+          <span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(40 30) scale(1.4)"><use href="#obj-list"/></g></svg><b lang="ar">ب</b></span>
+          <span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-omar"/></g></svg><b lang="ar">ج</b></span>
+          <span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-razan"/></g></svg><b lang="ar">د</b></span>
+          <span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-sara"/></g></svg><b lang="ar">هـ</b></span>
+        </div>
+        <ul lang="ar"><li>هٰذَا وَلَدٌ. ○</li><li>هٰذِهِ بِنْتٌ. ○</li><li>عِنْدِي قَائِمَةٌ. ○</li><li>هٰذِهِ هُدَى. ○</li><li>أَنَا رَزَان. ○</li></ul></div>
+      <div class="act"><div class="rubric"><span class="ico">✓✗</span><span lang="ar">صَحٌّ أَمْ خَطَأٌ؟ أَرِنِي</span> <span class="rubric" lang="ar" style="opacity:.75">— ✓ أَوْ ✗ · رَقْمُ الصُّورَةِ</span></div>
+        <ul lang="ar"><li>1 · سَارَة بِنْتٌ. ⬜ ○</li><li>2 · عُمَر بِنْتٌ. ⬜ ○</li><li>3 · هٰذِهِ هُدَى. ⬜ ○</li><li>4 · رَزَان صَدِيقَةُ سَارَة. ⬜ ○</li></ul>
+        <p class="note rev" style="direction:ltr">Judge (✓/✗ in the box), then write in ○ the number of the strip frame that proves it. The strip is the response resource; its frames are numbered 1–6 above.</p></div>
+      <div class="act"><div class="rubric"><span class="ico">💬</span><span lang="ar">مَنْ يَقُولُ؟</span> <span class="rubric" lang="ar" style="opacity:.75">— رَقْمُ الْوَجْهِ ○</span></div>
+        <!-- gen:u1-ws-main --><div class="picseq" aria-label="who says — the five faces, numbered"><span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-razan"/></g></svg><b>1 · <bdi lang="ar">رَزَان</bdi></b></span><span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-omar"/></g></svg><b>2 · <bdi lang="ar">عُمَر</bdi></b></span><span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-sara"/></g></svg><b>3 · <bdi lang="ar">سَارَة</bdi></b></span><span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-huda"/></g></svg><b>4 · <bdi lang="ar">هُدَى</bdi></b></span><span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-rana"/></g></svg><b>5 · <bdi lang="ar">رَنَا</bdi></b></span></div><ul lang="ar"><li>«السَّلَامُ عَلَيْكُمْ! أَنَا رَزَان.» ○</li><li>«لَا! لَا! لَيْسَ اسْمِي سَارَة! أَنَا هُدَى!» ○</li><li>«لِي صَدِيقٌ: طَارِق!» ○</li><li>«أَنَا! أَنَا رَزَان!» ○</li><li>«وَأَنَا! لِي صَدِيقَةٌ!» ○</li></ul><!-- /gen:u1-ws-main -->
+        <p class="note rev" style="direction:ltr">I2 (audit 2026-10-10): the five quotations and the five faces are <b>generated at build from the engine's <code>whosays</code> table</b> (w1–w5, each a verbatim substring of its support sentence, SC-052), so the printed set can no longer drift from the story. The learner writes the face's number in ○.</p></div>
       <div class="act"><div class="rubric"><span class="ico">✏️</span><span lang="ar">اِخْتَرْ وَاكْتُبْ</span></div>
         <ul lang="ar"><li>اِسْمِي <span class="blank"></span>.</li><li>أَنَا صَدِيقُ/صَدِيقَةُ <span class="blank"></span>.</li><li>عِنْدِي <span class="blank"></span>. (قَائِمَةٌ · قَلَمٌ)</li><li>لِي <span class="blank"></span>. (صَدِيقٌ · صَدِيقَةٌ · صَدِيقَاتٌ)</li><li>هٰذَا/هٰذِهِ <span class="blank"></span>.</li></ul></div>
-      <div class="act"><div class="rubric"><span class="ico">🔢</span><span lang="ar">رَتِّبْ</span></div>
-        <ul lang="ar"><li>⬜ تَقُولُ هُدَى: «لَا! لَا! أَنَا هُدَى!»</li><li>⬜ تَدْخُلُ الْفَصْلَ.</li><li>⬜ تَقُولُ رَزَان: «أَنَا رَزَان... وَلِي صَدِيقَاتٌ!»</li><li>⬜ تَرَى رَزَان الْقَائِمَةَ.</li></ul>
-        <p class="note" style="direction:ltr">Write 1–4 in the boxes.</p></div>
-      <div class="act"><div class="rubric"><span class="ico">🔍</span><span lang="ar">اِبْحَثْ فِي النَّصِّ</span></div>
+      <div class="act"><div class="rubric"><span class="ico">🔢</span><span lang="ar">رَتِّبْ</span> <span class="rubric" lang="ar" style="opacity:.75">— اُكْتُبْ 1–4</span></div>
+        <!-- gen:u1-seq-main --><ul lang="ar"><li>⬜ تَقُولُ هُدَى: «لَا! لَا! لَيْسَ اسْمِي سَارَة! أَنَا هُدَى!»</li><li>⬜ تَدْخُلُ الْفَصْلَ.</li><li>⬜ تَقُولُ رَزَان: «أَنَا رَزَان... وَلِي صَدِيقَاتٌ!»</li><li>⬜ تَرَى رَزَان الْقَائِمَةَ.</li></ul><!-- /gen:u1-seq-main -->
+        <p class="note rev" style="direction:ltr">Generated at build from the engine's <code>events</code> (e1–e4) with each line printed <b>exactly</b> as the story prints it — the earlier set spliced Huda's correction («لَا! لَا! أَنَا هُدَى!») and presented it as a quotation.</p></div>
+      <div class="act"><div class="rubric"><span class="ico">🔍</span><span lang="ar">اِبْحَثْ فِي النَّصِّ</span> <span class="rubric" lang="ar" style="opacity:.75">— ضَعْ خَطًّا</span></div>
         <ul lang="ar"><li>1 · أَيْنَ «لَيْسَ لَهَا صَدِيقٌ»؟ ✏️✏️</li><li>2 · أَيْنَ «رَزَان» فِي الْقَائِمَةِ؟ ✏️</li><li>3 · مَاذَا تُحِبُّ رَزَان؟ ✏️</li></ul>
-        <p class="note" style="direction:ltr">Find and underline the line in the story.</p></div>
+        <p class="note rev" style="direction:ltr">Find and underline the line in the story. (Rubric words أَيْنَ · مَاذَا are chrome, SC-046; question words are in any case free from first exposure, SC-114.)</p></div>
     </div>
   </div>
 
   <div class="sheet">
     <span class="sheet-tag"><span class="rubric" lang="ar">مَنْ أَنْتَ يَا قَلَم؟</span></span>
     <h3>The second reading · <b>past tense</b> · v8</h3>
-    <p class="note" style="direction:ltr"><b>SC-041.</b> Reading 1 is always narrated in the present; reading 2 is always narrated in the past — <span lang="ar">دَخَلَ · قَالَ · رَأَى</span>. Dialogue stays in the present, as narrative does in any language. Absurdity is licensed: this one ends with a talking pen.</p>
+    <p class="note rev" style="direction:ltr"><b>SC-041 · SC-073.</b> Reading 1 is narrated in the present; reading 2 in the past. In this unit the narration uses exactly the licensed past forms — <span lang="ar">دَخَلَ · قَالَ · قَالَتْ · وَقَالَ · رَأَى</span> (Grammar Ledger, form-level) — and these characters' dialogue describes their present situation, so it stays in the present. <b>Recorded exception:</b> the narrated state «كَرِيم... لَيْسَ عِنْدَهُ قَلَمٌ» predates SC-095's clarification (such states move into dialogue); Unit 1 is preserved as built (SC-093) and the line is disclosed, not rewritten. Absurdity is licensed (Standard §E-3): this one ends with a talking pen.</p>
     <div class="picseq">
       <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-pen1"/></svg><b>1</b></span>
       <span class="picfr"><svg viewBox="0 0 120 100"><use href="#sc-pen2"/></svg><b>2</b></span>
@@ -576,23 +589,23 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
       <p>قَالَتْ فَرِيدَة: «نَعَمْ يَا كَرِيم... هُنَاكَ قَلَمٌ يَتَكَلَّمُ!»</p>
     </div>
     <div class="acts">
-      <div class="act"><div class="rubric"><span class="ico">🔗</span><span lang="ar">اِقْرَأْ وَصِلْ</span></div>
+      <div class="act"><div class="rubric"><span class="ico">🔗</span><span lang="ar">اِقْرَأْ وَصِلْ</span> <span class="rubric" lang="ar" style="opacity:.75">— رَقْمُ الصُّورَةِ ○</span></div>
         <ul lang="ar"><li>دَخَلَ كَرِيم. ○</li><li>مَنْ عِنْدَهُ قَلَمٌ؟ ○</li><li>لِي صَدِيقٌ: كَرِيم! ○</li></ul>
-        <p class="note" style="direction:ltr">…matched to the three pictures above.</p></div>
-      <div class="act"><div class="rubric"><span class="ico">💬</span><span lang="ar">مَنْ يَقُولُ؟</span></div>
-        <ul lang="ar"><li>«مَنْ عِنْدَهُ قَلَمٌ؟»</li><li>«أَنَا! أَنَا قَلَمٌ!»</li><li>«نَعَمْ يَا كَرِيم... هُنَاكَ قَلَمٌ يَتَكَلَّمُ!»</li></ul>
-        <p class="note" style="direction:ltr">Four faces to choose from — and one of them is <b>the pen</b>.</p></div>
+        <p class="note rev" style="direction:ltr">The three strip frames above (1–3) are the response set; the learner writes the frame number in ○.</p></div>
+      <div class="act"><div class="rubric"><span class="ico">💬</span><span lang="ar">مَنْ يَقُولُ؟</span> <span class="rubric" lang="ar" style="opacity:.75">— رَقْمُ الْوَجْهِ ○</span></div>
+        <!-- gen:u1p-ws --><div class="picseq" aria-label="who says — four faces and the pen, numbered"><span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-karim-pen"/></g></svg><b>1 · <bdi lang="ar">كَرِيم</bdi></b></span><span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-farida"/></g></svg><b>2 · <bdi lang="ar">فَرِيدَة</bdi></b></span><span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-maha"/></g></svg><b>3 · <bdi lang="ar">مَهَا</bdi></b></span><span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-zayd"/></g></svg><b>4 · <bdi lang="ar">زَيْد</bdi></b></span><span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#obj-pen"/></g></svg><b>5 · <bdi lang="ar">الْقَلَمُ</bdi></b></span></div><ul lang="ar"><li>«مَنْ عِنْدَهُ قَلَمٌ؟» ○</li><li>«أَنَا قَلَمُ كَرِيم!» ○</li><li>«نَعَمْ يَا كَرِيم... هُنَاكَ قَلَمٌ يَتَكَلَّمُ!» ○</li></ul><!-- /gen:u1p-ws -->
+        <p class="note rev" style="direction:ltr">Generated at build from the engine's <code>whosays</code> table (rw1–rw3). Five choices are printed — four faces and <b>the pen</b>; the learner writes the choice's number in ○.</p></div>
       <div class="act"><div class="rubric"><span class="ico">✓✗</span><span lang="ar">صَحٌّ أَمْ خَطَأٌ؟</span></div>
         <ul lang="ar"><li>1 · دَخَلَ كَرِيم. ⬜</li><li>2 · مَهَا: عِنْدَهَا قَلَمٌ. ⬜</li><li>3 · لِلْقَلَمِ صَدِيقٌ: كَرِيم. ⬜</li></ul></div>
       <div class="act"><div class="rubric"><span class="ico">⚖️</span><span lang="ar">اِخْتَرْ</span></div>
-        <ul lang="ar"><li>(صورة 1) دَخَلَ كَرِيم / رَأَى كَرِيم</li><li>(صورة 3) أَنَا قَلَمٌ / أَنَا وَلَدٌ</li></ul>
-        <p class="note" style="direction:ltr">Circle what the picture shows.</p></div>
-      <div class="act"><div class="rubric"><span class="ico">🕐</span><span lang="ar">الْآنَ أَمْ قَبْلُ؟</span></div>
+        <ul lang="ar"><li>(صورة 1) دَخَلَ كَرِيم / رَأَى كَرِيم</li><li>(صورة 3) أَنَا قَلَمٌ / أَنَا كَرِيم</li></ul>
+        <p class="note rev" style="direction:ltr">Circle what the picture shows. The former distractor (first-person “I am a boy”) is retired here and in the digital contrast rc2: first-person gender self-categorisation is display language (SC-021) and is not printed even as a wrong answer.</p></div>
+      <div class="act"><div class="rubric"><span class="ico">🕐</span><span lang="ar">الْآنَ أَمْ قَبْلُ؟</span> <span class="rubric" lang="ar" style="opacity:.75">— 1 «قَائِمَةُ رَزَان» · 2 «مَنْ أَنْتَ يَا قَلَم؟»</span></div>
         <ul lang="ar"><li>تَدْخُلُ الْفَصْلَ. ⬜</li><li>دَخَلَ كَرِيم. ⬜</li><li>تَقُولُ سَارَة. ⬜</li><li>قَالَ زَيْد. ⬜</li></ul>
-        <p class="note" style="direction:ltr"><b>New set (SC-041):</b> sort the lines into the two readings — story 1 (now) or story 2 (before)? No rule is stated; the learner sorts by ear.</p></div>
-      <div class="act"><div class="rubric"><span class="ico">🔢</span><span lang="ar">رَتِّبْ</span></div>
-        <ul lang="ar"><li>⬜ قَالَ قَلَمٌ: «أَنَا! أَنَا قَلَمٌ!»</li><li>⬜ دَخَلَ كَرِيم.</li><li>⬜ قَالَتْ مَهَا: «لَا!»</li></ul>
-        <p class="note" style="direction:ltr">Write 1–3 in the boxes.</p></div>
+        <p class="note rev" style="direction:ltr"><b>S14 (SC-041, SC-048 item 4):</b> sort each line into the story it comes from — the response categories are the two <b>story titles</b> (1 and 2), not "now/before" labels and not "by ear": without verified audio this is a visual story-and-form sort (audit 2026-10-10 §6). No rule is stated.</p></div>
+      <div class="act"><div class="rubric"><span class="ico">🔢</span><span lang="ar">رَتِّبْ</span> <span class="rubric" lang="ar" style="opacity:.75">— اُكْتُبْ 1–3</span></div>
+        <!-- gen:u1p-seq --><ul lang="ar"><li>⬜ قَالَ قَلَمٌ: «أَنَا! أَنَا قَلَمٌ!»</li><li>⬜ دَخَلَ كَرِيم وَقَالَ: «السَّلَامُ عَلَيْكُمْ!»</li><li>⬜ قَالَتْ مَهَا: «لَا! لَيْسَ عِنْدِي قَلَمٌ!»</li></ul><!-- /gen:u1p-seq -->
+        <p class="note rev" style="direction:ltr">Generated at build from the engine's <code>events</code> (re1–re3), each line verbatim — «قَالَتْ مَهَا: «لَا!»» had been truncated.</p></div>
     </div>
   </div>
 
@@ -602,14 +615,27 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
       <div><div class="roster" lang="ar"><h4>قَائِمَةُ الصَّفِّ</h4>المُعَلِّمَة: هُدَى<ol><li>آدَم</li><li>رَنَا</li><li>سَارَة</li><li>طَارِق</li><li>عُمَر</li><li>رَزَان</li><li>نُور</li><li>بَدْر</li></ol></div></div>
       <div>
         <div class="picfr" style="display:block;width:100%;margin-bottom:10px"><svg viewBox="0 0 200 100" style="width:100%;height:auto" role="img" aria-label="the class picture: seven of the eight children on the list"><use href="#sc-class"/></svg></div>
-        <p class="note" style="margin-bottom:10px"><b lang="ar">اِسْتَعْمِلِ النَّصَّ</b> — circle the three story names · find the name with no face in the class picture · write your favourite character's number.</p>
-        <p class="note" style="margin-bottom:10px;direction:ltr"><b>SC-054:</b> the picture shows seven of the eight listed children. The missing one is <b lang="ar">طَارِق</b> — the same child the story names and never shows, so the gap task and the story agree instead of merely coexisting. آدَم · نُور · بَدْر are <b>reserved students</b>: on the roll from Unit 1, drawn here, free to arrive in any later unit as an ordinary new classmate.</p>
+        <!-- I3 (audit 2026-10-10): a labelled name-to-face reference, from the same approved figures, so the gap task can be solved alone -->
+        <div class="picseq" aria-label="who is who: the seven children in the picture, named" style="margin-bottom:10px">
+          <span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-adam"/></g></svg><b lang="ar">آدَم</b></span>
+          <span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-rana"/></g></svg><b lang="ar">رَنَا</b></span>
+          <span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-sara"/></g></svg><b lang="ar">سَارَة</b></span>
+          <span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-omar"/></g></svg><b lang="ar">عُمَر</b></span>
+          <span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-razan"/></g></svg><b lang="ar">رَزَان</b></span>
+          <span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-nur"/></g></svg><b lang="ar">نُور</b></span>
+          <span class="picfr"><svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#av-badr"/></g></svg><b lang="ar">بَدْر</b></span>
+        </div>
+        <div class="rubric" lang="ar" style="margin-bottom:6px">اِسْتَعْمِلِ النَّصَّ</div>
+        <ul lang="ar" class="arabic" style="margin:0 0 10px 0;padding-inline-start:18px;font-size:18px"><li>1 · ○ الْأَسْمَاءُ فِي الْقِصَّةِ</li><li>2 · مَنْ لَيْسَ فِي الصُّورَةِ؟ <span class="blank"></span></li><li>3 · رَقْمُ شَخْصِيَّتِي: <span class="blank" style="min-width:40px"></span></li></ul>
+        <p class="note rev" style="margin-bottom:10px;direction:ltr"><b>Tasks (S12):</b> (1) circle every name on the roll that the story mentions — the old criterion "the three story names" was stale; Story 1 names five of them (رَنَا · سَارَة · طَارِق · عُمَر · رَزَان); (2) find the name with no face in the class picture, using the labelled row above (the Unit 1 prose never establishes which face is آدَم, نُور or بَدْر, so the row is the resource the task needs); (3) write a favourite character's number. Rubric words here are chrome (SC-046) and are recorded in the Unit 1 disclosure.</p>
+        <p class="note rev" style="margin-bottom:10px;direction:ltr"><b>SC-054:</b> the picture shows seven of the eight listed children. The missing one is <b lang="ar">طَارِق</b> — the same child the story names and never shows, so the gap task and the story agree instead of merely coexisting. آدَم · نُور · بَدْر were reserved students under SC-054; the standing cast was retired at SC-089, so they are simply names on this unit's roll.</p>
         <div class="rubric" lang="ar" style="margin-bottom:8px">عَرَبِيَّةٌ حَوْلَنَا</div>
         <div class="acts" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr))">
           <div class="photo">real shop sign photo<br>(to be sourced)</div>
           <div class="photo">school door sign photo</div>
           <div class="photo">street name plate photo</div>
         </div>
+        <p class="note rev" style="direction:ltr;margin-top:8px"><b>Not delivered (Batch 4):</b> the authentic corner is three placeholders and no recognition task. It needs real photographs (never mock realia, SC-020) and the specified name/letter recognition tasks before it can be counted in the unit's inventory.</p>
       </div>
     </div>
   </div>
@@ -617,18 +643,18 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
   <div class="sheet" id="cando">
     <span class="sheet-tag"><span class="rubric" lang="ar">أَسْتَطِيعُ!</span></span>
     <h3>What I can do · the unit's last page</h3>
-    <p class="note" style="direction:ltr">Unit 1's can-do statements (SC-049), and the design decision inside them: at Novice Low a learner cannot read <i>"I can introduce myself"</i> in Arabic, and English is not available — the pop-up is the book's only English. So the page <b>shows the function instead of naming it</b>. Each line is a sentence the learner can now actually say, with a tick box. Ticking «أَنَا ___» <i>is</i> "I can introduce myself." The English can-do wording lives where it belongs — in the committee-facing alignment appendix, per the framework's §7.</p>
+    <p class="note rev" style="direction:ltr">Unit 1's can-do statements (SC-049), and the design decision inside them: at Novice Low a learner cannot read <i>"I can introduce myself"</i> in Arabic, and English is not available — the pop-up is the book's only English. So the page <b>shows the function instead of naming it</b>. Each line is a sentence the learner can now actually say, with a tick box. Ticking «أَنَا ___» <i>is</i> "I can introduce myself." The English can-do wording lives where it belongs — in the committee-facing alignment appendix, per the framework's §7.</p>
     <div class="acts" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
       <div class="act"><div class="rubric"><span class="ico">💬</span><span lang="ar">أَتَكَلَّمُ</span></div>
         <ul lang="ar"><li>«السَّلَامُ عَلَيْكُمْ! أَنَا <span class="blank"></span>.» ⬜</li><li>«مَنْ أَنْتَ؟» ⬜</li><li>«هٰذَا وَلَدٌ. هٰذِهِ بِنْتٌ.» ⬜</li><li>«عِنْدِي قَلَمٌ.» ⬜</li><li>«لَيْسَ عِنْدِي قَلَمٌ.» ⬜</li><li>«لِي صَدِيقٌ / صَدِيقَةٌ: <span class="blank"></span>.» ⬜</li></ul></div>
       <div class="act"><div class="rubric"><span class="ico">📖</span><span lang="ar">أَقْرَأُ</span></div>
-        <ul lang="ar"><li>«قَائِمَةُ رَزَان» ⬜</li><li>«مَنْ أَنْتَ يَا قَلَم؟» ⬜</li><li>«قَائِمَةُ الصَّفِّ» ⬜</li><li>هُنَاكَ اسْمٌ فِي الْقَائِمَةِ. ⬜</li></ul>
-        <p class="note" style="direction:ltr">The two readings and the roster, named. Ticking one is "I can read a short story built from familiar language" — the framework's interpretive-reading can-do, performed.</p></div>
+        <ul lang="ar"><li>«قَائِمَةُ رَزَان» ⬜</li><li>«مَنْ أَنْتَ يَا قَلَم؟» ⬜</li><li>«قَائِمَةُ الصَّفِّ» ⬜</li><li>«هُنَاكَ اسْمٌ: «رَزَان»!» ⬜</li></ul>
+        <p class="note rev" style="direction:ltr">The fourth line used to read «هُنَاكَ اسْمٌ فِي الْقَائِمَةِ», which performs <span lang="ar">فِي</span> before its Unit 2 home as an assessed can-do; it now quotes the story's own line (audit 2026-10-10 §8). The two readings and the roster, named. Ticking one is "I can read a short story built from familiar language" — the framework's interpretive-reading can-do, performed.</p></div>
       <div class="act"><div class="rubric"><span class="ico">✍️</span><span lang="ar">أَكْتُبُ</span></div>
         <ul lang="ar"><li>«اُكْتُبِ الْقِصَّةَ» ⬜</li><li>«قِصَّتِي الْمُوَازِيَةُ» ⬜</li><li>«قِصَّتِي» ⬜</li><li>«دَوْرِي» ⬜</li></ul>
-        <p class="note" style="direction:ltr">The four notebook pages by their own names — so the book's last page and the notebook's contents are the same list.</p></div>
+        <p class="note rev" style="direction:ltr">The four notebook pages by their own names — so the book's last page and the notebook's contents are the same list.</p></div>
     </div>
-    <p class="note" style="direction:ltr;margin-top:12px"><b>Chrome admitted here, recorded per SC-046:</b> أَسْتَطِيعُ · أَتَكَلَّمُ · أَقْرَأُ · أَكْتُبُ — four words, page furniture, learned once by icon.</p>
+    <p class="note rev" style="direction:ltr;margin-top:12px"><b>Chrome admitted here, recorded per SC-046:</b> أَسْتَطِيعُ · أَتَكَلَّمُ · أَقْرَأُ · أَكْتُبُ — four words, page furniture, learned once by icon.</p>
   </div>
 
 </section>
@@ -920,9 +946,9 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
 
 <!-- ================= NOTEBOOK ================= -->
 <section class="view" id="v-note">
-  <div class="viewbar"><div class="viewbar-in"><a class="back" href="#">← Library</a><div><div class="vt">Unit 1 · Notebook</div><div class="vsub">Phase 4 · the output ladder</div></div><span class="draft">DRAFT</span></div></div>
+  <div class="viewbar"><div class="viewbar-in"><a class="back" href="#">← Library</a><div><div class="vt">Unit 1 · Notebook</div><div class="vsub">Phase 4 · the output ladder (the survey on p. 9 is Phase 3 and comes first)</div></div><span class="draft">DRAFT</span></div></div>
   <main class="rtl">
-  <p class="lede" style="direction:ltr"><b>Ten pages: write the story you read → write your parallel story → write your own → show it.</b> Every page is completable by a student alone (P-3); each retell is titled <span lang="ar">اُكْتُبِ الْقِصَّةَ</span> plus the story's own name, and its <span lang="ar">بَنْكُ الْكَلِمَاتِ</span> supplies the missing word. Every frame prints the possessive split correctly — <span lang="ar">عِنْدَ</span> for things, <span lang="ar">لِـ</span> for people (SC-039).</p>
+  <p class="lede rev" style="direction:ltr"><b>Ten pages: ask your friends (p. 9, in class) → write the story you read → write your parallel story → write your own → show it.</b> Every writing page is completable by a student alone (P-3); the survey is the one page that needs classmates, and it comes <b>before</b> the parallel story that uses its names (owner's decision: scaffolded interaction, including C1, precedes notebook writing — SC-119). Each retell is titled <span lang="ar">اُكْتُبِ الْقِصَّةَ</span> plus the story's own name, and its <span lang="ar">بَنْكُ الْكَلِمَاتِ</span> supplies the missing word. Every frame prints the possessive split correctly — <span lang="ar">عِنْدَ</span> for things, <span lang="ar">لِـ</span> for people (SC-039).</p>
 
   <div class="sheet"><span class="sheet-tag"><span class="rubric" lang="ar">دَفْتَرِي</span></span><h3>Opener · page 1</h3>
     <div class="nb"><p class="arabic" lang="ar" style="font-size:28px;text-align:center">دَفْتَرِي</p>
@@ -933,7 +959,7 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
       <div class="act" style="text-align:center"><div style="font-size:22px">📖</div><div class="rubric" lang="ar">قِصَّتِي</div><div style="font-size:22px">⬜</div></div>
       <div class="act" style="text-align:center"><div style="font-size:22px">🙋</div><div class="rubric" lang="ar">دَوْرِي</div><div style="font-size:22px">⬜</div></div>
     </div>
-    <p class="note" style="direction:ltr;margin-top:10px">A tick-box per finished page — the notebook's only progress device. No scores anywhere in the course.</p></div></div>
+    <p class="note rev" style="direction:ltr;margin-top:10px">A tick-box per finished page — the notebook's only progress device. No scores anywhere in the course.</p></div></div>
 
   <div class="sheet"><span class="sheet-tag"><span class="code">N1 أ</span> <span class="rubric" lang="ar">اُكْتُبِ الْقِصَّةَ: «قَائِمَةُ رَزَان»</span></span><h3>Write the story · story 1 · <b>present</b> · pages 2–3</h3>
     <div class="nbpics">
@@ -954,7 +980,7 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
     </p>
     <div class="bank"><span class="bl">بَنْكُ الْكَلِمَاتِ</span><br>
       <span class="w">رَزَان</span><span class="w">لَهَا</span><span class="w">الْقَائِمَةَ</span><span class="w">هُدَى</span><span class="w">عُمَر</span><span class="w">سَارَة</span><span class="w">لِي</span></div>
-    <p class="note" style="direction:ltr">One slot per line at the U1 tier — the frame carries the sentence, the learner supplies the load-bearing chunk. Line 1 carries two because <span lang="ar">لَيْسَ لَهَا</span> is the story's spine.</p></div></div>
+    <p class="note rev" style="direction:ltr">One slot per line at the U1 tier — the frame carries the sentence, the learner supplies the load-bearing chunk. Line 1 carries two because <span lang="ar">لَيْسَ لَهَا</span> is the story's spine.</p></div></div>
 
   <div class="sheet"><span class="sheet-tag"><span class="code">N1 ب</span> <span class="rubric" lang="ar">اُكْتُبِ الْقِصَّةَ: «مَنْ أَنْتَ يَا قَلَم؟»</span></span><h3>Write the story · story 2 · <b>past</b> · page 4</h3>
     <div class="nbpics">
@@ -971,9 +997,9 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
     </p>
     <div class="bank"><span class="bl">بَنْكُ الْكَلِمَاتِ</span><br>
       <span class="w">دَخَلَ</span><span class="w">مَنْ</span><span class="w">عِنْدَهَا</span><span class="w">رَأَى</span><span class="w">قَلَمُ</span></div>
-    <p class="note" style="direction:ltr">The number beside each line is the <b>frame</b> it belongs to — five lines over three frames (audit 2026-09-17). <b>The past forms are printed in the bank, never built by the learner</b> — supported retrieval, not production. This is the only page in the unit where the learner writes a past-tense form, and it is a copy from a bank.</p></div></div>
+    <p class="note rev" style="direction:ltr">The number beside each line is the <b>frame</b> it belongs to — five lines over three frames (audit 2026-09-17). <b>The past forms are printed in the bank, never built by the learner</b> — supported retrieval, not production (cards <code>g: G-input_first · output: copied</code>). This is the only page in the unit where the learner writes a past-tense form, and it is a copy from a bank. <b>Disclosed (audit 2026-10-10 §6):</b> line 2b narrates «لَيْسَ عِنْدَهَا قَلَمٌ» about مَهَا, where the story gives her first-person denial «لَيْسَ عِنْدِي قَلَمٌ!» — a supported retell, not a verbatim line; عِنْدَهَا is a Unit 1 licensed form (SC-023).</p></div></div>
 
-  <div class="sheet"><span class="sheet-tag"><span class="code">N2</span> <span class="rubric" lang="ar">قِصَّتِي الْمُوَازِيَةُ</span></span><h3>My parallel story · pages 5–6</h3>
+  <div class="sheet"><span class="sheet-tag"><span class="code">N2</span> <span class="rubric" lang="ar">قِصَّتِي الْمُوَازِيَةُ</span></span><h3>My parallel story · pages 5–6 · <b>after the survey on p. 9</b></h3>
     <div class="nb"><p class="arabic" lang="ar" style="font-size:24px;text-align:center">قَائِمَةُ <span class="slot" style="min-width:150px"></span></p>
     <p class="arabic" lang="ar">
       يَدْخُلُ / تَدْخُلُ <span class="slot"></span>.<br>
@@ -983,29 +1009,36 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
     </p>
     <div class="drawbox"><span class="rubric" lang="ar">اُرْسُمْ صَفَّكَ</span></div>
     <p class="arabic" lang="ar" style="margin-top:8px">هٰذِهِ صَفْحَتِي! <span style="font-size:15px;color:#5A6B72">⬜</span></p>
-    <p class="note" style="direction:ltr">That last line is <b>C3 (SC-049)</b>: when the page is finished the learner shows it to a partner and says it. The classroom format is a line on the page it presents — no prep, no separate product.<br>The same story, about the learner's real classroom, using the names collected in the survey on page 9. The last line prints both forms: a boy completes <span lang="ar">صَدِيقِي</span>, a girl completes <span lang="ar">صَدِيقَتِي</span> — SC-036 is carried by the frame itself, with no rule stated.</p></div></div>
+    <p class="note rev" style="direction:ltr">That last line is <b>C3 (SC-049)</b>: when the page is finished the learner shows it to a partner and says it — Phase 5; the classroom format is a line on the page it presents — no prep, no separate product.<br>The same story, about the learner's real classroom, using the names collected in the survey on page 9 — which is why the survey (Phase 3) runs first. <b>Gender guidance, corrected (audit 2026-10-10 I4):</b> the last line prints both forms; the learner chooses the form that matches <b>the friend being named</b> — <span lang="ar">صَدِيقِي</span> for a boy, <span lang="ar">صَدِيقَتِي</span> for a girl; the <span lang="ar">ـِي</span> ending says "my" whoever is writing. For this course's task the friendship named is same-gender (SC-036), so in practice a boy writes صَدِيقِي and a girl صَدِيقَتِي; the frame carries the rule without stating it.<br><b>Absent from the survey?</b> A learner who missed C1 completes the page from the printed class list (قَائِمَةُ الصَّفِّ) as a parallel version about that class — an implementation alternative under P-3, recorded in Activity Architecture §2 (SC-119).</p></div></div>
 
-  <div class="sheet"><span class="sheet-tag"><span class="code">N3</span> <span class="rubric" lang="ar">قِصَّتِي</span></span><h3>My own story · page 7</h3>
-    <div class="nb"><p class="arabic" lang="ar">
+  <div class="sheet"><span class="sheet-tag"><span class="code">N3</span> <span class="rubric" lang="ar">قِصَّتِي</span></span><h3>My own story · page 7 · a first framed vignette</h3>
+    <div class="nb">
+    <!-- I4 (audit 2026-10-10): a visible model for every slash choice the frames offer, printed above them -->
+    <p class="arabic" lang="ar" style="font-size:17px;color:#5A6B72;border-bottom:1px dashed #D9E0DE;padding-bottom:6px;margin-bottom:8px">يَدْخُلُ عُمَر · تَدْخُلُ رَزَان · عِنْدَهُ قَلَمٌ · عِنْدَهَا قَائِمَةٌ · لَهُ صَدِيقٌ · لَهَا صَدِيقَةٌ · يَقُولُ عُمَر · تَقُولُ رَزَان</p>
+    <p class="arabic" lang="ar">
       يَدْخُلُ / تَدْخُلُ <span class="slot"></span>.<br>
       عِنْدَهُ / عِنْدَهَا <span class="slot"></span>.<br>
       لَهُ / لَهَا <span class="slot"></span>.<br>
       يَقُولُ / تَقُولُ: «<span class="slot" style="min-width:170px"></span>».
     </p>
     <div class="bank"><span class="bl">أَشْيَاءُ</span><br><span class="w">قَلَمٌ</span><span class="w">قَائِمَةٌ</span>
-      <br><span class="bl">أَشْخَاصٌ</span><br><span class="w">صَدِيقٌ</span><span class="w">صَدِيقَةٌ</span><span class="w">صَدِيقَاتٌ</span></div>
+      <br><span class="bl">أَشْخَاصٌ</span><br><span class="w">صَدِيقٌ</span><span class="w">صَدِيقَةٌ</span><span class="w">صَدِيقَاتٌ</span>
+      <br><span class="bl">يَقُولُ / تَقُولُ</span><br><span class="w">أَهْلًا!</span><span class="w">السَّلَامُ عَلَيْكُمْ!</span><span class="w">أُرِيدُ صَدِيقًا!</span><span class="w">لَيْسَ عِنْدِي قَلَمٌ!</span></div>
     <div class="drawbox"><span class="rubric" lang="ar">اُرْسُمْ</span></div>
-    <p class="note" style="direction:ltr">The freest rung at U1, and the page where the possessive split is <b>produced</b> rather than read: the bank is split into things and people, so choosing the right line is choosing the right preposition. Nothing says why.</p></div></div>
+    <p class="note rev" style="direction:ltr">The freest rung at U1, and the page where the possessive split is <b>produced</b> rather than read: the bank is split into things and people, so choosing the right line is choosing the right preposition. Nothing says why. <b>Form map (audit 2026-10-10 I4):</b> every slash choice now has a printed model above the frames — يَدْخُلُ / عِنْدَهُ are Unit 1 licences (SC-023, masc./fem. pair = one item); لَهُ is the masculine of the لِـ family (SC-039) and appears in the apparatus only — <b>licence to confirm in the Chunk Inventory</b>, recorded in the Unit 1 disclosure. The speech slot gets a small bank of lines the stories print, so a beginner working alone has something to choose rather than invent. "My own story" at this rung is a framed vignette — someone enters, has, has a friend, speaks — not a plotted story; the want–obstacle–resolution shape arrives with the later rungs (SC-096).</p></div></div>
 
   <div class="sheet"><span class="sheet-tag"><span class="code">S6</span> <span class="rubric" lang="ar">دَوْرِي</span></span><h3>Name poster · page 8 · feeds the classroom share (C3)</h3>
     <div class="nb"><p class="arabic" lang="ar" style="font-size:23px">هٰذَا أَنَا. اِسْمِي <span class="slot" style="min-width:150px"></span>.<br>لِي صَدِيقٌ / صَدِيقَةٌ: <span class="slot" style="min-width:150px"></span>.</p>
     <div class="drawbox" style="height:130px"><span class="rubric" lang="ar">اُرْسُمْ نَفْسَكَ</span></div></div></div>
 
-  <div class="sheet"><span class="sheet-tag"><span class="code">C1</span> <span class="rubric" lang="ar">اِسْأَلْ أَصْدِقَاءَكَ</span></span><h3>Survey grid · page 9 · filled in class, used on page 5</h3>
+  <div class="sheet"><span class="sheet-tag"><span class="code">C1</span> <span class="rubric" lang="ar">اِسْأَلْ أَصْدِقَاءَكَ</span></span><h3>Survey grid · page 9 · <b>Phase 3, filled in class before page 5</b></h3>
     <div class="nb" style="background-image:none">
-      <p class="arabic" lang="ar" style="text-align:center;font-size:21px">«مَنْ أَنْتَ؟» · «مَنْ عِنْدَهُ قَلَمٌ؟»</p>
+      <!-- B5 (audit 2026-10-10): three questions, one per column — the name, the pen, the list — asked TO the classmate in the second person
+           (عِنْدَكَ / عِنْدَكِ are Unit 1 core chunks, SC-016; هَلْ is free from first exposure, SC-114), with the two answer models printed -->
+      <p class="arabic" lang="ar" style="text-align:center;font-size:21px">«مَنْ أَنْتَ؟ / مَنْ أَنْتِ؟» · «هَلْ عِنْدَكَ / عِنْدَكِ قَلَمٌ؟» · «هَلْ عِنْدَكَ / عِنْدَكِ قَائِمَةٌ؟»</p>
+      <p class="arabic" lang="ar" style="text-align:center;font-size:18px;color:#5A6B72">«عِنْدِي قَلَمٌ.» ✓ · «لَيْسَ عِنْدِي قَلَمٌ.» ✗</p>
       <table class="nbgrid">
-        <tr><th>الِاسْمُ</th><th>عِنْدَهُ / عِنْدَهَا قَلَمٌ</th><th>عِنْدَهُ / عِنْدَهَا قَائِمَةٌ</th></tr>
+        <tr><th>الِاسْمُ</th><th>قَلَمٌ ✓ / ✗</th><th>قَائِمَةٌ ✓ / ✗</th></tr>
         <tr><td>1</td><td></td><td></td></tr>
         <tr><td>2</td><td></td><td></td></tr>
         <tr><td>3</td><td></td><td></td></tr>
@@ -1013,11 +1046,11 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
         <tr><td>5</td><td></td><td></td></tr>
       </table>
       <p class="arabic" lang="ar" style="text-align:center;font-size:19px;margin-top:10px">اِسْأَلْ. اُكْتُبِ الِاسْمَ. ✓</p>
-      <p class="note" style="direction:ltr">Two licensed questions, five real classmates, ticks not sentences. The names collected here are the raw material for N2 — the notebook feeds itself. <b>C1's whole instruction to the learner is that one Arabic line (SC-049)</b>; the teacher's procedure lives on the separate teacher's page (SC-104), never here.</p></div></div>
+      <p class="note rev" style="direction:ltr">Three licensed questions — one per column — five real classmates, ticks not sentences. <b>B5 (audit 2026-10-10):</b> the old pair («مَنْ أَنْتَ؟» · «مَنْ عِنْدَهُ قَلَمٌ؟») asked the room, not the classmate, and nothing elicited the list column; the questions now address the interlocutor in the second person with masculine/feminine forms side by side, and both answer models are printed. The names collected here are the raw material for N2 — the notebook feeds itself, which is why this page runs <b>before</b> p. 5 (SC-119). <b>C1's whole instruction to the learner is the one Arabic line (SC-049)</b>; the teacher's procedure lives on the separate teacher's page (SC-104), never here.</p></div></div>
 
   <div class="sheet" style="opacity:.6"><span class="sheet-tag"><span class="code">N4</span> <span class="rubric" lang="ar">هَلْ تَذْكُرُ؟</span></span><h3>Do you remember? · page 10 · <b>empty at Unit 1 by design</b></h3>
     <div class="nb"><p class="arabic" lang="ar" style="text-align:center;font-size:22px">🕐</p>
-    <p class="note" style="direction:ltr;text-align:center">The delayed-retrieval page draws only on <b>earlier</b> units, so Unit 1's is deliberately blank — it carries the format's icon and its promise. The first real one is in Unit 2.</p></div></div>
+    <p class="note rev" style="direction:ltr;text-align:center">The delayed-retrieval page draws only on <b>earlier</b> units, so Unit 1's is deliberately blank — it carries the format's icon and its promise. The first real one is in Unit 2.</p></div></div>
 
   </main>
 </section>
@@ -1347,8 +1380,10 @@ const UNIT_01 = {
     {id:"m19", ar:"تُحِبُّ رَزَان... الْقَائِمَةَ!", stage:3, items:["yuhibb","qaima"], img:"sc-end"},
     {id:"m20", ar:"تَقُولُ رَزَان: «أَنَا رَزَان... وَلِي صَدِيقَاتٌ!»", stage:3, items:["yaqul","ana","li","sadiq"], img:"sc-end"}
   ],
+  /* B1 (audit 2026-10-10): the reading is every sentence of the inventory, in inventory order — generated from `sentences`
+     by readingOf() and asserted by qc(); a hand-kept list drifted (deleted m10b kept, m00/m13/m13b omitted) and crashed R.read. */
   readings:[
-    {id:"main", role:"main", title:"قَائِمَةُ رَزَان", sentence_ids:["m01","m02","m03","m04","m05","m06","m07","m08","m09","m10","m10b","m11","m12","m14","m15","m15b","m16","m17","m18","m18b","m19","m20"]}
+    {id:"main", role:"main", title:"قَائِمَةُ رَزَان", sentence_ids:["m00","m01","m02","m03","m04","m05","m06","m07","m08","m09","m10","m11","m12","m13","m13b","m14","m15","m15b","m16","m17","m18","m18b","m19","m20"]}
   ],
   /* authored contrast metadata (spec §13): every alternative is canonical or owner-authored unit language */
   contrasts:[
@@ -1408,9 +1443,9 @@ const UNIT_01P = {
   ],
   items:[
     {id:"salam",  ar:"السَّلَامُ عَلَيْكُمْ", status:"RECYCLED_CORE_TARGET", lemma:"السَّلَامُ عَلَيْكُمْ", kind:"chunk", chunk_ref:"CH-01", forms:["السَّلَامُ عَلَيْكُمْ"], gloss:"hello (greeting)", img:null, dim:"greeting", phrase:"السَّلَامُ عَلَيْكُمْ!", hl:"السَّلَامُ عَلَيْكُمْ"},
-    {id:"dakhala",ar:"دَخَلَ", status:"NEW_CORE_TARGET", lemma:"دَخَلَ", kind:"lemma", forms:["دَخَلَ"], gloss:"(he) entered — past of يَدْخُلُ", img:"vg-enter", dim:"action", phrase:"دَخَلَ كَرِيم.", hl:"دَخَلَ"},
-    {id:"qala",   ar:"قَالَ", status:"NEW_CORE_TARGET", lemma:"قَالَ", kind:"lemma", forms:["قَالَ","قَالَتْ","وَقَالَ"], gloss:"(he) said — past of يَقُولُ", img:"vg-say", dim:"action", phrase:"قَالَ كَرِيم: «أَنَا!»", hl:"قَالَ"},
-    {id:"raa",    ar:"رَأَى", status:"NEW_CORE_TARGET", lemma:"رَأَى", kind:"lemma", forms:["رَأَى"], gloss:"(he) saw — past of يَرَى", img:"vg-see", dim:"action", phrase:"رَأَى كَرِيم الْقَلَمَ.", hl:"رَأَى"},
+    {id:"dakhala",ar:"دَخَلَ", status:"NEW_CORE_TARGET", g:"G-input_first", output:"copied", lemma:"دَخَلَ", kind:"lemma", forms:["دَخَلَ"], gloss:"(he) entered — past of يَدْخُلُ", img:"vg-enter", dim:"action", phrase:"دَخَلَ كَرِيم.", hl:"دَخَلَ"},
+    {id:"qala",   ar:"قَالَ", status:"NEW_CORE_TARGET", g:"G-input_first", output:"copied", lemma:"قَالَ", kind:"lemma", forms:["قَالَ","قَالَتْ","وَقَالَ"], gloss:"(he) said — past of يَقُولُ", img:"vg-say", dim:"action", phrase:"قَالَ كَرِيم: «أَنَا!»", hl:"قَالَ"},
+    {id:"raa",    ar:"رَأَى", status:"NEW_CORE_TARGET", g:"G-input_first", output:"copied", lemma:"رَأَى", kind:"lemma", forms:["رَأَى"], gloss:"(he) saw — past of يَرَى", img:"vg-see", dim:"action", phrase:"رَأَى كَرِيم الْقَلَمَ.", hl:"رَأَى"},
     {id:"qalam",  ar:"قَلَمٌ", status:"COMPREHENSIBLE_SUPPORT", lemma:"قَلَم", kind:"lemma", forms:["قَلَمٌ","قَلَمًا","الْقَلَمَ","الْقَلَمُ","قَلَمُ"], gloss:"a pen", img:"obj-pen", dim:"object", phrase:"هٰذَا قَلَمٌ.", hl:"قَلَمٌ"},
     {id:"inda",   ar:"عِنْدَهُ", status:"RECYCLED_CORE_TARGET", lemma:"عِنْدَ", kind:"lemma", forms:["عِنْدَهُ","عِنْدِي"], gloss:"he has (a thing)", img:null, dim:"possession", phrase:"عِنْدَهُ قَلَمٌ.", hl:"عِنْدَهُ"},
     {id:"man",    ar:"مَنْ؟", status:"RECYCLED_CORE_TARGET", lemma:"مَنْ", kind:"lemma", forms:["مَنْ"], gloss:"who?", img:null, dim:"question", phrase:"مَنْ عِنْدَهُ قَلَمٌ؟", hl:"مَنْ"},
@@ -1442,7 +1477,7 @@ const UNIT_01P = {
   readings:[{id:"parallel", role:"parallel", title:"مَنْ أَنْتَ يَا قَلَم؟", sentence_ids:["r01","r02","r03","r04","r05","r06","r07","r08","r09","r10","r11"]}],
   contrasts:[
     {id:"rc1", stage:0, img:"sc-pen1", a:"دَخَلَ كَرِيم", b:"رَأَى كَرِيم", correct:"a", support:"r01", dim:"action"},
-    {id:"rc2", stage:2, img:"sc-pen3", a:"أَنَا قَلَمٌ", b:"أَنَا وَلَدٌ", correct:"a", support:"r08", dim:"person"},
+    {id:"rc2", stage:2, img:"sc-pen3", a:"أَنَا قَلَمٌ", b:"أَنَا كَرِيم", correct:"a", support:"r08", dim:"person"}, /* the former first-person gender distractor is retired (SC-021) */
     {id:"rc3", stage:2, img:"sc-pen3", a:"هُنَاكَ قَلَمٌ", b:"هُنَاكَ وَلَدٌ", correct:"a", support:"r11", dim:"existence"},
     {id:"rc4", stage:1, img:"sc-pen2", a:"لَيْسَ عِنْدِي قَلَمٌ", b:"عِنْدِي قَلَمٌ", correct:"a", support:"r04", dim:"possession"}
   ],
@@ -1469,6 +1504,30 @@ const UNIT_01P = {
   ]
 };
 
+/* ---------------- form licence (authority-backed; audit 2026-10-10 B2) ----------------
+   SC-073 item 3: a licensed form licenses only itself. The `forms` arrays on the cards are the working record; this table is
+   the SAME licence held separately, transcribed from the Grammar and Vocabulary Ledgers at the SC-059/SC-075 freeze, so that
+   editing a card (or the canon) cannot authorise a form by itself — qc() fails any card whose forms exceed its lemma's licence,
+   and any card whose lemma the licence does not know. Units 2–3 are not yet covered: their tables are owed to their build
+   scripts, and qc() skips the check where a unit has no table (reported in notes, never silently passed). */
+const FORM_LICENCE = {
+  "unit-01": {
+    "السَّلَامُ عَلَيْكُمْ":["السَّلَامُ عَلَيْكُمْ"], "وَعَلَيْكُمُ السَّلَامُ":["وَعَلَيْكُمُ السَّلَامُ"], "أَهْلًا":["أَهْلًا"],
+    "أَنَا":["أَنَا","وَأَنَا"], "وَلَد":["وَلَدًا","الْوَلَدُ"], "بِنْت":["بِنْتٌ","بِنْتًا","الْبِنْتُ"],
+    "صَدِيق":["صَدِيقٌ","صَدِيقًا","صَدِيقَةٌ","صَدِيقَاتٌ"], "قَائِمَة":["قَائِمَةٌ","الْقَائِمَةَ"], "فَصْل":["الْفَصْلَ"], "قَلَم":[],
+    "عِنْدَ":["وَعِنْدَهَا"], "لِـ":["لِي","وَلِي","لَهَا"], "أَرَادَ":["أُرِيدُ"], "لَيْسَ":["لَيْسَ"],
+    "دَخَلَ":["تَدْخُلُ"], "رَأَى":["تَرَى","يَرَى"], "قَالَ":["تَقُولُ","يَقُولُ","وَتَقُولُ","وَيَقُولُ"], "أَحَبَّ":["تُحِبُّ"],
+    "هُنَاكَ":["هُنَاكَ","وَهُنَاكَ"], "مَنْ":["مَنْ","وَمَنْ"], "اِسْم":["اسْمٌ","اسْمُهَا","اسْمِي"], "لَا":["لَا"], "نَعَمْ":["نَعَمْ"],
+    "أَنْتَ":["أَنْتَ","أَنْتِ","وَأَنْتِ"], "هٰذَا":["هٰذِهِ"], "يَا":["يَا"], "هِيَ":["هِيَ"]
+  },
+  "unit-01p": {
+    "السَّلَامُ عَلَيْكُمْ":["السَّلَامُ عَلَيْكُمْ"], "دَخَلَ":["دَخَلَ"], "قَالَ":["قَالَ","قَالَتْ","وَقَالَ"], "رَأَى":["رَأَى"],
+    "قَلَم":["قَلَمٌ","قَلَمًا","الْقَلَمَ","الْقَلَمُ","قَلَمُ"], "عِنْدَ":["عِنْدَهُ","عِنْدِي"], "مَنْ":["مَنْ"], "هُنَاكَ":["هُنَاكَ"],
+    "أَنَا":["أَنَا"], "صَدِيق":["صَدِيقٌ"], "أَرَادَ":["أُرِيدُ"], "تَكَلَّمَ":["يَتَكَلَّمُ"], "لَيْسَ":["لَيْسَ"], "لِـ":["وَلِي"],
+    "لَا":["لَا"], "نَعَمْ":["نَعَمْ"], "أَنْتَ":["أَنْتَ"], "يَا":["يَا"]
+  }
+};
+
 /* ---------------- normalization ---------------- */
 function normalize(u){
   const S={}, I={}, C={};
@@ -1478,10 +1537,14 @@ function normalize(u){
   return {unit:u, S, I, C};
 }
 
+/* the reading membership a unit's data implies: every sentence, in inventory order (B1) */
+function readingOf(u){ return u.sentences.map(s=>s.id); }
+
 /* ---------------- generation (activities reference data; no Arabic is composed here) ---------------- */
 function gen(u){
   const n=normalize(u), acts=[];
   const push=(a)=>acts.push(a);
+  const firstCtx=iid=>u.sentences.find(s=>s.items.includes(iid));
 
   /* F1 explore — meaning establishment (all statuses permit) */
   u.items.forEach(it=>{
@@ -1493,12 +1556,16 @@ function gen(u){
   /* F2 arabic→picture / F3 picture→arabic — items with images, meaningfully distinct dims */
   const imgItems=u.items.filter(i=>i.img && STATUS[i.status].recog);
   imgItems.forEach(it=>{
-    const distract=imgItems.filter(o=>o.id!==it.id && o.img!==it.img).slice(0,2);
+    /* distractors: a different picture AND, wherever possible, a different meaning dimension — so a single girl is never
+       set against the two-girl friendship icon as a "wrong" picture (audit 2026-10-10 §10); `confusable` excludes by hand */
+    const pool=imgItems.filter(o=>o.id!==it.id && o.img!==it.img && !(it.confusable||[]).includes(o.id) && !(o.confusable||[]).includes(it.id));
+    const distract=[...pool.filter(o=>o.dim!==it.dim), ...pool.filter(o=>o.dim===it.dim)].slice(0,2);
+    const ctx=firstCtx(it.id);
     if(distract.length>=1){
       push({activity_id:`${u.unit_id}_a2p_${it.id}`, unit_id:u.unit_id, type:"arabic_to_picture", stage:"recognition",
-        difficulty:"supported", spoiler_stage:0, item:it.id, choices:[it.id,...distract.map(d=>d.id)], correct:it.id});
+        difficulty:"supported", spoiler_stage:0, item:it.id, sentence_ref:ctx?ctx.id:null, choices:[it.id,...distract.map(d=>d.id)], correct:it.id});
       push({activity_id:`${u.unit_id}_p2a_${it.id}`, unit_id:u.unit_id, type:"picture_to_arabic", stage:"recognition",
-        difficulty:"supported", spoiler_stage:0, item:it.id, choices:[it.id,...distract.map(d=>d.id)], correct:it.id});
+        difficulty:"supported", spoiler_stage:0, item:it.id, sentence_ref:ctx?ctx.id:null, choices:[it.id,...distract.map(d=>d.id)], correct:it.id});
     }
   });
 
@@ -1534,8 +1601,10 @@ function gen(u){
   (u.findit||[]).forEach(f=>push({activity_id:`${u.unit_id}_find_${f.id}`, unit_id:u.unit_id, type:"find_it",
     stage:"rereading", difficulty:"familiar", spoiler_stage:f.stage, findit:f.id}));
 
-  /* F9 listening — only with verified audio (spec: suppressed otherwise) */
-  if(u.audio && u.audio.verified){ /* generators would go here; none generated without verified audio */ }
+  /* F9 listening — only with verified audio (spec: suppressed otherwise).
+     NOT BUILT (audit 2026-10-10 B6): there is no listening generator yet. Setting audio.verified=true without clip bindings
+     is a unit-level QC failure (see qc), so the flag cannot be flipped to claim listening that does not exist. */
+  if(u.audio && u.audio.verified && Array.isArray(u.audio.clips) && u.audio.clips.length){ /* listening generators go here when clips are bound and verified */ }
 
   /* F10 supported retrieval — core items only, gated at runtime by prior comprehension */
   (u.retrieval||[]).forEach(r=>{
@@ -1571,19 +1640,40 @@ function canonCheck(u){
 function qc(u, acts){
   const n=normalize(u), ok=[], failed=[], notes=[];
   const fail=(a,why)=>failed.push({id:a.activity_id, why});
+  /* unit-level failures block the whole unit (B2): nothing from a failing unit is delivered — see deliverable() */
+  const unitFail=(id,why)=>failed.push({id:u.unit_id+"_"+id, why, unit:true});
   const canon=canonCheck(u);
-  if(!canon.ok) failed.push({id:u.unit_id+"_canon", why:"reading no longer matches the printed text — "+canon.why});
-  /* SC-065 §11: a licensed form licenses only itself. Every form a card claims must be printed. */
+  if(!canon.ok) unitFail("canon","reading no longer matches the printed text — "+canon.why);
+  /* B1: reading membership = the sentence inventory, in order, each id resolving, stages never going backwards */
+  const want=readingOf(u);
+  (u.readings||[]).forEach(rd=>{
+    const ids=rd.sentence_ids||[];
+    const missing=ids.filter(id=>!n.S[id]); if(missing.length) unitFail("reading_"+rd.id+"_unknown","reading lists sentence ids that do not exist: "+missing.join(", "));
+    if(new Set(ids).size!==ids.length) unitFail("reading_"+rd.id+"_dup","reading lists a sentence twice");
+    const omitted=want.filter(id=>!ids.includes(id)); if(omitted.length) unitFail("reading_"+rd.id+"_omitted","reading omits live sentences: "+omitted.join(", "));
+    if(!missing.length && !omitted.length && ids.join("|")!==want.join("|")) unitFail("reading_"+rd.id+"_order","reading order differs from the printed order");
+    for(let i=1;i<ids.length;i++){ const a=n.S[ids[i-1]], b=n.S[ids[i]]; if(a&&b&&b.stage<a.stage){ unitFail("reading_"+rd.id+"_stage","spoiler stages go backwards at "+ids[i]); break; } }
+  });
+  if(!(u.readings||[]).length) unitFail("reading_none","unit declares no reading");
+  /* SC-065 §11: a licensed form licenses only itself. Every form a card claims must be printed… */
+  const lic=FORM_LICENCE[u.unit_id];
+  if(!lic) notes.push({id:u.unit_id, note:"no form-licence table for this unit yet — form claims checked against the canon only"});
   u.items.forEach(it=>{
     (it.forms||[]).forEach(f=>{
-      if(!wordRe(f).test(u.canon||"")) failed.push({id:u.unit_id+"_form_"+it.id, why:`card claims the form "${f}", which this reading does not print`});
+      if(!wordRe(f).test(u.canon||"")) unitFail("form_"+it.id, `card claims the form "${f}", which this reading does not print`);
+      /* …and (B2) must also be in the licence table — a form written into the canon is not thereby licensed */
+      if(lic){ const L=lic[it.lemma]; if(!L) unitFail("licence_"+it.id, `card lemma "${it.lemma}" is not in the unit's form licence`);
+               else if(!L.includes(f)) unitFail("licence_"+it.id+"_"+f, `form "${f}" is printed but not licensed for ${it.lemma} (Grammar/Vocabulary Ledger)`); }
     });
     if(it.kind==="lemma" && (it.forms||[]).length===0){
       if(STATUS[it.status] && STATUS[it.status].retrieval)
-        failed.push({id:u.unit_id+"_orphan_"+it.id, why:`productive item with no printed form in this reading`});
+        unitFail("orphan_"+it.id, `productive item with no printed form in this reading`);
       else notes.push({id:it.id, note:"carded but not printed in this reading — taught elsewhere in the unit"});
     }
   });
+  /* B6: a verified-audio claim needs clip bindings; otherwise the claim itself is the defect */
+  if(u.audio && u.audio.verified && !(Array.isArray(u.audio.clips) && u.audio.clips.length))
+    unitFail("audio","audio.verified is true but no clips are bound — listening is not built");
   acts.forEach(a=>{
     try{
       if(a.sentence_ref && !n.S[a.sentence_ref]) return fail(a,"missing sentence ref");
@@ -1611,6 +1701,7 @@ function qc(u, acts){
         if(!s.ar.includes(r.blank)) return fail(a,"blank not in canonical sentence");   /* Arabic never altered */
         if(!r.choices.includes(r.blank)) return fail(a,"answer not in choices");
         if(new Set(r.choices).size!==r.choices.length) return fail(a,"dup choices");
+        const rit=n.I[r.item]; if(rit && rit.g==="G-orthographic_presence") return fail(a,"retrieval on orthographic-presence grammar");
       }
       if(a.type==="either_or"){
         const c=(u.contrasts||[]).find(x=>x.id===a.contrast);
@@ -1641,12 +1732,56 @@ function qc(u, acts){
       ok.push(a);
     }catch(e){ fail(a,"exception: "+e.message); }
   });
-  return {ok, failed, notes};
+  const blocked=failed.some(f=>f.unit);
+  return {ok: blocked?[]:ok, failed, notes, blocked};
+}
+
+/* B2: a unit is deliverable only when qc() records no unit-level failure. The player and sequenceFor() consult this and
+   deliver NOTHING from a blocked unit — an activity that is well-formed against the wrong text is still wrong. */
+function deliverable(u){
+  const r=qc(u, gen(u));
+  return {ok:!r.blocked, failed:r.failed.filter(f=>f.unit), notes:r.notes, acts:r.ok.length};
+}
+
+/* ---------------- pathway selection (spec §10/§11; audit 2026-10-10 I1) ----------------
+   Fixed prefixes (slice(0,6) etc.) were replaced by a documented coverage plan. Counts are REPORTED, never typed:
+     "vocab"   — explore every core item (new or recycled) in first-occurrence order; recognise every pictured item
+                 (Arabic→picture, then picture→Arabic); one meaning-in-context task per core item that has no picture,
+                 so every core item is met at least once outside the story; support and recognition-only items are
+                 met inside the story and its phrase page, not drilled here.
+     "reading" — before the text: establish the items the opening (stage-0) sentences carry — explore those core items,
+                 recognise the pictured ones; then the reading; then every post-reading task the stage permits.
+   The function returns the planned queue; a blocked unit yields []. */
+function pathway(u, kind, sessionStage){
+  const r=qc(u, gen(u)); if(r.blocked) return [];
+  const ok=r.ok, vis=a=>a.spoiler_stage<=(sessionStage||0);
+  const order=iid=>{const i=u.sentences.findIndex(s=>s.items.includes(iid)); return i<0?999:i;};
+  const core=u.items.filter(i=>/CORE_TARGET$/.test(i.status)).sort((a,b)=>order(a.id)-order(b.id));
+  const coreIds=new Set(core.map(i=>i.id));
+  const pick=(type,ids)=>ids.map(id=>ok.find(a=>a.type===type&&a.item===id)).filter(Boolean);
+  if(kind==="vocab"){
+    const pictured=core.filter(i=>i.img).map(i=>i.id);
+    const unpictured=core.filter(i=>!i.img).map(i=>i.id);
+    const ctx=unpictured.map(id=>ok.filter(a=>a.type==="meaning_in_context"&&a.item===id&&vis(a)).sort((a,b)=>order(a.item)-order(b.item))[0]).filter(Boolean);
+    return [...pick("explore",core.map(i=>i.id)), ...pick("arabic_to_picture",pictured), ...pick("picture_to_arabic",pictured), ...ctx];
+  }
+  const opening=u.sentences.filter(s=>s.stage===0).flatMap(s=>s.items).filter((v,i,a)=>a.indexOf(v)===i&&coreIds.has(v));
+  const pre=[...pick("explore",opening), ...pick("arabic_to_picture",opening.filter(id=>(u.items.find(i=>i.id===id)||{}).img))];
+  return [...pre, {activity_id:`${u.unit_id}_read_${(u.readings[0]||{}).id}`, unit_id:u.unit_id, type:"read", stage:"encounter", spoiler_stage:sessionStage||0}, "POST"];
+}
+/* the post-reading tail, once the whole reading has been seen (sessionStage at its maximum) */
+function postReading(u, sessionStage, comprehensionDone){
+  const r=qc(u, gen(u)); if(r.blocked) return [];
+  const ok=r.ok, vis=a=>a.spoiler_stage<=sessionStage;
+  const post=[...ok.filter(a=>a.type==="either_or"&&vis(a)), ...ok.filter(a=>(a.type==="true_false"||a.type==="who_says")&&vis(a)),
+              ...ok.filter(a=>a.type==="find_it"&&vis(a)), ...ok.filter(a=>a.type==="sequence"&&vis(a))];
+  return comprehensionDone? [...post, ...ok.filter(a=>a.type==="retrieval"&&vis(a))] : post;
 }
 
 /* ---------------- reading-practice sequence selection (spec §10/§11) ---------------- */
 function sequenceFor(u, readingId, sessionStage, comprehensionDone){
-  const {ok}=qc(u, gen(u));
+  const {ok, blocked}=qc(u, gen(u));
+  if(blocked) return [];                                               /* B2: nothing from a failing unit */
   const vis=a=>a.spoiler_stage<=sessionStage;
   const seq=[];
   seq.push(...ok.filter(a=>a.type==="explore").slice(0,6));
@@ -1669,7 +1804,7 @@ const UNIT_02P = {"unit_id": "unit-02p", "title": "صُورَةُ رَزَان �
 /* ---- Unit 3 (SC-109) — revision-1 texts; no illustrations yet (img:null) ---- */
 const UNIT_03 = {"unit_id": "unit-03", "title": "مَنْ عِنْدَهُ الْكُرَةُ؟", "audio": {"verified": false}, "canon": "هُنَاكَ وَلَدٌ اسْمُهُ يُوسُف. يَعِيشُ يُوسُف فِي بَيْتٍ كَبِيرٍ. فِي الْبَيْتِ أُمُّهُ وَأَبُوهُ وَأُخْتُهُ الصَّغِيرَةُ لَيْلَى. وَفِي الْبَيْتِ قِطٌّ كَبِيرٌ أَيْضًا. يَعِيشُ الْقِطُّ بِجَانِبِ الْبَابِ.\n\nيَقُولُ يُوسُف: «أُرِيدُ الْكُرَةَ! أَيْنَ الْكُرَةُ؟ الْكُرَةُ لَيْسَتْ مَعِي. مَنْ عِنْدَهُ الْكُرَةُ؟»\n\nيَذْهَبُ يُوسُف إِلَى أُخْتِهِ. «يَا لَيْلَى، عِنْدَكِ الْكُرَةُ؟»\n\nتَقُولُ لَيْلَى: «نَعَمْ، الْكُرَةُ عِنْدِي. وَأَنْتَ، مَاذَا تُرِيدُ؟»\n\n«أُرِيدُ الْكُرَةَ!»\n\n«وَأَنَا أَحْتَاجُ إِلَى كِتَابِكَ.»\n\n«كِتَابِي؟ كِتَابِي لَيْسَ عِنْدِي. أُمِّي عِنْدَهَا كِتَابِي.»\n\nيَذْهَبُ يُوسُف إِلَى أُمِّهِ. «يَا أُمِّي، عِنْدَكِ كِتَابِي؟»\n\nتَقُولُ أُمُّهُ: «نَعَمْ، كِتَابُكَ عِنْدِي. وَأَنَا أَحْتَاجُ إِلَى قَلَمِي. أَبُوكَ عِنْدَهُ قَلَمِي.»\n\nيَذْهَبُ يُوسُف إِلَى الْبَابِ. أَبُوهُ هُنَاكَ. «يَا أَبِي، عِنْدَكَ قَلَمُ أُمِّي؟»\n\nيَقُولُ أَبُوهُ: «نَعَمْ، الْقَلَمُ مَعِي. وَأَنَا أَحْتَاجُ إِلَى مِفْتَاحِي. أَيْنَ مِفْتَاحِي؟ لَيْسَ عِنْدِي!»\n\nيَنْظُرُ يُوسُف. الْمِفْتَاحُ عَلَى الْأَرْضِ بِجَانِبِ الْبَابِ... تَحْتَ الْقِطِّ!\n\nيَأْخُذُ يُوسُف الْمِفْتَاحَ وَيُعْطِيهِ أَبُوهُ الْقَلَمَ. يَرْجِعُ يُوسُف إِلَى أُمِّهِ وَيُعْطِيهَا الْقَلَمَ. تُعْطِيهِ أُمُّهُ الْكِتَابَ. يَرْجِعُ إِلَى أُخْتِهِ لَيْلَى وَيُعْطِيهَا الْكِتَابَ. تُعْطِيهِ لَيْلَى الْكُرَةَ.\n\n«الْكُرَةُ مَعِي!» يَضْحَكُ يُوسُف.\n\nوَالْقِطُّ؟ يَنْظُرُ إِلَى الْكُرَةِ... وَيَأْخُذُ الْكُرَةَ... وَيَذْهَبُ!\n\n«يَا قِطُّ! أُرِيدُ الْكُرَةَ!»", "cast": [{"id": "yusuf", "ar": "يُوسُف", "img": null}, {"id": "layla", "ar": "لَيْلَى", "img": null}, {"id": "umm", "ar": "أُمُّهُ", "img": null}, {"id": "ab", "ar": "أَبُوهُ", "img": null}, {"id": "qitt", "ar": "الْقِطُّ", "img": null}], "items": [{"id": "umm", "ar": "أُمِّي", "status": "NEW_CORE_TARGET", "lemma": "أُمّ", "kind": "lemma", "forms": ["أُمِّي", "أُمُّهُ", "أُمِّهِ"], "gloss": "mother", "img": null, "dim": "person", "phrase": "هٰذِهِ أُمِّي", "hl": "أُمِّي", "chunk_ref": "CH-24"}, {"id": "ab", "ar": "أَبِي", "status": "NEW_CORE_TARGET", "lemma": "أَب", "kind": "lemma", "forms": ["أَبِي", "أَبُوهُ", "أَبُوكَ"], "gloss": "father", "img": null, "dim": "person", "phrase": "هٰذَا أَبِي", "hl": "أَبِي", "chunk_ref": "CH-24"}, {"id": "ukht", "ar": "أُخْتِهِ", "status": "NEW_CORE_TARGET", "lemma": "أُخْت", "kind": "lemma", "forms": ["أُخْتِهِ"], "gloss": "sister", "img": null, "dim": "person", "phrase": "يَذْهَبُ يُوسُف إِلَى أُخْتِهِ.", "hl": "أُخْتِهِ", "chunk_ref": "CH-24"}, {"id": "maa", "ar": "مَعِي", "status": "NEW_CORE_TARGET", "lemma": "مَعَ", "kind": "lemma", "forms": ["مَعِي"], "gloss": "with", "img": null, "dim": "possession", "phrase": "الْكُرَةُ مَعِي", "hl": "مَعِي", "chunk_ref": "CH-25"}, {"id": "inda", "ar": "عِنْدِي", "status": "NEW_CORE_TARGET", "lemma": "عِنْدَ", "kind": "lemma", "forms": ["عِنْدِي", "عِنْدَكَ", "عِنْدَكِ", "عِنْدَهُ", "عِنْدَهَا"], "gloss": "has / have", "img": null, "dim": "possession", "phrase": "عِنْدِي كُرَةٌ", "hl": "عِنْدِي", "chunk_ref": "CH-21"}, {"id": "laysa", "ar": "لَيْسَ", "status": "NEW_CORE_TARGET", "lemma": "لَيْسَ", "kind": "lemma", "forms": ["لَيْسَ", "لَيْسَتْ"], "gloss": "is not / has no", "img": null, "dim": "polarity", "phrase": "الْكُرَةُ لَيْسَتْ مَعِي", "hl": "لَيْسَتْ", "chunk_ref": "CH-05"}, {"id": "aata", "ar": "وَيُعْطِيهِ", "status": "NEW_CORE_TARGET", "lemma": "أَعْطَى", "kind": "lemma", "forms": ["وَيُعْطِيهِ", "وَيُعْطِيهَا", "تُعْطِيهِ"], "gloss": "gives / gave", "img": null, "dim": "action", "phrase": "يَأْخُذُ يُوسُف الْمِفْتَاحَ وَيُعْطِيهِ أَبُوهُ الْقَلَمَ.", "hl": "وَيُعْطِيهِ"}, {"id": "akhadha", "ar": "يَأْخُذُ", "status": "NEW_CORE_TARGET", "lemma": "أَخَذَ", "kind": "lemma", "forms": ["يَأْخُذُ", "وَيَأْخُذُ"], "gloss": "takes / took", "img": null, "dim": "action", "phrase": "يَأْخُذُ الْمِفْتَاحَ", "hl": "يَأْخُذُ"}, {"id": "ihtaja", "ar": "أَحْتَاجُ", "status": "NEW_CORE_TARGET", "lemma": "اِحْتَاجَ", "kind": "lemma", "forms": ["أَحْتَاجُ"], "gloss": "needs", "img": null, "dim": "action", "phrase": "أَحْتَاجُ إِلَى قَلَمِي", "hl": "أَحْتَاجُ", "chunk_ref": "CH-23"}, {"id": "aasha", "ar": "يَعِيشُ", "status": "NEW_CORE_TARGET", "lemma": "عَاشَ", "kind": "lemma", "forms": ["يَعِيشُ"], "gloss": "lives", "img": null, "dim": "action", "phrase": "يَعِيشُ فِي بَيْتٍ كَبِيرٍ", "hl": "يَعِيشُ"}, {"id": "arada", "ar": "أُرِيدُ", "status": "RECYCLED_CORE_TARGET", "lemma": "أَرَادَ", "kind": "lemma", "forms": ["أُرِيدُ", "تُرِيدُ"], "gloss": "wants", "img": null, "dim": "action", "phrase": "أُرِيدُ الْكُرَةَ", "hl": "أُرِيدُ", "chunk_ref": "CH-22"}, {"id": "ayna", "ar": "أَيْنَ", "status": "RECYCLED_CORE_TARGET", "lemma": "أَيْنَ", "kind": "lemma", "forms": ["أَيْنَ"], "gloss": "where?", "img": null, "dim": "question", "phrase": "أَيْنَ الْكُرَةُ؟", "hl": "أَيْنَ"}, {"id": "fi", "ar": "فِي", "status": "RECYCLED_CORE_TARGET", "lemma": "فِي", "kind": "lemma", "forms": ["فِي", "وَفِي"], "gloss": "in", "img": null, "dim": "place", "phrase": "يَعِيشُ يُوسُف فِي بَيْتٍ كَبِيرٍ.", "hl": "فِي"}, {"id": "ala", "ar": "عَلَى", "status": "RECYCLED_CORE_TARGET", "lemma": "عَلَى", "kind": "lemma", "forms": ["عَلَى"], "gloss": "on", "img": null, "dim": "place", "phrase": "الْمِفْتَاحُ عَلَى الْأَرْضِ بِجَانِبِ الْبَابِ...", "hl": "عَلَى"}, {"id": "tahta", "ar": "تَحْتَ", "status": "RECYCLED_CORE_TARGET", "lemma": "تَحْتَ", "kind": "lemma", "forms": ["تَحْتَ"], "gloss": "under", "img": null, "dim": "place", "phrase": "تَحْتَ الْقِطِّ!", "hl": "تَحْتَ"}, {"id": "hunaka", "ar": "هُنَاكَ", "status": "RECYCLED_CORE_TARGET", "lemma": "هُنَاكَ", "kind": "lemma", "forms": ["هُنَاكَ"], "gloss": "there is / there", "img": null, "dim": "existence", "phrase": "هُنَاكَ وَلَدٌ اسْمُهُ يُوسُف.", "hl": "هُنَاكَ"}, {"id": "dhahab", "ar": "يَذْهَبُ", "status": "RECYCLED_CORE_TARGET", "lemma": "ذَهَبَ", "kind": "lemma", "forms": ["يَذْهَبُ", "وَيَذْهَبُ"], "gloss": "goes / went", "img": null, "dim": "action", "phrase": "يَذْهَبُ يُوسُف إِلَى أُخْتِهِ.", "hl": "يَذْهَبُ", "chunk_ref": "CH-18"}, {"id": "ila", "ar": "إِلَى", "status": "RECYCLED_CORE_TARGET", "lemma": "إِلَى", "kind": "lemma", "forms": ["إِلَى"], "gloss": "to", "img": null, "dim": "place", "phrase": "يَذْهَبُ يُوسُف إِلَى أُخْتِهِ.", "hl": "إِلَى"}, {"id": "rajaa", "ar": "يَرْجِعُ", "status": "RECYCLED_CORE_TARGET", "lemma": "رَجَعَ", "kind": "lemma", "forms": ["يَرْجِعُ"], "gloss": "comes back / came back", "img": null, "dim": "action", "phrase": "يَرْجِعُ يُوسُف إِلَى أُمِّهِ وَيُعْطِيهَا الْقَلَمَ.", "hl": "يَرْجِعُ"}, {"id": "walad", "ar": "وَلَدٌ", "status": "RECYCLED_CORE_TARGET", "lemma": "وَلَد", "kind": "lemma", "forms": ["وَلَدٌ"], "gloss": "a boy", "img": null, "dim": "person", "phrase": "هُنَاكَ وَلَدٌ اسْمُهُ يُوسُف.", "hl": "وَلَدٌ"}, {"id": "ism", "ar": "اسْمُهُ", "status": "RECYCLED_CORE_TARGET", "lemma": "اِسْم", "kind": "lemma", "forms": ["اسْمُهُ"], "gloss": "a name", "img": null, "dim": "object", "phrase": "هُنَاكَ وَلَدٌ اسْمُهُ يُوسُف.", "hl": "اسْمُهُ"}, {"id": "yaqul", "ar": "يَقُولُ", "status": "RECYCLED_CORE_TARGET", "lemma": "قَالَ", "kind": "lemma", "forms": ["يَقُولُ", "تَقُولُ"], "gloss": "says / said", "img": "vg-say", "dim": "action", "phrase": "يَقُولُ يُوسُف: «أُرِيدُ الْكُرَةَ!", "hl": "يَقُولُ"}, {"id": "naam", "ar": "نَعَمْ", "status": "RECYCLED_CORE_TARGET", "lemma": "نَعَمْ", "kind": "lemma", "forms": ["نَعَمْ"], "gloss": "yes", "img": null, "dim": "polarity", "phrase": "تَقُولُ لَيْلَى: «نَعَمْ، الْكُرَةُ عِنْدِي.", "hl": "نَعَمْ"}, {"id": "anta", "ar": "وَأَنْتَ", "status": "RECYCLED_CORE_TARGET", "lemma": "أَنْتَ", "kind": "lemma", "forms": ["وَأَنْتَ"], "gloss": "you", "img": null, "dim": "person", "phrase": "وَأَنْتَ، مَاذَا تُرِيدُ؟»", "hl": "وَأَنْتَ"}, {"id": "ana", "ar": "وَأَنَا", "status": "RECYCLED_CORE_TARGET", "lemma": "أَنَا", "kind": "lemma", "forms": ["وَأَنَا"], "gloss": "I", "img": null, "dim": "person", "phrase": "«وَأَنَا أَحْتَاجُ إِلَى كِتَابِكَ.»", "hl": "وَأَنَا"}, {"id": "man", "ar": "مَنْ", "status": "RECYCLED_CORE_TARGET", "lemma": "مَنْ", "kind": "lemma", "forms": ["مَنْ"], "gloss": "who?", "img": null, "dim": "question", "phrase": "مَنْ عِنْدَهُ الْكُرَةُ؟»", "hl": "مَنْ"}, {"id": "qalam", "ar": "قَلَمِي", "status": "RECYCLED_CORE_TARGET", "lemma": "قَلَم", "kind": "lemma", "forms": ["قَلَمِي", "قَلَمُ", "الْقَلَمُ", "الْقَلَمَ"], "gloss": "a pen", "img": "obj-pen", "dim": "object", "phrase": "وَأَنَا أَحْتَاجُ إِلَى قَلَمِي.", "hl": "قَلَمِي"}, {"id": "ya", "ar": "يَا", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "يَا", "kind": "lemma", "forms": ["يَا"], "gloss": "O (address)", "img": null, "dim": "address", "phrase": "«يَا لَيْلَى، عِنْدَكِ الْكُرَةُ؟»", "hl": "يَا"}, {"id": "kitab", "ar": "كِتَابِي", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "كِتَاب", "kind": "lemma", "forms": ["كِتَابِي", "كِتَابُكَ", "الْكِتَابَ"], "gloss": "a book", "img": null, "dim": "object", "phrase": "«كِتَابِي؟", "hl": "كِتَابِي"}, {"id": "bayt", "ar": "بَيْتٍ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "بَيْت", "kind": "lemma", "forms": ["بَيْتٍ", "الْبَيْتِ"], "gloss": "a house", "img": "obj-door", "dim": "place", "phrase": "يَعِيشُ يُوسُف فِي بَيْتٍ كَبِيرٍ.", "hl": "بَيْتٍ"}, {"id": "bab", "ar": "الْبَابِ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "بَاب", "kind": "lemma", "forms": ["الْبَابِ"], "gloss": "a door", "img": "obj-door", "dim": "object", "phrase": "يَعِيشُ الْقِطُّ بِجَانِبِ الْبَابِ.", "hl": "الْبَابِ"}, {"id": "miftah", "ar": "مِفْتَاحِي", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "مِفْتَاح", "kind": "lemma", "forms": ["مِفْتَاحِي", "الْمِفْتَاحُ", "الْمِفْتَاحَ"], "gloss": "a key", "img": null, "dim": "object", "phrase": "وَأَنَا أَحْتَاجُ إِلَى مِفْتَاحِي.", "hl": "مِفْتَاحِي"}, {"id": "ard", "ar": "الْأَرْضِ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "أَرْض", "kind": "lemma", "forms": ["الْأَرْضِ"], "gloss": "the ground", "img": null, "dim": "place", "phrase": "الْمِفْتَاحُ عَلَى الْأَرْضِ بِجَانِبِ الْبَابِ...", "hl": "الْأَرْضِ"}, {"id": "qitt", "ar": "قِطٌّ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "قِطّ", "kind": "lemma", "forms": ["قِطٌّ", "الْقِطُّ", "وَالْقِطُّ", "الْقِطِّ", "قِطُّ"], "gloss": "a cat", "img": null, "dim": "person", "phrase": "وَفِي الْبَيْتِ قِطٌّ كَبِيرٌ أَيْضًا.", "hl": "قِطٌّ"}, {"id": "kabir", "ar": "كَبِيرٍ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "كَبِير", "kind": "lemma", "forms": ["كَبِيرٍ", "كَبِيرٌ"], "gloss": "big", "img": null, "dim": "description", "phrase": "يَعِيشُ يُوسُف فِي بَيْتٍ كَبِيرٍ.", "hl": "كَبِيرٍ"}, {"id": "saghir", "ar": "الصَّغِيرَةُ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "صَغِير", "kind": "lemma", "forms": ["الصَّغِيرَةُ"], "gloss": "small", "img": null, "dim": "description", "phrase": "فِي الْبَيْتِ أُمُّهُ وَأَبُوهُ وَأُخْتُهُ الصَّغِيرَةُ لَيْلَى.", "hl": "الصَّغِيرَةُ"}, {"id": "kura", "ar": "الْكُرَةَ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "كُرَة", "kind": "lemma", "forms": ["الْكُرَةَ", "الْكُرَةُ", "الْكُرَةِ"], "gloss": "a ball", "img": null, "dim": "object", "phrase": "أُرِيدُ الْكُرَةَ", "hl": "الْكُرَةَ"}, {"id": "bijanib", "ar": "بِجَانِبِ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "بِجَانِبِ", "kind": "lemma", "forms": ["بِجَانِبِ"], "gloss": "beside", "img": null, "dim": "place", "phrase": "بِجَانِبِ الْبَابِ", "hl": "بِجَانِبِ"}, {"id": "yanzur", "ar": "يَنْظُرُ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "نَظَرَ", "kind": "lemma", "forms": ["يَنْظُرُ"], "gloss": "looks / looked", "img": null, "dim": "action", "phrase": "يَنْظُرُ يُوسُف.", "hl": "يَنْظُرُ"}, {"id": "yadhak", "ar": "يَضْحَكُ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "ضَحِكَ", "kind": "lemma", "forms": ["يَضْحَكُ"], "gloss": "laughs / laughed", "img": null, "dim": "action", "phrase": "«الْكُرَةُ مَعِي!» يَضْحَكُ يُوسُف.", "hl": "يَضْحَكُ"}, {"id": "aydan", "ar": "أَيْضًا", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "أَيْضًا", "kind": "lemma", "forms": ["أَيْضًا"], "gloss": "too", "img": null, "dim": "addition", "phrase": "وَفِي الْبَيْتِ قِطٌّ كَبِيرٌ أَيْضًا.", "hl": "أَيْضًا"}, {"id": "madha", "ar": "مَاذَا", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "مَاذَا", "kind": "lemma", "forms": ["مَاذَا"], "gloss": "what?", "img": null, "dim": "question", "phrase": "مَاذَا تُرِيدُ؟", "hl": "مَاذَا", "chunk_ref": "CH-22"}], "sentences": [{"id": "s00", "ar": "هُنَاكَ وَلَدٌ اسْمُهُ يُوسُف. يَعِيشُ يُوسُف فِي بَيْتٍ كَبِيرٍ. فِي الْبَيْتِ أُمُّهُ وَأَبُوهُ وَأُخْتُهُ الصَّغِيرَةُ لَيْلَى. وَفِي الْبَيْتِ قِطٌّ كَبِيرٌ أَيْضًا. يَعِيشُ الْقِطُّ بِجَانِبِ الْبَابِ.", "stage": 0, "items": ["umm", "aasha", "fi", "hunaka", "walad", "ism", "bayt", "bab", "qitt", "kabir", "saghir", "bijanib", "aydan"], "img": null}, {"id": "s01", "ar": "يَقُولُ يُوسُف: «أُرِيدُ الْكُرَةَ! أَيْنَ الْكُرَةُ؟ الْكُرَةُ لَيْسَتْ مَعِي. مَنْ عِنْدَهُ الْكُرَةُ؟»", "stage": 0, "items": ["maa", "inda", "laysa", "arada", "ayna", "yaqul", "man", "kura"], "img": null}, {"id": "s02", "ar": "يَذْهَبُ يُوسُف إِلَى أُخْتِهِ. «يَا لَيْلَى، عِنْدَكِ الْكُرَةُ؟»", "stage": 1, "items": ["ukht", "inda", "dhahab", "ila", "ya", "kura"], "img": null}, {"id": "s03", "ar": "تَقُولُ لَيْلَى: «نَعَمْ، الْكُرَةُ عِنْدِي. وَأَنْتَ، مَاذَا تُرِيدُ؟»", "stage": 1, "items": ["inda", "arada", "yaqul", "naam", "anta", "kura", "madha"], "img": null}, {"id": "s04", "ar": "«أُرِيدُ الْكُرَةَ!»", "stage": 1, "items": ["arada", "kura"], "img": null}, {"id": "s05", "ar": "«وَأَنَا أَحْتَاجُ إِلَى كِتَابِكَ.»", "stage": 1, "items": ["ihtaja", "ila", "ana"], "img": null}, {"id": "s06", "ar": "«كِتَابِي؟ كِتَابِي لَيْسَ عِنْدِي. أُمِّي عِنْدَهَا كِتَابِي.»", "stage": 1, "items": ["umm", "inda", "laysa", "kitab"], "img": null}, {"id": "s07", "ar": "يَذْهَبُ يُوسُف إِلَى أُمِّهِ. «يَا أُمِّي، عِنْدَكِ كِتَابِي؟»", "stage": 1, "items": ["umm", "inda", "dhahab", "ila", "ya", "kitab"], "img": null}, {"id": "s08", "ar": "تَقُولُ أُمُّهُ: «نَعَمْ، كِتَابُكَ عِنْدِي. وَأَنَا أَحْتَاجُ إِلَى قَلَمِي. أَبُوكَ عِنْدَهُ قَلَمِي.»", "stage": 1, "items": ["umm", "ab", "inda", "ihtaja", "ila", "yaqul", "naam", "ana", "qalam", "kitab"], "img": null}, {"id": "s09", "ar": "يَذْهَبُ يُوسُف إِلَى الْبَابِ. أَبُوهُ هُنَاكَ. «يَا أَبِي، عِنْدَكَ قَلَمُ أُمِّي؟»", "stage": 2, "items": ["umm", "ab", "inda", "hunaka", "dhahab", "ila", "qalam", "ya", "bab"], "img": null}, {"id": "s10", "ar": "يَقُولُ أَبُوهُ: «نَعَمْ، الْقَلَمُ مَعِي. وَأَنَا أَحْتَاجُ إِلَى مِفْتَاحِي. أَيْنَ مِفْتَاحِي؟ لَيْسَ عِنْدِي!»", "stage": 2, "items": ["ab", "maa", "inda", "laysa", "ihtaja", "ayna", "ila", "yaqul", "naam", "ana", "qalam", "miftah"], "img": null}, {"id": "s11", "ar": "يَنْظُرُ يُوسُف. الْمِفْتَاحُ عَلَى الْأَرْضِ بِجَانِبِ الْبَابِ... تَحْتَ الْقِطِّ!", "stage": 2, "items": ["ala", "tahta", "bab", "miftah", "ard", "qitt", "bijanib", "yanzur"], "img": null}, {"id": "s12", "ar": "يَأْخُذُ يُوسُف الْمِفْتَاحَ وَيُعْطِيهِ أَبُوهُ الْقَلَمَ. يَرْجِعُ يُوسُف إِلَى أُمِّهِ وَيُعْطِيهَا الْقَلَمَ. تُعْطِيهِ أُمُّهُ الْكِتَابَ. يَرْجِعُ إِلَى أُخْتِهِ لَيْلَى وَيُعْطِيهَا الْكِتَابَ. تُعْطِيهِ لَيْلَى الْكُرَةَ.", "stage": 3, "items": ["umm", "ab", "ukht", "aata", "akhadha", "ila", "rajaa", "qalam", "kitab", "miftah", "kura"], "img": null}, {"id": "s13", "ar": "«الْكُرَةُ مَعِي!» يَضْحَكُ يُوسُف.", "stage": 3, "items": ["maa", "kura", "yadhak"], "img": null}, {"id": "s14", "ar": "وَالْقِطُّ؟ يَنْظُرُ إِلَى الْكُرَةِ... وَيَأْخُذُ الْكُرَةَ... وَيَذْهَبُ!", "stage": 3, "items": ["akhadha", "dhahab", "ila", "qitt", "kura", "yanzur"], "img": null}, {"id": "s15", "ar": "«يَا قِطُّ! أُرِيدُ الْكُرَةَ!»", "stage": 3, "items": ["arada", "ya", "qitt", "kura"], "img": null}], "readings": [{"id": "main", "role": "main", "title": "مَنْ عِنْدَهُ الْكُرَةُ؟", "sentence_ids": ["s00", "s01", "s02", "s03", "s04", "s05", "s06", "s07", "s08", "s09", "s10", "s11", "s12", "s13", "s14", "s15"]}], "contrasts": [{"id": "c1", "stage": 0, "img": null, "a": "يَعِيشُ الْقِطُّ بِجَانِبِ الْبَابِ", "b": "يَعِيشُ الْقِطُّ فِي الْحَقِيبَةِ", "correct": "a", "support": "s00", "dim": "place"}, {"id": "c2", "stage": 1, "img": null, "a": "الْكُرَةُ عِنْدَ لَيْلَى", "b": "الْكُرَةُ عِنْدَ يُوسُف", "correct": "a", "support": "s03", "dim": "possession"}, {"id": "c3", "stage": 1, "img": null, "a": "أُمِّي عِنْدَهَا كِتَابِي", "b": "أُمِّي عِنْدَهَا قَلَمِي", "correct": "a", "support": "s06", "dim": "possession"}, {"id": "c4", "stage": 2, "img": null, "a": "الْمِفْتَاحُ تَحْتَ الْقِطِّ", "b": "الْمِفْتَاحُ تَحْتَ الْكِتَابِ", "correct": "a", "support": "s11", "dim": "place"}, {"id": "c5", "stage": 3, "img": null, "a": "يَأْخُذُ الْقِطُّ الْكُرَةَ", "b": "يَأْخُذُ الْقِطُّ الْمِفْتَاحَ", "correct": "a", "support": "s14", "dim": "object"}], "facts": [{"id": "f1", "stage": 0, "ar": "يُوسُف وَلَدٌ.", "truth": true, "support": "s00", "dim": "person"}, {"id": "f2", "stage": 0, "ar": "لَيْلَى أُمُّ يُوسُف.", "truth": false, "support": "s00", "dim": "person"}, {"id": "f3", "stage": 1, "ar": "الْكُرَةُ عِنْدَ لَيْلَى.", "truth": true, "support": "s03", "dim": "possession"}, {"id": "f4", "stage": 1, "ar": "الْكِتَابُ عِنْدَ يُوسُف.", "truth": false, "support": "s06", "dim": "possession"}, {"id": "f5", "stage": 2, "ar": "الْمِفْتَاحُ تَحْتَ الْقِطِّ.", "truth": true, "support": "s11", "dim": "place"}, {"id": "f6", "stage": 3, "ar": "يَأْخُذُ الْقِطُّ الْكُرَةَ.", "truth": true, "support": "s14", "dim": "object"}], "whosays": [{"id": "w1", "stage": 1, "quote": "«نَعَمْ، الْكُرَةُ عِنْدِي. وَأَنْتَ، مَاذَا تُرِيدُ؟»", "speaker": "layla", "support": "s03"}, {"id": "w2", "stage": 1, "quote": "«نَعَمْ، كِتَابُكَ عِنْدِي. وَأَنَا أَحْتَاجُ إِلَى قَلَمِي.»", "speaker": "umm", "support": "s08"}, {"id": "w3", "stage": 2, "quote": "«نَعَمْ، الْقَلَمُ مَعِي. وَأَنَا أَحْتَاجُ إِلَى مِفْتَاحِي.»", "speaker": "ab", "support": "s10"}, {"id": "w4", "stage": 3, "quote": "«يَا قِطُّ! أُرِيدُ الْكُرَةَ!»", "speaker": "yusuf", "support": "s15"}], "events": [{"id": "e1", "order": 1, "stage": 1, "img": null, "sentence": "s02"}, {"id": "e2", "order": 2, "stage": 1, "img": null, "sentence": "s07"}, {"id": "e3", "order": 3, "stage": 2, "img": null, "sentence": "s11"}, {"id": "e4", "order": 4, "stage": 3, "img": null, "sentence": "s14"}], "findit": [{"id": "fi1", "stage": 1, "img": null, "prompt_gloss": "Which line says where the cat lives?", "answer": "s00", "pool": ["s00", "s01", "s02", "s03"]}, {"id": "fi2", "stage": 1, "img": null, "prompt_gloss": "Which line says who has the book?", "answer": "s06", "pool": ["s04", "s05", "s06", "s07"]}, {"id": "fi3", "stage": 2, "img": null, "prompt_gloss": "Which line says where the key is?", "answer": "s11", "pool": ["s08", "s09", "s10", "s11"]}], "retrieval": [{"id": "r1", "stage": 1, "sentence": "s03", "blank": "عِنْدِي", "choices": ["عِنْدِي", "عِنْدَكَ", "عِنْدَهُ"], "img": null, "item": "inda"}, {"id": "r2", "stage": 1, "sentence": "s06", "blank": "أُمِّي", "choices": ["أُمِّي", "أَبِي", "أُخْتِي"], "img": null, "item": "umm"}, {"id": "r3", "stage": 2, "sentence": "s10", "blank": "مَعِي", "choices": ["مَعِي", "مَعَهَا", "مَعَهُ"], "img": null, "item": "maa"}, {"id": "r4", "stage": 3, "sentence": "s12", "blank": "يَأْخُذُ", "choices": ["يَأْخُذُ", "يُعْطِيهَا", "يَرْجِعُ"], "img": null, "item": "akhadha"}]};
 const UNIT_03P = {"unit_id": "unit-03p", "title": "هَدِيَّةُ رَزَان", "audio": {"verified": false}, "canon": "عِنْدَ رَزَان هَدِيَّةٌ لِخَدِيجَة: كِتَابٌ صَغِيرٌ. ذَهَبَتْ رَزَان إِلَى بَيْتِ خَدِيجَة، وَالْهَدِيَّةُ مَعَهَا.\n\nبِجَانِبِ الْبَابِ وَلَدٌ صَغِيرٌ. هٰذَا أَخُو خَدِيجَة، وَاسْمُهُ سَامِي.\n\nرَأَى سَامِي الْهَدِيَّةَ. قَالَ: «كِتَابٌ! أُرِيدُ الْكِتَابَ! لَيْسَ عِنْدِي كِتَابٌ.»\n\nقَالَتْ رَزَان: «هٰذِهِ الْهَدِيَّةُ لِخَدِيجَة يَا سَامِي...»\n\nنَظَرَ سَامِي إِلَى الْكِتَابِ. وَنَظَرَتْ رَزَان إِلَى سَامِي. سَامِي صَغِيرٌ... وَلَيْسَ عِنْدَهُ كِتَابٌ.\n\nأَعْطَتْ رَزَان الْكِتَابَ لِسَامِي. «هٰذَا لَكَ.»\n\nضَحِكَ سَامِي وَأَخَذَ الْكِتَابَ وَدَخَلَ الْبَيْتَ.\n\nدَخَلَتْ رَزَان الْبَيْتَ أَيْضًا. خَدِيجَة هُنَاكَ، وَالْكِتَابُ مَعَ سَامِي.\n\nقَالَتْ رَزَان: «يَا خَدِيجَة... الْهَدِيَّةُ لَكِ. وَلٰكِنْ أَخُوكِ...»\n\nضَحِكَتْ خَدِيجَة. قَالَتْ: «هٰذَا أَخِي الصَّغِيرُ! يَعِيشُ مَعِي هُنَا. لَيْسَ عِنْدَهُ كِتَابٌ. وَأَنَا عِنْدِي كِتَابٌ.»\n\nوَرَجَعَ سَامِي. مَعَهُ كُرَةٌ. أَعْطَاهَا الْكُرَةَ. «هٰذِهِ لَكِ يَا رَزَان!»\n\nذَهَبَتْ رَزَان إِلَى بَيْتِ خَدِيجَة وَالْهَدِيَّةُ مَعَهَا... وَرَجَعَتْ إِلَى بَيْتِهَا وَالْكُرَةُ مَعَهَا.", "cast": [{"id": "razan", "ar": "رَزَان", "img": "av-razan"}, {"id": "khadija", "ar": "خَدِيجَة", "img": null}, {"id": "sami", "ar": "سَامِي", "img": null}], "items": [{"id": "akh", "ar": "أَخُو", "status": "NEW_CORE_TARGET", "lemma": "أَخ", "kind": "lemma", "forms": ["أَخُو", "أَخُوكِ", "أَخِي"], "gloss": "brother", "img": null, "dim": "person", "phrase": "هٰذَا أَخِي الصَّغِيرُ", "hl": "أَخِي", "chunk_ref": "CH-24"}, {"id": "maa", "ar": "مَعِي", "status": "NEW_CORE_TARGET", "lemma": "مَعَ", "kind": "lemma", "forms": ["مَعِي", "مَعَهَا", "مَعَهُ", "مَعَ"], "gloss": "with", "img": null, "dim": "possession", "phrase": "الْكُرَةُ مَعِي", "hl": "مَعِي", "chunk_ref": "CH-25"}, {"id": "inda", "ar": "عِنْدِي", "status": "NEW_CORE_TARGET", "lemma": "عِنْدَ", "kind": "lemma", "forms": ["عِنْدِي", "عِنْدَهُ", "عِنْدَ"], "gloss": "has / have", "img": null, "dim": "possession", "phrase": "عِنْدِي كُرَةٌ", "hl": "عِنْدِي", "chunk_ref": "CH-21"}, {"id": "laysa", "ar": "لَيْسَ", "status": "NEW_CORE_TARGET", "lemma": "لَيْسَ", "kind": "lemma", "forms": ["لَيْسَ", "وَلَيْسَ"], "gloss": "is not / has no", "img": null, "dim": "polarity", "phrase": "لَيْسَ عِنْدِي كِتَابٌ", "hl": "لَيْسَ", "chunk_ref": "CH-05"}, {"id": "li", "ar": "لَكَ", "status": "NEW_CORE_TARGET", "lemma": "لِـ", "kind": "lemma", "forms": ["لَكَ", "لَكِ", "لِخَدِيجَة", "لِسَامِي"], "gloss": "for (you / me)", "img": null, "dim": "possession", "phrase": "هٰذَا لَكَ", "hl": "لَكَ"}, {"id": "aata", "ar": "أَعْطَتْ", "status": "NEW_CORE_TARGET", "lemma": "أَعْطَى", "kind": "lemma", "forms": ["أَعْطَتْ", "أَعْطَاهَا"], "gloss": "gives / gave", "img": null, "dim": "action", "phrase": "أَعْطَتْ رَزَان الْكِتَابَ لِسَامِي", "hl": "أَعْطَتْ"}, {"id": "akhadha", "ar": "وَأَخَذَ", "status": "NEW_CORE_TARGET", "lemma": "أَخَذَ", "kind": "lemma", "forms": ["وَأَخَذَ"], "gloss": "takes / took", "img": null, "dim": "action", "phrase": "ضَحِكَ سَامِي وَأَخَذَ الْكِتَابَ وَدَخَلَ الْبَيْتَ.", "hl": "وَأَخَذَ"}, {"id": "aasha", "ar": "يَعِيشُ", "status": "NEW_CORE_TARGET", "lemma": "عَاشَ", "kind": "lemma", "forms": ["يَعِيشُ"], "gloss": "lives", "img": null, "dim": "action", "phrase": "يَعِيشُ فِي بَيْتٍ كَبِيرٍ", "hl": "يَعِيشُ"}, {"id": "arada", "ar": "أُرِيدُ", "status": "RECYCLED_CORE_TARGET", "lemma": "أَرَادَ", "kind": "lemma", "forms": ["أُرِيدُ"], "gloss": "wants", "img": null, "dim": "action", "phrase": "أُرِيدُ الْكُرَةَ", "hl": "أُرِيدُ", "chunk_ref": "CH-22"}, {"id": "huna", "ar": "هُنَا", "status": "RECYCLED_CORE_TARGET", "lemma": "هُنَا", "kind": "lemma", "forms": ["هُنَا"], "gloss": "here", "img": null, "dim": "place", "phrase": "يَعِيشُ مَعِي هُنَا.", "hl": "هُنَا"}, {"id": "hunaka", "ar": "هُنَاكَ", "status": "RECYCLED_CORE_TARGET", "lemma": "هُنَاكَ", "kind": "lemma", "forms": ["هُنَاكَ"], "gloss": "there is / there", "img": null, "dim": "existence", "phrase": "خَدِيجَة هُنَاكَ، وَالْكِتَابُ مَعَ سَامِي.", "hl": "هُنَاكَ"}, {"id": "dhahab", "ar": "ذَهَبَتْ", "status": "RECYCLED_CORE_TARGET", "lemma": "ذَهَبَ", "kind": "lemma", "forms": ["ذَهَبَتْ"], "gloss": "goes / went", "img": null, "dim": "action", "phrase": "ذَهَبَتْ رَزَان إِلَى بَيْتِ خَدِيجَة، وَالْهَدِيَّةُ مَعَهَا.", "hl": "ذَهَبَتْ", "chunk_ref": "CH-18"}, {"id": "ila", "ar": "إِلَى", "status": "RECYCLED_CORE_TARGET", "lemma": "إِلَى", "kind": "lemma", "forms": ["إِلَى"], "gloss": "to", "img": null, "dim": "place", "phrase": "ذَهَبَتْ رَزَان إِلَى بَيْتِ خَدِيجَة، وَالْهَدِيَّةُ مَعَهَا.", "hl": "إِلَى"}, {"id": "rajaa", "ar": "وَرَجَعَ", "status": "RECYCLED_CORE_TARGET", "lemma": "رَجَعَ", "kind": "lemma", "forms": ["وَرَجَعَ", "وَرَجَعَتْ"], "gloss": "comes back / came back", "img": null, "dim": "action", "phrase": "وَرَجَعَ سَامِي.", "hl": "وَرَجَعَ"}, {"id": "walad", "ar": "وَلَدٌ", "status": "RECYCLED_CORE_TARGET", "lemma": "وَلَد", "kind": "lemma", "forms": ["وَلَدٌ"], "gloss": "a boy", "img": null, "dim": "person", "phrase": "بِجَانِبِ الْبَابِ وَلَدٌ صَغِيرٌ.", "hl": "وَلَدٌ"}, {"id": "ism", "ar": "وَاسْمُهُ", "status": "RECYCLED_CORE_TARGET", "lemma": "اِسْم", "kind": "lemma", "forms": ["وَاسْمُهُ"], "gloss": "a name", "img": null, "dim": "object", "phrase": "هٰذَا أَخُو خَدِيجَة، وَاسْمُهُ سَامِي.", "hl": "وَاسْمُهُ"}, {"id": "yara", "ar": "رَأَى", "status": "RECYCLED_CORE_TARGET", "lemma": "رَأَى", "kind": "lemma", "forms": ["رَأَى"], "gloss": "sees / saw", "img": "vg-see", "dim": "action", "phrase": "رَأَى سَامِي الْهَدِيَّةَ.", "hl": "رَأَى"}, {"id": "yaqul", "ar": "قَالَ", "status": "RECYCLED_CORE_TARGET", "lemma": "قَالَ", "kind": "lemma", "forms": ["قَالَ", "قَالَتْ"], "gloss": "says / said", "img": "vg-say", "dim": "action", "phrase": "قَالَ: «كِتَابٌ!", "hl": "قَالَ"}, {"id": "yadkhul", "ar": "وَدَخَلَ", "status": "RECYCLED_CORE_TARGET", "lemma": "دَخَلَ", "kind": "lemma", "forms": ["وَدَخَلَ", "دَخَلَتْ"], "gloss": "enters / entered", "img": "vg-enter", "dim": "action", "phrase": "ضَحِكَ سَامِي وَأَخَذَ الْكِتَابَ وَدَخَلَ الْبَيْتَ.", "hl": "وَدَخَلَ"}, {"id": "hadha", "ar": "هٰذَا", "status": "RECYCLED_CORE_TARGET", "lemma": "هٰذَا", "kind": "lemma", "forms": ["هٰذَا", "هٰذِهِ"], "gloss": "this", "img": null, "dim": "deixis", "phrase": "هٰذَا أَخُو خَدِيجَة، وَاسْمُهُ سَامِي.", "hl": "هٰذَا"}, {"id": "ana", "ar": "وَأَنَا", "status": "RECYCLED_CORE_TARGET", "lemma": "أَنَا", "kind": "lemma", "forms": ["وَأَنَا"], "gloss": "I", "img": null, "dim": "person", "phrase": "وَأَنَا عِنْدِي كِتَابٌ.»", "hl": "وَأَنَا"}, {"id": "ya", "ar": "يَا", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "يَا", "kind": "lemma", "forms": ["يَا"], "gloss": "O (address)", "img": null, "dim": "address", "phrase": "قَالَتْ رَزَان: «هٰذِهِ الْهَدِيَّةُ لِخَدِيجَة يَا سَامِي...»", "hl": "يَا"}, {"id": "kitab", "ar": "الْكِتَابَ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "كِتَاب", "kind": "lemma", "forms": ["الْكِتَابَ", "الْكِتَابِ", "كِتَابٌ", "وَالْكِتَابُ"], "gloss": "a book", "img": null, "dim": "object", "phrase": "عِنْدَ رَزَان هَدِيَّةٌ لِخَدِيجَة: كِتَابٌ صَغِيرٌ.", "hl": "كِتَابٌ"}, {"id": "bayt", "ar": "بَيْتِ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "بَيْت", "kind": "lemma", "forms": ["بَيْتِ", "الْبَيْتَ", "بَيْتِهَا"], "gloss": "a house", "img": "obj-door", "dim": "place", "phrase": "ذَهَبَتْ رَزَان إِلَى بَيْتِ خَدِيجَة، وَالْهَدِيَّةُ مَعَهَا.", "hl": "بَيْتِ"}, {"id": "bab", "ar": "الْبَابِ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "بَاب", "kind": "lemma", "forms": ["الْبَابِ"], "gloss": "a door", "img": "obj-door", "dim": "object", "phrase": "بِجَانِبِ الْبَابِ وَلَدٌ صَغِيرٌ.", "hl": "الْبَابِ"}, {"id": "saghir", "ar": "صَغِيرٌ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "صَغِير", "kind": "lemma", "forms": ["صَغِيرٌ", "الصَّغِيرُ"], "gloss": "small", "img": null, "dim": "description", "phrase": "هٰذَا أَخِي الصَّغِيرُ", "hl": "الصَّغِيرُ"}, {"id": "kura", "ar": "الْكُرَةَ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "كُرَة", "kind": "lemma", "forms": ["الْكُرَةَ", "كُرَةٌ"], "gloss": "a ball", "img": null, "dim": "object", "phrase": "عِنْدِي كُرَةٌ", "hl": "كُرَةٌ"}, {"id": "hadiya", "ar": "هَدِيَّةٌ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "هَدِيَّة", "kind": "lemma", "forms": ["هَدِيَّةٌ", "الْهَدِيَّةُ", "الْهَدِيَّةَ", "وَالْهَدِيَّةُ"], "gloss": "a gift", "img": null, "dim": "object", "phrase": "هٰذِهِ هَدِيَّةٌ", "hl": "هَدِيَّةٌ"}, {"id": "bijanib", "ar": "بِجَانِبِ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "بِجَانِبِ", "kind": "lemma", "forms": ["بِجَانِبِ"], "gloss": "beside", "img": null, "dim": "place", "phrase": "بِجَانِبِ الْبَابِ", "hl": "بِجَانِبِ"}, {"id": "yanzur", "ar": "نَظَرَ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "نَظَرَ", "kind": "lemma", "forms": ["نَظَرَ", "وَنَظَرَتْ"], "gloss": "looks / looked", "img": null, "dim": "action", "phrase": "نَظَرَ سَامِي إِلَى الْكِتَابِ.", "hl": "نَظَرَ"}, {"id": "yadhak", "ar": "ضَحِكَ", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "ضَحِكَ", "kind": "lemma", "forms": ["ضَحِكَ", "ضَحِكَتْ"], "gloss": "laughs / laughed", "img": null, "dim": "action", "phrase": "ضَحِكَ سَامِي وَأَخَذَ الْكِتَابَ وَدَخَلَ الْبَيْتَ.", "hl": "ضَحِكَ"}, {"id": "aydan", "ar": "أَيْضًا", "status": "COMPREHENSIBLE_SUPPORT", "lemma": "أَيْضًا", "kind": "lemma", "forms": ["أَيْضًا"], "gloss": "too", "img": null, "dim": "addition", "phrase": "دَخَلَتْ رَزَان الْبَيْتَ أَيْضًا.", "hl": "أَيْضًا"}, {"id": "walakin", "ar": "وَلٰكِنْ", "status": "RECOGNITION_ONLY", "lemma": "وَلٰكِنْ", "kind": "lemma", "forms": ["وَلٰكِنْ"], "gloss": "but", "img": null, "dim": "connector", "phrase": "وَلٰكِنْ أَخُوكِ...»", "hl": "وَلٰكِنْ"}], "sentences": [{"id": "s00", "ar": "عِنْدَ رَزَان هَدِيَّةٌ لِخَدِيجَة: كِتَابٌ صَغِيرٌ. ذَهَبَتْ رَزَان إِلَى بَيْتِ خَدِيجَة، وَالْهَدِيَّةُ مَعَهَا.", "stage": 0, "items": ["maa", "inda", "li", "dhahab", "ila", "kitab", "bayt", "saghir", "hadiya"], "img": null}, {"id": "s01", "ar": "بِجَانِبِ الْبَابِ وَلَدٌ صَغِيرٌ. هٰذَا أَخُو خَدِيجَة، وَاسْمُهُ سَامِي.", "stage": 0, "items": ["akh", "walad", "ism", "hadha", "bab", "saghir", "bijanib"], "img": null}, {"id": "s02", "ar": "رَأَى سَامِي الْهَدِيَّةَ. قَالَ: «كِتَابٌ! أُرِيدُ الْكِتَابَ! لَيْسَ عِنْدِي كِتَابٌ.»", "stage": 1, "items": ["inda", "laysa", "arada", "yara", "yaqul", "kitab", "hadiya"], "img": null}, {"id": "s03", "ar": "قَالَتْ رَزَان: «هٰذِهِ الْهَدِيَّةُ لِخَدِيجَة يَا سَامِي...»", "stage": 1, "items": ["li", "yaqul", "hadha", "ya", "hadiya"], "img": null}, {"id": "s04", "ar": "نَظَرَ سَامِي إِلَى الْكِتَابِ. وَنَظَرَتْ رَزَان إِلَى سَامِي. سَامِي صَغِيرٌ... وَلَيْسَ عِنْدَهُ كِتَابٌ.", "stage": 1, "items": ["inda", "laysa", "ila", "kitab", "saghir", "yanzur"], "img": null}, {"id": "s05", "ar": "أَعْطَتْ رَزَان الْكِتَابَ لِسَامِي. «هٰذَا لَكَ.»", "stage": 2, "items": ["li", "aata", "hadha", "kitab"], "img": null}, {"id": "s06", "ar": "ضَحِكَ سَامِي وَأَخَذَ الْكِتَابَ وَدَخَلَ الْبَيْتَ.", "stage": 2, "items": ["akhadha", "yadkhul", "kitab", "bayt", "yadhak"], "img": null}, {"id": "s07", "ar": "دَخَلَتْ رَزَان الْبَيْتَ أَيْضًا. خَدِيجَة هُنَاكَ، وَالْكِتَابُ مَعَ سَامِي.", "stage": 2, "items": ["maa", "hunaka", "yadkhul", "kitab", "bayt", "aydan"], "img": null}, {"id": "s08", "ar": "قَالَتْ رَزَان: «يَا خَدِيجَة... الْهَدِيَّةُ لَكِ. وَلٰكِنْ أَخُوكِ...»", "stage": 2, "items": ["akh", "li", "yaqul", "ya", "hadiya", "walakin"], "img": null}, {"id": "s09", "ar": "ضَحِكَتْ خَدِيجَة. قَالَتْ: «هٰذَا أَخِي الصَّغِيرُ! يَعِيشُ مَعِي هُنَا. لَيْسَ عِنْدَهُ كِتَابٌ. وَأَنَا عِنْدِي كِتَابٌ.»", "stage": 2, "items": ["akh", "maa", "inda", "laysa", "aasha", "huna", "yaqul", "hadha", "ana", "kitab", "saghir", "yadhak"], "img": null}, {"id": "s10", "ar": "وَرَجَعَ سَامِي. مَعَهُ كُرَةٌ. أَعْطَاهَا الْكُرَةَ. «هٰذِهِ لَكِ يَا رَزَان!»", "stage": 3, "items": ["maa", "li", "aata", "rajaa", "hadha", "ya", "kura"], "img": null}, {"id": "s11", "ar": "ذَهَبَتْ رَزَان إِلَى بَيْتِ خَدِيجَة وَالْهَدِيَّةُ مَعَهَا... وَرَجَعَتْ إِلَى بَيْتِهَا وَالْكُرَةُ مَعَهَا.", "stage": 3, "items": ["maa", "dhahab", "ila", "rajaa", "bayt", "hadiya"], "img": null}], "readings": [{"id": "second", "role": "second", "title": "هَدِيَّةُ رَزَان", "sentence_ids": ["s00", "s01", "s02", "s03", "s04", "s05", "s06", "s07", "s08", "s09", "s10", "s11"]}], "contrasts": [{"id": "c1", "stage": 0, "img": null, "a": "الْهَدِيَّةُ لِخَدِيجَة", "b": "الْهَدِيَّةُ لِسَامِي", "correct": "a", "support": "s00", "dim": "possession"}, {"id": "c2", "stage": 1, "img": null, "a": "سَامِي أَخُو خَدِيجَة", "b": "سَامِي أَخُو رَزَان", "correct": "a", "support": "s01", "dim": "person"}, {"id": "c3", "stage": 2, "img": null, "a": "أَعْطَتْ رَزَان الْكِتَابَ لِسَامِي", "b": "أَعْطَتْ رَزَان الْكِتَابَ لِخَدِيجَة", "correct": "a", "support": "s05", "dim": "possession"}, {"id": "c4", "stage": 3, "img": null, "a": "مَعَ سَامِي كُرَةٌ", "b": "مَعَ سَامِي قَلَمٌ", "correct": "a", "support": "s10", "dim": "object"}], "facts": [{"id": "f1", "stage": 0, "ar": "الْهَدِيَّةُ كِتَابٌ صَغِيرٌ.", "truth": true, "support": "s00", "dim": "object"}, {"id": "f2", "stage": 1, "ar": "سَامِي أَخُو خَدِيجَة.", "truth": true, "support": "s01", "dim": "person"}, {"id": "f3", "stage": 1, "ar": "عِنْدَ سَامِي كِتَابٌ.", "truth": false, "support": "s02", "dim": "possession"}, {"id": "f4", "stage": 2, "ar": "الْكِتَابُ مَعَ سَامِي.", "truth": true, "support": "s07", "dim": "possession"}, {"id": "f5", "stage": 3, "ar": "أَعْطَاهَا سَامِي الْكُرَةَ.", "truth": true, "support": "s10", "dim": "possession"}], "whosays": [{"id": "w1", "stage": 1, "quote": "«كِتَابٌ! أُرِيدُ الْكِتَابَ! لَيْسَ عِنْدِي كِتَابٌ.»", "speaker": "sami", "support": "s02"}, {"id": "w2", "stage": 2, "quote": "«هٰذَا لَكَ.»", "speaker": "razan", "support": "s05"}, {"id": "w3", "stage": 3, "quote": "«هٰذَا أَخِي الصَّغِيرُ! يَعِيشُ مَعِي هُنَا.»", "speaker": "khadija", "support": "s09"}], "events": [{"id": "e1", "order": 1, "stage": 0, "img": null, "sentence": "s00"}, {"id": "e2", "order": 2, "stage": 1, "img": null, "sentence": "s02"}, {"id": "e3", "order": 3, "stage": 2, "img": null, "sentence": "s05"}, {"id": "e4", "order": 4, "stage": 3, "img": null, "sentence": "s10"}], "findit": [{"id": "fi1", "stage": 1, "img": null, "prompt_gloss": "Which line says what the gift is?", "answer": "s00", "pool": ["s00", "s01", "s02", "s03"]}, {"id": "fi2", "stage": 2, "img": null, "prompt_gloss": "Which line gives the book to سامي?", "answer": "s05", "pool": ["s03", "s04", "s05", "s06"]}, {"id": "fi3", "stage": 3, "img": null, "prompt_gloss": "Which line brings the ball?", "answer": "s10", "pool": ["s08", "s09", "s10", "s11"]}], "retrieval": [{"id": "r1", "stage": 0, "sentence": "s00", "blank": "مَعَهَا", "choices": ["مَعَهَا", "مَعَهُ", "مَعِي"], "img": null, "item": "maa"}, {"id": "r2", "stage": 2, "sentence": "s05", "blank": "أَعْطَتْ", "choices": ["أَعْطَتْ", "أَخَذَ", "ذَهَبَتْ"], "img": null, "item": "aata"}, {"id": "r3", "stage": 3, "sentence": "s09", "blank": "أَخِي", "choices": ["أَخِي", "أُخْتِي", "أَبِي"], "img": null, "item": "akh"}]};
-const API={UNITS:{ "unit-01":UNIT_01, "unit-01p":UNIT_01P, "unit-02":UNIT_02, "unit-02p":UNIT_02P, "unit-03":UNIT_03, "unit-03p":UNIT_03P }, STATUS, normalize, gen, qc, canonCheck, sequenceFor, wordRe};
+const API={UNITS:{ "unit-01":UNIT_01, "unit-01p":UNIT_01P, "unit-02":UNIT_02, "unit-02p":UNIT_02P, "unit-03":UNIT_03, "unit-03p":UNIT_03P }, STATUS, FORM_LICENCE, normalize, gen, qc, canonCheck, sequenceFor, deliverable, pathway, postReading, readingOf, wordRe};
 if(typeof module!=="undefined"&&module.exports) module.exports=API;
 root.SC_ENGINE=API;
 })(typeof window!=="undefined"?window:globalThis);
@@ -1697,47 +1832,36 @@ const SCP=(function(){
     $("pr-sub").textContent=base==="unit-03"?"Unit 3 practice · المنصّة · rev 1, no illustrations yet":base==="unit-02"?"Unit 2 practice · المنصّة · rev 6, Unit 2 rich-cartoon art complete":"Unit 1 practice · المنصّة";
     hub();
   }
+  /* B2 (audit 2026-10-10): a unit whose QC records a unit-level failure delivers nothing — the hub says so, the pathway buttons
+     are disabled, and start() refuses. Counts shown are the PLANNED pathway (selected tasks), not the generated inventory. */
+  const blockedNote=d=>`<div class="helpbox" style="direction:ltr"><b>Withheld.</b> This reading's practice is not available: the engine's checks failed (${d.failed.length}), so nothing is shown until the data matches the printed text. ${d.failed.map(f=>esc(f.why)).join(" · ")}</div>`;
   function hub(){
     setU(base);
     const pair=PAIRS[base]?E.UNITS[PAIRS[base]]:null;
+    const d1=E.deliverable(U), d2=pair?E.deliverable(pair):null;
+    const n=(u,k)=>{const q=E.pathway(u,k,0); return k==="vocab"?q.length:(q.length-2)+1+E.postReading(u,3,true).length;};
     $("pr-stage").innerHTML=`
       <div class="prhub">
-        <button class="hubcard" data-h="vocab"><span class="hubar" lang="ar">الْمُفْرَدَات</span><span class="hubext">Vocabulary practice — meet, recognize, and meet again</span></button>
-        <button class="hubcard" data-h="reading"><span class="hubar" lang="ar">الْقِرَاءَة ١ · ${esc(U.title)}</span><span class="hubext">Reading 1 — read, understand, reread, retrieve</span></button>
-        ${pair?`<button class="hubcard" data-h="reading2"><span class="hubar" lang="ar">الْقِرَاءَة ٢ · ${esc(pair.title)}</span><span class="hubext">Reading 2 — the past-tense story, its own items and activities</span></button>`:""}
+        <button class="hubcard" data-h="vocab" ${d1.ok?"":"disabled"}><span class="hubar" lang="ar">الْمُفْرَدَات</span><span class="hubext">Vocabulary practice — every core item met, recognized, and met again in a sentence${d1.ok?` · ${n(U,"vocab")} tasks`:""}</span></button>
+        <button class="hubcard" data-h="reading" ${d1.ok?"":"disabled"}><span class="hubar" lang="ar">الْقِرَاءَة ١ · ${esc(U.title)}</span><span class="hubext">Reading 1 — meet the opening's words, read, understand, reread, retrieve${d1.ok?` · ${n(U,"reading")} tasks`:""}</span></button>
+        ${pair?`<button class="hubcard" data-h="reading2" ${d2.ok?"":"disabled"}><span class="hubar" lang="ar">الْقِرَاءَة ٢ · ${esc(pair.title)}</span><span class="hubext">Reading 2 — the past-tense story, its own items and activities${d2.ok?` · ${n(pair,"reading")} tasks`:""}</span></button>`:""}
       </div>
-      <p class="note" style="direction:ltr;margin-top:14px">Audio: browser preview voice only — recorded audio not yet verified, so listening activities are suppressed by rule. One task at a time; wrong answers bring more Arabic, never just an ✗.</p>`;
-    $("pr-stage").querySelectorAll(".hubcard").forEach(b=>b.addEventListener("click",()=>start(b.dataset.h)));
+      ${d1.ok?"":blockedNote(d1)}${d2&&!d2.ok?blockedNote(d2):""}
+      <p class="note" style="direction:ltr;margin-top:14px">Sound: the browser's own preview voice on request (🔊) — there is no recorded, verified audio yet, so the course has no listening tasks; they are not built, not merely switched off. One task at a time; a wrong answer shows the phrase or sentence it belongs to, never just an ✗.</p>`;
+    $("pr-stage").querySelectorAll(".hubcard:not([disabled])").forEach(b=>b.addEventListener("click",()=>start(b.dataset.h)));
     dots();
   }
   function start(which){
     if(which==="reading2"){setU(PAIRS[base]);which="reading";}
     phase=which;
-    const {ok}=E.qc(U,E.gen(U));
-    const vis=a=>a.spoiler_stage<=sessionStage;
-    if(which==="vocab"){
-      queue=[...ok.filter(a=>a.type==="explore").slice(0,6),
-             ...ok.filter(a=>a.type==="arabic_to_picture"),
-             ...ok.filter(a=>a.type==="picture_to_arabic"),
-             ...ok.filter(a=>a.type==="meaning_in_context"&&vis(a)).slice(0,4)];
-    }else{
-      queue=[...ok.filter(a=>a.type==="explore").slice(0,4),
-             ...ok.filter(a=>a.type==="arabic_to_picture").slice(0,3),
-             {type:"read"},
-             "POST"];
-    }
+    const d=E.deliverable(U);
+    if(!d.ok){ queue=[];qi=0; $("pr-stage").innerHTML=blockedNote(d)+`<button class="pbtn primary" id="pr-again">Back to pathways</button>`; $("pr-again").addEventListener("click",hub); dots(); return; }
+    queue=E.pathway(U, which==="vocab"?"vocab":"reading", sessionStage);
     qi=0;render();
   }
   function postComp(){
-    const {ok}=E.qc(U,E.gen(U));
-    const vis=a=>a.spoiler_stage<=sessionStage;
-    const post=[...ok.filter(a=>a.type==="either_or"&&vis(a)),
-                ...ok.filter(a=>(a.type==="true_false"||a.type==="who_says")&&vis(a)),
-                ...ok.filter(a=>a.type==="find_it"&&vis(a)),
-                ...ok.filter(a=>a.type==="sequence"&&vis(a))];
     compDone=true;
-    const ret=ok.filter(a=>a.type==="retrieval"&&vis(a));
-    return [...post,...ret];
+    return E.postReading(U, sessionStage, true);                       /* every post-reading task the stage permits, then retrieval */
   }
   function dots(){
     $("pr-dots").innerHTML=queue.length?queue.map((_,i)=>`<span class="dot${i<qi?' done':i===qi?' now':''}"></span>`).join(""):"";
@@ -1751,13 +1875,16 @@ const SCP=(function(){
   }
   function frame(inner,help){ $("pr-stage").innerHTML=inner+`<div id="pr-help" class="helpbox" hidden></div>`; dots();
     if(help)window._prHelp=help; }
-  function wrong(btn,supportSid,supportImg){
+  /* a wrong answer brings more Arabic: the support sentence when the learner has already read that far, otherwise the item's
+     own phrase (audit 2026-10-10 §10 — picture→Arabic used to return the picture alone) */
+  function wrong(btn,supportSid,supportImg,phrase){
     btn.classList.add("bad");setTimeout(()=>btn.classList.remove("bad"),350);
-    const h=$("pr-help");const s=supportSid?N.S[supportSid]:null;
-    h.innerHTML=`${supportImg?img(supportImg,'himg'):''}${s?`<p class="arabic" lang="ar">${esc(s.ar)}</p>`:""}<button class="sayb" aria-label="listen">🔊</button>`;
+    const h=$("pr-help");let s=supportSid?N.S[supportSid]:null; if(s&&s.stage>sessionStage)s=null;
+    const text=s?s.ar:(phrase||"");
+    h.innerHTML=`${supportImg?img(supportImg,'himg'):''}${text?`<p class="arabic" lang="ar">${esc(text)}</p>`:""}<button class="sayb" aria-label="listen">🔊</button>`;
     h.hidden=false;
-    h.querySelector(".sayb").addEventListener("click",()=>s&&say(s.ar));
-    if(s)say(s.ar);
+    h.querySelector(".sayb").addEventListener("click",()=>text&&say(text));
+    if(text)say(text);
   }
   function right(btn){btn.classList.add("good");setTimeout(next,650);}
 
@@ -1773,11 +1900,11 @@ const SCP=(function(){
     frame(`<div class="prompt"><button class="sayb" id="t-say">🔊</button><span class="bubble" lang="ar">${phHL(it)}</span></div>
       <div class="facegrid">${shuffle(a.choices).map(c=>`<button class="face" data-c="${c}">${img(N.I[c].img)}</button>`).join("")}</div>`);
     $("t-say").addEventListener("click",()=>say(ph(it)));say(ph(it));
-    bindChoices(a.correct,c=>N.I[c].img?null:null,a.sentence_ref,it.img);};
+    bindChoices(a.correct,null,a.sentence_ref,it.img,ph(it));};
   R.picture_to_arabic=a=>{const it=N.I[a.item];
     frame(`<div class="prompt">${img(it.img,'pimg')}</div>
       <div class="facegrid">${shuffle(a.choices).map(c=>`<button class="face" data-c="${c}"><div class="nm big" lang="ar">${esc(ph(N.I[c]))}</div></button>`).join("")}</div>`);
-    bindChoices(a.correct,null,null,it.img);};
+    bindChoices(a.correct,null,a.sentence_ref,it.img,ph(it));};
   R.meaning_in_context=a=>{const it=N.I[a.item],s=N.S[a.sentence_ref];
     const hl=esc(s.ar).replace(E.wordRe(esc(it.ar.replace(/[؟?]/g,"").trim())),(m,p,w)=>p+`<mark>${w}</mark>`);
     frame(`<p class="arabic big rtl" lang="ar">${hl}</p><div class="facegrid">${shuffle(a.choices).map(c=>`<button class="face" data-c="${c}"><div class="nm">${esc(N.I[c].gloss)}</div></button>`).join("")}</div>`);
@@ -1796,6 +1923,8 @@ const SCP=(function(){
     $("t-say").addEventListener("click",()=>say(w.quote));
     bindChoices(w.speaker,null,w.support,null);};
   R.read=()=>{const rd=U.readings[0];
+    /* membership is asserted by qc() (B1); this guard only keeps a data slip from becoming a crash — it withholds the reading */
+    if(!rd||rd.sentence_ids.some(id=>!N.S[id])){ $("pr-stage").innerHTML=blockedNote({failed:[{why:"reading membership does not resolve"}]}); return; }
     const upTo=st=>rd.sentence_ids.map(id=>N.S[id]).filter(s=>s.stage<=st);
     const draw=()=>{const vis=upTo(sessionStage);
       frame(`<div class="readpage rtl">${vis.map(s=>`<p class="arabic" lang="ar" data-s="${s.id}">${esc(s.ar)} <button class="glossb sayb" data-say="${esc(s.ar)}" aria-label="listen">🔊</button></p>`).join("")}
@@ -1827,16 +1956,18 @@ const SCP=(function(){
       <div class="facegrid">${shuffle(r.choices.slice()).map(c=>`<button class="face" data-c="${c}"><div class="nm big" lang="ar">${esc(c)}</div></button>`).join("")}</div>`);
     bindChoices(r.blank,null,r.sentence,r.img);};
 
-  function bindChoices(correct,_,supportSid,supportImg){
+  function bindChoices(correct,_,supportSid,supportImg,phrase){
     $("pr-stage").querySelectorAll("[data-c]").forEach(b=>b.addEventListener("click",()=>{
-      if(b.dataset.c===String(correct))right(b);else wrong(b,supportSid,supportImg);
+      if(b.dataset.c===String(correct))right(b);else wrong(b,supportSid,supportImg,phrase);
     }));
   }
   function render(){const a=queue[qi];dots();
     if(a==="POST"){queue.splice(qi,1,...postComp());return render();}
     (R[a.type]||(()=>next()))(a);}
   function shuffle(arr){const a=arr.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-  return {mount};
+  /* read-only hook for the release gate (TF-9): the current queue item and position. Same data the engine already exposes. */
+  const current=()=>({item:queue[qi]||null, index:qi, length:queue.length, stage:sessionStage, unit:U&&U.unit_id});
+  return {mount, current};
 })();
 
 /* ---- hash router ---- */
@@ -1850,6 +1981,10 @@ function route(){
   window.scrollTo({top:0});
 }
 window.addEventListener('hashchange',route);route();
+/* learner view (audit 2026-10-10 I6): review commentary (.rev) is hidden by default; the button shows it. Not persisted. */
+(function(){document.body.classList.add('learner');const b=document.createElement('button');b.className='viewtoggle';b.type='button';
+  const label=()=>b.textContent=document.body.classList.contains('learner')?'Show review notes':'Learner view';label();
+  b.addEventListener('click',()=>{document.body.classList.toggle('learner');label();});document.body.appendChild(b);})();
 /* live numbers for the library (V33): counted from the engine, never typed */
 (function(){try{
   const E=window.SC_ENGINE, ids=Object.keys(E.UNITS); let acts=0,fail=0,words=0,units=new Set();

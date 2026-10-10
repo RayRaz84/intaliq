@@ -8,17 +8,17 @@
 
 ---
 
-## Unit 1 — the lexical ledger (V2), reconstructed
+## Unit 1 — the lexical ledger (V2), reconstructed — **summary regenerated 2026-10-10 (SC-120; audit I5)**
 
 | | count | items |
 |---|---|---|
-| **NEW CORE** | **21** | 17 in Story 1 + 4 in Story 2 |
+| **NEW CORE** | **21** | 20 lemmas + 1 chunk (`السَّلَامُ عَلَيْكُمْ`), all debuting in Story 1 under the SC-076 counting rule; Story 2's `دَخَلَ · قَالَ · رَأَى` are **new forms of Story 1 lemmas**, not new items (their cards keep the lexical status `NEW_CORE_TARGET` for retrieval permission and carry `g: G-input_first · output: copied` — the grammar permission, SC-120) |
 | **RECENT RECYCLED** | 0 | *first unit — nothing precedes it* |
 | **OLDER RECYCLED** | 0 | *first unit* |
-| **SUPPORT** | 4 | قَائِمَة · فَصْل · قَلَم · حَزِين |
-| **RECOGNITION ONLY** | 2 | وَعَلَيْكُمُ السَّلَام · يَتَكَلَّمُ |
+| **SUPPORT** | 4 | قَائِمَة · فَصْل · قَلَم · يَا *(حَزِين was struck at SC-059 and no longer belongs in this line; the old summary kept it)* |
+| **RECOGNITION ONLY** | 3 entries | هِيَ · تَكَلَّمَ (lemmas) · وَعَلَيْكُمُ السَّلَامُ (chunk) |
 
-*Unit 1's ledger was reconstructed after drafting. Every later unit writes its ledger first, per V2.*
+*Unit 1's ledger was reconstructed after drafting. Every later unit writes its ledger first, per V2. The `P×n` figures in the tables below are the **2026-09-13 generated-inventory counts**, kept as history; the current, machine-counted report — print encounters, generated inventory and the tasks a learner's planned pathway actually selects, in separate columns — is §"Unit 1 — regenerated encounter report" below, and it is the one to quote.*
 
 ---
 
@@ -49,7 +49,7 @@
 | اسْم | U1 · S1 | S1 · P×6 · R | ⟨U2⟩ | ⟨U4⟩ | Yes |
 | **أُرِيدُ** | **U1 · S1** *(moved from S2, SC-059)* | **S1 · S2 · P×4** — still thin: 2 print against LC-6's ≥3 in debut | ⟨U2⟩ **owed, and must reach تُرِيدُ per V13** | ⟨U3, U5⟩ | Yes |
 
-### Story 2 core — the four
+### Story 2 — the three past forms (new forms of Story 1 lemmas, SC-076; lexical card status NEW_CORE_TARGET, grammar `G-input_first`, output copied — SC-120)
 
 | word | introduced | same-unit recycling | next-unit return | later return | productive? |
 |---|---|---|---|---|---|
@@ -72,6 +72,43 @@
 **V16 forbids silent promotion, and nothing here was promoted by the Editor.** All four were put to the owner and ruled at **SC-062**. Promotion takes effect **at the item's next return, not retroactively** — Unit 1's measured counts are unchanged, and the promotion becomes a licensing event in the unit that carries it. **قَلَم is the one to watch**: V12's warning about a support noun displacing a core word is what made it a candidate, and promotion answers the warning rather than ignoring it.
 
 ---
+
+## Unit 1 — regenerated encounter report ⟨2026-10-10, SC-120⟩
+
+*Machine-counted from the Version 45 engine (`engine_core.js`, Units 1 and 1p). **Print** = whole-word occurrences of the card's licensed forms in the two canons. **Generated** = QC-accepted activities that target the item (inventory, not delivery). **Selected** = tasks a learner meets on the planned pathways (vocabulary + Reading 1 pre-reading + post-reading + Reading 2), which is the first column that can be called exposure — and it is still an opportunity, not evidence of processing (audit §7). Pre-reading coverage is bounded by spoiler stages: an item whose only sentences come late in the story (`أَهْلًا`, `هٰذَا`) is met once before the reading and again inside it and its post-reading tasks; the notebook and print sets are not in these columns.*
+
+| lemma | status (U1 · U1p) | print | generated | selected |
+|---|---|---:|---:|---:|
+| السَّلَامُ عَلَيْكُمْ | new core · recycled | 2 | 4 | 6 |
+| وَعَلَيْكُمُ السَّلَامُ | recognition | 1 | 2 | 0 |
+| أَهْلًا | new core | 3 | 4 | 1 |
+| أَنَا | new core · recycled | 14 | 12 | 5 |
+| وَلَد | new core | 2 | 4 | 4 |
+| بِنْت | new core | 3 | 4 | 5 |
+| صَدِيق | new core · recycled | 7 | 10 | 9 |
+| قَائِمَة | support | 5 | 4 | 0 |
+| فَصْل | support | 1 | 2 | 0 |
+| قَلَم | support · support | 12 | 13 | 0 |
+| عِنْدَ | new core · recycled | 6 | 5 | 6 |
+| لِـ (لِي · لَهَا · وَلِي) | new core · recycled | 7 | 13 | 9 |
+| أَرَادَ (أُرِيدُ) | new core · recycled | 2 | 4 | 6 |
+| لَيْسَ | new core · recycled | 6 | 8 | 4 |
+| دَخَلَ (تَدْخُلُ · دَخَلَ) | new core · new form | 2 | 8 | 10 |
+| رَأَى (تَرَى · يَرَى · رَأَى) | new core · new form | 7 | 12 | 8 |
+| قَالَ (تَقُولُ · يَقُولُ · قَالَ · قَالَتْ…) | new core · new form | 34 | 24 | 10 |
+| أَحَبَّ (تُحِبُّ) | new core | 1 | 4 | 3 |
+| هُنَاكَ | new core · recycled | 7 | 7 | 4 |
+| مَنْ | new core · recycled | 9 | 7 | 6 |
+| اِسْم | new core | 6 | 6 | 5 |
+| لَا | new core · recycled | 5 | 2 | 2 |
+| نَعَمْ | new core · recycled | 3 | 2 | 2 |
+| أَنْتَ | new core · recycled | 5 | 2 | 2 |
+| هٰذَا (هٰذِهِ) | new core | 1 | 1 | 1 |
+| يَا | support · support | 5 | 2 | 0 |
+| هِيَ | recognition | 1 | 1 | 0 |
+| تَكَلَّمَ | recognition | 1 | 2 | 0 |
+
+**What the regenerated columns show.** Support is never selected for practice (`قَلَم` 13 generated, 0 selected) — the V12 worry about a support noun displacing core in *digital* exposure is answered by the pathway plan, though its 12 print encounters stand. The thin items are now `هٰذَا`, `لَا`, `نَعَمْ`, `أَنْتَ` and `أَهْلًا` (1–2 selected tasks): each is carried by the readings, the print sets and the notebook instead, and `أَنْتَ` by the survey's questions. `أُرِيدُ`'s selected count (6) is healthier than its print count (2); the ⟨U2⟩ debt in the table above was paid by Unit 2's `أُرِيدُ`/`تُرِيدُ` only in part — Unit 3 paid `تُرِيدُ` (SC-109). SC-077's finding that every core item clears the ≥8 with-activities floor across **all** canonical materials (print sets, can-do, roster, notebook) stands as a historical whole-unit count; it is not reproduced here because those channels are not in these columns.
 
 ## What the map already reveals
 

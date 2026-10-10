@@ -1,6 +1,6 @@
 # Intaliq 1 — Function-Word Progression
 
-*Created 2026-09-15 under SC-082 · Editor · **the authoritative cumulative table** for prepositions, locative expressions, interrogatives, adverbs and connectors across Units 1–10*
+*Created 2026-09-15 under SC-082 · Editor · **the authoritative cumulative table** for prepositions, locative expressions, interrogatives, adverbs and connectors across Units 1–10 · **§6 added 2026-10-10 under SC-114: the question-word class is free as support from first exposure; its productive dates in §3 are unchanged***
 
 ```
 Grammatical classes follow ALHAWARY, read off the page image, not intuition and not the loose
@@ -69,7 +69,7 @@ Read off the page image 2026-09-15. **The single most consequential correction: 
 
 ## 3 · The cumulative table
 
-*Statuses: **IF** input-first · **NC** new core · **PP** productive promotion · **R** recycled · **S** support · **REC** recognition. "Assessment eligible" is `no` for everything support, recognition-only, input-first or orthographic (Architecture §9–§10, SC-075).*
+*Statuses: **IF** input-first · **NC** new core · **PP** productive promotion · **R** recycled · **S** support · **REC** recognition. "Assessment eligible" is `no` for everything support, recognition-only, input-first or orthographic (Architecture §9–§10, SC-075). **Interrogatives ⟨SC-114⟩:** the "first exposure" column for `أَيْنَ` and `لِمَاذَا` below records the unit that *teaches* the word; under SC-114 any question word may be printed as support earlier — §6 is the governing record of the class.*
 
 | Item | Class | Licensed printed forms | First exposure | New-core unit | Input-first | Productive promotion | Required recycling | Support / recognition use | Assessment eligible | Frequency evidence | Communicative affordance | Governing reference | Conflict or debt |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
@@ -181,4 +181,28 @@ Three reasons, and none of them is capacity. **The functional set closes at U8**
 | No assessment of support, recognition or input-first language | **Pass** — `وَ` (U1–U7), `عِنْدَ` (U1–U2) and every `G-orthographic_presence` row are marked not assessable until their promotion unit |
 | Consistent with story envelopes and form licences | **Pass** — attached-pronoun forms withheld on `فِي`/`عَلَى`/`تَحْتَ`; the accusative on adverbs of place is orthographic-presence only |
 
+**Question words ⟨SC-114⟩:** exposure is free, teaching is scheduled — see §6; nothing in the table above moves.
+
 **The progression is not complete, and §4.8 is why.** Units 4–8's connector placements stand as proposals for their own Gate A processes; **Unit 3's three function-word rows are candidacies, not allocations**; and two items carry live debts: **`بِجَانِبِ` has no verified rank** and cannot pass U3's Gate A until it does, and **`وَ`'s rank 2 needs its printed page**. Both are recorded in the table rather than smoothed over.
+
+---
+
+## 6 · The question-word class — free as support from first exposure (SC-114, 2026-10-10)
+
+**Owner's ruling:** *"USE هَلْ and any question word freely. the classroom posters should support and scafold them."*
+
+**What it changes.** Any interrogative may be printed in any reading or apparatus from any unit, as **support under SC-090** — never explained on the page, never assessed, never a productive target before its scheduled unit, disclosed at every printing in the drafts file's table, carried in the ledger with real evidence or marked *lookup owed*. **What it does not change:** the unit that *teaches* each word (its new-core or productive date in §3) — `أَيْنَ` U2, `هَلْ` U4, `مَاذَا` U6, `لِمَاذَا` U7 — and the evidence rule: no rank or page is written below that was not read by eye.
+
+**Why the class, and not a word at a time.** A story is a question answered; a reading that may not ask one without a particle is forced into intonation questions that Novice readers cannot hear on a page (readings pass F-1). The scaffold the owner named — one classroom poster per word, the word large with a model question quoted from a reading the class has read — is what makes early exposure safe: the learner meets the word on the page and on the wall, and the wall says nothing the page did not.
+
+| Word | Alhawary (read by eye unless marked) | B&P rank | First printed in Intaliq | Teaches (§3) | Poster due |
+|---|---|---|---|---|---|
+| `مَنْ` | 7.1.x — **to locate** | **pending** — the SC-066 bare match (2322) was `مُنَى`, false; lookup owed | **U1** core: «مَنْ أَنْتَ؟», «مَنْ عِنْدَهُ قَلَمٌ؟» | U1 | **now** (U1 frozen) |
+| `أَيْنَ` | **7.1.8 p. 138** | **461 / p. 50** | **U2** core: «أَيْنَ مِفْتَاحِي؟» | U2 | **now** (U2 frozen) |
+| `هَلْ` | **7.1.1 p. 133** (SC-106) | **lookup owed** | **U2** Story 1 ×4 in the canon (SC-095 records the owner adding it to "the three questions"; the frozen text prints four, counted 2026-10-10); U3 Story 1 ×3 (rev 2) + apparatus | U4 | **now** (U2 frozen) |
+| `مَاذَا` | 7.1.5 p. 136 (as recorded in the Unit 3 drafts §5) | **lookup owed** | **U3** CH-22 «مَاذَا تُرِيدُ؟» (SC-109 item 4) | U6 | after U3's freeze |
+| `مَا` | 7.1.x — **to locate** | **lookup owed** | **U3** apparatus only: «مَا اسْمُ الْقِطِّ؟» (undisclosed in rev 1; disclosed in rev 2) | not scheduled — stays support until a Gate A schedules it | after U3's freeze |
+| `لِمَاذَا` | **7.1.6 p. 137** | **375 / p. 42** | not yet printed | U7 | at the freeze of the first unit that prints it |
+| `كَيْفَ` · `مَتَى` · `كَمْ` · `لِمَنْ` | **to locate** at first printing | **lookup owed** | not yet printed | not scheduled | at the freeze of the first unit that prints it |
+
+**Rules of the class.** (a) A question word printed ahead of its teaching unit is **support**, row-disclosed, with the Alhawary subsection read by eye at that printing if not already on record. (b) A yes/no question in a reading **carries `هَلْ`** — intonation-only questions are no longer written (readings pass F-1; Unit 1's «عِنْدَكِ…؟»-type lines, if any, stand as built under SC-093 and are not reopened). (c) `مَنْ عِنْدَهُ ___؟` and `هَلْ عِنْدَكَ ___؟` are different questions and both stay available: *who has* against *do you have*. (d) The posters scaffold; they never teach — no English, no grammatical term, no answer printed. Spec: `INTALIQ1_QUESTION_WORD_POSTERS.md`. (e) **Nothing here reschedules instruction.** `هَلْ` still becomes productive and assessable at Unit 4, `مَاذَا` at Unit 6, `لِمَاذَا` at Unit 7, by those units' Gate A.
