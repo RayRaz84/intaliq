@@ -2,6 +2,8 @@
 
 ## Current: Version 44 Brown-Bag Follow-Up
 
+Corrective commit `0bf1413` was successfully pushed to `origin/main` on 2026-10-10. This confirms the Git push, not live hosting deployment.
+
 SC-116 replaces only the generic `obj-bag` illustration with an accepted raw-generated brown PNG, `obj-bag-v44.png`. Both readings' generic bag vocabulary entries now use that file; the larger-bag icon, phrase art and story scenes are unchanged. Old accepted PNGs remain byte-exact with supersession hashes.
 
 Fresh TF-9 passes all 14 routes without blockers; the contact sheet was inspected. The focused check passes all 69 archive/site/served hashes, both Version A pixel locks, notebook reuse, and desktop/mobile flows. Both directions of the live bag picture-recognition tasks were rendered and inspected at 1180px and 390px. Canonical QC remains 226/226 and 141/141 with zero failures or suppressions; the production record now restates these counts per SC-050. Unit 1 and Unit 3 data and the teacher page are unchanged. Evidence: `source/cast-and-art/reviews/v44-brown-bag/`.

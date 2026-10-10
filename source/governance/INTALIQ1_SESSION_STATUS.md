@@ -9,7 +9,7 @@
 - changed: canonical Unit 2 data generator consumes `art_assets_map.json` plus explicit bindings; `build_studio_art.cjs` generates Version 43, source engine assignments, source Studio, identical root index/404, and a deploy package. Runtime assignment patch removed; notebook lede and Unit 3 N4 reuse corrected. Canonical QC: 226 activities / 172 words for unit-02; 141 / 114 for unit-02p; no failures. Final TF-9 reports no blockers across 14 routes; contact sheet inspected. Focused art gate passes both Version A pixel locks, all 69 served hashes, canonical image assignments, exact notebook reuse and desktop/mobile flows. Version 43 is ready for the owner-authorized corrective push.
 - waiting on: the owner's Gate B word on Unit 3 (texts, titles, pop-up — SC-110), and the Unit 2 pop-up ruling (SC-105) remain separate content decisions
 - asks of Art: —
-- current follow-up: Version 43 was pushed as `9d0ac8c`. Version 44 replaces the generic bag image assignment in both readings with the accepted small brown icon. Production record restates 226/141 passing activities (SC-050). Fresh TF-9 and focused art checks pass; both live bag picture families were inspected on desktop/mobile. Unit 1 and Unit 3 data and teacher page remain unchanged. Version 44 is ready for the authorized follow-up push.
+- current follow-up: Version 43 was pushed as `9d0ac8c`; Version 44 is pushed as `0bf1413`. Both readings' generic bag image assignments use the accepted small brown icon. Production record restates 226/141 passing activities (SC-050). Fresh TF-9 and focused art checks pass; both live bag picture families were inspected on desktop/mobile. Unit 1 and Unit 3 data and teacher page remain unchanged.
 - rulings recorded: SC-114, SC-116 (corrective builds; not content approval)
 
 ## Intaliq Art — last updated: 2026-10-10 (Codex correction turn)
@@ -23,4 +23,4 @@
 
 ## Intaliq Publisher — 2026-10-10 (Codex publishing role, SC-114)
 
-- Last confirmed Git push: Version 43, `9d0ac8c`. Owner's "fix them and push" commission continues with the single brown-bag correction. Version 44 passes fresh TF-9 and focused checks and is being published after review. Live deployment is not inferred from a successful Git push.
+- Confirmed Git push: Version 44, `0bf1413`, on 2026-10-10; prior Version 43 push was `9d0ac8c`. Owner's "fix them and push" commission completed for the single brown-bag correction. Fresh TF-9 and focused checks pass. Live deployment is not inferred from a successful Git push.
