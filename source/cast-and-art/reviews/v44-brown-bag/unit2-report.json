@@ -1,0 +1,61 @@
+{
+  "version": 44,
+  "accepted_hashes": 69,
+  "version_a": [
+    {
+      "slot": "u2-va-2",
+      "changed_bbox": [
+        815,
+        937,
+        985,
+        1039
+      ],
+      "outside_pixels_identical": true
+    },
+    {
+      "slot": "u2-va-7",
+      "changed_bbox": [
+        1076,
+        775,
+        1304,
+        843
+      ],
+      "outside_pixels_identical": true
+    }
+  ],
+  "viewports": [
+    1180,
+    390
+  ],
+  "errors": [],
+  "engine": {
+    "unit-02": {
+      "activities": 226,
+      "words": 172,
+      "pictureActivities": 74
+    },
+    "unit-02p": {
+      "activities": 141,
+      "words": 114,
+      "pictureActivities": 44
+    }
+  },
+  "brown_bag": [
+    {
+      "viewport": 1180,
+      "path": "assets/art/unit2-rich/obj-bag-v44.png",
+      "families": [
+        "arabic_to_picture",
+        "picture_to_arabic"
+      ]
+    },
+    {
+      "viewport": 390,
+      "path": "assets/art/unit2-rich/obj-bag-v44.png",
+      "families": [
+        "arabic_to_picture",
+        "picture_to_arabic"
+      ]
+    }
+  ]
+}

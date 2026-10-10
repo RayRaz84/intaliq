@@ -1,5 +1,13 @@
 # Unit 2 Art Status
 
+## Current: Version 44 Brown-Bag Follow-Up
+
+SC-116 replaces only the generic `obj-bag` illustration with an accepted raw-generated brown PNG, `obj-bag-v44.png`. Both readings' generic bag vocabulary entries now use that file; the larger-bag icon, phrase art and story scenes are unchanged. Old accepted PNGs remain byte-exact with supersession hashes.
+
+Fresh TF-9 passes all 14 routes without blockers; the contact sheet was inspected. The focused check passes all 69 archive/site/served hashes, both Version A pixel locks, notebook reuse, and desktop/mobile flows. Both directions of the live bag picture-recognition tasks were rendered and inspected at 1180px and 390px. Canonical QC remains 226/226 and 141/141 with zero failures or suppressions; the production record now restates these counts per SC-050. Unit 1 and Unit 3 data and the teacher page are unchanged. Evidence: `source/cast-and-art/reviews/v44-brown-bag/`.
+
+## Version 43 History
+
 The original integration was pushed as `0dd18c3` on 2026-10-10. A subsequent audit found visual-plan and release-process defects; its earlier completion claim is superseded. The owner requested corrections and a new push. Version 43 now passes TF-9 and the focused Unit 2 checks and is ready for the authorized corrective push.
 
 ## Inventory

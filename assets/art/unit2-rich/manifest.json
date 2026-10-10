@@ -1021,18 +1021,34 @@
       "file": "common/obj-bag.png",
       "kind": "object",
       "show": "school bag: rounded rectangle, one flap, one strap (زَيْد's size)",
-      "delivered": "assets/art/unit2-rich/obj-bag.png",
+      "delivered": "assets/art/unit2-rich/obj-bag-v44.png",
       "accepted": {
-        "file": "common/obj-bag.png",
-        "path": "accepted-rich/unit2/assets/art/common/obj-bag.png",
-        "site_path": "assets/art/unit2-rich/obj-bag.png",
-        "source_candidate": "rich-cartoon-candidates/unit2/obj-bag/attempt-1/obj-bag-rich-cartoon-raw.png",
-        "sha256": "c36d913eabd8401ef3ab069f9c619b5c8375409902b7807f2746ec75248c782b",
+        "file": "common/obj-bag-v44.png",
+        "path": "accepted-rich/unit2/assets/art/common/obj-bag-v44.png",
+        "site_path": "assets/art/unit2-rich/obj-bag-v44.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/obj-bag/v44/obj-bag.png",
+        "sha256": "24ee2e096bb2121a0f0f1188e9de38ea23e43cd1bb28c6fe7f9ec90818ace22a",
         "size": "1254x1254",
         "accepted_at": "2026-10-10",
-        "by": "Codex visual review after owner style switch",
-        "prompt_record": "state/obj-bag-prompt.json"
-      }
+        "by": "Codex visual review after owner correction request",
+        "method": "built-in image_gen",
+        "prompt": "Use case: precise-object-edit. Asset: INTALIQ Unit 2 obj-bag vocabulary/picture-recognition illustration. Image 1 is the edit target: small black closed school satchel on white. Image 2 is colour/style reference only: larger brown satchel. Change the small bag's body, flap and shoulder strap to the same warm medium brown/cognac leather colour family as image 2. Keep image 1's smaller proportions, single closed opaque flap, rectangular rounded shape, single shoulder strap, buckle, orientation, white background, shading, crisp rich-cartoon rendering and generous margins. The bag must be unmistakably brown at 118x98 thumbnail size, not black or charcoal. Do not substitute the large bag, do not add objects or visible interior, no people, no text, logos or watermark. Output one complete production PNG on white.",
+        "correction_reason": "Owner requests brown generic bag for learner picture activities; retain smaller size and original PNG audit trail."
+      },
+      "superseded": [
+        {
+          "file": "common/obj-bag.png",
+          "path": "accepted-rich/unit2/assets/art/common/obj-bag.png",
+          "site_path": "assets/art/unit2-rich/obj-bag.png",
+          "source_candidate": "rich-cartoon-candidates/unit2/obj-bag/attempt-1/obj-bag-rich-cartoon-raw.png",
+          "sha256": "c36d913eabd8401ef3ab069f9c619b5c8375409902b7807f2746ec75248c782b",
+          "size": "1254x1254",
+          "accepted_at": "2026-10-10",
+          "by": "Codex visual review after owner style switch",
+          "prompt_record": "state/obj-bag-prompt.json",
+          "reason": "Owner requests brown generic bag for learner picture activities; retain smaller size and original PNG audit trail."
+        }
+      ]
     },
     {
       "id": "obj-bag-big",

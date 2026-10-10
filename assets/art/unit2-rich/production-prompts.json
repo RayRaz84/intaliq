@@ -321,5 +321,12 @@
       "prompt": "Add generated blue book only; preserve all outside pixels and original scene/cat.",
       "reason": "Replace independently regenerated variant with pixel-locked Story 1 derivation, owner-authorized SC-115."
     }
+  },
+  "version44-corrections": {
+    "obj-bag": {
+      "method": "built-in image_gen",
+      "prompt": "Use case: precise-object-edit. Asset: INTALIQ Unit 2 obj-bag vocabulary/picture-recognition illustration. Image 1 is the edit target: small black closed school satchel on white. Image 2 is colour/style reference only: larger brown satchel. Change the small bag's body, flap and shoulder strap to the same warm medium brown/cognac leather colour family as image 2. Keep image 1's smaller proportions, single closed opaque flap, rectangular rounded shape, single shoulder strap, buckle, orientation, white background, shading, crisp rich-cartoon rendering and generous margins. The bag must be unmistakably brown at 118x98 thumbnail size, not black or charcoal. Do not substitute the large bag, do not add objects or visible interior, no people, no text, logos or watermark. Output one complete production PNG on white.",
+      "reason": "Owner requests brown generic bag for learner picture activities; retain smaller size and original PNG audit trail."
+    }
   }
 }

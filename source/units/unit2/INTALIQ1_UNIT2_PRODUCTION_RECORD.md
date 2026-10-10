@@ -258,3 +258,14 @@ Owner approved the separate, unlinked teacher's page. Generator `build_teacher_p
 ## 18 · 2026-09-19 — Gate B: owner's sign-off ⟨SC-105⟩
 
 Owner: "sign off." The Story Standard audit that SC-031 requires at Gate B was missing for revision 6 and is now written (drafts file §8): 29 PASS + 1 N-A per story; criteria 6, 10, 11 pass in both. The audit and the teacher's-page flow mapping found two gaps: the pop-up (drafted, PROPOSED in the Studio, **the owner's ruling closes the gate**) and Reading 2's missing sets plus the missing S14 (built, Version 40, every line verbatim from the canon). **State of Unit 2:** texts and titles signed off · apparatus complete pending the pop-up ruling · illustrations held · Gate B closes on the pop-up.
+
+## 19 · 2026-10-10 — Unit 2 art integration and measured activity counts (SC-050, SC-113–116)
+
+Version 43 (`9d0ac8c`) integrated the owner-selected rich-cartoon art, canonical image assignments and pixel-locked Version A derivatives. Newly available picture-recognition families increase the counts; earlier 166/105 counts above describe historical pre-illustration builds, not the current engine.
+
+| Engine Unit | Generated | Passed | Failed | Suppressed | Canon |
+|---|---:|---:|---:|---:|---|
+| unit-02 (Story 1) | 226 | 226 | 0 | 0 | 172 words, partition exact |
+| unit-02p (parallel) | 141 | 141 | 0 | 0 | 114 words, partition exact |
+
+SC-116 corrects generic learner-facing `obj-bag` from black to brown in Version 44. Only that production image is replaced; both generic bag vocabulary bindings now use it. Old accepted bytes, story scenes and larger-bag image remain unchanged. Texts, activity definitions, Unit 1 and Unit 3 content, teacher page, audio verification and pop-up decisions are unchanged. Fresh TF-9 passes all 14 routes with no blockers; the focused check verifies all 69 accepted hashes, Version A pixel locks, notebook reuse and both live bag picture families at 1180px/390px without page errors. Contact sheet and bag screenshots inspected. Evidence: `source/cast-and-art/reviews/v44-brown-bag/`.

@@ -23,3 +23,14 @@ The focused check expects a local preview at `http://127.0.0.1:8877/` (override 
 The corrected raw PNGs are versioned siblings. Old production PNGs stay unchanged, with supersession reasons in the production manifest. Never run the historical ignored `art-production/sync-rich-integration.cjs` as a release stage: it is the runtime-patch approach superseded by this build.
 
 SC-115 authorizes targeted compositing for Version A's two changed frames only. `python source/pipeline/derive_version_a.py` reproduces them from the original scenes and the tracked generated book insert (Pillow required). This is an Art-production operation, not part of the integration build; the build only consumes the accepted derived PNGs.
+
+For the brown-bag follow-up build, issue Version 44 explicitly and verify it:
+
+```sh
+INTALIQ_STUDIO_VERSION=44 node source/pipeline/build_studio_art.cjs
+node source/pipeline/build_studio_art.cjs art-production/release-44/deploy
+INTALIQ_BROWSER_CHANNEL=chrome INTALIQ_VERIFY_PORT=0 python source/pipeline/verify_release.py art-production/release-44/deploy 44
+python source/pipeline/verify_unit2_art.py --version 44
+```
+
+Without the version override, the build retains the source Studio's current version; it does not silently downgrade to 43. Art acceptance takes an optional final revision argument (for example `v44`) and retains old accepted PNGs.

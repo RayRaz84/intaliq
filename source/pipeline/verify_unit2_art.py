@@ -11,17 +11,19 @@ from playwright.sync_api import sync_playwright
 ROOT = Path(__file__).resolve().parents[2]
 parser = argparse.ArgumentParser()
 parser.add_argument('--base-url', default='http://127.0.0.1:8877/')
-parser.add_argument('--out', type=Path, default=ROOT / 'art-production/v43-checks')
+parser.add_argument('--version', type=int, default=43)
+parser.add_argument('--out', type=Path)
 args = parser.parse_args()
+args.out = args.out or ROOT / f'art-production/v{args.version}-checks'
 args.out.mkdir(parents=True, exist_ok=True)
 assets = json.loads((ROOT / 'art_assets_map.json').read_text())
 manifest = json.loads((ROOT / 'assets/art/unit2-rich/manifest.json').read_text())
 bindings = json.loads((ROOT / 'source/cast-and-art/unit2_art_bindings.json').read_text())
 html = (ROOT / 'index.html').read_text()
 assert (ROOT / '404.html').read_bytes() == (ROOT / 'index.html').read_bytes(), '404 differs from index'
-assert 'VERSION 43' in html and 'RICH_UNIT2' not in html and 'withRichArt' not in html
+assert f'VERSION {args.version}' in html and 'RICH_UNIT2' not in html and 'withRichArt' not in html
 assert len(assets) == len(manifest['slots']) == 69
-report = {'version': 43, 'accepted_hashes': 0, 'version_a': [], 'viewports': [], 'errors': []}
+report = {'version': args.version, 'accepted_hashes': 0, 'version_a': [], 'viewports': [], 'errors': []}
 for slot in manifest['slots']:
     assert assets[slot['id']] == slot['delivered']
     assert hashlib.sha256((ROOT / slot['delivered']).read_bytes()).hexdigest() == slot['accepted']['sha256']
@@ -81,6 +83,36 @@ with sync_playwright() as playwright:
                     page.screenshot(path=str(args.out / ('practice-' + pathway + '-' + str(width) + '.png')))
                 page.locator('#x-next').click()
             assert page.locator('#pr-stage img.rich-art').count()
+        if args.version >= 44:
+            page.goto(args.base_url + 'index.html#unit-02/practice')
+            page.reload()
+            for unit in ['unit-02', 'unit-02p']:
+                assert page.evaluate('id => window.SC_ENGINE.UNITS[id].items.find(i => i.id === "haqiba").img', unit) == assets['obj-bag']
+            queue = page.evaluate('''() => {
+                const E = window.SC_ENGINE, u = E.UNITS['unit-02'];
+                const {ok} = E.qc(u, E.gen(u));
+                return [...ok.filter(a => a.type === 'explore').slice(0, 6),
+                        ...ok.filter(a => a.type === 'arabic_to_picture'),
+                        ...ok.filter(a => a.type === 'picture_to_arabic')];
+            }''')
+            page.locator('[data-h="vocab"]').click()
+            found = []
+            for index, activity in enumerate(queue):
+                if activity.get('item') == 'haqiba' and activity['type'] in ['arabic_to_picture', 'picture_to_arabic']:
+                    art = page.locator('#pr-stage img[src="' + assets['obj-bag'] + '"]')
+                    assert art.count(), 'Brown bag missing in live picture task'
+                    art.evaluate_all('async elements => { await Promise.all(elements.map(e => e.decode())); }')
+                    page.screenshot(path=str(args.out / ('brown-bag-' + activity['type'] + '-' + str(width) + '.png')))
+                    found.append(activity['type'])
+                    if len(found) == 2:
+                        break
+                if activity['type'] == 'explore':
+                    page.locator('#x-next').click()
+                else:
+                    page.locator('[data-c="' + activity['correct'] + '"]').click()
+                page.wait_for_function('expected => document.getElementById("pr-count").textContent.startsWith("TASK " + expected + " OF")', arg=index + 2)
+            assert len(found) == 2, 'Both bag picture-recognition families must render'
+            report.setdefault('brown_bag', []).append({'viewport': width, 'path': assets['obj-bag'], 'families': found})
         report['viewports'].append(width)
     page.set_viewport_size({'width': 800, 'height': 400})
     slots = ['u2-s1-3', 'u2-s1-5', 'u2-s1-6', 'u2-s2-4', 'u2-va-2', 'u2-va-7']

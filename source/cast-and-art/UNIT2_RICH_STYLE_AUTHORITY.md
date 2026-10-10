@@ -19,7 +19,7 @@ Full colour, shaded faces, dimensional clothing and props, and backgrounds match
 | Rana | Chin-length bob | Mustard top, blue trousers |
 | Cat | Orange-white, triangular ears, curled tail | Not applicable |
 
-Karim's large satchel is brown. Zayd's small satchel is black. The two object slots are intentional variants, not interchangeable drawings of the same owner's bag. Photo figures retain Razan's bundles and Khadija's plaits and are faceless inside the small prints.
+Karim's large satchel is brown. Zayd's existing small satchel in Story 1 frame 4 is black. SC-116 changes the generic learner-facing small `obj-bag` icon to brown at the owner's request, matching the dominant narrative bag colour; the story frame is unchanged. The two object slots still distinguish small and large bags, not colour. Photo figures retain Razan's bundles and Khadija's plaits and are faceless inside the small prints.
 
 ## Preservation And Acceptance
 

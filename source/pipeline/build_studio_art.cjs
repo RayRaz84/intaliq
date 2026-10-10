@@ -4,6 +4,8 @@ const crypto = require('node:crypto');
 const { execFileSync } = require('node:child_process');
 const root = path.resolve(__dirname, '../..');
 const output = process.argv[2] ? path.resolve(process.argv[2]) : root;
+const version = Number(process.env.INTALIQ_STUDIO_VERSION || fs.readFileSync(path.join(__dirname, 'school_course_studio.html'), 'utf8').match(/VERSION (\d+)/)?.[1] || 43);
+if (!Number.isInteger(version) || version < 43) throw Error('Invalid Studio version');
 const read = file => fs.readFileSync(path.join(root, file), 'utf8');
 const assets = JSON.parse(read('art_assets_map.json'));
 const bindings = JSON.parse(read('source/cast-and-art/unit2_art_bindings.json'));
@@ -55,7 +57,7 @@ const pictures = '<div class="nbpics">' + bindings.unit3_retrieval.map((id, i) =
 third = third.slice(0, retrievalStart) + third.slice(retrievalStart).replace(/<div class="nbpics">.*?<\/div>/, pictures);
 third = third.replace('reprinted from the student book once its illustrations exist (SC-100), empty until then', 'reprinted byte-for-byte from the student-book strips (SC-100)');
 html = html.slice(0, thirdStart) + third + html.slice(thirdEnd);
-html = html.replace(/VERSION \d+/g, 'VERSION 43');
+html = html.replace(/VERSION \d+/g, 'VERSION ' + version);
 if (html.includes('withRichArt') || html.includes('RICH_UNIT2')) throw Error('Runtime assignment patch remains');
 if (/teacher\.html/i.test(html)) throw Error('Teacher page linked in Studio');
 const wrapper = '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:,"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><style>[hidden]{display:none!important}</style>';
@@ -71,6 +73,6 @@ else {
 const review = '<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>INTALIQ Unit 2 Art Review</title><style>body{font:14px Arial;margin:24px;color:#202426;background:#fff}h1{font-size:24px}main{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:20px}figure{margin:0;min-width:0}img{width:100%;height:180px;object-fit:contain}figcaption{overflow-wrap:anywhere;margin-top:8px}small{display:block;color:#555}</style><h1>INTALIQ Unit 2</h1><main>' + manifest.slots.map(slot => '<figure><img src="' + path.basename(slot.delivered) + '" alt="' + slot.id + '"><figcaption>' + slot.id + '<small>' + slot.kind + '</small></figcaption></figure>').join('') + '</main></html>';
 fs.writeFileSync(path.join(output, 'assets/art/unit2-rich/review.html'), review);
 const prompts = JSON.parse(read('assets/art/unit2-rich/production-prompts.json'));
-prompts['version43-corrections'] = Object.fromEntries(manifest.slots.filter(slot => slot.accepted.prompt).map(slot => [slot.id, { method: slot.accepted.method, prompt: slot.accepted.prompt, reason: slot.accepted.correction_reason }]));
+prompts['version' + version + '-corrections'] = Object.fromEntries(manifest.slots.filter(slot => slot.accepted.prompt && slot.delivered.endsWith('-v' + version + '.png')).map(slot => [slot.id, { method: slot.accepted.method, prompt: slot.accepted.prompt, reason: slot.accepted.correction_reason }]));
 fs.writeFileSync(path.join(output, 'assets/art/unit2-rich/production-prompts.json'), JSON.stringify(prompts, null, 2) + '\n');
-console.log('Text build: Version 43; canonical engine assignments; index and 404 generated from one source.');
+console.log('Text build: Version ' + version + '; canonical engine assignments; index and 404 generated from one source.');

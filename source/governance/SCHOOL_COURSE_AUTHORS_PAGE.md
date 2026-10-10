@@ -1,6 +1,6 @@
 # Intaliq 1 — The Author's Page
 
-*What governs the drafting of a reading today. Created 2026-09-16 under **SC-093** (the consolidation pass). This page is the entry point; everything it names is reference. When a later ruling changes anything here, this page is amended in the same pass — a stale author's page is a defect. Current through **SC-115**.*
+*What governs the drafting of a reading today. Created 2026-09-16 under **SC-093** (the consolidation pass). This page is the entry point; everything it names is reference. When a later ruling changes anything here, this page is amended in the same pass — a stale author's page is a defect. Current through **SC-116**.*
 
 ---
 
@@ -75,3 +75,5 @@ The **phrase page** (numbered picture-phrases for every new item the readings pr
 **Parallel sessions ⟨SC-112⟩:** `INTALIQ1_SESSION_PROTOCOL.md` (who owns which file) · `INTALIQ1_SESSION_STATUS.md` (read first, every turn). Text session: briefs → build → deploy. Art session: spec, manifests, reviews, assets map. Publisher: push only.
 
 Register `SCHOOL_COURSE_DECISION_REGISTER.md` · **Unit 3 brief `INTALIQ1_UNIT3_GATE_A_BRIEF.md` (revision 1, awaiting Gate A)** · Unit 3 drafts `INTALIQ1_UNIT3_STORY_DRAFTS.md` · Unit 3 production record · Unit 2 brief `INTALIQ1_UNIT2_GATE_A_BRIEF.md` (revision 4) · drafts `INTALIQ1_UNIT2_STORY_DRAFTS.md` · production record · calibration evidence `INTALIQ1_CI_SAMPLE_CALIBRATION.md` · runbook `UNIT_GENERATION_RUNBOOK.md` · template `INTALIQ1_GATE_A_TEMPLATE.md` · ledgers `INTALIQ1_VOCABULARY_LEDGER.md` · `INTALIQ1_GRAMMAR_LEDGER.md` · `INTALIQ1_CHUNK_INVENTORY.md` · Alhawary index `ALHAWARY_SECTION_INDEX.md` · engine `tools/engine_core.js` and Studio · teacher's pages `tools/build_teacher_pages.py` (separate artifact, SC-104).
+
+**SC-116 follow-up:** the generic Unit 2 bag icon is brown for learner picture activities. This one-asset correction is Studio Version 44, with fresh TF-9 and focused checks. Unit 2 production counts are restated as 226/141 passing activities (SC-050); no other content or art is commissioned.
