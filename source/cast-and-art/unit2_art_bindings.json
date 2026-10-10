@@ -1,0 +1,206 @@
+{
+  "units": {
+    "unit-02": {
+      "items": {
+        "ayna": "u2-ph-01",
+        "fi": "u2-ph-02",
+        "ala": "u2-ph-03",
+        "tahta": "u2-ph-04",
+        "dhahab": "u2-ph-06",
+        "ila": "u2-ph-06",
+        "rajaa": "u2-ph-08",
+        "wadaa": "u2-ph-09",
+        "hunaka": "u2-s1-1",
+        "walad": "u2-s1-1",
+        "ism": "u2-s1-1",
+        "inda": "u2-s1-1",
+        "yara": "u2-s1-2",
+        "yaqul": "u2-s1-4",
+        "yadkhul": "u2-s1-8",
+        "la": "u2-s1-4",
+        "naam": "u2-s1-7",
+        "anta": "u2-s1-6",
+        "hadha": "u2-s1-2",
+        "ana": "u2-s1-6",
+        "ya": "u2-s1-4",
+        "man": "u2-s1-2",
+        "qalam": "obj-pen",
+        "miftah": "obj-key",
+        "haqiba": "obj-bag-big",
+        "kitab": "obj-book",
+        "bayt": "obj-house",
+        "bab": "obj-door",
+        "ard": "u2-s1-2",
+        "yad": "u2-s1-8",
+        "qitt": "av-qitt",
+        "kabira": "u2-s1-1",
+        "yanzur": "u2-s1-8",
+        "yadhak": "u2-s1-8",
+        "aydan": "u2-s1-8",
+        "hal": "u2-s1-3",
+        "walakin": "u2-s1-8"
+      },
+      "cast": {
+        "karim": "av-karim",
+        "zayd": "av-zayd",
+        "maha": "av-maha",
+        "omar": "av-omar",
+        "qitt": "av-qitt"
+      },
+      "sentences": {
+        "s00": "u2-s1-1",
+        "s01": "u2-s1-2",
+        "s02": "u2-s1-2",
+        "s03": "u2-s1-2",
+        "s04": "u2-s1-3",
+        "s05": "u2-s1-4",
+        "s06": "u2-s1-4",
+        "s07": "u2-s1-5",
+        "s08": "u2-s1-5",
+        "s09": "u2-s1-6",
+        "s10": "u2-s1-6",
+        "s11": "u2-s1-6",
+        "s12": "u2-s1-7",
+        "s13": "u2-s1-7",
+        "s14": "u2-s1-7",
+        "s15": "u2-s1-7",
+        "s16": "u2-s1-8",
+        "s17": "u2-s1-8",
+        "s18": "u2-s1-8",
+        "s19": "u2-s1-8",
+        "s20": "u2-s1-8",
+        "s21": "u2-s1-8"
+      },
+      "events": {
+        "e1": "u2-s1-2",
+        "e2": "u2-s1-4",
+        "e3": "u2-s1-7",
+        "e4": "u2-s1-8"
+      },
+      "contrasts": {
+        "c1": "u2-s1-2",
+        "c2": "u2-s1-4",
+        "c3": "u2-s1-5",
+        "c4": "u2-s1-7",
+        "c5": "u2-s1-8"
+      },
+      "facts": {
+        "f1": "u2-s1-1",
+        "f2": "u2-s1-2",
+        "f3": "u2-s1-4",
+        "f4": "u2-s1-6",
+        "f5": "u2-s1-7",
+        "f6": "u2-s1-8"
+      },
+      "findit": {
+        "fi1": "u2-s1-2",
+        "fi2": "u2-s1-5",
+        "fi3": "u2-s1-8"
+      },
+      "retrieval": {
+        "r1": "u2-s1-2",
+        "r2": "u2-s1-5",
+        "r3": "u2-s1-4",
+        "r4": "u2-s1-8"
+      }
+    },
+    "unit-02p": {
+      "items": {
+        "fi": "u2-ph-02",
+        "huna": "u2-ph-05",
+        "dhahab": "u2-s2-1",
+        "ila": "u2-ph-06",
+        "rajaa": "u2-s2-4",
+        "wadaa": "u2-s2-1",
+        "inda": "u2-s2-1",
+        "yara": "u2-s2-3",
+        "yaqul": "u2-s2-1",
+        "hadha": "u2-ph-19",
+        "ana": "u2-ph-05",
+        "ya": "u2-s2-2",
+        "sadiq": "u2-s2-1",
+        "laysa": "u2-s2-2",
+        "li": "u2-s2-1",
+        "haqiba": "obj-bag-big",
+        "bayt": "obj-house",
+        "sura": "obj-photo",
+        "hazina": "u2-ph-18",
+        "yadhak": "u2-s2-1",
+        "aata": "u2-s2-5",
+        "aydan": "u2-s2-4"
+      },
+      "cast": {
+        "razan": "av-razan",
+        "khadija": "av-khadija",
+        "rana": "av-rana"
+      },
+      "sentences": {
+        "s00": "u2-s2-1",
+        "s01": "u2-s2-1",
+        "s02": "u2-s2-1",
+        "s03": "u2-s2-1",
+        "s04": "u2-s2-2",
+        "s05": "u2-s2-2",
+        "s06": "u2-s2-3",
+        "s07": "u2-s2-3",
+        "s08": "u2-s2-4",
+        "s09": "u2-s2-4",
+        "s10": "u2-s2-4",
+        "s11": "u2-s2-5",
+        "s12": "u2-s2-5",
+        "s13": "u2-s2-5",
+        "s14": "u2-s2-5",
+        "s15": "u2-s2-6",
+        "s16": "u2-s2-6",
+        "s17": "u2-s2-6",
+        "s18": "u2-s2-6",
+        "s19": "u2-s2-6"
+      },
+      "events": {
+        "e1": "u2-s2-1",
+        "e2": "u2-s2-3",
+        "e3": "u2-s2-5",
+        "e4": "u2-s2-6"
+      },
+      "contrasts": {
+        "c1": "u2-s2-1",
+        "c2": "u2-s2-2",
+        "c3": "u2-s2-3",
+        "c4": "u2-s2-6"
+      },
+      "facts": {
+        "f1": "u2-s2-1",
+        "f2": "u2-s2-1",
+        "f3": "u2-s2-2",
+        "f4": "u2-s2-4",
+        "f5": "u2-s2-6"
+      },
+      "findit": {
+        "fi1": "u2-s2-1",
+        "fi2": "u2-s2-3",
+        "fi3": "u2-s2-6"
+      },
+      "retrieval": {
+        "r1": "u2-s2-1",
+        "r2": "u2-s2-4",
+        "r3": "u2-s2-2"
+      }
+    }
+  },
+  "version_a": [
+    "u2-s1-1",
+    "u2-va-2",
+    "u2-s1-3",
+    "u2-s1-4",
+    "u2-s1-5",
+    "u2-s1-6",
+    "u2-va-7",
+    "u2-s1-8"
+  ],
+  "unit3_retrieval": [
+    "u2-s1-2",
+    "u2-s1-5",
+    "u2-s1-7",
+    "u2-s2-2"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "method": "built-in image_gen",
+  "source": "/Users/main/.codex/generated_images/01a12503-625c-7b20-92e5-e74940b943cc/exec-d96a8a57-b03b-4b31-8aad-ad0151001f2e.png",
+  "prompt": "Use case: background-extraction. Supporting insert for INTALIQ Version A pixel-locked edits. Extract ONLY this exact blue closed hardback book from white background. Preserve its blue cover, exactly two gold cover lines, spine, off-white pages, perspective, outlines and rich-cartoon shading. Genuine transparent background (alpha), no white matte or ground shadow, no extra props or key, no text. Center whole book with generous transparent safe margins. Do not render a new scene. Output one transparent PNG.",
+  "status": "Supporting candidate only; compositing exception awaiting owner response"
+}

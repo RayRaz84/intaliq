@@ -1,0 +1,5 @@
+fb461e0667967d641fab659313908bd674521ae6e571bcc513a29a025a46cf3b  four-friends-golden-keys-01.png
+b0c6950ff5cabf2e40bb6ddde18804e8eb28db3934d3c67948d53e0bdbbd51b4  four-friends-golden-keys-02.png
+1ee368c5e84f108687adbd7b271f1bbffe36c438e576e218ef82b43cfb8ee60f  four-friends-golden-keys-03.png
+62fc389a72b0557cd921ac355b88247979d60c1c932ee3b2a33965795d334709  four-friends-golden-keys-04.png
+5bab50d48376a6c2d19fb67590f221fda7d98c0db2d2694cb36f1ba62d311c66  version-a-generated-book.png

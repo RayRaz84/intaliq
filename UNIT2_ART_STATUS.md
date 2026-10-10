@@ -1,6 +1,6 @@
 # Unit 2 Art Status
 
-Completed and verified locally on 2026-10-10. The owner authorized committing and pushing the integration on 2026-10-10.
+The original integration was pushed as `0dd18c3` on 2026-10-10. A subsequent audit found visual-plan and release-process defects; its earlier completion claim is superseded. The owner requested corrections and a new push. Version 43 now passes TF-9 and the focused Unit 2 checks and is ready for the authorized corrective push.
 
 ## Inventory
 
@@ -16,7 +16,7 @@ Eight character review sheets display the exact accepted portraits. Version A re
 
 ## Preservation And Integration
 
-Original generated PNG bytes are retained in candidate archives, canonical accepted paths, and site paths. Accepted files were not cropped, resized, redrawn, or substituted. Failed candidates are retained with rejection reasons. Browser layout uses object-fit: contain.
+Original generated PNG bytes are retained in candidate archives, canonical accepted paths, and site paths. Except for the explicit SC-115 Version A-only targeted compositing exception, production PNGs were not cropped, resized, redrawn, or substituted. Version A's final derived PNG bytes are preserved exactly; every pixel outside the recorded local change rectangles remains identical to Story 1. Failed candidates are retained with rejection reasons. Browser layout uses object-fit: contain.
 
 - Production manifest: assets/art/unit2-rich/manifest.json
 - Art review: assets/art/unit2-rich/review.html
@@ -41,4 +41,6 @@ index.html and source/pipeline/school_course_studio.html contain the same update
 
 The discovered repository was inside the Mac's Trash. This complete working copy preserves its Git history, local changes, generated art, candidates, references, and verification evidence outside Trash. The original checkout remains intact. Synced project sources were not modified.
 
-No remaining Unit 2 art-generation or integration blocker was found. These checks are not a complete end-to-end run of every learning activity. Recorded audio verification and the classroom pilot remain separate release gates; the site retains its draft status.
+The original checks above verified file integrity and initial rendering, not full visual-plan compliance or TF-9. The corrective build consumes the asset map in the canonical data generator; the runtime assignment patch is removed. Frame 3 now hides the bag interior, frame 5 has a larger visible key bow, and Story 2 frame 4 has a clearer sad mouth. Prior accepted PNGs are unchanged; corrections are versioned siblings.
+
+Version A's two regenerated scenes are superseded by authorized pixel-preserving derivatives. The final TF-9 run reports no blockers across 14 routes; its contact sheet was inspected. The focused gate verifies outside-region pixel identity, all 69 accepted and served hashes, canonical engine image assignments, exact notebook reuse, and desktop/mobile practice flows with no page errors. Evidence is saved in `source/cast-and-art/reviews/v43-preflight/`. No Unit 2 art integration blocker remains. Recorded audio verification and the classroom pilot remain separate release gates; the site retains its draft status.

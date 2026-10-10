@@ -294,5 +294,32 @@
         "prompt": "Controlled edit of accepted u2-s1-7: add one small closed blue book under the sitting cat on the doorstep. Preserve every other detail and canvas size. No key, text, or markings."
       }
     }
+  },
+  "version43-corrections": {
+    "u2-s1-3": {
+      "method": "built-in image_gen",
+      "prompt": "Use case: precise-object-edit. Edit ONLY the bag opening and hands in this INTALIQ Story1 frame3. Karim puts the gold key into his brown satchel, but the satchel INTERIOR MUST BE FULLY HIDDEN. Lower the opaque leather flap so it lies almost closed, with Karim's key hand sliding behind the flap at its top edge. Show the round key bow and a short bit of shank above that edge; everything behind/below the edge is occluded by the opaque flap. No open black/brown cavity, no visible contents, no lifted upright lid. Other hand rests lightly on exterior. Retain Karim's exact curls, blue top, identity, rich-cartoon rendering, white background and framing. No text, no added objects. One final PNG.",
+      "reason": "Previous bag showed an open interior, contrary to Story1 spoiler rule."
+    },
+    "u2-s1-5": {
+      "method": "built-in image_gen",
+      "prompt": "Use case: precise-object-edit. Edit existing INTALIQ Story1 frame5 ONLY the book and key at lower right. Make the gold round key bow peep MUCH MORE visibly from under the blue hardback book: the bow must be a clear gold ring about 100 pixels wide in this 1376-pixel-wide scene, immediately left/front of book, while the straight shank and two teeth remain hidden under the book. The BOOK still sits ON TOP OF THE KEY. Keep the book physically on the step/floor next to Maha without overlapping her feet. Preserve both children, their identity hair clothing, distance, held-up found key, doorway, background and rich-cartoon style. This book/key relation must be readable in a 118x98 thumbnail. No text, no other changes, one PNG.",
+      "reason": "Key bow under book enlarged for strip-size legibility; prior bow existed but was too small."
+    },
+    "u2-s2-4": {
+      "method": "built-in image_gen",
+      "prompt": "Use case: precise-object-edit. Edit this existing INTALIQ Story2 frame4. Change ONLY Razan's mouth: make a clearly downturned inverted-U frown, with both corners low and center noticeably higher. It MUST read as SAD at 118x98 display, not neutral or thoughtful. Mouth is the sole expression change: retain eyes, eyebrows, face angle, low side hair bundles, teal top, brown satchel, body position, closed green door, light dry ground, composition and rich-cartoon style exactly. No tears, rain, other girl, photo, extra objects or text. Single PNG.",
+      "reason": "Sadness was too close to neutral at strip size; downturned mouth now explicit."
+    },
+    "u2-va-2": {
+      "method": "owner-authorized Version A-only targeted compositing",
+      "prompt": "Add generated blue book only; preserve all outside pixels and original scene/cat.",
+      "reason": "Replace independently regenerated variant with pixel-locked Story 1 derivation, owner-authorized SC-115."
+    },
+    "u2-va-7": {
+      "method": "owner-authorized Version A-only targeted compositing",
+      "prompt": "Add generated blue book only; preserve all outside pixels and original scene/cat.",
+      "reason": "Replace independently regenerated variant with pixel-locked Story 1 derivation, owner-authorized SC-115."
+    }
   }
 }

@@ -1,15 +1,16 @@
 {
- "status": "ISSUED 2026-10-01 — the only authority for the Unit 2 art package, with INTALIQ1_ART_PACKAGE_SPEC.md",
+ "status": "ISSUED 2026-10-01; Unit 2 style and raw-PNG size exceptions recorded by SC-113 on 2026-10-10. Content slots remain binding.",
  "return_rules": [
-  "one PNG per slot id, named exactly as 'file' says, sizes per spec §2",
-  "pure white #FFFFFF background; no text, letters, numerals or glyphs inside any image",
+  "one accepted PNG per stable slot id, delivered path in art_assets_map.json; raw PNG size exception per SC-113, no resizing of production assets",
+  "pure white icon and portrait backgrounds; rich scene backgrounds per SC-113; no text, letters, numerals or glyphs inside any image",
   "each file shows only what its own slot says — never a crop from a larger sheet, never a neighbouring slot's picture",
   "fill 'delivered' with the filename, or leave it null with a 'note' saying why — never substitute",
   "deliver assets/art/ + this file only; no index.html, no 404.html, no teacher.html"
  ],
  "unit": "unit-02",
  "issued": "2026-10-01",
- "authority": "INTALIQ1_UNIT2_VISUAL_PLAN.md (frozen texts SC-095/SC-102) · SC-111 style · INTALIQ1_ART_PACKAGE_SPEC.md",
+ "authority": "INTALIQ1_UNIT2_VISUAL_PLAN.md (frozen texts SC-095/SC-102) · SC-113 Unit 2 rich-cartoon exception · INTALIQ1_ART_PACKAGE_SPEC.md",
+ "style_override": "UNIT2_RICH_STYLE_AUTHORITY.md supersedes historical stick rendering, pure-white scene backgrounds and conformed sizes. Icons and portraits retain white backgrounds; exact accepted PNG bytes are production assets.",
  "reconciliation_note": "The plan predates SC-097 in two rows: every 'Sara' below is خَدِيجَة, and the figure in obj-photo wears two plaits, not a hijab. Applied here.",
  "sizes": {
   "frame": "590x490 PNG",

@@ -1,6 +1,6 @@
 # Intaliq 1 — The Author's Page
 
-*What governs the drafting of a reading today. Created 2026-09-16 under **SC-093** (the consolidation pass). This page is the entry point; everything it names is reference. When a later ruling changes anything here, this page is amended in the same pass — a stale author's page is a defect. Current through **SC-112**.*
+*What governs the drafting of a reading today. Created 2026-09-16 under **SC-093** (the consolidation pass). This page is the entry point; everything it names is reference. When a later ruling changes anything here, this page is amended in the same pass — a stale author's page is a defect. Current through **SC-115**.*
 
 ---
 
@@ -69,6 +69,8 @@ The **phrase page** (numbered picture-phrases for every new item the readings pr
 - **Running vocabulary totals ⟨SC-107⟩** — measured, never projected; updated at each freeze. **Unit 1:** 29 ledger entries (core, support, two chunks, one lexical plural). **Unit 2:** 6 new core (band, +1 disclosed: `فَصْل` promoted) · 14 support · 3 story verbs (support) · 7 chunks (CH-14–CH-20). **Unit 3 (rev 1, not frozen):** 5 new core (band, +0) · 3 promotions · 4 support + 1 in-chunk · 4 target verbs · 6 chunks (CH-21–CH-26). **Level total claimed publicly: none yet.**
 
 ## 10 · Where things are
+
+**Unit 2 art and corrective release (SC-113/114/115):** the owner-selected rich-cartoon rendering supersedes the SC-111 style for Unit 2 only; Unit 1 remains unchanged. Frozen visual-plan content and spoiler constraints still bind. Version 43 is the Text integration review build commissioned by "fix them and push", generated from `art_assets_map.json` and canonical data, with TF-9 required before pushing. This does not close audio, pilot, pop-up or Unit 3 content gates. SC-115 permits targeted compositing only for Version A's two changed frames, with every outside-region pixel identical to Story 1; other accepted generated PNGs stay raw and unchanged. The earlier §9 illustration paragraph is historical except for its still-binding content and release conditions.
 
 **Parallel sessions ⟨SC-112⟩:** `INTALIQ1_SESSION_PROTOCOL.md` (who owns which file) · `INTALIQ1_SESSION_STATUS.md` (read first, every turn). Text session: briefs → build → deploy. Art session: spec, manifests, reviews, assets map. Publisher: push only.
 

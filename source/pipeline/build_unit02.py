@@ -1,6 +1,16 @@
-import re, json
-s1=open("u2r7_s1.txt",encoding="utf8").read().strip()
-s2=open("u2r7_s2.txt",encoding="utf8").read().strip()
+import re, json, argparse
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[2]
+parser = argparse.ArgumentParser()
+parser.add_argument('--art-map', type=Path, default=ROOT / 'art_assets_map.json')
+parser.add_argument('--output', type=Path, default=Path('unit02_data.js'))
+args = parser.parse_args()
+def canon(name):
+    local = Path(name)
+    return (local if local.exists() else ROOT / 'source/units/unit2/canon' / name).read_text(encoding='utf8').strip()
+s1=canon('u2r7_s1.txt')
+s2=canon('u2r7_s2.txt')
 PUNCT=r"[«»\"،.!؟:\-…]"
 def toks(t): return [w for w in re.sub(PUNCT," ",t).split() if w]
 def paras(t): return [p.strip() for p in t.split("\n\n") if p.strip()]
@@ -168,6 +178,18 @@ ex2={"reading_id":"second","role":"second",
   {"id":"r3","stage":1,"sentence":"s04","blank":"هُنَا","choices":["هُنَا","هُنَاكَ"],"img":None,"item":"huna"}]}
 U2=build("unit-02","أَيْنَ مِفْتَاحِي؟",s1,cast1,st1,ex1)
 U2P=build("unit-02p","صُورَةُ رَزَان وَخَدِيجَة",s2,cast2,st2,ex2)
-js="\n/* ---- Unit 2 (SC-092 · SC-094 · SC-095) — texts are the owner-edited revision 6; no illustrations yet (img:null) ---- */\nconst UNIT_02 = "+json.dumps(U2,ensure_ascii=False)+";\nconst UNIT_02P = "+json.dumps(U2P,ensure_ascii=False)+";\n"
-open("unit02_data.js","w",encoding="utf8").write(js)
+assets=json.loads(args.art_map.read_text(encoding='utf8'))
+bindings=json.loads((ROOT / 'source/cast-and-art/unit2_art_bindings.json').read_text(encoding='utf8'))
+for unit in [U2,U2P]:
+    assignments=bindings['units'][unit['unit_id']]
+    for group, records in assignments.items():
+        for record in unit[group]:
+            slot=records.get(record['id'])
+            if slot:
+                filename=assets[slot]
+                if not (ROOT / filename).is_file():
+                    raise ValueError('Missing art: '+filename)
+                record['img']=filename
+js="\n/* ---- Unit 2 (SC-092 · SC-094 · SC-095) — frozen revision 6; art assigned by the build from art_assets_map.json ---- */\nconst UNIT_02 = "+json.dumps(U2,ensure_ascii=False)+";\nconst UNIT_02P = "+json.dumps(U2P,ensure_ascii=False)+";\n"
+args.output.write_text(js,encoding='utf8')
 print("items",len(U2["items"]),len(U2P["items"]),"sentences",len(U2["sentences"]),len(U2P["sentences"]))

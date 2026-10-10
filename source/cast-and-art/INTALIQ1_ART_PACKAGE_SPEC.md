@@ -51,6 +51,8 @@ Ids are the build's; the tool does not invent ids. A slot the tool cannot draw s
 
 ## 4 · Style (what every image obeys — Cast Bible §2 as amended by SC-111)
 
+**Unit 2 exception, SC-113 (2026-10-10):** the rich-cartoon reference and `UNIT2_RICH_STYLE_AUTHORITY.md` supersede the stick rendering, limited palette, white scene backgrounds, and conformed derivative sizes below for Unit 2 only. Fixed identity, exact accepted PNG preservation, slot content, spoiler and sensitivity rules still bind. Unit 1 is unchanged. This exception is a style ruling, not blanket image acceptance.
+
 One stroke weight, uniform, rounded caps, no tapering, no hatching, no shading. Heads about a third of figure height, no neck; two-dot eyes, hooked nose, one mouth line carrying the expression; tube limbs. Near-empty space: a floor line, a doorframe, one object — no backgrounds, no perspective. **Black line on pure white; flat colour on clothing only** — teal #2F7D78, ochre #D3A344, coral #D97668 — never on faces, hair, props, animals or ground. No text, letters, numerals or glyph-like marks inside any slot image. Named characters have faces; generic action figures (`fig-walk`) do not. No hearts, no embrace, no romance-readable pairing (SC-027 · SC-036); children at doorways stand apart.
 
 **Identity is one fixed marker per character, identical in every frame.** A clothing colour may be part of a character's identity only if it never changes between frames. The marker reservation table (Cast Bible) is the authority — no two characters share a marker, and a marker the table lists as taken is not given to anyone else.

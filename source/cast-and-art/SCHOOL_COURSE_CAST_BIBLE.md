@@ -19,6 +19,8 @@ The cost of a recurring cast is **continuity debt**, and §4 is how this line re
 
 Adopted deliberately and in full. What it means in practice:
 
+**Unit 2 exception (SC-113, 2026-10-10):** rich full-colour cartoon with dimensional shading and scene backgrounds, per `UNIT2_RICH_STYLE_AUTHORITY.md`. The table below remains the earlier house grammar, not the Unit 2 rendering target. Unit 1 retains its existing art. Unit 2 identities remain fixed: Karim crown curls / blue; Zayd flat cap / green; Maha high topknot / coral; Omar straight spikes / green; Razan two low side bundles / teal; Khadija two front plaits / coral; Rana bob / mustard; cat orange-white, triangular ears and curled tail. Karim's large satchel is brown; Zayd's small satchel is black. These markers are distinct within Unit 2. The object variants are intentional and must not be conflated in assignments.
+
 | | rule |
 |---|---|
 | **Line** | One weight (3 units), uniform, no tapering, no variation for emphasis. It should read as a fine felt-tip, not a brush. |

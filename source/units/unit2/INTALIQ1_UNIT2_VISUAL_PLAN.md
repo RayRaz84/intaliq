@@ -8,6 +8,8 @@
 
 ## 1 · Style lock (what every image obeys)
 
+**Current precedence (SC-113, 2026-10-10):** the owner selected the rich-cartoon reference for Unit 2. The historical stick-style text and palette checks below are superseded for this unit only; `source/cast-and-art/UNIT2_RICH_STYLE_AUTHORITY.md` gives the current rendering and size rules. Frame content, must-not-show, markers, expression beats, spoiler protection, notebook reuse and Version A's pixel identity are unchanged. The historical final "images not authorized" line is superseded by SC-111; neither style adoption nor authorization is a per-image pass.
+
 The house figure style, SC-053, unchanged: one ink, **one stroke weight (3)**, **two values — black line on white**, no greys, no tints, no accent colours; heads about a third of figure height, no neck; faces of two dots, a hooked nose, one mouth line carrying the whole expression; tube limbs; near-empty space — a floor line, a doorframe, one object, never a background. Framed panels for the strips. **Named characters have faces; generic action figures do not.** No text, letters or numerals inside any image (the picture strip is read before the text; a word in a frame would be a caption). No hearts, no romance-readable imagery (SC-027 · SC-036). Criterion 27: a frame supports the text and never spoils it.
 
 **Why this style and not a picture-book one:** the strip is a sequencing task, Version A/B is spot-the-change, who-says offers faces, and the engine's feedback shows a picture — all of which need the same character and the same object to be recognisably identical across frames. Identity-by-one-fixed-marker is what makes that checkable (and what a generator is worst at; Book 1's C-11 is the record of that).

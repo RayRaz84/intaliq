@@ -4,22 +4,23 @@
   "source_manifest": "source/cast-and-art/art_manifest_unit2.json",
   "style_authority": {
     "owner_direction": "Switch Unit 2 illustration production to the richer full-colour cartoon style from the shared ChatGPT image set titled Four Friends and the Golden Keys.",
-    "style_note": "art-production/RICH_CARTOON_STYLE_SWITCH_2026-10-10.md",
+    "style_note": "source/cast-and-art/UNIT2_RICH_STYLE_AUTHORITY.md",
+    "recorded_ruling": "SC-113",
     "style_refs": [
       {
-        "file": "reference/style-rich-cartoon/four-friends-golden-keys-01.png",
+        "file": "source/cast-and-art/references/rich-cartoon/four-friends-golden-keys-01.png",
         "sha256": "fb461e0667967d641fab659313908bd674521ae6e571bcc513a29a025a46cf3b"
       },
       {
-        "file": "reference/style-rich-cartoon/four-friends-golden-keys-02.png",
+        "file": "source/cast-and-art/references/rich-cartoon/four-friends-golden-keys-02.png",
         "sha256": "b0c6950ff5cabf2e40bb6ddde18804e8eb28db3934d3c67948d53e0bdbbd51b4"
       },
       {
-        "file": "reference/style-rich-cartoon/four-friends-golden-keys-03.png",
+        "file": "source/cast-and-art/references/rich-cartoon/four-friends-golden-keys-03.png",
         "sha256": "1ee368c5e84f108687adbd7b271f1bbffe36c438e576e218ef82b43cfb8ee60f"
       },
       {
-        "file": "reference/style-rich-cartoon/four-friends-golden-keys-04.png",
+        "file": "source/cast-and-art/references/rich-cartoon/four-friends-golden-keys-04.png",
         "sha256": "62fc389a72b0557cd921ac355b88247979d60c1c932ee3b2a33965795d334709"
       }
     ]
@@ -79,17 +80,33 @@
       "show": "كَرِيم's hand placing the key into the (closed-flap) bag; a small \"?\" is not drawn — the question is in the text",
       "must_not_show": "the bag's interior",
       "risks": "keep the bag flap up so the interior stays unseen",
-      "delivered": "assets/art/unit2-rich/u2-s1-3.png",
+      "delivered": "assets/art/unit2-rich/u2-s1-3-v43.png",
       "accepted": {
-        "file": "unit2/u2-s1-3.png",
-        "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-3.png",
-        "site_path": "assets/art/unit2-rich/u2-s1-3.png",
-        "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-3/attempt-1/u2-s1-3-rich-cartoon-raw.png",
-        "sha256": "6f336cdda0b6c006913269a58750ad873db2cb5f1fe5b725c2b0bf1507ad59cb",
+        "file": "unit2/u2-s1-3-v43.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-3-v43.png",
+        "site_path": "assets/art/unit2-rich/u2-s1-3-v43.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-3/v43/u2-s1-3.png",
+        "sha256": "7132d8fb0046bcb94ca510ee0a0363c5264d9d7c10c2e8435c55da77cd531a19",
         "size": "1376x1143",
         "accepted_at": "2026-10-10",
-        "by": "Codex visual review after owner style switch"
-      }
+        "by": "Codex visual review after owner correction request",
+        "method": "built-in image_gen",
+        "prompt": "Use case: precise-object-edit. Edit ONLY the bag opening and hands in this INTALIQ Story1 frame3. Karim puts the gold key into his brown satchel, but the satchel INTERIOR MUST BE FULLY HIDDEN. Lower the opaque leather flap so it lies almost closed, with Karim's key hand sliding behind the flap at its top edge. Show the round key bow and a short bit of shank above that edge; everything behind/below the edge is occluded by the opaque flap. No open black/brown cavity, no visible contents, no lifted upright lid. Other hand rests lightly on exterior. Retain Karim's exact curls, blue top, identity, rich-cartoon rendering, white background and framing. No text, no added objects. One final PNG.",
+        "correction_reason": "Previous bag showed an open interior, contrary to Story1 spoiler rule."
+      },
+      "superseded": [
+        {
+          "file": "unit2/u2-s1-3.png",
+          "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-3.png",
+          "site_path": "assets/art/unit2-rich/u2-s1-3.png",
+          "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-3/attempt-1/u2-s1-3-rich-cartoon-raw.png",
+          "sha256": "6f336cdda0b6c006913269a58750ad873db2cb5f1fe5b725c2b0bf1507ad59cb",
+          "size": "1376x1143",
+          "accepted_at": "2026-10-10",
+          "by": "Codex visual review after owner style switch",
+          "reason": "Previous bag showed an open interior, contrary to Story1 spoiler rule."
+        }
+      ]
     },
     {
       "id": "u2-s1-4",
@@ -123,17 +140,33 @@
       "show": "كَرِيم at مَهَا's door with the key up; مَهَا (hair tie) in the doorway; beside her, on the floor line, a book with a key's bow peeping from under it",
       "must_not_show": "—",
       "risks": "مَهَا and the book must not overlap; the peeping key must be small but the same drawing; sensitivity: two children at a doorway, no touch, ordinary distance",
-      "delivered": "assets/art/unit2-rich/u2-s1-5.png",
+      "delivered": "assets/art/unit2-rich/u2-s1-5-v43.png",
       "accepted": {
-        "file": "unit2/u2-s1-5.png",
-        "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-5.png",
-        "site_path": "assets/art/unit2-rich/u2-s1-5.png",
-        "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-5/attempt-1/u2-s1-5-rich-cartoon-raw.png",
-        "sha256": "111803597b087cfeb791000df860e72b702f3df02fe61799373bd6d43f776c0d",
+        "file": "unit2/u2-s1-5-v43.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-5-v43.png",
+        "site_path": "assets/art/unit2-rich/u2-s1-5-v43.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-5/v43/u2-s1-5.png",
+        "sha256": "d1ff01c737bf747e22917b90bc421447cd54bd1967f59eea035f98fdf2640568",
         "size": "1376x1143",
         "accepted_at": "2026-10-10",
-        "by": "Codex visual review after owner style switch"
-      }
+        "by": "Codex visual review after owner correction request",
+        "method": "built-in image_gen",
+        "prompt": "Use case: precise-object-edit. Edit existing INTALIQ Story1 frame5 ONLY the book and key at lower right. Make the gold round key bow peep MUCH MORE visibly from under the blue hardback book: the bow must be a clear gold ring about 100 pixels wide in this 1376-pixel-wide scene, immediately left/front of book, while the straight shank and two teeth remain hidden under the book. The BOOK still sits ON TOP OF THE KEY. Keep the book physically on the step/floor next to Maha without overlapping her feet. Preserve both children, their identity hair clothing, distance, held-up found key, doorway, background and rich-cartoon style. This book/key relation must be readable in a 118x98 thumbnail. No text, no other changes, one PNG.",
+        "correction_reason": "Key bow under book enlarged for strip-size legibility; prior bow existed but was too small."
+      },
+      "superseded": [
+        {
+          "file": "unit2/u2-s1-5.png",
+          "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-5.png",
+          "site_path": "assets/art/unit2-rich/u2-s1-5.png",
+          "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-5/attempt-1/u2-s1-5-rich-cartoon-raw.png",
+          "sha256": "111803597b087cfeb791000df860e72b702f3df02fe61799373bd6d43f776c0d",
+          "size": "1376x1143",
+          "accepted_at": "2026-10-10",
+          "by": "Codex visual review after owner style switch",
+          "reason": "Key bow under book enlarged for strip-size legibility; prior bow existed but was too small."
+        }
+      ]
     },
     {
       "id": "u2-s1-6",
@@ -280,18 +313,34 @@
       "show": "رَزَان (sad variant) at her own house, door closed; her bag on her shoulder",
       "must_not_show": "خَدِيجَة",
       "risks": "the sad mouth line is the only expression change in the strip; nothing else \"sad\" (no rain, no tear)",
-      "delivered": "assets/art/unit2-rich/u2-s2-4.png",
+      "delivered": "assets/art/unit2-rich/u2-s2-4-v43.png",
       "accepted": {
-        "file": "unit2/u2-s2-4.png",
-        "path": "accepted-rich/unit2/assets/art/unit2/u2-s2-4.png",
-        "site_path": "assets/art/unit2-rich/u2-s2-4.png",
-        "source_candidate": "rich-cartoon-candidates/unit2/u2-s2-4/attempt-1/u2-s2-4-rich-cartoon-raw.png",
-        "sha256": "b5f1ed24d7d54ea892b9171809df107c053ffe5a60178691ce6ec7b10e128368",
+        "file": "unit2/u2-s2-4-v43.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s2-4-v43.png",
+        "site_path": "assets/art/unit2-rich/u2-s2-4-v43.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s2-4/v43/u2-s2-4.png",
+        "sha256": "3a043999cea8851a891bd225f567fda637a4fd9ad30aa9b4adb51a3801baf8f4",
         "size": "1374x1145",
         "accepted_at": "2026-10-10",
-        "by": "Codex visual review after owner style switch",
-        "prompt_record": "state/unit2-story2-prompts.json"
-      }
+        "by": "Codex visual review after owner correction request",
+        "method": "built-in image_gen",
+        "prompt": "Use case: precise-object-edit. Edit this existing INTALIQ Story2 frame4. Change ONLY Razan's mouth: make a clearly downturned inverted-U frown, with both corners low and center noticeably higher. It MUST read as SAD at 118x98 display, not neutral or thoughtful. Mouth is the sole expression change: retain eyes, eyebrows, face angle, low side hair bundles, teal top, brown satchel, body position, closed green door, light dry ground, composition and rich-cartoon style exactly. No tears, rain, other girl, photo, extra objects or text. Single PNG.",
+        "correction_reason": "Sadness was too close to neutral at strip size; downturned mouth now explicit."
+      },
+      "superseded": [
+        {
+          "file": "unit2/u2-s2-4.png",
+          "path": "accepted-rich/unit2/assets/art/unit2/u2-s2-4.png",
+          "site_path": "assets/art/unit2-rich/u2-s2-4.png",
+          "source_candidate": "rich-cartoon-candidates/unit2/u2-s2-4/attempt-1/u2-s2-4-rich-cartoon-raw.png",
+          "sha256": "b5f1ed24d7d54ea892b9171809df107c053ffe5a60178691ce6ec7b10e128368",
+          "size": "1374x1145",
+          "accepted_at": "2026-10-10",
+          "by": "Codex visual review after owner style switch",
+          "prompt_record": "state/unit2-story2-prompts.json",
+          "reason": "Sadness was too close to neutral at strip size; downturned mouth now explicit."
+        }
+      ]
     },
     {
       "id": "u2-s2-5",
@@ -346,17 +395,52 @@
       "story": "Version A of Story 1 (S11 spot-the-change)",
       "show": "identical to u2-s1-2 except: the key is UNDER a book on the ground, not bare on it",
       "must_not_show": "any other change",
-      "delivered": "assets/art/unit2-rich/u2-va-2.png",
+      "delivered": "assets/art/unit2-rich/u2-va-2-v43.png",
       "accepted": {
-        "file": "unit2/u2-va-2.png",
-        "path": "accepted-rich/unit2/assets/art/unit2/u2-va-2.png",
-        "site_path": "assets/art/unit2-rich/u2-va-2.png",
-        "source_candidate": "rich-cartoon-candidates/unit2/u2-va-2/attempt-1/u2-va-2-rich-cartoon-raw.png",
-        "sha256": "de8e33fa3f028b6b52fa3d97f1e4db01f05c5476047ec59c3b80976118f5a649",
+        "file": "unit2/u2-va-2-v43.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-va-2-v43.png",
+        "site_path": "assets/art/unit2-rich/u2-va-2-v43.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-va-2/v43/u2-va-2.png",
+        "sha256": "122092a351aa2349b404055a6f5d3c9f877c13fbb936c1f0ec3045d8560c4949",
         "size": "1376x1143",
         "accepted_at": "2026-10-10",
-        "by": "Codex visual review after owner style switch",
-        "prompt_record": "state/unit2-version-a-prompts.json"
+        "by": "Codex visual review after owner correction request",
+        "method": "owner-authorized Version A-only targeted compositing",
+        "prompt": "Add generated blue book only; preserve all outside pixels and original scene/cat.",
+        "correction_reason": "Replace independently regenerated variant with pixel-locked Story 1 derivation, owner-authorized SC-115."
+      },
+      "superseded": [
+        {
+          "file": "unit2/u2-va-2.png",
+          "path": "accepted-rich/unit2/assets/art/unit2/u2-va-2.png",
+          "site_path": "assets/art/unit2-rich/u2-va-2.png",
+          "source_candidate": "rich-cartoon-candidates/unit2/u2-va-2/attempt-1/u2-va-2-rich-cartoon-raw.png",
+          "sha256": "de8e33fa3f028b6b52fa3d97f1e4db01f05c5476047ec59c3b80976118f5a649",
+          "size": "1376x1143",
+          "accepted_at": "2026-10-10",
+          "by": "Codex visual review after owner style switch",
+          "prompt_record": "state/unit2-version-a-prompts.json",
+          "reason": "Replace independently regenerated variant with pixel-locked Story 1 derivation, owner-authorized SC-115."
+        }
+      ],
+      "derivation": {
+        "source_slot": "u2-s1-2",
+        "changed_rect": [
+          815,
+          931,
+          220,
+          110
+        ],
+        "source_sha256": "87c22cb4c317726453e9fd8ab13566e8c19cfeb23818a00f43128810169acd5e",
+        "generated_book_sha256": "5bab50d48376a6c2d19fb67590f221fda7d98c0db2d2694cb36f1ba62d311c66",
+        "authorization": "Owner explicit Version A-only targeted compositing approval; SC-115",
+        "method": "Localized alpha composite of generated book; original cat pixels re-layered in frame 7",
+        "changed_bbox": [
+          815,
+          937,
+          985,
+          1039
+        ]
       }
     },
     {
@@ -366,17 +450,52 @@
       "story": "Version A of Story 1",
       "show": "identical to u2-s1-7 except: the cat sits ON that book",
       "must_not_show": "any other change",
-      "delivered": "assets/art/unit2-rich/u2-va-7.png",
+      "delivered": "assets/art/unit2-rich/u2-va-7-v43.png",
       "accepted": {
-        "file": "unit2/u2-va-7.png",
-        "path": "accepted-rich/unit2/assets/art/unit2/u2-va-7.png",
-        "site_path": "assets/art/unit2-rich/u2-va-7.png",
-        "source_candidate": "rich-cartoon-candidates/unit2/u2-va-7/attempt-1/u2-va-7-rich-cartoon-raw.png",
-        "sha256": "7dd4805453cf90c6de60399d9c9bc72ca476b78322675c7be06cfb165826ffbc",
+        "file": "unit2/u2-va-7-v43.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-va-7-v43.png",
+        "site_path": "assets/art/unit2-rich/u2-va-7-v43.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-va-7/v43/u2-va-7.png",
+        "sha256": "cec16729266ee759b5ad41250363a37c9df387ceb3967527656e0ee69b9a0b6d",
         "size": "1448x1086",
         "accepted_at": "2026-10-10",
-        "by": "Codex visual review after owner style switch",
-        "prompt_record": "state/unit2-version-a-prompts.json"
+        "by": "Codex visual review after owner correction request",
+        "method": "owner-authorized Version A-only targeted compositing",
+        "prompt": "Add generated blue book only; preserve all outside pixels and original scene/cat.",
+        "correction_reason": "Replace independently regenerated variant with pixel-locked Story 1 derivation, owner-authorized SC-115."
+      },
+      "superseded": [
+        {
+          "file": "unit2/u2-va-7.png",
+          "path": "accepted-rich/unit2/assets/art/unit2/u2-va-7.png",
+          "site_path": "assets/art/unit2-rich/u2-va-7.png",
+          "source_candidate": "rich-cartoon-candidates/unit2/u2-va-7/attempt-1/u2-va-7-rich-cartoon-raw.png",
+          "sha256": "7dd4805453cf90c6de60399d9c9bc72ca476b78322675c7be06cfb165826ffbc",
+          "size": "1448x1086",
+          "accepted_at": "2026-10-10",
+          "by": "Codex visual review after owner style switch",
+          "prompt_record": "state/unit2-version-a-prompts.json",
+          "reason": "Replace independently regenerated variant with pixel-locked Story 1 derivation, owner-authorized SC-115."
+        }
+      ],
+      "derivation": {
+        "source_slot": "u2-s1-7",
+        "changed_rect": [
+          1074,
+          757,
+          230,
+          86
+        ],
+        "source_sha256": "9d60f165fcbf5a4454ae4cb9f7ac074177889d34e759846acce91e15049c1619",
+        "generated_book_sha256": "5bab50d48376a6c2d19fb67590f221fda7d98c0db2d2694cb36f1ba62d311c66",
+        "authorization": "Owner explicit Version A-only targeted compositing approval; SC-115",
+        "method": "Localized alpha composite of generated book; original cat pixels re-layered in frame 7",
+        "changed_bbox": [
+          1076,
+          775,
+          1304,
+          843
+        ]
       }
     },
     {

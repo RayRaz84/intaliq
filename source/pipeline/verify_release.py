@@ -15,12 +15,12 @@ expected_version = sys.argv[2] if len(sys.argv) > 2 else None
 out = deploy.parent / "verify_shots"; out.mkdir(exist_ok=True)
 
 # --- serve the folder like Pages (relative asset paths resolve the same way)
-PORT = 8765
+PORT = int(os.environ.get('INTALIQ_VERIFY_PORT', '8765'))
 handler = functools.partial(http.server.SimpleHTTPRequestHandler, directory=str(deploy))
 class Q(socketserver.TCPServer): allow_reuse_address = True
 srv = Q(("127.0.0.1", PORT), handler)
 threading.Thread(target=srv.serve_forever, daemon=True).start()
-base = f"http://127.0.0.1:{PORT}/"
+base = f"http://127.0.0.1:{srv.server_address[1]}/"
 
 html = (deploy / "index.html").read_text(encoding="utf-8")
 routes = [""] + re.findall(r"'([a-z0-9\-/]+)':'v-", html)
@@ -29,7 +29,7 @@ routes = list(dict.fromkeys(routes))
 blockers, warnings, rows = [], [], []
 
 with sync_playwright() as p:
-    b = p.chromium.launch()
+    b = p.chromium.launch(channel=os.environ.get('INTALIQ_BROWSER_CHANNEL') or None)
     pg = b.new_page(viewport={"width": 1180, "height": 900})
     console, failed, external = [], [], []
     pg.on("console", lambda m: console.append((m.type, m.text)) if m.type in ("error", "warning") else None)
