@@ -1,0 +1,1406 @@
+{
+  "unit": "unit-02",
+  "style": "rich-cartoon",
+  "source_manifest": "source/cast-and-art/art_manifest_unit2.json",
+  "style_authority": {
+    "owner_direction": "Switch Unit 2 illustration production to the richer full-colour cartoon style from the shared ChatGPT image set titled Four Friends and the Golden Keys.",
+    "style_note": "art-production/RICH_CARTOON_STYLE_SWITCH_2026-10-10.md",
+    "style_refs": [
+      {
+        "file": "reference/style-rich-cartoon/four-friends-golden-keys-01.png",
+        "sha256": "fb461e0667967d641fab659313908bd674521ae6e571bcc513a29a025a46cf3b"
+      },
+      {
+        "file": "reference/style-rich-cartoon/four-friends-golden-keys-02.png",
+        "sha256": "b0c6950ff5cabf2e40bb6ddde18804e8eb28db3934d3c67948d53e0bdbbd51b4"
+      },
+      {
+        "file": "reference/style-rich-cartoon/four-friends-golden-keys-03.png",
+        "sha256": "1ee368c5e84f108687adbd7b271f1bbffe36c438e576e218ef82b43cfb8ee60f"
+      },
+      {
+        "file": "reference/style-rich-cartoon/four-friends-golden-keys-04.png",
+        "sha256": "62fc389a72b0557cd921ac355b88247979d60c1c932ee3b2a33965795d334709"
+      }
+    ]
+  },
+  "slots": [
+    {
+      "id": "u2-s1-1",
+      "file": "unit2/u2-s1-1.png",
+      "kind": "frame",
+      "story": "«أَيْنَ مِفْتَاحِي؟»",
+      "paragraphs": "0",
+      "event": "كَرِيم has a big bag; in it a book, a pen and the house key",
+      "show": "كَرِيم (neutral), the big bag open, book, pen and key visible inside it",
+      "must_not_show": "—",
+      "risks": "three objects in the bag must read as three distinct icons; nothing else in frame",
+      "delivered": "assets/art/unit2-rich/u2-s1-1.png",
+      "accepted": {
+        "file": "unit2/u2-s1-1.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-1.png",
+        "site_path": "assets/art/unit2-rich/u2-s1-1.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-1/attempt-1/u2-s1-1-rich-cartoon-raw.png",
+        "sha256": "3dbe7e6a116419a831dd3390f1d69dc9aac993905c9dfffe45c6f9eeb3dbf71e",
+        "size": "1377x1142",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch"
+      }
+    },
+    {
+      "id": "u2-s1-2",
+      "file": "unit2/u2-s1-2.png",
+      "kind": "frame",
+      "story": "«أَيْنَ مِفْتَاحِي؟»",
+      "paragraphs": "1–3",
+      "event": "On the way home he sees a key on the ground",
+      "show": "كَرِيم (questioning) walking, the bag closed on his shoulder; a key on the floor line ahead of him; a house with a door far right",
+      "must_not_show": "the bag's contents",
+      "risks": "the key on the ground must be the same drawing as frame 1's key — deliberately",
+      "delivered": "assets/art/unit2-rich/u2-s1-2.png",
+      "accepted": {
+        "file": "unit2/u2-s1-2.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-2.png",
+        "site_path": "assets/art/unit2-rich/u2-s1-2.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-2/attempt-1/u2-s1-2-rich-cartoon-raw.png",
+        "sha256": "87c22cb4c317726453e9fd8ab13566e8c19cfeb23818a00f43128810169acd5e",
+        "size": "1376x1143",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch"
+      }
+    },
+    {
+      "id": "u2-s1-3",
+      "file": "unit2/u2-s1-3.png",
+      "kind": "frame",
+      "story": "«أَيْنَ مِفْتَاحِي؟»",
+      "paragraphs": "4",
+      "event": "He puts the key in his bag and decides to ask زَيْد",
+      "show": "كَرِيم's hand placing the key into the (closed-flap) bag; a small \"?\" is not drawn — the question is in the text",
+      "must_not_show": "the bag's interior",
+      "risks": "keep the bag flap up so the interior stays unseen",
+      "delivered": "assets/art/unit2-rich/u2-s1-3.png",
+      "accepted": {
+        "file": "unit2/u2-s1-3.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-3.png",
+        "site_path": "assets/art/unit2-rich/u2-s1-3.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-3/attempt-1/u2-s1-3-rich-cartoon-raw.png",
+        "sha256": "6f336cdda0b6c006913269a58750ad873db2cb5f1fe5b725c2b0bf1507ad59cb",
+        "size": "1376x1143",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch"
+      }
+    },
+    {
+      "id": "u2-s1-4",
+      "file": "unit2/u2-s1-4.png",
+      "kind": "frame",
+      "story": "«أَيْنَ مِفْتَاحِي؟»",
+      "paragraphs": "5–6",
+      "event": "زَيْد, at his door: no, my key is in my bag",
+      "show": "كَرِيم holding up the key at زَيْد's door; زَيْد (flat cap) in the doorway with his small bag on his shoulder, patting it",
+      "must_not_show": "—",
+      "risks": "two bags in frame: كَرِيم's big, زَيْد's small; the key is in كَرِيم's hand, not زَيْد's",
+      "delivered": "assets/art/unit2-rich/u2-s1-4.png",
+      "accepted": {
+        "file": "unit2/u2-s1-4.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-4.png",
+        "site_path": "assets/art/unit2-rich/u2-s1-4.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-4/attempt-1/u2-s1-4-rich-cartoon-raw.png",
+        "sha256": "4423060dfd323d2ae76d462d6452ba087f5cf3b7f2a0a461c64dc314b1ce07c5",
+        "size": "1376x1143",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch"
+      }
+    },
+    {
+      "id": "u2-s1-5",
+      "file": "unit2/u2-s1-5.png",
+      "kind": "frame",
+      "story": "«أَيْنَ مِفْتَاحِي؟»",
+      "paragraphs": "7–8",
+      "event": "مَهَا: my key is under the book",
+      "show": "كَرِيم at مَهَا's door with the key up; مَهَا (hair tie) in the doorway; beside her, on the floor line, a book with a key's bow peeping from under it",
+      "must_not_show": "—",
+      "risks": "مَهَا and the book must not overlap; the peeping key must be small but the same drawing; sensitivity: two children at a doorway, no touch, ordinary distance",
+      "delivered": "assets/art/unit2-rich/u2-s1-5.png",
+      "accepted": {
+        "file": "unit2/u2-s1-5.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-5.png",
+        "site_path": "assets/art/unit2-rich/u2-s1-5.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-5/attempt-1/u2-s1-5-rich-cartoon-raw.png",
+        "sha256": "111803597b087cfeb791000df860e72b702f3df02fe61799373bd6d43f776c0d",
+        "size": "1376x1143",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch"
+      }
+    },
+    {
+      "id": "u2-s1-6",
+      "file": "unit2/u2-s1-6.png",
+      "kind": "frame",
+      "story": "«أَيْنَ مِفْتَاحِي؟»",
+      "paragraphs": "9–11",
+      "event": "عُمَر: my key is on the door — and you?",
+      "show": "كَرِيم at عُمَر's door; عُمَر (spikes, happy) pointing at a key hanging on the door; كَرِيم pointing at his own bag",
+      "must_not_show": "—",
+      "risks": "three keys exist in the story by now (found, عُمَر's, كَرِيم's-in-bag): only two in frame — كَرِيم's hand and the door",
+      "delivered": "assets/art/unit2-rich/u2-s1-6.png",
+      "accepted": {
+        "file": "unit2/u2-s1-6.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-6.png",
+        "site_path": "assets/art/unit2-rich/u2-s1-6.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-6/attempt-1/u2-s1-6-rich-cartoon-raw.png",
+        "sha256": "226604acdb637aea6c9052f64e43e831d1b2b9564435292225af25488c54fea5",
+        "size": "1448x1086",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch"
+      }
+    },
+    {
+      "id": "u2-s1-7",
+      "file": "unit2/u2-s1-7.png",
+      "kind": "frame",
+      "story": "«أَيْنَ مِفْتَاحِي؟»",
+      "paragraphs": "12–15",
+      "event": "كَرِيم comes home; a cat at the door",
+      "show": "كَرِيم walking toward his own house (same house as frame 2); the cat sitting upright at the door, neutral, looking at nothing",
+      "must_not_show": "any hint that the cat knows: no cat looking at the key, no cat looking at the bag, no cat mouth open",
+      "risks": "the cat's marker must be legible at strip size (ears + tail)",
+      "delivered": "assets/art/unit2-rich/u2-s1-7.png",
+      "accepted": {
+        "file": "unit2/u2-s1-7.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-7.png",
+        "site_path": "assets/art/unit2-rich/u2-s1-7.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-7/attempt-1/u2-s1-7-rich-cartoon-raw.png",
+        "sha256": "9d60f165fcbf5a4454ae4cb9f7ac074177889d34e759846acce91e15049c1619",
+        "size": "1448x1086",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch"
+      }
+    },
+    {
+      "id": "u2-s1-8",
+      "file": "unit2/u2-s1-8.png",
+      "kind": "frame",
+      "story": "«أَيْنَ مِفْتَاحِي؟»",
+      "paragraphs": "16–21",
+      "event": "The reveal: the bag holds book and pen but no key; the key in his hand is his own; he laughs; both go in",
+      "show": "كَرِيم (laughing) with the bag open showing book and pen only, the key in his other hand; the cat (`-talk`) beside him; the door ajar",
+      "must_not_show": "—",
+      "risks": "the open bag must clearly show *two* objects where frame 1 showed three — that gap is the whole reveal; nothing else in frame",
+      "delivered": "assets/art/unit2-rich/u2-s1-8.png",
+      "accepted": {
+        "file": "unit2/u2-s1-8.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s1-8.png",
+        "site_path": "assets/art/unit2-rich/u2-s1-8.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s1-8/attempt-1/u2-s1-8-rich-cartoon-raw.png",
+        "sha256": "d868fd28aeb74a7442a3dbd1d4913f6b2881eeb9fb3705e885c57866703ddf4b",
+        "size": "1448x1086",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch"
+      }
+    },
+    {
+      "id": "u2-s2-1",
+      "file": "unit2/u2-s2-1.png",
+      "kind": "frame",
+      "story": "«صُورَةُ رَزَان وَخَدِيجَة»",
+      "paragraphs": "0–3",
+      "event": "رَزَان has a picture of herself and خَدِيجَة; puts it in her bag; sets off",
+      "show": "رَزَان (happy) holding `obj-photo` (its two tiny figures: bundles + two plaits), her bag open beside her",
+      "must_not_show": "خَدِيجَة herself",
+      "risks": "the photo's tiny figures must read as the two girls at strip size — bundles and two plaits only, no faces",
+      "delivered": "assets/art/unit2-rich/u2-s2-1.png",
+      "accepted": {
+        "file": "unit2/u2-s2-1.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s2-1.png",
+        "site_path": "assets/art/unit2-rich/u2-s2-1.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s2-1/attempt-1/u2-s2-1-rich-cartoon-raw.png",
+        "sha256": "0b8a1179a4aabdef789b6e396123abdb846d8c8f45842450cff091bdfa6d08f8",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/unit2-story2-prompts.json"
+      }
+    },
+    {
+      "id": "u2-s2-2",
+      "file": "unit2/u2-s2-2.png",
+      "kind": "frame",
+      "story": "«صُورَةُ رَزَان وَخَدِيجَة»",
+      "paragraphs": "4–5",
+      "event": "At خَدِيجَة's house — calls — خَدِيجَة isn't there",
+      "show": "رَزَان (talking) at a house with the door closed; nothing else",
+      "must_not_show": "خَدِيجَة anywhere; the photo",
+      "risks": "a closed door must read as \"nobody\" — no window, no second figure",
+      "delivered": "assets/art/unit2-rich/u2-s2-2.png",
+      "accepted": {
+        "file": "unit2/u2-s2-2.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s2-2.png",
+        "site_path": "assets/art/unit2-rich/u2-s2-2.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s2-2/attempt-1/u2-s2-2-rich-cartoon-raw.png",
+        "sha256": "a60b5a963e33b64e9804eb4ac245546335a09708344aa556427975c9f28eefd2",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/unit2-story2-prompts.json"
+      }
+    },
+    {
+      "id": "u2-s2-3",
+      "file": "unit2/u2-s2-3.png",
+      "kind": "frame",
+      "story": "«صُورَةُ رَزَان وَخَدِيجَة»",
+      "paragraphs": "6–7",
+      "event": "رَنَا: خَدِيجَة went to your house",
+      "show": "رَنَا (bob, talking) pointing back along the floor line the way رَزَان came; رَزَان (questioning)",
+      "must_not_show": "خَدِيجَة",
+      "risks": "رَنَا's pointing arm must point away from خَدِيجَة's house, toward رَزَان's",
+      "delivered": "assets/art/unit2-rich/u2-s2-3.png",
+      "accepted": {
+        "file": "unit2/u2-s2-3.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s2-3.png",
+        "site_path": "assets/art/unit2-rich/u2-s2-3.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s2-3/attempt-1/u2-s2-3-rich-cartoon-raw.png",
+        "sha256": "8bf75ee850f56ff4033a687804008f5a6b479135d7f87e1b6bab40501aa0274f",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/unit2-story2-prompts.json"
+      }
+    },
+    {
+      "id": "u2-s2-4",
+      "file": "unit2/u2-s2-4.png",
+      "kind": "frame",
+      "story": "«صُورَةُ رَزَان وَخَدِيجَة»",
+      "paragraphs": "8–10",
+      "event": "Back home — not here either — رَزَان is sad",
+      "show": "رَزَان (sad variant) at her own house, door closed; her bag on her shoulder",
+      "must_not_show": "خَدِيجَة",
+      "risks": "the sad mouth line is the only expression change in the strip; nothing else \"sad\" (no rain, no tear)",
+      "delivered": "assets/art/unit2-rich/u2-s2-4.png",
+      "accepted": {
+        "file": "unit2/u2-s2-4.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s2-4.png",
+        "site_path": "assets/art/unit2-rich/u2-s2-4.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s2-4/attempt-1/u2-s2-4-rich-cartoon-raw.png",
+        "sha256": "b5f1ed24d7d54ea892b9171809df107c053ffe5a60178691ce6ec7b10e128368",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/unit2-story2-prompts.json"
+      }
+    },
+    {
+      "id": "u2-s2-5",
+      "file": "unit2/u2-s2-5.png",
+      "kind": "frame",
+      "story": "«صُورَةُ رَزَان وَخَدِيجَة»",
+      "paragraphs": "11–14",
+      "event": "Back at خَدِيجَة's house — خَدِيجَة is there — رَزَان gives her the picture",
+      "show": "خَدِيجَة (happy) at her open door; رَزَان (happy) holding out `obj-photo`",
+      "must_not_show": "خَدِيجَة's own picture — خَدِيجَة's hands are empty or one hand on the doorframe",
+      "risks": "two identical-marker-bearing girls plus a photo of them: keep the photo small and held out between them",
+      "delivered": "assets/art/unit2-rich/u2-s2-5.png",
+      "accepted": {
+        "file": "unit2/u2-s2-5.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s2-5.png",
+        "site_path": "assets/art/unit2-rich/u2-s2-5.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s2-5/attempt-2/u2-s2-5-rich-cartoon-raw.png",
+        "sha256": "a19894c5a69a4d07300789f9cef71c53b86e9d21a8be5d33ad0ccf56317d706a",
+        "size": "1536x1024",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/unit2-story2-prompts.json"
+      }
+    },
+    {
+      "id": "u2-s2-6",
+      "file": "unit2/u2-s2-6.png",
+      "kind": "frame",
+      "story": "«صُورَةُ رَزَان وَخَدِيجَة»",
+      "paragraphs": "15–19",
+      "event": "خَدِيجَة gives her one too — the same picture — both laugh",
+      "show": "Both girls (happy), each holding a `obj-photo` identical to the other's, held up side by side",
+      "must_not_show": "—",
+      "risks": "the two photos must be the same drawing, same size — the joke is identity; no hearts, no hug (SC-027): they stand apart, each holding a picture",
+      "delivered": "assets/art/unit2-rich/u2-s2-6.png",
+      "accepted": {
+        "file": "unit2/u2-s2-6.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-s2-6.png",
+        "site_path": "assets/art/unit2-rich/u2-s2-6.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-s2-6/attempt-1/u2-s2-6-rich-cartoon-raw.png",
+        "sha256": "e1f8613a02a84ddf90435cea0cdb25a73bfcd55757638666a10f435e1176e87f",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/unit2-story2-prompts.json"
+      }
+    },
+    {
+      "id": "u2-va-2",
+      "file": "unit2/u2-va-2.png",
+      "kind": "frame",
+      "story": "Version A of Story 1 (S11 spot-the-change)",
+      "show": "identical to u2-s1-2 except: the key is UNDER a book on the ground, not bare on it",
+      "must_not_show": "any other change",
+      "delivered": "assets/art/unit2-rich/u2-va-2.png",
+      "accepted": {
+        "file": "unit2/u2-va-2.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-va-2.png",
+        "site_path": "assets/art/unit2-rich/u2-va-2.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-va-2/attempt-1/u2-va-2-rich-cartoon-raw.png",
+        "sha256": "de8e33fa3f028b6b52fa3d97f1e4db01f05c5476047ec59c3b80976118f5a649",
+        "size": "1376x1143",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/unit2-version-a-prompts.json"
+      }
+    },
+    {
+      "id": "u2-va-7",
+      "file": "unit2/u2-va-7.png",
+      "kind": "frame",
+      "story": "Version A of Story 1",
+      "show": "identical to u2-s1-7 except: the cat sits ON that book",
+      "must_not_show": "any other change",
+      "delivered": "assets/art/unit2-rich/u2-va-7.png",
+      "accepted": {
+        "file": "unit2/u2-va-7.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-va-7.png",
+        "site_path": "assets/art/unit2-rich/u2-va-7.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-va-7/attempt-1/u2-va-7-rich-cartoon-raw.png",
+        "sha256": "7dd4805453cf90c6de60399d9c9bc72ca476b78322675c7be06cfb165826ffbc",
+        "size": "1448x1086",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/unit2-version-a-prompts.json"
+      }
+    },
+    {
+      "id": "u2-vb-1",
+      "file": "unit2/u2-vb-1.png",
+      "kind": "frame",
+      "story": "Version B (parallel to Story 1 in Story 2's cast)",
+      "show": "رَزَان (questioning) sees a pen on the ground; floor line; nothing else",
+      "must_not_show": "the key; the photo; hearts; any face on the bird beyond two dots",
+      "delivered": "assets/art/unit2-rich/u2-vb-1.png",
+      "accepted": {
+        "file": "unit2/u2-vb-1.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-vb-1.png",
+        "site_path": "assets/art/unit2-rich/u2-vb-1.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-vb-1/attempt-1/u2-vb-1-rich-cartoon-raw.png",
+        "sha256": "7ab8eabdc6f1e74e80733567fba6a1274820d6c5a3f1543c717eb6a9fad4ad3d",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-vb-1-prompt.json"
+      }
+    },
+    {
+      "id": "u2-vb-2",
+      "file": "unit2/u2-vb-2.png",
+      "kind": "frame",
+      "story": "Version B (parallel to Story 1 in Story 2's cast)",
+      "show": "رَزَان at خَدِيجَة's door holding up the pen; خَدِيجَة (two plaits) in the doorway",
+      "must_not_show": "the key; the photo; hearts; any face on the bird beyond two dots",
+      "delivered": "assets/art/unit2-rich/u2-vb-2.png",
+      "accepted": {
+        "file": "unit2/u2-vb-2.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-vb-2.png",
+        "site_path": "assets/art/unit2-rich/u2-vb-2.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-vb-2/attempt-1/u2-vb-2-rich-cartoon-raw.png",
+        "sha256": "ec15e1f11296a0aa726c39db0a414721e598d075a15bb82cc1895993b5fa099f",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-vb-2-prompt.json"
+      }
+    },
+    {
+      "id": "u2-vb-3",
+      "file": "unit2/u2-vb-3.png",
+      "kind": "frame",
+      "story": "Version B (parallel to Story 1 in Story 2's cast)",
+      "show": "رَزَان at رَنَا's door holding up the pen; رَنَا (bob) in the doorway",
+      "must_not_show": "the key; the photo; hearts; any face on the bird beyond two dots",
+      "delivered": "assets/art/unit2-rich/u2-vb-3.png",
+      "accepted": {
+        "file": "unit2/u2-vb-3.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-vb-3.png",
+        "site_path": "assets/art/unit2-rich/u2-vb-3.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-vb-3/attempt-1/u2-vb-3-rich-cartoon-raw.png",
+        "sha256": "463d90176998613d7cda59e35a52f9212bead872e240714361e1a9e678e94f62",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-vb-3-prompt.json"
+      }
+    },
+    {
+      "id": "u2-vb-4",
+      "file": "unit2/u2-vb-4.png",
+      "kind": "frame",
+      "story": "Version B (parallel to Story 1 in Story 2's cast)",
+      "show": "رَزَان at عُمَر's door holding up the pen; عُمَر (spikes) in the doorway",
+      "must_not_show": "the key; the photo; hearts; any face on the bird beyond two dots",
+      "delivered": "assets/art/unit2-rich/u2-vb-4.png",
+      "accepted": {
+        "file": "unit2/u2-vb-4.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-vb-4.png",
+        "site_path": "assets/art/unit2-rich/u2-vb-4.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-vb-4/attempt-1/u2-vb-4-rich-cartoon-raw.png",
+        "sha256": "32031339edf3734fefb8e362b12b75e423e74a2783d7587a40d4aa28e1568c78",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-vb-4-prompt.json"
+      }
+    },
+    {
+      "id": "u2-vb-5",
+      "file": "unit2/u2-vb-5.png",
+      "kind": "frame",
+      "story": "Version B (parallel to Story 1 in Story 2's cast)",
+      "show": "رَزَان walking home; a bird sitting on the door (two dots, no nose, short tail fan)",
+      "must_not_show": "the key; the photo; hearts; any face on the bird beyond two dots",
+      "delivered": "assets/art/unit2-rich/u2-vb-5.png",
+      "accepted": {
+        "file": "unit2/u2-vb-5.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-vb-5.png",
+        "site_path": "assets/art/unit2-rich/u2-vb-5.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-vb-5/attempt-1/u2-vb-5-rich-cartoon-raw.png",
+        "sha256": "2a5950bd94a18f7ae69773de250934880107bff32d3398d5d7c603cecd45019f",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-vb-5-prompt.json"
+      }
+    },
+    {
+      "id": "u2-vb-6",
+      "file": "unit2/u2-vb-6.png",
+      "kind": "frame",
+      "story": "Version B (parallel to Story 1 in Story 2's cast)",
+      "show": "رَزَان (happy/laughing) at her door, pen in hand; the bird still on the door",
+      "must_not_show": "the key; the photo; hearts; any face on the bird beyond two dots",
+      "delivered": "assets/art/unit2-rich/u2-vb-6.png",
+      "accepted": {
+        "file": "unit2/u2-vb-6.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-vb-6.png",
+        "site_path": "assets/art/unit2-rich/u2-vb-6.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-vb-6/attempt-2/u2-vb-6-rich-cartoon-raw.png",
+        "sha256": "ef72294008663f6a6dc094d5726b3f3257091ffa170393d34ceb24fe0f93967c",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-vb-6-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-01",
+      "file": "unit2/u2-ph-01.png",
+      "kind": "phrase",
+      "phrase": "أَيْنَ الْمِفْتَاحُ؟",
+      "show": "كَرِيم (questioning), empty hands up; no key anywhere",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-01.png",
+      "accepted": {
+        "file": "unit2/u2-ph-01.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-01.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-01.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-01/attempt-1/u2-ph-01-rich-cartoon-raw.png",
+        "sha256": "0314a65e0c9e70955c629103b884d978e6a678e1e6f116e4de82914e7ba0c84d",
+        "size": "1367x1150",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-01-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-02",
+      "file": "unit2/u2-ph-02.png",
+      "kind": "phrase",
+      "phrase": "فِي الْحَقِيبَةِ",
+      "show": "the bag open, the key inside",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-02.png",
+      "accepted": {
+        "file": "unit2/u2-ph-02.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-02.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-02.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-02/attempt-1/u2-ph-02-rich-cartoon-raw.png",
+        "sha256": "814271da63ab6447ecad5529b500ca71fd879f213ea95e3eb43b2489f429cd0b",
+        "size": "1367x1151",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-02-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-03",
+      "file": "unit2/u2-ph-03.png",
+      "kind": "phrase",
+      "phrase": "عَلَى الْبَابِ",
+      "show": "the door with the key hanging on it",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-03.png",
+      "accepted": {
+        "file": "unit2/u2-ph-03.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-03.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-03.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-03/attempt-1/u2-ph-03-rich-cartoon-raw.png",
+        "sha256": "48503eca43beb8aa8af51d982bd469413b15aa61e45c9f54e2e22ecfeeee2940",
+        "size": "1366x1152",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-03-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-04",
+      "file": "unit2/u2-ph-04.png",
+      "kind": "phrase",
+      "phrase": "تَحْتَ الْكِتَابِ",
+      "show": "the book on the floor line, the key's bow peeping from under it",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-04.png",
+      "accepted": {
+        "file": "unit2/u2-ph-04.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-04.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-04.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-04/attempt-1/u2-ph-04-rich-cartoon-raw.png",
+        "sha256": "fd1a0eec157902ba16901ca5d616ce03ceb525d5f4e8d3fcf8c61ad2e18d7c41",
+        "size": "1368x1149",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-04-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-05",
+      "file": "unit2/u2-ph-05.png",
+      "kind": "phrase",
+      "phrase": "أَنَا هُنَا!",
+      "show": "رَزَان (talking), one arm raised, at a door",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-05.png",
+      "accepted": {
+        "file": "unit2/u2-ph-05.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-05.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-05.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-05/attempt-1/u2-ph-05-rich-cartoon-raw.png",
+        "sha256": "48395fea65261f133956704474c2d788d6147683f91d2ca106687e3c2d59bbda",
+        "size": "1363x1154",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-05-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-06",
+      "file": "unit2/u2-ph-06.png",
+      "kind": "phrase",
+      "phrase": "يَذْهَبُ إِلَى الْبَيْتِ",
+      "show": "generic faceless walker (`fig-walk`) → arrow → house",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-06.png",
+      "accepted": {
+        "file": "unit2/u2-ph-06.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-06.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-06.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-06/attempt-1/u2-ph-06-rich-cartoon-raw.png",
+        "sha256": "366cb141b54838b82b64c47560737fdc3a556d566bac2b40023bd4183ee504ff",
+        "size": "1364x1153",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-06-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-07",
+      "file": "unit2/u2-ph-07.png",
+      "kind": "phrase",
+      "phrase": "أَذْهَبُ إِلَى بَيْتِكِ",
+      "show": "رَزَان walking → arrow → a house with خَدِيجَة in its doorway",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-07.png",
+      "accepted": {
+        "file": "unit2/u2-ph-07.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-07.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-07.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-07/attempt-1/u2-ph-07-rich-cartoon-raw.png",
+        "sha256": "0ae1a6162cae6f2e810da2a1452b075b6aa8af3181847e006529f9ecd270223c",
+        "size": "1361x1156",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-07-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-08",
+      "file": "unit2/u2-ph-08.png",
+      "kind": "phrase",
+      "phrase": "يَرْجِعُ إِلَى بَيْتِهِ",
+      "show": "generic walker with a curved return arrow → house",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-08.png",
+      "accepted": {
+        "file": "unit2/u2-ph-08.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-08.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-08.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-08/attempt-1/u2-ph-08-rich-cartoon-raw.png",
+        "sha256": "41964f6e303f73397d5a4d426fa3a5e1fe1741d1a59ce126cd33331026e40382",
+        "size": "1363x1154",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-08-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-09",
+      "file": "unit2/u2-ph-09.png",
+      "kind": "phrase",
+      "phrase": "أَضَعُ مِفْتَاحِي فِي حَقِيبَتِي",
+      "show": "a hand placing the key into the bag (no face in frame — first person is the reader)",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-09.png",
+      "accepted": {
+        "file": "unit2/u2-ph-09.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-09.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-09.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-09/attempt-1/u2-ph-09-rich-cartoon-raw.png",
+        "sha256": "a0db5e68fbb4d4efa2de024033decceef7cd3958f173f2b6b1fdd38435376f58",
+        "size": "1363x1154",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-09-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-10",
+      "file": "unit2/u2-ph-10.png",
+      "kind": "phrase",
+      "phrase": "هٰذَا مِفْتَاحٌ",
+      "show": "the key alone",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-10.png",
+      "accepted": {
+        "file": "unit2/u2-ph-10.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-10.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-10.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-10/attempt-1/u2-ph-10-rich-cartoon-raw.png",
+        "sha256": "e0ab239333dab1e332bfc6aa27abc87c66bce5dc1d0c4d2416baa0ce2de236e0",
+        "size": "1448x1086",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-10-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-11",
+      "file": "unit2/u2-ph-11.png",
+      "kind": "phrase",
+      "phrase": "هٰذِهِ حَقِيبَةٌ",
+      "show": "the bag alone",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-11.png",
+      "accepted": {
+        "file": "unit2/u2-ph-11.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-11.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-11.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-11/attempt-1/u2-ph-11-rich-cartoon-raw.png",
+        "sha256": "affb25e3b0be440c6e863150c7cd2e6313ba221183a8762e39a6ec385f358ed7",
+        "size": "1366x1151",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-11-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-12",
+      "file": "unit2/u2-ph-12.png",
+      "kind": "phrase",
+      "phrase": "هٰذَا كِتَابٌ",
+      "show": "the book alone",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-12.png",
+      "accepted": {
+        "file": "unit2/u2-ph-12.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-12.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-12.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-12/attempt-2/u2-ph-12-rich-cartoon-raw.png",
+        "sha256": "b554edf3e816829ac261002dae1d7c752776a9e9b8ec9e4216df99ed0f0c15ee",
+        "size": "1362x1155",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-12-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-13",
+      "file": "unit2/u2-ph-13.png",
+      "kind": "phrase",
+      "phrase": "هٰذَا بَابٌ",
+      "show": "the door alone",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-13.png",
+      "accepted": {
+        "file": "unit2/u2-ph-13.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-13.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-13.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-13/attempt-1/u2-ph-13-rich-cartoon-raw.png",
+        "sha256": "6cb8242829c26da3a1157e66bb6f94fe113517887307b1d3d36b5bd3460df76d",
+        "size": "1363x1154",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-13-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-14",
+      "file": "unit2/u2-ph-14.png",
+      "kind": "phrase",
+      "phrase": "هٰذِهِ صُورَةٌ",
+      "show": "the photo alone (its two tiny figures inside)",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-14.png",
+      "accepted": {
+        "file": "unit2/u2-ph-14.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-14.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-14.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-14/attempt-1/u2-ph-14-rich-cartoon-raw.png",
+        "sha256": "af41fe5760634c987113c38afd5ab97ce2fb03a01422375cfa9d598889611fb5",
+        "size": "1366x1152",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-14-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-15",
+      "file": "unit2/u2-ph-15.png",
+      "kind": "phrase",
+      "phrase": "هٰذَا بَيْتٌ",
+      "show": "the house alone",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-15.png",
+      "accepted": {
+        "file": "unit2/u2-ph-15.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-15.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-15.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-15/attempt-1/u2-ph-15-rich-cartoon-raw.png",
+        "sha256": "bb394c0cd8800d44dabbd05bf44d3eec77b51ed6ff5ee7be6775fd46dbef56e2",
+        "size": "1363x1154",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-15-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-16",
+      "file": "unit2/u2-ph-16.png",
+      "kind": "phrase",
+      "phrase": "عَلَى الْأَرْضِ",
+      "show": "the key on the floor line",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-16.png",
+      "accepted": {
+        "file": "unit2/u2-ph-16.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-16.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-16.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-16/attempt-1/u2-ph-16-rich-cartoon-raw.png",
+        "sha256": "cb9330c17f005830f0d35967a6b49356ea2b0d0014d50f864b680904f41f7709",
+        "size": "1360x1156",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-16-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-17",
+      "file": "unit2/u2-ph-17.png",
+      "kind": "phrase",
+      "phrase": "هٰذَا قِطٌّ",
+      "show": "the cat alone, sitting",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-17.png",
+      "accepted": {
+        "file": "unit2/u2-ph-17.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-17.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-17.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-17/attempt-1/u2-ph-17-rich-cartoon-raw.png",
+        "sha256": "8f3c7142889bcb0baab8b0f1850916711eb385ddf83d1e8c45c2343d63e73b98",
+        "size": "1365x1152",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-17-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-18",
+      "file": "unit2/u2-ph-18.png",
+      "kind": "phrase",
+      "phrase": "رَزَان حَزِينَةٌ",
+      "show": "رَزَان, the sad variant, alone",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-18.png",
+      "accepted": {
+        "file": "unit2/u2-ph-18.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-18.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-18.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-18/attempt-1/u2-ph-18-rich-cartoon-raw.png",
+        "sha256": "92f52bc777cd42c52d23eb74249b4e442677175be402aeb6ec07b2a2dbd82950",
+        "size": "1364x1153",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-18-prompt.json"
+      }
+    },
+    {
+      "id": "u2-ph-19",
+      "file": "unit2/u2-ph-19.png",
+      "kind": "phrase",
+      "phrase": "هٰذِهِ لَكِ",
+      "show": "a hand holding out the photo toward the viewer",
+      "must_not_show": "any person the phrase does not name; any text",
+      "delivered": "assets/art/unit2-rich/u2-ph-19.png",
+      "accepted": {
+        "file": "unit2/u2-ph-19.png",
+        "path": "accepted-rich/unit2/assets/art/unit2/u2-ph-19.png",
+        "site_path": "assets/art/unit2-rich/u2-ph-19.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/u2-ph-19/attempt-1/u2-ph-19-rich-cartoon-raw.png",
+        "sha256": "16a79e3d0b556a36e0e98ed16d99a05b59fd854455c46518bda1dcde18f7a799",
+        "size": "1366x1151",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/u2-ph-19-prompt.json"
+      }
+    },
+    {
+      "id": "obj-key",
+      "file": "common/obj-key.png",
+      "kind": "object",
+      "show": "a round bow, a straight shank, two teeth — the single key drawing used everywhere",
+      "delivered": "assets/art/unit2-rich/obj-key.png",
+      "accepted": {
+        "file": "common/obj-key.png",
+        "path": "accepted-rich/unit2/assets/art/common/obj-key.png",
+        "site_path": "assets/art/unit2-rich/obj-key.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/obj-key/attempt-1/obj-key-rich-cartoon-raw.png",
+        "sha256": "90abf8cb2e22736fd4c5d315ef40d37f1f9570dc80faae0b6c4906e52b5fe846",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/obj-key-prompt.json"
+      }
+    },
+    {
+      "id": "obj-bag",
+      "file": "common/obj-bag.png",
+      "kind": "object",
+      "show": "school bag: rounded rectangle, one flap, one strap (زَيْد's size)",
+      "delivered": "assets/art/unit2-rich/obj-bag.png",
+      "accepted": {
+        "file": "common/obj-bag.png",
+        "path": "accepted-rich/unit2/assets/art/common/obj-bag.png",
+        "site_path": "assets/art/unit2-rich/obj-bag.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/obj-bag/attempt-1/obj-bag-rich-cartoon-raw.png",
+        "sha256": "c36d913eabd8401ef3ab069f9c619b5c8375409902b7807f2746ec75248c782b",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/obj-bag-prompt.json"
+      }
+    },
+    {
+      "id": "obj-bag-big",
+      "file": "common/obj-bag-big.png",
+      "kind": "object",
+      "show": "the same bag drawn larger — كَرِيم's",
+      "delivered": "assets/art/unit2-rich/obj-bag-big.png",
+      "accepted": {
+        "file": "common/obj-bag-big.png",
+        "path": "accepted-rich/unit2/assets/art/common/obj-bag-big.png",
+        "site_path": "assets/art/unit2-rich/obj-bag-big.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/obj-bag-big/attempt-1/obj-bag-big-rich-cartoon-raw.png",
+        "sha256": "16ae4647771a8a0ede7f984684b0e095867967218719d1a116d5d1572fd833b9",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/obj-bag-big-prompt.json"
+      }
+    },
+    {
+      "id": "obj-book",
+      "file": "common/obj-book.png",
+      "kind": "object",
+      "show": "closed book, spine left, two lines on the cover (never lined like the قَائِمَة)",
+      "delivered": "assets/art/unit2-rich/obj-book.png",
+      "accepted": {
+        "file": "common/obj-book.png",
+        "path": "accepted-rich/unit2/assets/art/common/obj-book.png",
+        "site_path": "assets/art/unit2-rich/obj-book.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/obj-book/attempt-1/obj-book-rich-cartoon-raw.png",
+        "sha256": "b5320dbf59e14e2bd028402fc6a3c9561f09c64fbb5a88808cc9f2c2f1bfd0bb",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/obj-book-prompt.json"
+      }
+    },
+    {
+      "id": "obj-pen",
+      "file": "common/obj-pen.png",
+      "kind": "object",
+      "show": "the Unit 1 pen",
+      "delivered": "assets/art/unit2-rich/obj-pen.png",
+      "accepted": {
+        "file": "common/obj-pen.png",
+        "path": "accepted-rich/unit2/assets/art/common/obj-pen.png",
+        "site_path": "assets/art/unit2-rich/obj-pen.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/obj-pen/attempt-1/obj-pen-rich-cartoon-raw.png",
+        "sha256": "b43307003d70420085b80f717c684fa4aa6f09f77e1d65884abdc9a9db37946a",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/obj-pen-prompt.json"
+      }
+    },
+    {
+      "id": "obj-door",
+      "file": "common/obj-door.png",
+      "kind": "object",
+      "show": "the Unit 1 door",
+      "delivered": "assets/art/unit2-rich/obj-door.png",
+      "accepted": {
+        "file": "common/obj-door.png",
+        "path": "accepted-rich/unit2/assets/art/common/obj-door.png",
+        "site_path": "assets/art/unit2-rich/obj-door.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/obj-door/attempt-1/obj-door-rich-cartoon-raw.png",
+        "sha256": "cac89f0f1cbda77a6f816d0d2b9413bc58ddfba1640dbc3e7e4e874fd9c62ad5",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/obj-door-prompt.json"
+      }
+    },
+    {
+      "id": "obj-house",
+      "file": "common/obj-house.png",
+      "kind": "object",
+      "show": "door + a roof line only",
+      "delivered": "assets/art/unit2-rich/obj-house.png",
+      "accepted": {
+        "file": "common/obj-house.png",
+        "path": "accepted-rich/unit2/assets/art/common/obj-house.png",
+        "site_path": "assets/art/unit2-rich/obj-house.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/obj-house/attempt-1/obj-house-rich-cartoon-raw.png",
+        "sha256": "84dfeaaebba7f2df94a5eecf8b37a2f3e8bde49ded2d296873680a6dc4fd5dc1",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/obj-house-prompt.json"
+      }
+    },
+    {
+      "id": "obj-photo",
+      "file": "common/obj-photo.png",
+      "kind": "object",
+      "show": "a print: rectangle with thick lower border; inside, two tiny figures — رَزَان's two low side bundles and خَدِيجَة's two plaits; no faces",
+      "delivered": "assets/art/unit2-rich/obj-photo.png",
+      "accepted": {
+        "file": "common/obj-photo.png",
+        "path": "accepted-rich/unit2/assets/art/common/obj-photo.png",
+        "site_path": "assets/art/unit2-rich/obj-photo.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/obj-photo/attempt-1/obj-photo-rich-cartoon-raw.png",
+        "sha256": "5265a5f9d65c4909047909fb1d2ba574559ae9874234f965d80d31ceac67f2aa",
+        "size": "1536x1024",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/obj-photo-prompt.json"
+      }
+    },
+    {
+      "id": "av-karim",
+      "file": "common/av-karim.png",
+      "kind": "face",
+      "marker": "three crown curls",
+      "expression": "neutral",
+      "delivered": "assets/art/unit2-rich/av-karim.png",
+      "accepted": {
+        "file": "common/av-karim.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-karim.png",
+        "site_path": "assets/art/unit2-rich/av-karim.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-karim/attempt-1/av-karim-rich-cartoon-raw.png",
+        "sha256": "4ae2455e314ce349947d0ed196cc4ad82e99c9ee6d83a3e70b4f75ca91698911",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-karim-prompt.json"
+      }
+    },
+    {
+      "id": "av-karim-q",
+      "file": "common/av-karim-q.png",
+      "kind": "face",
+      "marker": "three crown curls",
+      "expression": "q",
+      "delivered": "assets/art/unit2-rich/av-karim-q.png",
+      "accepted": {
+        "file": "common/av-karim-q.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-karim-q.png",
+        "site_path": "assets/art/unit2-rich/av-karim-q.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-karim-q/attempt-1/av-karim-q-rich-cartoon-raw.png",
+        "sha256": "ad9307729548006c26e454decf43dd92952100c350c8ec9c183dfd67e19addb1",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-karim-q-prompt.json"
+      }
+    },
+    {
+      "id": "av-karim-laugh",
+      "file": "common/av-karim-laugh.png",
+      "kind": "face",
+      "marker": "three crown curls",
+      "expression": "laugh",
+      "delivered": "assets/art/unit2-rich/av-karim-laugh.png",
+      "accepted": {
+        "file": "common/av-karim-laugh.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-karim-laugh.png",
+        "site_path": "assets/art/unit2-rich/av-karim-laugh.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-karim-laugh/attempt-1/av-karim-laugh-rich-cartoon-raw.png",
+        "sha256": "030960627d5772215b3e482a4d3c13a4824f6cad488ec5dbffade9de47e78130",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-karim-laugh-prompt.json"
+      }
+    },
+    {
+      "id": "av-zayd",
+      "file": "common/av-zayd.png",
+      "kind": "face",
+      "marker": "flat cap",
+      "expression": "neutral",
+      "delivered": "assets/art/unit2-rich/av-zayd.png",
+      "accepted": {
+        "file": "common/av-zayd.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-zayd.png",
+        "site_path": "assets/art/unit2-rich/av-zayd.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-zayd/attempt-1/av-zayd-rich-cartoon-raw.png",
+        "sha256": "22a0d3cadb2b390c1f89310144612f93cd11543f80b748864b8490c18624513f",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-zayd-prompt.json"
+      }
+    },
+    {
+      "id": "av-maha",
+      "file": "common/av-maha.png",
+      "kind": "face",
+      "marker": "high hair tie / topknot",
+      "expression": "neutral",
+      "delivered": "assets/art/unit2-rich/av-maha.png",
+      "accepted": {
+        "file": "common/av-maha.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-maha.png",
+        "site_path": "assets/art/unit2-rich/av-maha.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-maha/attempt-1/av-maha-rich-cartoon-raw.png",
+        "sha256": "7f19087cde5db5689b9b7b26d5c3d67ba15a941053a298ae0f0028798888f46a",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-maha-prompt.json"
+      }
+    },
+    {
+      "id": "av-omar",
+      "file": "common/av-omar.png",
+      "kind": "face",
+      "marker": "three upward spikes",
+      "expression": "neutral",
+      "delivered": "assets/art/unit2-rich/av-omar.png",
+      "accepted": {
+        "file": "common/av-omar.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-omar.png",
+        "site_path": "assets/art/unit2-rich/av-omar.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-omar/attempt-1/av-omar-rich-cartoon-raw.png",
+        "sha256": "7e5e9c3b2267aa633ad8f456b1306a6360df0de0dc20f56f32802003f40d49a7",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-omar-prompt.json"
+      }
+    },
+    {
+      "id": "av-omar-happy",
+      "file": "common/av-omar-happy.png",
+      "kind": "face",
+      "marker": "three upward spikes",
+      "expression": "happy",
+      "delivered": "assets/art/unit2-rich/av-omar-happy.png",
+      "accepted": {
+        "file": "common/av-omar-happy.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-omar-happy.png",
+        "site_path": "assets/art/unit2-rich/av-omar-happy.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-omar-happy/attempt-1/av-omar-happy-rich-cartoon-raw.png",
+        "sha256": "23091972619a0a3bbb744ab5d565b8acd8e5860768b924ca787249093ade29e9",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-omar-happy-prompt.json"
+      }
+    },
+    {
+      "id": "av-razan",
+      "file": "common/av-razan.png",
+      "kind": "face",
+      "marker": "two low side bundles",
+      "expression": "neutral",
+      "delivered": "assets/art/unit2-rich/av-razan.png",
+      "accepted": {
+        "file": "common/av-razan.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-razan.png",
+        "site_path": "assets/art/unit2-rich/av-razan.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-razan/attempt-1/av-razan-rich-cartoon-raw.png",
+        "sha256": "a715de6e174cae833d55c8d7d8fb46ec64ab73261a74b3cc46d236cb80c0d140",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-razan-prompt.json"
+      }
+    },
+    {
+      "id": "av-razan-q",
+      "file": "common/av-razan-q.png",
+      "kind": "face",
+      "marker": "two low side bundles",
+      "expression": "q",
+      "delivered": "assets/art/unit2-rich/av-razan-q.png",
+      "accepted": {
+        "file": "common/av-razan-q.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-razan-q.png",
+        "site_path": "assets/art/unit2-rich/av-razan-q.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-razan-q/attempt-1/av-razan-q-rich-cartoon-raw.png",
+        "sha256": "189490ee3623241d2ab65ad5ef4f9750629a77812f08db1dbc5c0a98e92529e1",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-razan-q-prompt.json"
+      }
+    },
+    {
+      "id": "av-razan-sad",
+      "file": "common/av-razan-sad.png",
+      "kind": "face",
+      "marker": "two low side bundles",
+      "expression": "sad",
+      "delivered": "assets/art/unit2-rich/av-razan-sad.png",
+      "accepted": {
+        "file": "common/av-razan-sad.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-razan-sad.png",
+        "site_path": "assets/art/unit2-rich/av-razan-sad.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-razan-sad/attempt-1/av-razan-sad-rich-cartoon-raw.png",
+        "sha256": "642d4e494f4d48e57546a3f9d0648ab09c6086c1b966309da4694bee32095010",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-razan-sad-prompt.json"
+      }
+    },
+    {
+      "id": "av-razan-happy",
+      "file": "common/av-razan-happy.png",
+      "kind": "face",
+      "marker": "two low side bundles",
+      "expression": "happy",
+      "delivered": "assets/art/unit2-rich/av-razan-happy.png",
+      "accepted": {
+        "file": "common/av-razan-happy.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-razan-happy.png",
+        "site_path": "assets/art/unit2-rich/av-razan-happy.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-razan-happy/attempt-1/av-razan-happy-rich-cartoon-raw.png",
+        "sha256": "bbd92a72102d1e355dd3e33cc69a61be92c326c33aaac4974f9d6bb380384e3c",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-razan-happy-prompt.json"
+      }
+    },
+    {
+      "id": "av-razan-talk",
+      "file": "common/av-razan-talk.png",
+      "kind": "face",
+      "marker": "two low side bundles",
+      "expression": "talk",
+      "delivered": "assets/art/unit2-rich/av-razan-talk.png",
+      "accepted": {
+        "file": "common/av-razan-talk.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-razan-talk.png",
+        "site_path": "assets/art/unit2-rich/av-razan-talk.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-razan-talk/attempt-1/av-razan-talk-rich-cartoon-raw.png",
+        "sha256": "c9b6258d427800c5d3af17484d059aefca0d93487ddb07a78e50bf145d22b7fa",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-razan-talk-prompt.json"
+      }
+    },
+    {
+      "id": "av-khadija",
+      "file": "common/av-khadija.png",
+      "kind": "face",
+      "marker": "two plaits, one each side, hanging to the shoulder (SC-097 — not a hijab)",
+      "expression": "neutral",
+      "delivered": "assets/art/unit2-rich/av-khadija.png",
+      "accepted": {
+        "file": "common/av-khadija.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-khadija.png",
+        "site_path": "assets/art/unit2-rich/av-khadija.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-khadija/attempt-1/av-khadija-rich-cartoon-raw.png",
+        "sha256": "65f001e7c0b6993d32f1e8aecb621ae9a4fb0748e88950b961aca29e8a47e7de",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-khadija-prompt.json"
+      }
+    },
+    {
+      "id": "av-khadija-happy",
+      "file": "common/av-khadija-happy.png",
+      "kind": "face",
+      "marker": "two plaits, one each side, hanging to the shoulder (SC-097 — not a hijab)",
+      "expression": "happy",
+      "delivered": "assets/art/unit2-rich/av-khadija-happy.png",
+      "accepted": {
+        "file": "common/av-khadija-happy.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-khadija-happy.png",
+        "site_path": "assets/art/unit2-rich/av-khadija-happy.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-khadija-happy/attempt-1/av-khadija-happy-rich-cartoon-raw.png",
+        "sha256": "5f5c0e5edbf0422b9d9d11f031f99528bb566418dd4237669ae2ba9132f8588f",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-khadija-happy-prompt.json"
+      }
+    },
+    {
+      "id": "av-khadija-talk",
+      "file": "common/av-khadija-talk.png",
+      "kind": "face",
+      "marker": "two plaits, one each side, hanging to the shoulder (SC-097 — not a hijab)",
+      "expression": "talk",
+      "delivered": "assets/art/unit2-rich/av-khadija-talk.png",
+      "accepted": {
+        "file": "common/av-khadija-talk.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-khadija-talk.png",
+        "site_path": "assets/art/unit2-rich/av-khadija-talk.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-khadija-talk/attempt-1/av-khadija-talk-rich-cartoon-raw.png",
+        "sha256": "6132a3fca170c9c75e7cd6f06c536cf86635ada998d1ea05b53996c50778ab32",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-khadija-talk-prompt.json"
+      }
+    },
+    {
+      "id": "av-rana",
+      "file": "common/av-rana.png",
+      "kind": "face",
+      "marker": "dark bob with side panels",
+      "expression": "neutral",
+      "delivered": "assets/art/unit2-rich/av-rana.png",
+      "accepted": {
+        "file": "common/av-rana.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-rana.png",
+        "site_path": "assets/art/unit2-rich/av-rana.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-rana/attempt-1/av-rana-rich-cartoon-raw.png",
+        "sha256": "99949c0f299d5292145719940a0409e2c59d04638f65da03a50adaec9a065d87",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-rana-prompt.json"
+      }
+    },
+    {
+      "id": "av-rana-talk",
+      "file": "common/av-rana-talk.png",
+      "kind": "face",
+      "marker": "dark bob with side panels",
+      "expression": "talk",
+      "delivered": "assets/art/unit2-rich/av-rana-talk.png",
+      "accepted": {
+        "file": "common/av-rana-talk.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-rana-talk.png",
+        "site_path": "assets/art/unit2-rich/av-rana-talk.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-rana-talk/attempt-1/av-rana-talk-rich-cartoon-raw.png",
+        "sha256": "3963b04f61ec7e0f4d443410f2305e11f4fe5f353388d9a89b6a99665a9040ec",
+        "size": "1374x1145",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-rana-talk-prompt.json"
+      }
+    },
+    {
+      "id": "av-qitt",
+      "file": "common/av-qitt.png",
+      "kind": "face",
+      "marker": "ears + curled tail",
+      "expression": "neutral",
+      "delivered": "assets/art/unit2-rich/av-qitt.png",
+      "accepted": {
+        "file": "common/av-qitt.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-qitt.png",
+        "site_path": "assets/art/unit2-rich/av-qitt.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-qitt/attempt-1/av-qitt-rich-cartoon-raw.png",
+        "sha256": "f5a1e9f2577c7de34504f8e69ac87aa3708f67e27ff0fddf4eef4bdd21ee9e77",
+        "size": "1448x1086",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-qitt-prompt.json"
+      }
+    },
+    {
+      "id": "av-qitt-talk",
+      "file": "common/av-qitt-talk.png",
+      "kind": "face",
+      "marker": "ears + curled tail",
+      "expression": "talk",
+      "delivered": "assets/art/unit2-rich/av-qitt-talk.png",
+      "accepted": {
+        "file": "common/av-qitt-talk.png",
+        "path": "accepted-rich/unit2/assets/art/common/av-qitt-talk.png",
+        "site_path": "assets/art/unit2-rich/av-qitt-talk.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/av-qitt-talk/attempt-1/av-qitt-talk-rich-cartoon-raw.png",
+        "sha256": "004cca647e3dd352d7c576c10c5fab734456e22cb589690af77e4f56c7ba9f22",
+        "size": "1448x1086",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/av-qitt-talk-prompt.json"
+      }
+    },
+    {
+      "id": "fig-walk",
+      "file": "common/fig-walk.png",
+      "kind": "generic",
+      "show": "faceless walking figure (no eyes, no mouth) — the action figure for phrases 6 and 8",
+      "delivered": "assets/art/unit2-rich/fig-walk.png",
+      "accepted": {
+        "file": "common/fig-walk.png",
+        "path": "accepted-rich/unit2/assets/art/common/fig-walk.png",
+        "site_path": "assets/art/unit2-rich/fig-walk.png",
+        "source_candidate": "rich-cartoon-candidates/unit2/fig-walk/attempt-1/fig-walk-rich-cartoon-raw.png",
+        "sha256": "4ed350df0d1525412bb17e8619cb111ef74145158ece49db09b809c52b05f80b",
+        "size": "1254x1254",
+        "accepted_at": "2026-10-10",
+        "by": "Codex visual review after owner style switch",
+        "prompt_record": "state/fig-walk-prompt.json"
+      }
+    }
+  ]
+}
