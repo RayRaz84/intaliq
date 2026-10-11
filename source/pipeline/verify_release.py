@@ -71,6 +71,18 @@ if engine_js:
         elif r["delivers"] or r["seq"] != 0 or r["path"] != 0:
             blockers.append(f"{r['unit']}: mutation '{r['test']}' still delivers (seq {r['seq']}, pathway {r['path']}) — QC does not stop delivery")
 
+# --- F9: the listening machinery must hold against the deployed engine (fixture bindings only; no recording is shipped)
+listening_test = None
+if engine_js:
+    here = Path(__file__).resolve().parent
+    tl = here / "test_listening.js"
+    if tl.exists():
+        rr = subprocess.run(["node", str(tl), eng_path], capture_output=True, text=True)
+        listening_test = rr.stdout.strip().splitlines()[-1] if rr.stdout.strip() else rr.stderr.strip()[:200]
+        if rr.returncode != 0: blockers.append("listening fixture test failed against the deployed engine: " + listening_test)
+    else:
+        warnings.append("test_listening.js not beside verify_release.py — listening machinery not re-tested")
+
 with sync_playwright() as p:
     b = p.chromium.launch(channel=os.environ.get('INTALIQ_BROWSER_CHANNEL') or None)
     pg = b.new_page(viewport={"width": 1180, "height": 900})
@@ -140,6 +152,42 @@ with sync_playwright() as p:
         for(const li of a.querySelectorAll('ul[lang=ar] li')){ const t=norm(li.textContent).replace(/[○⬜]/g,'').trim().replace(/^«|»$/g,''); if(t && !story.includes(t)) bad.push(t); } }
       return bad; }""")
     for t in drift: blockers.append(f"Unit 1 printed quotation not in the story on its page: «{t}» (I2)")
+
+    # --- SC-121: every learner-visible Arabic token on the Unit 1 pages is a canon word or a licensed/chrome token
+    lic_path = Path(__file__).resolve().parent.parent / "units" / "unit1" / "apparatus_licence_u1.json"
+    sweep = {"unknown": [], "checked": 0}
+    if lic_path.exists() and engine_js:
+        lic = json.loads(lic_path.read_text(encoding="utf-8"))
+        allowed = set(lic["names"]["tokens"]) | set(lic["letters"]["tokens"]) | set(lic["licensed_forms"]["tokens"].keys()) | set(lic["chrome"]["tokens"])
+        canon = subprocess.check_output(["node", "-e", 'const E=require(process.argv[1]);console.log(Object.values(E.UNITS).filter(u=>/unit-01/.test(u.unit_id)).map(u=>u.canon).join(" "))', eng_path], text=True)
+        arabic_runs = lambda t: re.findall(r"[\u0621-\u064A\u064B-\u0652\u0670\u0640]+", t)   # letters, harakat, dagger alif, tatweel
+        canon_words = set(arabic_runs(canon))
+        for view in ("v-student", "v-note"):
+            pg.goto(base + ("#unit-01/student" if view == "v-student" else "#unit-01/notebook"), wait_until="networkidle"); pg.wait_for_timeout(150)
+            text = pg.evaluate("""(v) => { const on=document.getElementById(v).cloneNode(true); on.querySelectorAll('.rev,script,style,svg').forEach(e=>e.remove());
+              const parts=[]; const walk=n=>{ for(const c of n.childNodes){ if(c.nodeType===3) parts.push(c.textContent); else if(c.nodeType===1) walk(c); } }; walk(on); return parts.join(' '); }""", view)
+            toks = arabic_runs(text)
+            sweep["checked"] += len(toks)
+            for w in sorted(set(toks)):
+                if w not in canon_words and w not in allowed: sweep["unknown"].append((view, w))
+        for view, w in sweep["unknown"]: blockers.append(f"{view}: Arabic token «{w}» is neither in the canons nor in apparatus_licence_u1.json (SC-121)")
+    else:
+        warnings.append("apparatus licence not found — language sweep skipped")
+    # --- SC-121: every print task has an Arabic rubric and at least one item; every notebook page has its rubric
+    forms = pg.evaluate("""() => {
+      const st=document.getElementById('v-student'); const nb=document.getElementById('v-note');
+      const acts=[...st.querySelectorAll('.act')].map(a=>({rubric:!!a.querySelector('.rubric [lang=ar]'), items:a.querySelectorAll('ul[lang=ar] li').length, english:[...a.querySelectorAll('p.note:not(.rev)')].length}));
+      const pages=[...nb.querySelectorAll('.sheet')].map(s=>({tag:!!s.querySelector('.sheet-tag [lang=ar]'), hasNb:!!s.querySelector('.nb')}));
+      const corner=document.getElementById('authentic-corner'); const slots=corner?[...corner.querySelectorAll('.photo')].map(p=>!!p.querySelector('img')):[];
+      return {acts, pages, corner: corner?{status:corner.dataset.status, slots}:null};
+    }""")
+    for i, a in enumerate(forms["acts"]):
+        if not a["rubric"] or a["items"] < 1: blockers.append(f"Unit 1 print task #{i+1}: missing Arabic rubric or items")
+        if a["english"]: blockers.append(f"Unit 1 print task #{i+1}: English instruction visible in learner view")
+    for i, pgc in enumerate(forms["pages"]):
+        if not pgc["tag"]: blockers.append(f"Unit 1 notebook sheet #{i+1}: no Arabic rubric tag")
+    corner = forms["corner"]
+    if corner is None or not all(corner["slots"]): warnings.append("Unit 1 authentic corner: NOT DELIVERED — " + (f"{sum(1 for s in (corner or {}).get('slots', []) if s)} of 3 photographs present" if corner else "block missing") + " (Batch 2; the unit is not complete)")
 
     # --- B1 / I7: walk every digital pathway to its end
     ANSWER_JS = r"""() => {
@@ -217,6 +265,9 @@ rep += ["", "## Digital pathways walked to the end", "| unit | pathway | planned
 for u, c, planned, completed, done, kinds, last in pathways:
     rep.append(f"| {u} | {c} | {planned} | {completed} | {'yes' if done else 'NO — ' + str(last)} | {', '.join(f'{k} {v}' for k, v in kinds.items())} |")
 rep += ["", "## Unit 1 print-task response resources", "```", json.dumps(resources, ensure_ascii=False), "```"]
+rep += ["", "## Unit 1 language sweep (learner view)", f"{sweep['checked']} Arabic tokens checked on the student and notebook pages; unknown: {len(sweep['unknown'])}" if 'sweep' in dir() else "not run"]
+rep += ["", "## Unit 1 task forms", "```", json.dumps(forms, ensure_ascii=False) if 'forms' in dir() else "not run", "```"]
+rep += ["", "## Listening machinery (fixture test against the deployed engine)", str(listening_test)]
 rep += ["", "## Mutation tests (deployed engine)", "| unit | mutation | delivers | sequence | pathway |", "|---|---|---|---:|---:|"]
 for r in (mut if engine_js else []):
     rep.append(f"| {r['unit']} | {r['test']} | {'YES' if r['delivers'] else 'blocked'} | {r['seq']} | {r['path']} |")

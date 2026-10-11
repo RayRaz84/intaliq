@@ -1,0 +1,32 @@
+{
+  "_about": "Unit 1 apparatus licence (closure 2026-10-11, SC-121). Every Arabic token a learner can see on the Unit 1 student-book and notebook pages must be (a) a word of one of the two canons, or (b) listed here with its authority. The release gate sweeps the rendered pages (review notes excluded) and blocks on any token in neither set. Proper names and chrome are exempt from the vocabulary envelope (SC-046) but are still listed so that nothing enters silently.",
+  "names": { "authority": "roster and cast (SC-054 roll; SC-089: names are outside the envelope)", "tokens": ["آدَم", "نُور", "بَدْر", "المُعَلِّمَة"] },
+  "letters": { "authority": "response letters for the lettered picture row (SC-120 B4)", "tokens": ["أ", "ب", "ج", "د", "هـ"] },
+  "licensed_forms": {
+    "authority": "forms licensed for Unit 1 apparatus by register ruling, not printed in the readings",
+    "tokens": {
+      "هٰذَا": "SC-075 (card hadha; apparatus attestation recorded in the Vocabulary Ledger); pop-up and scene",
+      "وَلَدٌ": "SC-038 labelled scene «هٰذَا وَلَدٌ» (citation form of the Unit 1 core item)",
+      "عِنْدَهَا": "SC-023 (third-person possession chunk; the canon prints وَعِنْدَهَا)",
+      "عِنْدَكَ": "SC-016 (affirmative chunk عِنْدَكَ)",
+      "عِنْدَكِ": "SC-016 (affirmative chunk عِنْدَكِ)",
+      "يَدْخُلُ": "SC-023 (verbs admitted as masc./fem. pairs = one item; the canon prints تَدْخُلُ)",
+      "صَدِيقُ": "SC-018 R-7 / S4 frame (the two-noun construct «صَدِيقُ ___»)",
+      "صَدِيقَةُ": "SC-018 R-7 / S4 frame; also «رَزَان صَدِيقَةُ سَارَة» (engine fact f4)",
+      "صَدِيقِي": "SC-036 / SC-042 (N2 final line prints both forms)",
+      "صَدِيقَتِي": "SC-036 / SC-042 (N2 final line; also the SC-038 scene phrase)",
+      "اسْمِكَ": "SC-015/SC-018 chunk اِسْمُكَ (naming chunks); printed here in the construct form after ○",
+      "لِلْقَلَمِ": "SC-041 build, engine fact rf3 «لِلْقَلَمِ صَدِيقٌ: كَرِيم.» (لِـ + definite noun)",
+      "هَلْ": "SC-114 (question words free from first exposure); survey questions",
+      "مَاذَا": "SC-114; S9 rubric «مَاذَا تُحِبُّ رَزَان؟»",
+      "أَيْنَ": "SC-046 rubric chrome; SC-114",
+      "فِي": "rubric chrome (SC-046): فِي النَّصِّ · فِي الْقَائِمَةِ · فِي الصُّورَةِ · فِي الْقِصَّةِ — Unit 2's core item, exposure only here",
+      "وَ": "proclitic of the canon (SC-082 §4.1)"
+    }
+  },
+  "chrome": {
+    "authority": "page furniture and rubrics, learned once by icon (SC-046; SC-043/044 names; SC-049 C-rubrics; SC-120/121 response rubrics)",
+    "tokens": ["اُنْظُرْ", "نُعِيدُ", "الْقِصَّةَ", "بِالصُّوَرِ", "بَعْدَ", "الْقِرَاءَةِ", "قَائِمَةُ", "الصَّفِّ", "اِقْرَأْ", "وَصِلْ", "اُكْتُبِ", "اُكْتُبْ", "الْحَرْفَ", "صَحٌّ", "أَمْ", "خَطَأٌ", "أَرِنِي", "أَوْ", "رَقْمُ", "الصُّورَةِ", "صُورَة", "الْوَجْهِ", "اِخْتَرْ", "وَاكْتُبْ", "رَتِّبْ", "اِبْحَثْ", "النَّصِّ", "النَّصَّ", "ضَعْ", "خَطًّا", "الْقَائِمَةِ", "الْآنَ", "قَبْلُ", "اِسْتَعْمِلِ", "الْأَسْمَاءُ", "الْقِصَّةِ", "الِاسْمُ", "الِاسْمَ", "شَخْصِيَّتِي", "عَرَبِيَّةٌ", "حَوْلَنَا", "حَرْفٌ", "أَسْتَطِيعُ", "أَتَكَلَّمُ", "أَقْرَأُ", "أَكْتُبُ", "دَفْتَرِي", "قِصَّتِي", "الْمُوَازِيَةُ", "دَوْرِي", "بَنْكُ", "الْكَلِمَاتِ", "اُرْسُمْ", "صَفَّكَ", "نَفْسَكَ", "صَفْحَتِي", "صَفْحَة", "أَشْيَاءُ", "أَشْخَاصٌ", "اِسْأَلْ", "أَصْدِقَاءَكَ", "تَذْكُرُ", "قَلَم"],
+    "note": "«قَلَم» without a case vowel is the vocative in the Reading 2 title «مَنْ أَنْتَ يَا قَلَم؟» (F-3 of the readings pass: «يَا قَلَمُ» is the owner's call; the title stands as built until he rules)."
+  }
+}

@@ -1,19 +1,19 @@
 {
-  "version": 45,
+  "version": 46,
   "units": {
     "unit-01": {
       "words": 138,
-      "generated": 124,
+      "generated": 128,
       "blocked": false,
       "vocab": 48,
-      "reading": 41
+      "reading": 46
     },
     "unit-01p": {
       "words": 71,
-      "generated": 75,
+      "generated": 78,
       "blocked": false,
       "vocab": 29,
-      "reading": 22
+      "reading": 28
     },
     "unit-02": {
       "words": 172,
@@ -34,14 +34,14 @@
       "generated": 158,
       "blocked": false,
       "vocab": 40,
-      "reading": 38
+      "reading": 54
     },
     "unit-03p": {
       "words": 118,
       "generated": 110,
       "blocked": false,
       "vocab": 33,
-      "reading": 29
+      "reading": 41
     }
   }
 }

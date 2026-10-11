@@ -1,0 +1,737 @@
+{
+  "_about": "Unit 1 clip manifest, generated from the engine (SC-121). One row per sentence of each reading and per core-item phrase. Fill `src` with the recorded file path under assets/audio/unit-01/…, `sha256` with the file hash, and `verified_by` / `verified_on` once a named person has listened to the clip against the printed text. Then copy the rows into the unit data as audio.clips with audio.verified=true; the build verifies every file and hash, and qc() withholds the unit on any invalid binding. Text is the exact string to record; nothing may be paraphrased.",
+  "units": {
+    "unit-01": {
+      "title": "قَائِمَةُ رَزَان",
+      "clips": [
+        {
+          "id": "c_m00",
+          "kind": "sentence",
+          "ref": "m00",
+          "text": "هُنَاكَ بِنْتٌ اسْمُهَا رَزَان.",
+          "src": "assets/audio/unit-01/m00.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m01",
+          "kind": "sentence",
+          "ref": "m01",
+          "text": "تَدْخُلُ الْفَصْلَ.",
+          "src": "assets/audio/unit-01/m01.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m02",
+          "kind": "sentence",
+          "ref": "m02",
+          "text": "رَزَان لَيْسَ لَهَا صَدِيقٌ... وَعِنْدَهَا قَائِمَةٌ.",
+          "src": "assets/audio/unit-01/m02.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m03",
+          "kind": "sentence",
+          "ref": "m03",
+          "text": "تَقُولُ: «السَّلَامُ عَلَيْكُمْ! أَنَا رَزَان.»",
+          "src": "assets/audio/unit-01/m03.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m04",
+          "kind": "sentence",
+          "ref": "m04",
+          "text": "يَقُولُ عُمَر وَسَارَة وَرَنَا: «وَعَلَيْكُمُ السَّلَامُ!»",
+          "src": "assets/audio/unit-01/m04.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m05",
+          "kind": "sentence",
+          "ref": "m05",
+          "text": "تَرَى رَزَان الْقَائِمَةَ.",
+          "src": "assets/audio/unit-01/m05.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m06",
+          "kind": "sentence",
+          "ref": "m06",
+          "text": "هُنَاكَ اسْمٌ: «عُمَر». وَهُنَاكَ اسْمٌ: «سَارَة».",
+          "src": "assets/audio/unit-01/m06.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m07",
+          "kind": "sentence",
+          "ref": "m07",
+          "text": "تَقُولُ: «مَنْ عُمَر؟ وَمَنْ سَارَة؟ أُرِيدُ صَدِيقًا!»",
+          "src": "assets/audio/unit-01/m07.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m08",
+          "kind": "sentence",
+          "ref": "m08",
+          "text": "تَرَى رَزَان هُدَى وَتَقُولُ: «هٰذِهِ سَارَة!»",
+          "src": "assets/audio/unit-01/m08.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m09",
+          "kind": "sentence",
+          "ref": "m09",
+          "text": "تَقُولُ هُدَى: «لَا! لَا! لَيْسَ اسْمِي سَارَة! أَنَا هُدَى!»",
+          "src": "assets/audio/unit-01/m09.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m10",
+          "kind": "sentence",
+          "ref": "m10",
+          "text": "تَقُولُ رَزَان: «أَهْلًا يَا هُدَى!»",
+          "src": "assets/audio/unit-01/m10.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m11",
+          "kind": "sentence",
+          "ref": "m11",
+          "text": "تَرَى رَزَان وَلَدًا. تَقُولُ: «أَنْتَ عُمَر!»",
+          "src": "assets/audio/unit-01/m11.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m12",
+          "kind": "sentence",
+          "ref": "m12",
+          "text": "يَقُولُ الْوَلَدُ: «نَعَمْ! أَنَا عُمَر! وَمَنْ أَنْتِ؟»",
+          "src": "assets/audio/unit-01/m12.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m13",
+          "kind": "sentence",
+          "ref": "m13",
+          "text": "تَقُولُ رَزَان: «أَنَا رَزَان.»",
+          "src": "assets/audio/unit-01/m13.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m13b",
+          "kind": "sentence",
+          "ref": "m13b",
+          "text": "يَقُولُ عُمَر: «أَهْلًا يَا رَزَان!»",
+          "src": "assets/audio/unit-01/m13b.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m14",
+          "kind": "sentence",
+          "ref": "m14",
+          "text": "تَرَى رَزَان بِنْتًا. تَقُولُ: «وَأَنْتِ سَارَة!»",
+          "src": "assets/audio/unit-01/m14.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m15",
+          "kind": "sentence",
+          "ref": "m15",
+          "text": "تَقُولُ الْبِنْتُ: «نَعَمْ! أَنَا سَارَة!»",
+          "src": "assets/audio/unit-01/m15.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m15b",
+          "kind": "sentence",
+          "ref": "m15b",
+          "text": "يَرَى عُمَر الْقَائِمَةَ وَيَقُولُ: «هُنَاكَ اسْمٌ: \"طَارِق\"! لِي صَدِيقٌ: طَارِق!»",
+          "src": "assets/audio/unit-01/m15b.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m16",
+          "kind": "sentence",
+          "ref": "m16",
+          "text": "تَرَى سَارَة الْقَائِمَةَ وَتَقُولُ: «هُنَاكَ اسْمٌ: \"رَزَان\"! مَنْ هِيَ؟»",
+          "src": "assets/audio/unit-01/m16.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m17",
+          "kind": "sentence",
+          "ref": "m17",
+          "text": "تَقُولُ رَزَان: «أَنَا! أَنَا رَزَان!»",
+          "src": "assets/audio/unit-01/m17.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m18",
+          "kind": "sentence",
+          "ref": "m18",
+          "text": "تَقُولُ سَارَة: «أَهْلًا يَا رَزَان! لِي صَدِيقَةٌ: رَزَان!»",
+          "src": "assets/audio/unit-01/m18.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m18b",
+          "kind": "sentence",
+          "ref": "m18b",
+          "text": "وَتَقُولُ رَنَا: «وَأَنَا! لِي صَدِيقَةٌ!»",
+          "src": "assets/audio/unit-01/m18b.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m19",
+          "kind": "sentence",
+          "ref": "m19",
+          "text": "تُحِبُّ رَزَان... الْقَائِمَةَ!",
+          "src": "assets/audio/unit-01/m19.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_m20",
+          "kind": "sentence",
+          "ref": "m20",
+          "text": "تَقُولُ رَزَان: «أَنَا رَزَان... وَلِي صَدِيقَاتٌ!»",
+          "src": "assets/audio/unit-01/m20.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_salam",
+          "kind": "item",
+          "ref": "salam",
+          "text": "السَّلَامُ عَلَيْكُمْ!",
+          "src": "assets/audio/unit-01/item_salam.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_ahlan",
+          "kind": "item",
+          "ref": "ahlan",
+          "text": "أَهْلًا يَا رَزَان!",
+          "src": "assets/audio/unit-01/item_ahlan.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_ana",
+          "kind": "item",
+          "ref": "ana",
+          "text": "أَنَا رَزَان.",
+          "src": "assets/audio/unit-01/item_ana.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_walad",
+          "kind": "item",
+          "ref": "walad",
+          "text": "هٰذَا وَلَدٌ.",
+          "src": "assets/audio/unit-01/item_walad.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_bint",
+          "kind": "item",
+          "ref": "bint",
+          "text": "هٰذِهِ بِنْتٌ.",
+          "src": "assets/audio/unit-01/item_bint.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_sadiq",
+          "kind": "item",
+          "ref": "sadiq",
+          "text": "رَزَان صَدِيقَتِي!",
+          "src": "assets/audio/unit-01/item_sadiq.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_inda",
+          "kind": "item",
+          "ref": "inda",
+          "text": "عِنْدَهَا قَائِمَةٌ.",
+          "src": "assets/audio/unit-01/item_inda.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_li",
+          "kind": "item",
+          "ref": "li",
+          "text": "لِي صَدِيقَاتٌ!",
+          "src": "assets/audio/unit-01/item_li.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_urid",
+          "kind": "item",
+          "ref": "urid",
+          "text": "أُرِيدُ صَدِيقًا!",
+          "src": "assets/audio/unit-01/item_urid.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_laysa",
+          "kind": "item",
+          "ref": "laysa",
+          "text": "لَيْسَ لَهَا صَدِيقٌ.",
+          "src": "assets/audio/unit-01/item_laysa.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_laha",
+          "kind": "item",
+          "ref": "laha",
+          "text": "لَهَا صَدِيقَةٌ.",
+          "src": "assets/audio/unit-01/item_laha.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_yadkhul",
+          "kind": "item",
+          "ref": "yadkhul",
+          "text": "تَدْخُلُ الْفَصْلَ.",
+          "src": "assets/audio/unit-01/item_yadkhul.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_yara",
+          "kind": "item",
+          "ref": "yara",
+          "text": "تَرَى رَزَان الْقَائِمَةَ.",
+          "src": "assets/audio/unit-01/item_yara.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_yaqul",
+          "kind": "item",
+          "ref": "yaqul",
+          "text": "تَقُولُ رَزَان: «أَهْلًا!»",
+          "src": "assets/audio/unit-01/item_yaqul.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_yuhibb",
+          "kind": "item",
+          "ref": "yuhibb",
+          "text": "تُحِبُّ رَزَان الْقَائِمَةَ.",
+          "src": "assets/audio/unit-01/item_yuhibb.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_hunaka",
+          "kind": "item",
+          "ref": "hunaka",
+          "text": "هُنَاكَ قَائِمَةٌ.",
+          "src": "assets/audio/unit-01/item_hunaka.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_man",
+          "kind": "item",
+          "ref": "man",
+          "text": "مَنْ عُمَر؟",
+          "src": "assets/audio/unit-01/item_man.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_ism",
+          "kind": "item",
+          "ref": "ism",
+          "text": "هُنَاكَ اسْمٌ: «عُمَر».",
+          "src": "assets/audio/unit-01/item_ism.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_la",
+          "kind": "item",
+          "ref": "la",
+          "text": "لَا! لَيْسَ اسْمِي سَارَة!",
+          "src": "assets/audio/unit-01/item_la.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_naam",
+          "kind": "item",
+          "ref": "naam",
+          "text": "نَعَمْ! أَنَا عُمَر!",
+          "src": "assets/audio/unit-01/item_naam.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_anta",
+          "kind": "item",
+          "ref": "anta",
+          "text": "أَنْتَ عُمَر!",
+          "src": "assets/audio/unit-01/item_anta.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_hadha",
+          "kind": "item",
+          "ref": "hadha",
+          "text": "هٰذِهِ سَارَة!",
+          "src": "assets/audio/unit-01/item_hadha.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        }
+      ],
+      "count": 46
+    },
+    "unit-01p": {
+      "title": "مَنْ أَنْتَ يَا قَلَم؟",
+      "clips": [
+        {
+          "id": "c_r01",
+          "kind": "sentence",
+          "ref": "r01",
+          "text": "دَخَلَ كَرِيم وَقَالَ: «السَّلَامُ عَلَيْكُمْ!»",
+          "src": "assets/audio/unit-01p/r01.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_r02",
+          "kind": "sentence",
+          "ref": "r02",
+          "text": "قَالَتْ فَرِيدَة وَمَهَا وَزَيْد: «وَعَلَيْكُمُ السَّلَامُ!»",
+          "src": "assets/audio/unit-01p/r02.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_r03",
+          "kind": "sentence",
+          "ref": "r03",
+          "text": "قَالَ كَرِيم: «أُرِيدُ قَلَمًا. مَنْ عِنْدَهُ قَلَمٌ؟»",
+          "src": "assets/audio/unit-01p/r03.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_r04",
+          "kind": "sentence",
+          "ref": "r04",
+          "text": "قَالَتْ مَهَا: «لَا! لَيْسَ عِنْدِي قَلَمٌ!»",
+          "src": "assets/audio/unit-01p/r04.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_r05",
+          "kind": "sentence",
+          "ref": "r05",
+          "text": "قَالَ زَيْد: «أَنَا؟ لَا! لَيْسَ عِنْدِي قَلَمٌ.»",
+          "src": "assets/audio/unit-01p/r05.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_r06",
+          "kind": "sentence",
+          "ref": "r06",
+          "text": "قَالَتْ فَرِيدَة: «لَا يَا كَرِيم! لَيْسَ عِنْدِي قَلَمٌ.»",
+          "src": "assets/audio/unit-01p/r06.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_r07",
+          "kind": "sentence",
+          "ref": "r07",
+          "text": "كَرِيم... لَيْسَ عِنْدَهُ قَلَمٌ.",
+          "src": "assets/audio/unit-01p/r07.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_r08",
+          "kind": "sentence",
+          "ref": "r08",
+          "text": "قَالَ قَلَمٌ: «أَنَا! أَنَا قَلَمٌ!»",
+          "src": "assets/audio/unit-01p/r08.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_r09",
+          "kind": "sentence",
+          "ref": "r09",
+          "text": "رَأَى كَرِيم الْقَلَمَ وَقَالَ: «مَنْ... مَنْ أَنْتَ؟»",
+          "src": "assets/audio/unit-01p/r09.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_r10",
+          "kind": "sentence",
+          "ref": "r10",
+          "text": "قَالَ الْقَلَمُ: «أَنَا قَلَمُ كَرِيم! وَلِي صَدِيقٌ: كَرِيم!»",
+          "src": "assets/audio/unit-01p/r10.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_r11",
+          "kind": "sentence",
+          "ref": "r11",
+          "text": "قَالَتْ فَرِيدَة: «نَعَمْ يَا كَرِيم... هُنَاكَ قَلَمٌ يَتَكَلَّمُ!»",
+          "src": "assets/audio/unit-01p/r11.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_salam",
+          "kind": "item",
+          "ref": "salam",
+          "text": "السَّلَامُ عَلَيْكُمْ!",
+          "src": "assets/audio/unit-01p/item_salam.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_dakhala",
+          "kind": "item",
+          "ref": "dakhala",
+          "text": "دَخَلَ كَرِيم.",
+          "src": "assets/audio/unit-01p/item_dakhala.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_qala",
+          "kind": "item",
+          "ref": "qala",
+          "text": "قَالَ كَرِيم: «أَنَا!»",
+          "src": "assets/audio/unit-01p/item_qala.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_raa",
+          "kind": "item",
+          "ref": "raa",
+          "text": "رَأَى كَرِيم الْقَلَمَ.",
+          "src": "assets/audio/unit-01p/item_raa.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_inda",
+          "kind": "item",
+          "ref": "inda",
+          "text": "عِنْدَهُ قَلَمٌ.",
+          "src": "assets/audio/unit-01p/item_inda.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_man",
+          "kind": "item",
+          "ref": "man",
+          "text": "مَنْ عِنْدَهُ قَلَمٌ؟",
+          "src": "assets/audio/unit-01p/item_man.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_hunaka",
+          "kind": "item",
+          "ref": "hunaka",
+          "text": "هُنَاكَ قَلَمٌ!",
+          "src": "assets/audio/unit-01p/item_hunaka.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_ana",
+          "kind": "item",
+          "ref": "ana",
+          "text": "أَنَا قَلَمٌ!",
+          "src": "assets/audio/unit-01p/item_ana.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_sadiq",
+          "kind": "item",
+          "ref": "sadiq",
+          "text": "لِي صَدِيقٌ: كَرِيم!",
+          "src": "assets/audio/unit-01p/item_sadiq.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_urid",
+          "kind": "item",
+          "ref": "urid",
+          "text": "أُرِيدُ قَلَمًا.",
+          "src": "assets/audio/unit-01p/item_urid.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_laysa",
+          "kind": "item",
+          "ref": "laysa",
+          "text": "لَيْسَ عِنْدِي قَلَمٌ!",
+          "src": "assets/audio/unit-01p/item_laysa.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_li",
+          "kind": "item",
+          "ref": "li",
+          "text": "لِي صَدِيقٌ: كَرِيم!",
+          "src": "assets/audio/unit-01p/item_li.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_la",
+          "kind": "item",
+          "ref": "la",
+          "text": "لَا! لَيْسَ عِنْدِي قَلَمٌ!",
+          "src": "assets/audio/unit-01p/item_la.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_naam",
+          "kind": "item",
+          "ref": "naam",
+          "text": "نَعَمْ يَا كَرِيم",
+          "src": "assets/audio/unit-01p/item_naam.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_anta",
+          "kind": "item",
+          "ref": "anta",
+          "text": "مَنْ... مَنْ أَنْتَ؟",
+          "src": "assets/audio/unit-01p/item_anta.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        }
+      ],
+      "count": 26
+    }
+  }
+}

@@ -48,6 +48,14 @@ for (const [k, u] of Object.entries(E.UNITS)) {
   const d = E.deliverable(u);
   report[k] = { words: E.canonCheck(u).words, generated: d.acts, blocked: !d.ok, vocab: E.pathway(u, 'vocab', 0).length, reading: E.pathway(u, 'reading', 0).length - 2 + 1 + E.postReading(u, 3, true).length };
   if (!d.ok) throw Error('Unit not deliverable — refusing to build: ' + k + ' — ' + d.failed.map(f => f.why).join(' · '));
+  /* audio bindings (B6 closure): when a unit claims verified clips, every file must exist under assets/audio/ and hash as bound */
+  if (u.audio && u.audio.verified) for (const c of u.audio.clips || []) {
+    const f = path.join(root, c.src);
+    if (!fs.existsSync(f) || fs.statSync(f).size === 0) throw Error('Audio binding without a file: ' + k + ' ' + c.id + ' → ' + c.src);
+    const h = crypto.createHash('sha256').update(fs.readFileSync(f)).digest('hex');
+    if (h !== c.sha256) throw Error('Audio file does not hash as bound: ' + k + ' ' + c.id);
+    report[k].clips = (report[k].clips || 0) + 1;
+  }
 }
 
 /* ---- 3 · the Studio: embed the engine wholesale, regenerate the generated blocks ---- */

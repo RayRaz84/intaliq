@@ -204,3 +204,20 @@ Phase 1 **input**: A-formats on shared devices (or B1–B2 alone) — the Digita
 ### 9.5 · Not done, by instruction (Batch 4 — completion work)
 
 **Verified listening** requires: recorded clips per sentence and per phrase, bound in the unit data (`audio.clips`), verified by ear against the canon; a listening generator family (F9) — hear-and-tap on phrases, hear-and-order, hear-the-speaker — with an accessible replay control; selection into the vocabulary and reading pathways; the station spec's sound-first sequence rebuilt on real clips; the teacher's page wording lifted from "no listening" only then. **The authentic corner** requires: three real photographs (shop sign with a name, door sign, street plate — never mock realia), the three recognition tasks of §3 printed, and a picture–task fit check. Neither is claimed. No voice, platform or licensing decision is taken here; if the clip source needs one, it is the owner's.
+
+### 9.6 · Closure pass — 2026-10-11 (**SC-121**, Studio Version 46, review build)
+
+| Item | Done | Where |
+|---|---|---|
+| `لَهُ` resolved | **not licensed in Unit 1** (لِي · وَلِي · لَهَا only; لَهُ productive from Unit 3, SC-109) — N3 line 3 is now «يَقُولُ / تَقُولُ: «لِي ___!»»; models row updated | Studio v-note; Grammar Ledger §1d |
+| Read-match distinguishable | «أَنَا رَزَان» → «لِي صَدِيقَاتٌ!» (friends icon); pictures: boy · list · teacher · group of girls · one girl | Studio v-student |
+| Coverage claim | SC-075 cards wired into their sentences (`la` m09/r04 · `anta` m11/r09 · `naam` m12/r11 · `hadha` m08); staged ctx tasks after the reading for every core item the pre-reading could not reach; hub wording states what happens | engine `uncoveredCore()`, `postReading()` |
+| Synchronisation | Grammar Ledger §1d; engine header; teacher flows (Units 1–3); deployment doc; art-build README; source index | — |
+| Absent learner's alternative | printed on N2 in Arabic: «الْأَسْمَاءُ: صَفْحَة 9 / «قَائِمَةُ الصَّفِّ»» | Studio v-note |
+| Audio checks | `audioCheck()` schema validation (refs, paths, hashes, verifier, date, duplicates, completeness); build checks files and hashes; `test_listening.js` (17 expectations × 2 units) | engine, build, gate |
+| Listening families | `listen_tap · listen_which · listen_who` generated only when bindings validate; vocabulary pathway sound-first; reading pathway hears its opening lines; post-reading hear-who-says; player renderers with replay | engine, Studio player |
+| Authentic corner | three recognition tasks printed in rubric Arabic; three slots wired, `data-status="not-delivered"`; gate warns until three photographs render | Studio v-student |
+| Apparatus licence | `source/units/unit1/apparatus_licence_u1.json` — every learner-visible token beyond the canons, with authority; gate sweep: 698 tokens, 0 unknown; spellings normalised (`اسْمِي`, `صُورَة`) | gate |
+| Generated inventory | 128 + 78 (was 124 + 75 — the four wired cards); pathways 48 vocab · 46 reading-1 · 28 reading-2 | build report |
+
+**Still owed before Unit 1 can be called complete:** 72 verified recordings (`INTALIQ1_UNIT1_AUDIO_INTAKE.md`; manifest `source/units/unit1/audio/clips_manifest.json`) · three real photographs (`INTALIQ1_UNIT1_AUTHENTIC_CORNER_INTAKE.md`) · the learner / panel check (`INTALIQ1_UNIT1_LEARNER_CHECK_PROTOCOL.md`) run and recorded. Version 46 is a **review build** until then.
