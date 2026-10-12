@@ -10,10 +10,11 @@ Rules this generator enforces, by construction:
   * NOT linked from the student Studio — this script never touches school_course_studio.html;
   * counts (words, activities) are read from the engine, never typed by hand.
 
-Outputs: intaliq1_teacher_pages.artifact-body.html (body, no skeleton — the build wraps it into teacher.html) and
-         intaliq1_teacher_pages.standalone.html (wrapped, for direct opening).
-         (The two names differ by more than letter case — audit 2026-10-10 §11: the old pair collided on a
-          case-insensitive filesystem.)
+Output: intaliq1_teacher_pages.artifact-body.html (body, no skeleton — the Text build wraps it into the
+        repo's teacher.html, which is the file to open). The former second output, a standalone wrapped copy,
+        was dropped in the 2026-10-12 cleanup: nothing read it, and teacher.html is the same page.
+        (Name chosen to differ by more than letter case — audit 2026-10-10 §11: the old pair collided on a
+         case-insensitive filesystem.)
 Phase order (owner's decision, SC-119): input → reading → consolidation AND scaffolded interaction (C1) →
 notebook output → fuller communication and transfer (C3, C4).
 """
@@ -291,7 +292,4 @@ if studio.exists():
     assert "teacher_pages" not in studio.read_text(encoding="utf-8"), "the Studio must not link the teacher's page (SC-104)"
 
 (HERE / "intaliq1_teacher_pages.artifact-body.html").write_text(page, encoding="utf-8")
-(HERE / "intaliq1_teacher_pages.standalone.html").write_text(
-    '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"></head><body>'
-    + page + "</body></html>", encoding="utf-8")
 print("built:", {k: (v["words"], v["ok"]) for k, v in meta.items()}, "bytes:", len(page.encode("utf-8")))

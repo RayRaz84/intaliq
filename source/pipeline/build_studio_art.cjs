@@ -60,9 +60,13 @@ for (const [k, u] of Object.entries(E.UNITS)) {
 
 /* ---- 3 · the Studio: embed the engine wholesale, regenerate the generated blocks ---- */
 let html = read('source/pipeline/school_course_studio.html');
-const engStart = html.indexOf('(function(root){\n"use strict";');
-const engEnd = html.indexOf('})(typeof window!=="undefined"?window:globalThis);', engStart);
-if (engStart < 0 || engEnd < 0) throw Error('Embedded engine not found in the Studio source');
+/* the embedded engine is everything in its <script> block up to the end of the engine's IIFE — header comments
+   included, so a rebuild replaces the previous embedding exactly (cleanup 2026-10-12: earlier builds kept the old
+   header comments above the IIFE and stacked a new copy on every rebuild) */
+const iife = html.indexOf('(function(root){\n"use strict";');
+const engStart = iife < 0 ? -1 : html.lastIndexOf('<script>\n', iife) + '<script>\n'.length;
+const engEnd = html.indexOf('})(typeof window!=="undefined"?window:globalThis);', iife);
+if (iife < 0 || engStart < '<script>\n'.length || engEnd < 0) throw Error('Embedded engine not found in the Studio source');
 const endLen = '})(typeof window!=="undefined"?window:globalThis);'.length;
 html = html.slice(0, engStart) + engine.trimEnd() + html.slice(engEnd + endLen);
 
