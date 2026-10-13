@@ -60,6 +60,7 @@ ACTFL bands correspond to text types, so interpretive claims are auditable again
 3. **Learner-work calibration** (once the level has students): for a sample of learners, three pieces per mode are rated against the claimed range; the observed range replaces the estimated one in all claims, on the record.
 4. Every calibration outcome is a register entry; outward copy is updated in the same pass.
 5. ⟨SC-096⟩ The materials sample per level is drawn **per ladder rung** (`SCHOOL_COURSE_OUTPUT_LADDER_SCHEDULE.md` §4): Captions and Frames work is rated against Novice Low–Mid, Chains against Novice Mid–High, the Stories rung against Novice High — the level's exit claim is tested there.
+6. ⟨SC-122⟩ Calibration outcomes are recorded in the five evidence categories of `INTALIQ1_LEARNING_EFFECTIVENESS_STANDARD.md` §2: materials calibration is **design review**; learner-work calibration is **observed performance** (and, when the probe is later or changed in context, **delayed performance** / **transfer**). P-4's "empirical result supersedes the estimate" happens through the unit's evidence record (`INTALIQ1_LEARNING_EVIDENCE_TEMPLATE.md` §D), whose rows name the version observed; a panel rating never fills a learner row.
 
 ## 6. Standing disclosures (appear in every alignment appendix)
 

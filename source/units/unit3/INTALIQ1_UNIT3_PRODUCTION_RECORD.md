@@ -43,3 +43,7 @@ Phrase page 18 items · recombination page 10 texts · personal questions 10 · 
 **TF-7 · stage 11.** Prescribed: generate activities. Needed: find-it pools must not reach into a later spoiler stage — two did and QC caught them. Change for v1: the build script asserts pool ⊆ stages ≤ activity stage before writing.
 
 **State of Unit 3:** Gate A approved (SC-109) · revision 1 drafted, built, measured, audited · Studio 42 · teacher's page generated · **Gate B open** · illustrations held.
+
+## 8 · 2026-10-13 — evidence status ⟨SC-122⟩
+
+**Technical verification — run** on the provisional texts (Version 46, gate exit 0; Unit 3 pathways walked to their end) · **design review — not run** · **observed · delayed · transfer — not observed**. The texts are not frozen (Gate B open); the evidence plan (template §A) is written at the freeze from the brief, and the record opens with the freeze per runbook stage 14 ⟨SC-122⟩.

@@ -14,6 +14,7 @@ An item proposed without frequency evidence or a recorded rationale fails LC-1.
 | 1 | Unit purpose and communicative affordance | yes | scope map |
 | 2 | Headline structural event — **exactly one** | yes | scope map; Architecture §19 |
 | 3 | ACTFL per-mode performance targets | yes | `SCHOOL_COURSE_ACTFL_ALIGNMENT` §6 — performance, never proficiency |
+| 3b | **Evidence plan** ⟨SC-122⟩ — `INTALIQ1_LEARNING_EVIDENCE_TEMPLATE.md` §A filled for this unit: the communicative function and rung, what each mode is expected to permit (deferrals named), the input and repeated processing before each output task, the supports allowed per task, the later return and the unit responsible for it, the riskiest assumption and the probe that could show its failure. Plans, never results; the record opens at freeze (runbook stage 14) | yes | `INTALIQ1_LEARNING_EFFECTIVENESS_STANDARD.md` §3; SC-122 |
 | 4 | **New core: 3–5 items**, or fewer with recorded rationale — an overrun is **disclosed, not gated** ⟨SC-090⟩; chunks count as one (§11) | yes | Frequency Manual §2.6; SC-016 R-1; SC-046 |
 | 4b | **Target verbs — 3–6 on the verb track** (SC-094), each with its past 3sg forms licensed and its form-class citation; plus story verbs carried as support ahead of their home unit (CR-6) and the preposition each needs | yes | SC-094; CR-6; SC-073 |
 | 4c | **Ladder rung** (SC-096) — Captions U1–2 · Frames U3–4 · Chains U5–6 · Stories U7–8; any deviation with its reason. The notebook and retell formats are built to the rung | yes | SC-096; `SCHOOL_COURSE_OUTPUT_LADDER_SCHEDULE.md` §3 |
@@ -41,4 +42,4 @@ An item proposed without frequency evidence or a recorded rationale fails LC-1.
 | 23 | **Reports** (not gates): support count · owed-lookup count · band overrun · name density ⟨SC-093⟩ | yes | SC-093 |
 | 22 | Unresolved items that genuinely prevent authorization | yes | — |
 
-**Template pass test.** All 22 fields present · field 4 within band or carrying a rationale · field 8 lists forms, not lemmas · field 11's not-authorized list non-empty · field 14 names three, none of them tense · field 21 has a row per proposed item · field 22 lists only genuine authorization blockers, each with a recommended resolution.
+**Template pass test.** All 23 fields present (3b added SC-122) · field 4 within band or carrying a rationale · field 8 lists forms, not lemmas · field 11's not-authorized list non-empty · field 14 names three, none of them tense · field 21 has a row per proposed item · field 22 lists only genuine authorization blockers, each with a recommended resolution.

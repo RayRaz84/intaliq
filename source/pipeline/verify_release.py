@@ -10,7 +10,9 @@ exit 1 on any blocker.
 
 Added 2026-10-10 (audit batches 1–3): pathway walkthroughs (B1, I7), resource checks (B4, I7),
 unresolved <use href="#…"> references, learner-view check (I6), and mutation tests against the
-embedded engine (B2) — a canon, form, membership or audio-flag mutation must leave the unit undeliverable."""
+embedded engine (B2) — a canon, form, membership or audio-flag mutation must leave the unit undeliverable.
+Added 2026-10-13 (SC-122): a status-only read of the Unit 1 evidence record (exists; names the version; carries its
+five status fields). The gate never writes an evidence status."""
 import sys, os, json, threading, http.server, socketserver, functools, re, subprocess, tempfile
 from pathlib import Path
 from playwright.sync_api import sync_playwright
@@ -250,6 +252,22 @@ for k in ("answer key", "Answer key", "ANSWER KEY"):
 if re.search(r"أَنَا وَلَدٌ|أَنَا بِنْتٌ", html): blockers.append("first-person gender self-categorisation printed (SC-021)")
 if (deploy / "index.html").read_bytes() != (deploy / "404.html").read_bytes(): blockers.append("index.html and 404.html differ")
 if not (deploy / "teacher.html").exists(): blockers.append("teacher.html missing from the deploy folder")
+
+# --- evidence record: STATUS-ONLY check (SC-122; Learning Effectiveness Standard §9). The gate reads the Unit 1
+# evidence record, requires that it exists, names the deployed version and carries its five status fields.
+# It never writes a status, never infers one from a build result, and treats "not run / not observed" as valid.
+rec = deploy / "source/units/unit1/INTALIQ1_UNIT1_LEARNING_EVIDENCE_RECORD.md"
+if not rec.exists():
+    blockers.append("Unit 1 evidence record missing (source/units/unit1/INTALIQ1_UNIT1_LEARNING_EVIDENCE_RECORD.md, SC-122)")
+else:
+    rtxt = rec.read_text(encoding="utf-8")
+    fsec = rtxt.split("## F · Status", 1)[1] if "## F · Status" in rtxt else ""
+    if expected_version and f"VERSION {expected_version}" not in fsec:
+        blockers.append(f"Unit 1 evidence record §F does not name VERSION {expected_version} (SC-122) — re-state the record against the deployed build; statuses are not changed by this")
+    for field in ("Technical:", "Design review:", "Learner evidence", "Listening and corner:"):
+        if field not in fsec: blockers.append(f"Unit 1 evidence record §F lacks the field '{field}' (SC-122)")
+    if "not observed" in fsec: warnings.append("Unit 1 learner evidence: NOT OBSERVED — the record says so; the unit carries no learning claim (SC-122)")
+    if "Design review: not run" in fsec: warnings.append("Unit 1 design review: NOT RUN (SC-009 panel sitting not yet recorded; SC-122)")
 errs = [c for c in console if c[0] == "error" and "ERR_TUNNEL" not in c[1] and "net::" not in c[1]]
 for u in sorted(set(external)): warnings.append(f"external resource not reachable from this workspace (fine on Pages): {u[:90]}")
 for e in errs: blockers.append(f"console error: {e[1][:160]}")
