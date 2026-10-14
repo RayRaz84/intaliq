@@ -4,7 +4,8 @@ build_teacher_pages.py — generates the per-unit TEACHER'S PAGE (SC-104).
 
 Rules this generator enforces, by construction:
   * one page per frozen unit; contents = unit flow (five phases → the unit's actual pages),
-    C1 · C3 · C4 procedures (three lines or fewer each), pilot observation notes (Activity Architecture §8);
+    C1 · C3 · C4 procedures (three lines or fewer each); ⟨SC-124: the pilot observation notes were removed — no pilot,
+    observation or evaluation survey is part of the course⟩;
   * NO answer keys of any kind (SC-048 item 3) — the data below carries no answers, and the
     assertion at the bottom of this file refuses to build if any bank/answer field is ever added;
   * NOT linked from the student Studio — this script never touches school_course_studio.html;
@@ -135,7 +136,7 @@ UNITS = [
      "Notebook p. 5–6 · قِصَّتِي الْمُوَازِيَةُ — the skeleton keeps only its verbs; the learner writes every noun phrase and one whole line, from the p. 9 survey and the p. 8 poster.",
      "Notebook p. 7 · قِصَّتِي — starters, no bank. p. 8 · دَوْرِي — my family, two lines and a drawing.",
      "Notebook p. 10 · هَلْ تَذْكُرُ؟ — four Unit 2 lines."],
-    "This is the first unit with no bank on p. 5–7. Expect it to be slower; if learners cannot supply a whole line unassisted, note it on the pilot sheet — the ladder moves the rung to Unit 5 on that evidence, not on impression."),
+    "This is the first unit with no bank on p. 5–7. Expect it to be slower; give the planned supports (the models row and the learner's own C1 grid) and let learners finish; the rung is set by design (Ladder §3), not by a sheet."),
    ("Fuller communication and transfer", "The teacher facilitates — zero prep, no props",
     ["C3 · هٰذِهِ صَفْحَتِي! — p. 6, and the family poster on p. 8 presented as a two-line exchange.",
      "C4 · نُعِيدُ الْقِصَّةَ بِالصُّوَرِ — under the eight-frame strip; learner-led, one picture each (Frames rung); after both readings.",
@@ -148,8 +149,8 @@ UNITS = [
 
 PROCEDURES = {
  "C1": ("اِسْأَلْ أَصْدِقَاءَكَ", "Ask your friends — the survey (Phase 3, before the notebook)", [
-   "Notebook open at p. 9. Read the printed questions aloud once, in Arabic, and the two answer models («عِنْدِي…» ✓ · «لَيْسَ عِنْدِي…» ✗); do not translate them.",
-   "Learners stand, ask five classmates — the name, the pen, the list — write each name and tick ✓ or ✗ in each column.",
+   "Prepare first (SC-124): notebook open at p. 9. Ask the printed questions yourself, in Arabic, to three or four learners — holding up a real pen or list where it fits — and let each answer from the printed answers; then the class says each question with you. Do not translate.",
+   "In pairs, learners ask each other every printed question once and answer from the printed answers. Then they stand, ask five classmates, write each name and tick ✓ or ✗ in each column.",
    "Stop when every grid has five names. Those names are used on p. 5, so this runs before the parallel story; a learner who missed it uses the printed class list on p. 5."]),
  "C3": ("هٰذِهِ صَفْحَتِي", "Share your page", [
    "In pairs. The learner holds up the finished page (p. 5–6 or the poster on p. 8) and says the printed line: «هٰذِهِ صَفْحَتِي!»",
@@ -161,14 +162,7 @@ PROCEDURES = {
    "Move to the next frame once a sentence has been said for this one. The story ends when the strip does."]),
 }
 
-PILOT = [
- "Of the two readings, how much could learners retell from the strip without the text? (a rough share, and which frames stalled)",
- "First cold read of Reading 1: what did the class understand before the phrase page and strip, and what changed after them?",
- "Were the personal questions (وَأَنْتَ؟ وَأَنْتِ؟) answered without you? Which ones needed you?",
- "Was the recombination page read, skipped, or read once? (Unit 2 onward)",
- "On the notebook: did learners complete p. 5–6 and p. 7 unassisted? Where did they stop and ask?",
- "Anything a learner said in Arabic that the unit did not teach — write it down exactly.",
-]
+# PILOT notes removed by SC-124 (2026-10-13): no pilot, observation or evaluation survey is part of the course.
 
 # ---------- 3 · render ----------
 _AR = re.compile(r'«?[\u0600-\u06FF][\u0600-\u06FF\s؟!،:\.]*[\u0600-\u06FF؟!\.]»?|«?[\u0600-\u06FF]»?')
@@ -209,10 +203,7 @@ def render_unit(u):
         ls = "".join(f"<li>{esc(l.format(c3ex=u['c3_example']))}</li>" for l in lines)
         out.append(f'''
   <article class="proc"><header><span class="code">{code}</span><span class="rub">{ar(rub)}</span><span class="en">{esc(en)}</span></header><ol>{ls}</ol></article>''')
-    out.append('</div>\n <h3>Pilot notes <small>what the classroom pilot must report (Activity Architecture §8) — write here, or on paper</small></h3>\n <ol class="pilot">')
-    for q in PILOT:
-        out.append(f'<li><p>{esc(q)}</p><div class="lines" aria-hidden="true"></div></li>')
-    out.append('</ol>\n</section>')
+    out.append('</div>\n</section>')   # SC-124: the pilot-notes section is removed; nothing on this page records learners
     return "".join(out)
 
 today = datetime.date.today().isoformat()
@@ -263,8 +254,6 @@ h3 small{display:block;font:400 14px/1.4 "Source Sans 3",system-ui,sans-serif;co
 .proc .en{color:var(--mute);font-size:14px}
 .proc ol{margin:0;padding-left:20px;font-size:15px}
 .proc li{margin:4px 0}
-.pilot{margin:0;padding-left:22px;display:grid;gap:12px}
-.pilot p{margin:0 0 4px}
 .lines{height:54px;background:repeating-linear-gradient(to bottom,transparent 0 26px,var(--line) 26px 27px)}
 footer{color:var(--mute);font-size:13px;margin-top:10px}
 @media (max-width:560px){.phase{grid-template-columns:1fr}.tnote{grid-column:1}.facts dt{min-width:64px}}
@@ -275,7 +264,7 @@ footer{color:var(--mute);font-size:13px;margin-top:10px}
 body = [CSS, f'''
 <div class="wrap">
  <header class="top"><span class="badge">Teacher</span><h1>Intaliq 1 · Teacher's pages</h1><span style="color:var(--mute)">Level 1 · MSA · ages 8–13</span></header>
- <p class="disc"><b>Not part of the student materials.</b> This page is for the person running the class. It is not linked from the student site and does not need to be hidden from learners: it holds no answers to anything (SC-048) — only the order of the unit, the three classroom procedures, and the questions the pilot must answer. Nothing on it asks you to prepare, print, cut or make anything.</p>
+ <p class="disc"><b>Not part of the student materials.</b> This page is for the person running the class. It is not linked from the student site and does not need to be hidden from learners: it holds no answers to anything (SC-048) — only the order of the unit and the three classroom procedures. Nothing on it asks you to prepare, print, cut or make anything.</p>
  <nav class="toc">''' + "".join(f'<a href="#unit-{u["n"]:02d}">{esc(u["label"])}</a>' for u in UNITS) + '</nav>']
 for u in UNITS:
     body.append(render_unit(u))

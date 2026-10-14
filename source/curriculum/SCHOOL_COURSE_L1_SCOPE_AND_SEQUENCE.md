@@ -11,7 +11,7 @@
 
 **The learner arrives able to decode fully vocalized words at a deliberate pace** — letters in all positions, the three short vowels, sukūn, shadda, long vowels, tanwīn at least by recognition. Level 1 assumes **decoding only**: no vocabulary, no grammar, no fluency. (The independent script manual brings the absolute beginner exactly to this doorstep; learners who decoded elsewhere enter identically. Level 1 never presupposes the manual's content.)
 
-Level 1 is **ten modular units** ⟨SC-063 locked the count at ten; **eight are designed** (U1–U8, this map) and **U9–U10 are locked, undesigned slots** to be designed after Units 1–4 have been through a real classroom — SC-099⟩, each built around one communicative affordance, one headline grammar event, and one story environment. Units are self-contained and counted in units, never weeks. Because decoding is assumed, print and speech run together from the first lesson: every oral exchange has its readable counterpart within the same unit.
+Level 1 is **ten modular units** ⟨SC-063 locked the count at ten; **eight are designed** (U1–U8, this map) and **U9–U10 are locked, undesigned slots** ~~to be designed after Units 1–4 have been through a real classroom — SC-099~~ ⟨SC-124: no classroom precondition — U9–U10 are designed at their own Gate A, from the designed exit of Unit 8⟩⟩, each built around one communicative affordance, one headline grammar event, and one story environment. Units are self-contained and counted in units, never weeks. Because decoding is assumed, print and speech run together from the first lesson: every oral exchange has its readable counterpart within the same unit.
 
 **Verification (SC-009):** the Program Owner and a panel of educators review units as they are built; U1–U2 go to the panel first, and panel findings feed forward into the later units' Gate A decisions.
 
@@ -106,7 +106,7 @@ Affordance: recounting completed events — the biggest communicative unlock in 
 
 Reads fully vocalized connected text built from ≈120–150 owned words, alone and at growing pace. Greets, introduces self and others; asks and answers where/what/who/why/yes-no questions; states possession, lack, wants, likes; describes routines; recounts a simple completed event in the past tense. Has read at least eight real stories that worked as stories, and has used every structure in live interaction before ever being assessed on it.
 
-The exit performance is also **Level 2's empirical entry profile** — recorded from real pilot learners, not assumed (charter §3).
+The exit performance is also **Level 2's ~~empirical~~ entry profile** — ~~recorded from real pilot learners, not assumed (charter §3)~~ ⟨SC-124: Level 1's designed exit profile, revisable by design review; no pilot⟩.
 
 ---
 

@@ -25,7 +25,7 @@ One scaffold is removed per **pair** of units, never per unit, so each rung is m
 
 **S6 · دَوْرِي / C3.** U1–U2 a poster with one line and a drawing · U3–U4 the poster becomes a two-line exchange presented to a partner · U5–U6 the learner presents an N3 page · U7–U8 the learner presents the rewritten story (N2) to the class.
 
-**Units 9–10.** Level 1 is ten units (SC-063); the two reserved units are undesigned by ruling. The ladder above covers the eight designed units; whether U9–U10 extend the Stories rung or add a fifth is decided at their Gate A, from what the pilot shows a Unit 8 learner can write.
+**Units 9–10.** Level 1 is ten units (SC-063); the two reserved units are undesigned by ruling. The ladder above covers the eight designed units; whether U9–U10 extend the Stories rung or add a fifth is decided at their Gate A, ~~from what the pilot shows a Unit 8 learner can write~~ ⟨SC-124: from the designed Unit 8 rung, by design review; no pilot⟩.
 
 ## 4 · What this claims, in ACTFL terms
 
@@ -37,4 +37,4 @@ Activity Architecture §3 N (this table replaces the four one-line definitions) 
 
 ## 6 · Risks
 
-The rungs above are a design, not a measurement. The classroom pilot (Activity Architecture §8) is where the Frames rung gets tested at ages 8–13 — if learners cannot supply a whole line unassisted at U3, the rung moves to U5 and the schedule compresses. The open-items line "confirmation at the panel that N2/N3 frames work unassisted" is the same question and should be answered on the same day.
+The rungs above are a design, not a measurement. ~~The classroom pilot (Activity Architecture §8) is where the Frames rung gets tested at ages 8–13 — if learners cannot supply a whole line unassisted at U3, the rung moves to U5 and the schedule compresses.~~ ⟨SC-124: there is no pilot. Each rung's demands are checked by design review — every slot has its language supplied first and its planned support printed — and a rung moves only by Gate A, the SC-009 review and the owner.⟩ The open-items line "confirmation at the panel that N2/N3 frames work unassisted" is the same question and should be answered on the same day.

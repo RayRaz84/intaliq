@@ -1,3 +1,5 @@
+> ⟨**ARCHIVED — SC-124, 2026-10-13.** Not an active instrument. The owner cancelled pilots, learner trials, observation studies, evaluation surveys, retention and transfer studies and empirical evidence records as requirements to produce, approve, complete or publish Intaliq. Kept unaltered below as history; nothing here may be required of a unit, a release, an approval or a completion, and no active document points to it as an instruction.⟩
+
 # Unit 1 Learning Check Addendum
 
 ⟨**Record-maintenance mark, Intaliq Text, 2026-10-13:** merged into `INTALIQ1_UNIT1_LEARNER_CHECK_PROTOCOL.md` v2 by **SC-122**; kept verbatim as the auditor's source. §6's "independently run" is corrected in SC-122: the listening fixture tests were run by the Text session's gate.⟩

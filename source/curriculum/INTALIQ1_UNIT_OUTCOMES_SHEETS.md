@@ -116,7 +116,7 @@
 
 | | |
 |---|---|
-| **Status** | The unit count is ten by ruling (SC-063). Units 9 and 10 exist as slots and carry **no content**: no stories, no can-dos, no word lists, no grammar. They are designed after Units 1–4 have been through a real classroom, because what a learner arriving at Unit 9 can do is an empirical fact those classrooms reveal, not a spec writable today (ten-unit progression, P-2). No instrument may read rows for them into existence. |
+| **Status** | The unit count is ten by ruling (SC-063). Units 9 and 10 exist as slots and carry **no content**: no stories, no can-dos, no word lists, no grammar. ~~They are designed after Units 1–4 have been through a real classroom, because what a learner arriving at Unit 9 can do is an empirical fact those classrooms reveal, not a spec writable today (ten-unit progression, P-2).~~ ⟨SC-124: no classroom precondition — they are designed at their own Gate A, after Unit 8, from Unit 8's designed exit.⟩ No instrument may read rows for them into existence. |
 | **What is already known about them** | They take no new connector (function-word progression: the Novice set closes at U8; `حَتَّى` or a purpose frame is the first candidate if a design needs one) · they are where the earlier connectors and the past system become productive across longer texts · the writing ladder's Stories rung (U7–U8) will need either a fifth rung or an extension, decided at their Gate A. |
 
 ---
@@ -258,7 +258,7 @@ Family set, core candidates (SC-101 — the reader line's one-noun cap does not 
 
 ### U3.4 · Production activities — the Frames rung, first use (Ladder §3)
 
-N1 two slots per line; bank printed **but shuffled and over-full** (two distractors) · N2 the skeleton keeps only the verbs; the learner supplies every noun phrase and **one whole line** · N3 starters, **no bank** — the learner's S4 truths and C1 data are the source · C1 *find someone who has…* · C3 the poster becomes a two-line exchange with a partner · C4 learner-led, one picture each · S11 Version B **written** as the changed lines only · N4 draws on Unit 2. **Pilot risk (Ladder §6):** if learners cannot supply a whole line unassisted here, the rung moves to Unit 5.
+N1 two slots per line; bank printed **but shuffled and over-full** (two distractors) · N2 the skeleton keeps only the verbs; the learner supplies every noun phrase and **one whole line** · N3 starters, **no bank** — the learner's S4 truths and C1 data are the source · C1 *find someone who has…* · C3 the poster becomes a two-line exchange with a partner · C4 learner-led, one picture each · S11 Version B **written** as the changed lines only · N4 draws on Unit 2. **Design risk (Ladder §6, as amended SC-124):** every slot must have its language supplied first and its support printed; the rung is checked by design review, not by a pilot.
 
 ---
 

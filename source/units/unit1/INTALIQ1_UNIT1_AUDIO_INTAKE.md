@@ -27,7 +27,7 @@ Three listening families (F9), all input-only: **hear a phrase → tap its pictu
 ## 4 · Who decides what
 
 - **Supplying the recordings** is production work outside this session (a speaker and a microphone). The Text role cannot do it and does not simulate it.
-- **One policy point is the owner's, if he wants the gap closed sooner:** SC-028 rules synthesised speech out as shipped audio. If the owner wants a synthesised stopgap for the pilot, that is a new ruling (it changes SC-028), recorded before any such clip is bound; nothing here assumes it.
+- **One policy point is the owner's, if he wants the gap closed sooner:** SC-028 rules synthesised speech out as shipped audio. If the owner wants a synthesised stopgap ⟨SC-124: there is no pilot⟩, that is a new ruling (it changes SC-028), recorded before any such clip is bound; nothing here assumes it.
 - **Verification** needs a named Arabic-reading listener; the Editor can be that listener for clips supplied to the session, and says so in the rows.
 
 ## 5 · Status

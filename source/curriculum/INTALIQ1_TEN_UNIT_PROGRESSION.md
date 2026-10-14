@@ -14,7 +14,7 @@ No unit below carries a count it has not earned. Where a number would be a guess
 
 **SC-063 locked the unit count at ten.** The adopted scope and sequence **designs eight**. Those are not in conflict — the count is settled and two units are not yet designed — but the difference has to be visible in this table rather than smoothed over.
 
-So this file gives **eight designed units and two locked-but-undesigned slots**, and says which is which. A later unit's content is an empirical fact that real Band 5–6 students reveal, not a spec writable today; filling U9–U10 with plausible-looking rows now would make the table look complete and make the product worse.
+So this file gives **eight designed units and two locked-but-undesigned slots**, and says which is which. ~~A later unit's content is an empirical fact that real Band 5–6 students reveal, not a spec writable today;~~ ⟨SC-124: no classroom evidence is required; U9–U10 are designed at their own Gate A after Unit 8⟩ filling U9–U10 with plausible-looking rows now would make the table look complete and make the product worse.
 
 ---
 
@@ -102,7 +102,7 @@ Four of these — `أَنْتَ/أَنْتِ` · `هِيَ` · `هٰذِهِ` ·
 
 **P-1 — Unit 3's family set breaks the one-family-noun cap.** Bank §4.2 (B-PP4) caps new family nouns at **one per unit**. The scope map gives Unit 3 six. Either the cap is a reader-line rule that does not transfer to Intaliq (as the diacritic taper explicitly did not, SC-062), or the family set splits across U3 and later units. **A ruling, not an edit.**
 
-**P-2 — two units are locked but undesigned, and that gap needs an owner's answer eventually, not now.** SC-063 locked the count at ten and retired the eight-unit assumption wherever it was load-bearing; SC-048's map still designs eight. The right time to design U9–U10 is after Units 1–4 have been through a real classroom, because their entry profile is the thing those classrooms will reveal. Until then **no downstream instrument should read U9/U10 rows into existence** — an empty slot is a ruling here, not an omission.
+**P-2 — two units are locked but undesigned, and that gap needs an owner's answer eventually, not now.** SC-063 locked the count at ten and retired the eight-unit assumption wherever it was load-bearing; SC-048's map still designs eight. ~~The right time to design U9–U10 is after Units 1–4 have been through a real classroom, because their entry profile is the thing those classrooms will reveal.~~ ⟨SC-124: the right time is their own Gate A, after Unit 8, from Unit 8's designed exit; no pilot.⟩ Until then **no downstream instrument should read U9/U10 rows into existence** — an empty slot is a ruling here, not an omission.
 
 **P-3 — `أُرِيدُ` is allocated twice.** ⟨**CONFIRMED AT SCALE AND ACTED ON BY SC-082, 2026-09-15** — the reader line's Frequency Manual §6 table does not govern Intaliq, and half the apparent function-word conflicts were that table, not internal ones. See `INTALIQ1_FUNCTION_WORD_PROGRESSION.md` §1.⟩ The reader line's Frequency Manual §6 allocates `أُرِيدُ` to **Unit 6 core**; Intaliq's scope map debuts it in **Unit 1** (SC-059) and finishes the possession system in **Unit 3**. These are two different products and the allocation tables do not have to agree — but `03_VOCABULARY_AND_FREQUENCY_MANUAL` is cited as Intaliq's frequency authority (§3), and a reader consulting it for `أُرِيدُ` will be told Unit 6. **Worth one sentence in the architecture stating that the reader line's §6 allocation table does not govern Intaliq.**
 

@@ -107,4 +107,4 @@ Delivered recordings come back as the folder `assets/audio/` plus the filled man
 |---|---|---|
 | Recordings | 72 clips (46 + 26) per §A, verified by a named listener | **none exist** |
 | Photographs | 3 per §B with provenance | **none exist** |
-| The sitting that closes the unit under SC-122 | the expert panel's design review (Route A), recorded in `INTALIQ1_UNIT1_LEARNING_EVIDENCE_RECORD.md`; learner sittings per the observation kit when the owner arranges them | **not run** |
+| The content and design review (SC-124 (d) 4) | the Program Owner and the panel of educators review the unit's materials under SC-009; recorded in the register — no learner sitting, observation or survey is part of it | **not yet recorded** |

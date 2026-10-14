@@ -23,10 +23,10 @@ The line works because each product refuses to be the others. This course:
 
 ## 3. Audience: the whole school span, leveled — one level at a time
 
-The course is a **multi-level series**, each level targeting a grade band across the school years, with a **college edition planned later** as a derivative product. But the charter adopts the line's hardest-won planning rule: **a later level's entry profile is an empirical fact that earlier levels' real students will reveal, not a spec writable today.** Accordingly:
+The course is a **multi-level series**, each level targeting a grade band across the school years, with a **college edition planned later** as a derivative product. But the charter adopts the line's hardest-won planning rule: **a later level's entry profile is an empirical fact that earlier levels' real students will reveal, not a spec writable today.** ⟨**SC-124:** no pilot, learner study or classroom evidence is required before a level or unit is designed; a later level's entry profile is the earlier level's designed exit profile, and the rule survives as a caution against overclaiming, not as a production requirement.⟩ Accordingly:
 
 - Only the **first level** is designed now. Its grade band is the first open decision (O-1). Each level carries a **proficiency anchor** in its level spec; Level 1's is **Novice Low → Novice High** (SC-010), and its selections are made with the full series in mind — higher-band machinery is reserved for the level that will teach it properly, never borrowed early.
-- The ladder above it is named in principle and left unspecified in detail; each level's spec is written when the level below has met real learners.
+- The ladder above it is named in principle and left unspecified in detail; each level's spec is written ~~when the level below has met real learners~~ ⟨SC-124: from the level below's designed exit profile⟩.
 - Nothing in Level 1 may be built in a way that silently commits the upper levels (no series-wide vocabulary promises, no cross-level plot dependencies) until those levels have specs.
 
 ## 4. The design floor: the weekend and community school
@@ -73,7 +73,7 @@ The course starts with the line's paid-for toolkit, each item subordinate to thi
 | ~~O-2~~ | **Product name — CLOSED** | **Intaliq 1** (SC-063). Files keep `SCHOOL_COURSE_*` names by alias. |
 | O-3 | Variety/dialect exposure stance | §15's principle is law; the concrete policy is open. |
 | ~~O-4~~ | **Contact-hours floor — CLOSED** | **Withdrawn as a requirement (SC-063).** Hours are implementation guidance only; pacing is proficiency-oriented and calendar-flexible. |
-| O-5 | The level ladder's band boundaries | Named when Level 1 has met real learners. |
+| O-5 | The level ladder's band boundaries | ~~Named when Level 1 has met real learners.~~ ⟨SC-124: named by owner ruling at design time; no learner study required.⟩ |
 | ~~O-6~~ | **Unit count — CLOSED; the rest open** | **Ten core units, locked (SC-063).** Per-unit communicative goals and the vocabulary/grammar allocations remain to be built, now against ten rather than the eight the working map assumed. |
 
 ## 10. Existing assets
@@ -82,4 +82,4 @@ Concept plus sample readings (the سلوى picture-hunt reading and its kin). Th
 
 ## 11. The first mistakes to avoid
 
-Named here so they are cheap to refuse later: designing upper levels before Level 1 has students (the overclaim pattern two projects have beaten out of this line) · adopting style rules mid-production instead of at Gate A · letting the story strand's success justify skipping the interaction strands, or vice versa (§19's two failure modes) · letting "sold setting-neutral" drift into "designed setting-neutral" · and treating the classroom pilot as a launch formality rather than the test of the course's riskiest assumption.
+Named here so they are cheap to refuse later: designing upper levels before Level 1 has students (the overclaim pattern two projects have beaten out of this line ⟨SC-124: read as a caution against overclaiming; it requires no study⟩) · adopting style rules mid-production instead of at Gate A · letting the story strand's success justify skipping the interaction strands, or vice versa (§19's two failure modes) · letting "sold setting-neutral" drift into "designed setting-neutral" · ~~and treating the classroom pilot as a launch formality rather than the test of the course's riskiest assumption~~ ⟨SC-124: there is no classroom pilot; the riskiest assumption — cold reading in untrained hands — is carried in design and stated in outward claims as untested⟩.

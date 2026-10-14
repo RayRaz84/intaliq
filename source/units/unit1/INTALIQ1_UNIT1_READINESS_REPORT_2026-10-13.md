@@ -1,5 +1,7 @@
 # Intaliq 1 — Unit 1 readiness for instructional verification (SC-123) · Studio Version 47 · review build
 
+> ⟨**SUPERSEDED IN PART — SC-124, 2026-10-13.** A record. Its completion rule (§1, §7), its evidence plan and learner check (§3) and every *not run / not observed* requirement are **cancelled**: no pilot, observation, evaluation survey or evidence record is required. **Current completion rule:** 72 verified recordings · 3 authentic photographs · release gate and content checks · the SC-009 content and design review recorded — Unit 1 Build §9.8. What stands from this report: the two notebook corrections (§2), the verification results of Version 47 (§4), and the supply list (§5).⟩
+
 *Editor (Text role) · 2026-10-13. Governance applied and instruments prepared; **nothing has been administered and no learning effectiveness is demonstrated or claimed.** Unit 1 remains a review build.*
 
 ## 1 · Governing entry and the completion rule

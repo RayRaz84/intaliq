@@ -1,3 +1,5 @@
+> ⟨**ARCHIVED — SC-124, 2026-10-13.** Not an active instrument. The owner cancelled pilots, learner trials, observation studies, evaluation surveys, retention and transfer studies and empirical evidence records as requirements to produce, approve, complete or publish Intaliq. Kept unaltered below as history; nothing here may be required of a unit, a release, an approval or a completion, and no active document points to it as an instruction.⟩
+
 # Intaliq 1 — Unit 1 learning evidence record
 
 *Editor (Text role) · opened 2026-10-12 · §A expanded 2026-10-13 (evidence-plan pass) · instance of `INTALIQ1_LEARNING_EVIDENCE_TEMPLATE.md` (adopted **SC-122**, 2026-10-13). **Status fields only. Nothing here is a result.** Every observation row reads "not run / not observed" and stays so until a named observer writes a sitting into §B–§C. The build may read this file's version and status fields; it never writes an outcome (standard §9).*

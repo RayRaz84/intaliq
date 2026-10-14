@@ -1,3 +1,5 @@
+> ⟨**ARCHIVED — SC-124, 2026-10-13.** Not an active instrument. The owner cancelled pilots, learner trials, observation studies, evaluation surveys, retention and transfer studies and empirical evidence records as requirements to produce, approve, complete or publish Intaliq. Kept unaltered below as history; nothing here may be required of a unit, a release, an approval or a completion, and no active document points to it as an instruction.⟩
+
 # Intaliq 1 — Learning-effectiveness governance: adoption packet
 
 **⟨ADOPTED 2026-10-13 — SC-122, Route A. The owner adopted the package as presented ("adopt the learning effectiveness governance"); the entry drafted in §4 was recorded with Route A and the cascade in §5 was run the same day. This packet is now a record.⟩**

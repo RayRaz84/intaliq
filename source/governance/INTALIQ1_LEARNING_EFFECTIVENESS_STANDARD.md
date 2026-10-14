@@ -1,6 +1,8 @@
 # INTALIQ 1 Learning Effectiveness Standard
 
-Version: proposal 1.0, 12 October 2026. Owner: instructional Text role. **Status: ADOPTED 2026-10-13 — SC-122** ⟨mark added by Intaliq Text; text otherwise verbatim⟩. Applies to all ten units when adopted. Existing language authorizations, frozen canons and output rungs remain governing.
+Version: proposal 1.0, 12 October 2026. Owner: instructional Text role. **Status: ADOPTED 2026-10-13 — SC-122; SUPERSEDED IN PART 2026-10-13 — SC-124** ⟨marks added by Intaliq Text; text otherwise verbatim⟩.
+
+> ⟨**SC-124 — what still governs, and what is history.** The owner cancelled every pilot, learner trial, observation study, feedback survey, retention or transfer study, and every empirical evidence record, as a requirement to produce, approve, complete or publish Intaliq. **§§3–7 and §9 no longer govern** (evidence plans, observation, evidence collection, review decisions on observations, build checks of evidence records) and are kept as history; §8's release and completion paragraphs and §10's observer duties lapse with them. **Still in force:** (i) **the claim limits** — outward wording names only the evidence that exists (today: technical verification; design review once recorded under SC-009), states learner effectiveness as untested, and never presents a build, a count, a panel review or the absence of evaluation as evidence of learning (§2's categories as claim vocabulary; §8's last paragraph); (ii) comprehension, retention and transfer remain **instructional aims**, pursued through the quality controls the Author's Page lists — no study is required to pursue them; (iii) §10's **privacy floor** (SC-048). No evaluation requirement replaces what was cancelled.⟩ Applies to all ten units when adopted. Existing language authorizations, frozen canons and output rungs remain governing.
 
 ## 1. Purpose and authority
 
@@ -31,7 +33,7 @@ Report these separately. They are not interchangeable approval levels.
 
 A classroom observation without a comparison condition cannot establish that this course caused an improvement or outperforms another method. A small convenience group cannot establish a population success rate. No category establishes general proficiency or guarantees acquisition.
 
-## 3. Planning before a unit is built
+## 3. Planning before a unit is built ⟨SUPERSEDED — SC-124; not a requirement⟩
 
 Each unit must carry an evidence plan beside its Gate A brief. Reuse the evidence template; do not create a separate assessment product for learners.
 
@@ -47,7 +49,7 @@ Record:
 
 The plan must follow input → repeated processing → scaffolded interaction → limited meaningful output → transfer. It must not require every word or structure to become productive in its debut unit.
 
-## 4. What must be observed
+## 4. What must be observed ⟨SUPERSEDED — SC-124; not a requirement⟩
 
 | Dimension | Suitable observation | What is insufficient |
 |---|---|---|
@@ -64,7 +66,7 @@ The plan must follow input → repeated processing → scaffolded interaction �
 
 Comprehension may be shown through pointing, ordering, choosing or another low-output response. An observer may use a neutral clarification outside the Arabic task to distinguish misunderstanding the instructions from misunderstanding the language; record that intervention. Such a diagnostic exchange is not new learner-facing course content.
 
-## 5. Support and assistance recording
+## 5. Support and assistance recording ⟨SUPERSEDED — SC-124⟩
 
 Use these labels in observer records. They are descriptions, not learner grades.
 
@@ -75,7 +77,7 @@ Use these labels in observer records. They are descriptions, not learner grades.
 
 A replay or printed bank is not a failure of independence when that task permits it. A planned teacher cue for Unit 1 C4 is not an unplanned intervention. Record both initial response and any supported recovery. Identify the reason for difficulty: decoding, language meaning, instructions, task design, technology, attention or unknown. Do not automatically attribute every difficulty to vocabulary load.
 
-## 6. Evidence collection
+## 6. Evidence collection ⟨SUPERSEDED — SC-124; no collection is required⟩
 
 Use the intended learners and record the actual entry profile. Do not assume that a child who can decode has zero previous Arabic vocabulary; document previous exposure. Record ages/grade band, classroom setting, teaching exposure, elapsed time and supports without identities in the shared record.
 
@@ -85,7 +87,7 @@ Observe learners after the teaching that the unit actually promises. A deliberat
 
 Use a short later probe at the next available lesson, ideally within 3–7 days for the first local trial. This interval is proposed implementation guidance, not a research-derived acquisition threshold; calendar-flexible pacing remains governing. Record the actual interval and exposure rather than forcing a date. A revised version needs fresh evidence for the function materially affected by the revision.
 
-## 7. Review decisions
+## 7. Review decisions ⟨SUPERSEDED — SC-124⟩
 
 Before observation, name the essential functions, permitted supports and interpretation rules. Any numerical benchmark must be identified as a local diagnostic rule with a rationale; no universal percentage pass mark is created by this standard. The old Unit 1 3/4 and 3/5 counts may be retained as descriptive indicators, but do not by themselves establish learning or close the evidence record.
 
@@ -99,7 +101,7 @@ Never average away a recurring failure in an essential function. A single diffic
 
 For each revision, record the observed difficulty, proposed explanation, source change, expected behavioral improvement and recheck result. Explanations remain hypotheses until tested. Prefer repairing input, response resources or scaffolding before expanding language or rewriting a frozen story. Reopening canon or changing the architecture still requires the existing owner process.
 
-## 8. Release, completion and claims
+## 8. Release, completion and claims ⟨in part — SC-124: the claim rule (last paragraph) stands; no evidence status gates release or completion⟩
 
 Technical release and empirical evidence status must be separate fields. A review build may advance while learner evidence is pending, subject to its existing technical and content gates. This standard does not silently repeal Charter §8/SC-009's expert-panel release route.
 
@@ -107,7 +109,7 @@ Panel-only evidence can support design review; record learner performance, reten
 
 Outward claims must name the observed mode, domain and conditions. “Instructionally observed with six learners after the stated sequence; delayed listening not observed” is more defensible than “proven effective.” An evidence ledger must never be used as a proficiency certificate.
 
-## 9. Build and revision governance
+## 9. Build and revision governance ⟨SUPERSEDED — SC-124; the build checks no evidence record⟩
 
 The build may check that plans/records exist, version references match and status fields are populated. It must not infer teaching quality from encounter counts or write evidence results, panel approval or learner approval itself. “Not run” is a valid evidence status and must not be converted to “pass.”
 
@@ -115,7 +117,7 @@ All learner evidence is tied to an immutable commit or identified material versi
 
 No new activity family is created by this standard. Probes belong to internal instructional verification; any probe added to the product must enter through the closed-catalog and language-authorization processes.
 
-## 10. Records and responsibilities
+## 10. Records and responsibilities ⟨in part — SC-124: the privacy floor stands; observer and record duties lapse⟩
 
 Text prepares the plan and revises the materials. The teacher/observer records actual delivery and responses. The panel interprets design fit and learner evidence with limits stated. The owner settles conflicts and adopts changes through the governing project register. The Publisher publishes an authorized build; publication does not alter evidence status.
 
