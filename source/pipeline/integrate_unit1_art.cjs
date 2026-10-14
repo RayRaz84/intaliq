@@ -3,7 +3,7 @@ module.exports = function integrateUnit1Art(html, manifest) {
   const bySymbol = Object.fromEntries(manifest.slots.map(s => [s.engine_symbol, s.delivered]));
   const esc = s => String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
   const img = (symbol, attrs = '') => `<img class="rich-art" src="${bySymbol[symbol]}" alt="" ${attrs}>`;
-  for (const view of ['v-student', 'v-note']) {
+  for (const view of ['v-student', 'v-note', 'v-note2']) {
     const re = new RegExp('(<section class="view" id="' + view + '">)([\\s\\S]*?)(</section>)');
     if (!re.test(html)) throw Error('Missing Unit 1 view: ' + view);
     html = html.replace(re, (all, start, body, end) => {
@@ -40,12 +40,20 @@ module.exports = function integrateUnit1Art(html, manifest) {
         const expected = manifest.main_strip.map(id => manifest.slots.find(s => s.id === id).delivered);
         const actual = [...(intro || '').matchAll(/<img[^>]*src="([^"]+)"/g)].map(m => m[1]);
         if (JSON.stringify(actual) !== JSON.stringify(expected)) throw Error('Unit 1 main strip assignment changed');
-      } else {
+      } else if (view === 'v-note') {
         const actual = [...body.matchAll(/<div class="nbpics">([\s\S]*?)<\/div>/g)].map(row =>
           [...row[1].matchAll(/<img[^>]*src="([^"]+)"/g)].map(m => m[1]));
         const expected = [manifest.main_strip, manifest.second_strip].map(ids =>
           ids.map(id => manifest.slots.find(s => s.id === id).delivered));
         if (JSON.stringify(actual) !== JSON.stringify(expected)) throw Error('Unit 1 notebook strip does not reuse student PNGs');
+      } else {
+        /* SC-100: Unit 2 N4 reuses Unit 1 faces, including Karim's pen-bearing portrait. */
+        const retrieval = body.slice(body.indexOf('<span class="code">N4</span>'));
+        const row = retrieval.match(/<div class="nbpics">([\s\S]*?)<\/div>/)?.[1] || '';
+        const actual = [...row.matchAll(/<img[^>]*src="([^"]+)"/g)].map(m => m[1]);
+        const expected = ['av-razan', 'av-omar', 'av-huda', 'av-karim-pen'].map(id => bySymbol[id]);
+        if (JSON.stringify(actual) !== JSON.stringify(expected) || /<svg\b/.test(row))
+          throw Error('Unit 2 N4 must reuse the four accepted Unit 1 portrait PNGs');
       }
       return start + body + end;
     });

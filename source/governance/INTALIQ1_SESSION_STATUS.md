@@ -23,13 +23,15 @@
 - next in order: push SC-122 → SC-126 (Version 50) → supply list (clips, photographs) and the SC-009 review → owner's findings → Unit 3 freeze (F-2, titles, pop-up) → next Version → Units 2–3 `.rev` marking, form-licence tables and apparatus licences → when clips land: bind, build, gate, push.
 - rulings recorded: SC-113, SC-114, SC-118, SC-119, SC-120, SC-121 (SC-115–SC-117 transcribed from Codex's repository entries). SC-122, SC-123, SC-124 recorded 2026-10-13.
 
-## Intaliq Art — last updated: 2026-10-14 (Unit 1 integration, Codex)
+## Intaliq Art — last updated: 2026-10-14 (Unit 2 N4 art correction, Codex)
 
 - Owner ruling **pending project transcription (SC-118), no SC number taken**: “adopt the exact accepted Unit 2 rich-cartoon PNG style for Unit 1.” Follow-up “continue working” authorizes integration and publication. No second owner confirmation is needed. Governing register export untouched.
 - Production commit `30d90e8`: 36 reconciled slots; 7 exact Unit 2 PNG reuses and 29 new inspected PNGs. Six main strip frames and three second frames; `sc-tariq` and `sc-alone` activity-only; Tariq portrait production-only. Photographs stay a separate real supply requirement.
 - Integrated in the source build and generated `index.html` / `404.html`: 37 student placements, 9 notebook placements; no remaining Unit 1 SVG consumers. Accepted PNG hashes are checked at every build; notebook strips must reuse the student paths; the build rejects a Tariq portrait leak. Unit 1p has its own Karim-and-pen phrase support. Frozen stories and non-image engine data unchanged. The legacy SVG-only, unlicensed B1 greeting was replaced with licensed CH-01 (`السَّلَامُ عَلَيْكُمْ!`). Release gate passed: 14 routes, 9 pathways, 749 Arabic tokens / 0 unknown, no blockers. Studio stays registered Version 50; art marker `30d90e8` distinguishes the update without allocating a competing version.
-- Publication blocked by missing GitHub credentials in this workspace (`could not read Username for https://github.com`). Import the integrated bundle in the authenticated clone and push after its checks. See `UNIT1_ART_INTEGRATION_2026-10-14.md` for final verification and intake instructions.
+- Unit 1 integration is now in public `main` as `35f1546`; the live art marker is present. This workspace still cannot push through GitHub; the new Unit 2 N4 correction must be imported into the authenticated clone and published. See `UNIT2_NOTEBOOK_N4_ART_FIX_2026-10-14.md` for verification and intake instructions.
 - Ask of project intake: transcribe the direct style ruling with next free SC number, cascade art-spec scope, compare the reconstructed manifest with the Mac-only original, and record this integration in the project sequence. No unresolved illustration-content decision. Existing poster work / Unit 2 reference cleanup is outside this pass.
+
+- Follow-up: public `main` now contains Unit 1 integration commit `35f1546`. Unit 2 notebook N4 was omitted from that pass and still showed four old SVG faces. Fixed only those image consumers: exact Razan/Omar/Huda/Karim-with-pen PNGs from Unit 1; no Arabic or engine content changed. Source build now checks the four N4 paths and rejects old art/order drift. Desktop/mobile proof and full release gate passed (14 routes, 9 pathways, no blockers); see `UNIT2_NOTEBOOK_N4_ART_FIX_2026-10-14.md`. Studio number remains 50. Publication of this follow-up is pending.
 
 ## Intaliq Publisher — (Claude Code / Codex on the Mac)
 
