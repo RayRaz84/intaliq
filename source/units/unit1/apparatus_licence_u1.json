@@ -1,6 +1,6 @@
 {
   "_about": "Unit 1 apparatus licence (closure 2026-10-11, SC-121). Every Arabic token a learner can see on the Unit 1 student-book and notebook pages must be (a) a word of one of the two canons, or (b) listed here with its authority. The release gate sweeps the rendered pages (review notes excluded) and blocks on any token in neither set. Proper names and chrome are exempt from the vocabulary envelope (SC-046) but are still listed so that nothing enters silently.",
-  "names": { "authority": "roster and cast (SC-054 roll; SC-089: names are outside the envelope)", "tokens": ["آدَم", "نُور", "بَدْر", "المُعَلِّمَة"] },
+  "names": { "authority": "roster and cast (SC-054 roll; SC-089: names are outside the envelope)", "tokens": ["آدَم", "نُور", "بَدْر", "الْمُعَلِّمَةُ"] },
   "letters": { "authority": "response letters for the lettered picture row (SC-120 B4)", "tokens": ["أ", "ب", "ج", "د", "هـ"] },
   "licensed_forms": {
     "authority": "forms licensed for Unit 1 apparatus by register ruling, not printed in the readings",

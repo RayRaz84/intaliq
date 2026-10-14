@@ -51,7 +51,7 @@
 Printed as a real list — the very object رزان holds, now in the learner's hands:
 
 > **قَائِمَةُ الصَّفِّ**
-> المُعَلِّمَة: هُدَى
+> الْمُعَلِّمَةُ: هُدَى
 > 1. آدَم · 2. رَنَا · 3. سَارَة · 4. طَارِق · 5. عُمَر · 6. رَزَان · 7. نُور · 8. بَدْر
 
 *(Support used: مُعَلِّمَة — 1 of 2. All eight names pass the substring check against cast and lexicon.)*
@@ -229,3 +229,7 @@ Under the learning-effectiveness standard (SC-122). **Closure rule:** 72 clips v
 ### 9.8 · Evaluation requirements cancelled; completion rule revised — 2026-10-13 (**SC-124**, Studio Version 48, review build)
 
 The owner cancelled every pilot, learner trial, observation study, feedback survey, retention or transfer study and evidence record as a requirement for Intaliq. **Unit 1 is complete when:** (1) the 72 recordings are made by a native speaker, verified clip by clip by a named listener and bound · (2) the three authentic photographs are supplied with provenance, placed and checked for task fit · (3) the build carrying them passes the release gate and the content checks · (4) the content and design review under SC-009 is recorded in the register — then a closing entry. **Outward status:** technically verified (Version 48) · design review not yet recorded · learner effectiveness untested. **Archived:** the learner-check protocol, the addendum, the observation kit and the evidence record (`source/archive/evaluation-SC124/`). **Changed in the materials:** notebook p. 9 now prints the three C1 exchanges as question → answer pairs — «مَنْ أَنْتَ؟ / مَنْ أَنْتِ؟» → «أَنَا ___.» · «هَلْ عِنْدَكَ / عِنْدَكِ قَلَمٌ؟» → «نَعَمْ! عِنْدِي قَلَمٌ.» ✓ / «لَا! لَيْسَ عِنْدِي قَلَمٌ.» ✗ · the same for «قَائِمَةٌ» — and the teacher's C1 procedure opens with modelling every exchange and pair rehearsal before the survey. Every form is canon or apparatus-licensed; the gate's sweep confirms it. The SC-123 notebook corrections stand.
+
+### 9.9 · Completion pass, part 1 — 2026-10-14 (**SC-126**, Studio Version 50, review build)
+
+One asset batch prepared: `INTALIQ1_UNIT1_RECORDING_PACKAGE.md` (72 texts, file names, delivery rules, listener checklist) with `INTALIQ1_UNIT1_CLIP_TRACKER.csv`, and `INTALIQ1_UNIT1_PHOTO_SUPPLY_SHEET.md` — nothing supplied yet. SC-009 review packet prepared: `INTALIQ1_UNIT1_DESIGN_REVIEW_PACKET.md`; the Editor's pre-check is entered in it, the review itself has not been held. Pre-check corrections: Reading 2 true/false line «مَهَا عِنْدَهَا قَلَمٌ.» (no colon); class-list label «الْمُعَلِّمَةُ». Open for the owner: F-3 (title vocative «يَا قَلَمُ»). Gate exit 0.
