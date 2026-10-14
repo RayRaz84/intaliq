@@ -1,5 +1,5 @@
 {
-  "version": 48,
+  "version": 49,
   "units": {
     "unit-01": {
       "words": 138,
@@ -30,7 +30,7 @@
       "reading": 39
     },
     "unit-03": {
-      "words": 158,
+      "words": 161,
       "generated": 158,
       "blocked": false,
       "vocab": 40,

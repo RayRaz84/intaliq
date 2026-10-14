@@ -143,7 +143,7 @@ UNITS = [
      "Transfer — the same language in a new small situation: who has what in another family; a gift for someone at school."],
     "The survey ran in phase 3, before p. 5. The poster is shared with a partner, not the whole class, unless the child wants to."),
   ],
-  c3_example="«مَنْ هٰذَا؟» · «عِنْدَكَ أَخٌ؟»",
+  c3_example="«مَنْ هٰذَا؟» · «هَلْ عِنْدَكَ أَخٌ؟»",
   notes=[]),
 ]
 
