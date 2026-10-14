@@ -23,12 +23,13 @@
 - next in order: push SC-122 → SC-126 (Version 50) → supply list (clips, photographs) and the SC-009 review → owner's findings → Unit 3 freeze (F-2, titles, pop-up) → next Version → Units 2–3 `.rev` marking, form-licence tables and apparatus licences → when clips land: bind, build, gate, push.
 - rulings recorded: SC-113, SC-114, SC-118, SC-119, SC-120, SC-121 (SC-115–SC-117 transcribed from Codex's repository entries). SC-122, SC-123, SC-124 recorded 2026-10-13.
 
-## Intaliq Art — last updated: 2026-10-10
+## Intaliq Art — last updated: 2026-10-14 (Unit 1 reconciliation, Codex)
 
-- **ask of the Publisher / Mac session:** pull or apply the `unit1-corrections` work; its `source/` tree already carries the re-exported governance copies, so the earlier renumbering ask (SC-114→115, 115→116, 116→117 in the repository's references) is **partly done** — `README_ART_BUILD.md` carries the mapping note; `UNIT2_ART_STATUS.md`, `manifest.json`, `production-prompts.json`, `UNIT2_RICH_STYLE_AUTHORITY.md` and the two review files still say the old numbers and are the Art role's to renumber (no content change).
-- queue (SC-114): the question-word posters — `poster-man` (Unit 1), `poster-ayna` and `poster-hal` (Unit 2) **due now**; `poster-madha` and `poster-ma` after Unit 3's freeze. Spec: `INTALIQ1_QUESTION_WORD_POSTERS.md`.
-- state: rich-cartoon style adopted (SC-113); producer is the process. Version 44 live (bag brown, SC-117). **Versions 45–46 change no art file, no binding, no hash** (the build verifies all 69 against the manifest). Then: replace the reference set with the accepted Unit 2 files; posters; Unit 1 slot list when the owner issues it; Unit 3 frames after freeze.
-- rulings recorded: SC-111, SC-112, SC-113, SC-114, SC-118.
+- Owner ruling **pending project transcription (SC-118), no SC number taken**: “adopt the exact accepted Unit 2 rich-cartoon PNG style for Unit 1.” Authorized directly in this session; production need not await another confirmation. Project access is unavailable here; governing register export untouched.
+- Current inspected baseline: `59309bc`, Studio Version 50, live Version 50; Unit 1 engine 128/78 generated, 0 QC failures. Reconstructed 36-slot readiness manifest from current published bindings because the Mac-only manifest was not in GitHub. Six main strip frames plus three second-story frames; `sc-tariq` digital-only; `sc-alone` activity-only; Tariq excluded from roster image and seven-face row.
+- Changed: `art_manifest_unit1_readiness.json`, `UNIT1_RICH_STYLE_AUTHORITY.md`, `UNIT1_ART_RECONCILIATION_2026-10-14.md`. Seven accepted Unit 2 PNGs reused with verified hashes; 29 new PNGs produced and inspected, including the distinct Unit 1p Karim-and-pen support. Raw bytes, dimensions and hashes recorded. Reduced-size proofs checked; final integrated page proofs remain required. No generated page or frozen Arabic changed.
+- Ask of Text/project intake: transcribe the direct style ruling with next free SC number, cascade scope in art spec, compare reconstructed manifest against Mac-only copy, and consume accepted exact PNG bytes during integration. No new owner content decision identified. Authentic corner stays real photographs.
+- Existing separate poster work and Unit 2 reference-number cleanup are outside this Unit 1 pass and remain outstanding as previously recorded.
 
 ## Intaliq Publisher — (Claude Code / Codex on the Mac)
 

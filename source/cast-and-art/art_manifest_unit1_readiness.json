@@ -1,0 +1,1215 @@
+{
+  "schema_version": 1,
+  "baseline_commit": "59309bc",
+  "baseline_studio_version": 50,
+  "provenance": "Reconstructed from current published sources and user-supplied 35-slot report. Mac-only readiness manifest not accessible and not claimed read.",
+  "authority_status": "Direct owner Unit 1 adoption received 2026-10-14; pending project-register transcription under SC-118; no new SC number assigned",
+  "qc": {
+    "unit-01": {
+      "generated": 128,
+      "failed": 0
+    },
+    "unit-01p": {
+      "generated": 78,
+      "failed": 0
+    }
+  },
+  "main_strip": [
+    "u1-s1-1",
+    "u1-s1-2",
+    "u1-s1-3",
+    "u1-s1-4",
+    "u1-s1-5",
+    "u1-s1-6"
+  ],
+  "second_strip": [
+    "u1-s2-1",
+    "u1-s2-2",
+    "u1-s2-3"
+  ],
+  "slots": [
+    {
+      "id": "u1-s1-1",
+      "engine_symbol": "sc-door",
+      "kind": "story",
+      "show": "Razan entering classroom through doorway carrying a blank class list; Omar, Sara and Rana answer her greeting; one classroom chair",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no teacher in this frame",
+        "no Tariq"
+      ],
+      "characters": [
+        "razan",
+        "omar",
+        "sara",
+        "rana"
+      ],
+      "uses": [
+        "student six-frame main strip",
+        "notebook N1 exact-byte reuse",
+        "digital refs where engine_symbol matches"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-s1-1.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "feaff8c60d874c8f8020e978653d49a575febd5055b77898a60c2d2440eb7471",
+      "dimensions": [
+        1377,
+        1142
+      ],
+      "review": "Content and identity reviewed; raw PNG bytes retained. Final integrated page proof remains required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-s1-2",
+      "engine_symbol": "sc-list",
+      "kind": "story",
+      "show": "Razan looking at her blank list with a questioning posture; enlarged blank list visible",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no named/text labels on paper",
+        "no other characters"
+      ],
+      "characters": [
+        "razan"
+      ],
+      "uses": [
+        "student six-frame main strip",
+        "notebook N1 exact-byte reuse",
+        "digital refs where engine_symbol matches"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-s1-2.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "768ad530c0a818e40dc9542fe6b408e9b3d80aa84580b22e5144c6a31c154d45",
+      "generation_prompt": null,
+      "review": "Full generated output inspected against slot content, identities, no text and no cropping. Raw bytes retained; final integration-size proof still required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-s1-3",
+      "engine_symbol": "sc-huda",
+      "kind": "story",
+      "show": "Razan questioning adult teacher Huda; Huda gently corrects with open-hand gesture; blank classroom board behind Huda",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no Sara",
+        "no embarrassment or mocking",
+        "no writing on board"
+      ],
+      "characters": [
+        "razan",
+        "huda"
+      ],
+      "uses": [
+        "student six-frame main strip",
+        "notebook N1 exact-byte reuse",
+        "digital refs where engine_symbol matches"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-s1-3.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "3296ae0c1903eeacdd2c94a204680dfff93ab5cc38aa3494863924685a34b519",
+      "generation_prompt": "Use case illustration-story. Independent INTALIQ Unit 1 production slot u1-s1-3. Match exact accepted rich-cartoon Unit 2 style and attached identities. Draw ONLY: Razan looks questioningly at teacher Huda. Huda is visibly an adult taller than the child, brown bun, round glasses, teal modest long top; Huda gently corrects her using an open-hand gesture. A blank classroom board behind Huda. Razan two low side bundles/teal top/navy trousers. No Sara or other people. No teasing or embarrassment. Natural rounded hands/feet, dimensional garments and warm shading, clean dark contour. Landscape about 59:49, full figures including feet and necessary props contained with margins. Scene backgrounds minimal classroom detail where specified; white outer margins. No text, writing, numerals, labels, glyphs, arrows, speech bubbles, bags, keys, cats or other carried-over content. Each reference is identity/style only, not a scene reference. Native high-resolution PNG; never crop.",
+      "review": "Full generated output inspected against slot content, identities, no text and no cropping. Raw bytes retained; final integration-size proof still required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-s1-4",
+      "engine_symbol": "sc-omar",
+      "kind": "story",
+      "show": "Razan and Omar facing each other, Omar welcomes her with open-hand gesture",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no additional people",
+        "no touching"
+      ],
+      "characters": [
+        "razan",
+        "omar"
+      ],
+      "uses": [
+        "student six-frame main strip",
+        "notebook N1 exact-byte reuse",
+        "digital refs where engine_symbol matches"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-s1-4.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "f6b40fc4561f6b2157a6dcf57533913726cafb4af9a2180d9b71b76bd9b69bf7",
+      "generation_prompt": null,
+      "review": "Full generated output inspected against slot content, identities, no text and no cropping. Raw bytes retained; final integration-size proof still required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-s1-5",
+      "engine_symbol": "sc-sara",
+      "kind": "story",
+      "show": "Razan and hijab-wearing Sara identify each other warmly",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no Huda",
+        "no touching"
+      ],
+      "characters": [
+        "razan",
+        "sara"
+      ],
+      "uses": [
+        "student six-frame main strip",
+        "notebook N1 exact-byte reuse",
+        "digital refs where engine_symbol matches"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-s1-5.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "705de691e704ad8eaa6d35ee4011ccc8fca5ccd7c8d4776b0f79b2d5d6f26f2b",
+      "generation_prompt": "Use case illustration-story. Independent INTALIQ Unit 1 production slot u1-s1-5. Match exact accepted rich-cartoon Unit 2 style and attached identities. Draw ONLY: Razan and Sara warmly identify each other, standing apart facing one another. Razan two low side bundles/teal top/navy trousers; Sara teal hijab/coral modest top/blue trousers, as reference. No other people, touching, props or romance. Natural rounded hands/feet, dimensional garments and warm shading, clean dark contour. Landscape about 59:49, full figures including feet and necessary props contained with margins. Scene backgrounds minimal classroom detail where specified; white outer margins. No text, writing, numerals, labels, glyphs, arrows, speech bubbles, bags, keys, cats or other carried-over content. Each reference is identity/style only, not a scene reference. Native high-resolution PNG; never crop.",
+      "review": "Full generated output inspected against slot content, identities, no text and no cropping. Raw bytes retained; final integration-size proof still required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-s1-6",
+      "engine_symbol": "sc-end",
+      "kind": "story",
+      "show": "Sara, Razan, Rana and Omar together; girls happy at friendship resolution; classroom chair foreground",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no Tariq",
+        "no hugging",
+        "no friendship paired with romance cues"
+      ],
+      "characters": [
+        "sara",
+        "razan",
+        "rana",
+        "omar"
+      ],
+      "uses": [
+        "student six-frame main strip",
+        "notebook N1 exact-byte reuse",
+        "digital refs where engine_symbol matches"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-s1-6.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "7c7f088ce7c844196ec4e636a865f00a928eddb9b7ebb6002e8a688768dd01d5",
+      "dimensions": [
+        1377,
+        1142
+      ],
+      "review": "Content and identity reviewed; raw PNG bytes retained. Final integrated page proof remains required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-s2-1",
+      "engine_symbol": "sc-pen1",
+      "kind": "story",
+      "show": "Karim enters doorway greeting grandmother Farida, Maha and Zayd; a pen visibly tucked behind his ear",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no Razan",
+        "no balloons/cake from retired story",
+        "pen must not be missing"
+      ],
+      "characters": [
+        "karim",
+        "farida",
+        "maha",
+        "zayd"
+      ],
+      "uses": [
+        "student three-frame second strip",
+        "notebook N1 exact-byte reuse",
+        "digital refs where engine_symbol matches"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-s2-1.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "5fab22b7cbc253fa743ff4fbcbb93ce4f31d35cea3615048c9331c9a5616e705",
+      "dimensions": [
+        1376,
+        1143
+      ],
+      "review": "Content and identity reviewed; raw PNG bytes retained. Final integrated page proof remains required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-s2-2",
+      "engine_symbol": "sc-pen2",
+      "kind": "story",
+      "show": "Karim puzzled, pen still behind his ear; Maha, Zayd and Farida show empty hands in their denials",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no pen in anyone else's hands",
+        "no new object",
+        "no generated punctuation"
+      ],
+      "characters": [
+        "karim",
+        "maha",
+        "zayd",
+        "farida"
+      ],
+      "uses": [
+        "student three-frame second strip",
+        "notebook N1 exact-byte reuse",
+        "digital refs where engine_symbol matches"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-s2-2.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "22871aa5eb6cbbc2d452c220ba3e22779110510a64c61cccef7ec351afb3449d",
+      "dimensions": [
+        1376,
+        1143
+      ],
+      "review": "Content and identity reviewed; raw PNG bytes retained. Final integrated page proof remains required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-s2-3",
+      "engine_symbol": "sc-pen3",
+      "kind": "story",
+      "show": "Karim reacts to the pen speaking; pen shown clearly beside him, empty speech bubble anchored to pen",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no face added to pen",
+        "no text or question mark",
+        "no duplicate pen behind ear and in foreground"
+      ],
+      "characters": [
+        "karim"
+      ],
+      "uses": [
+        "student three-frame second strip",
+        "notebook N1 exact-byte reuse",
+        "digital refs where engine_symbol matches"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-s2-3.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "a29a2752fda6e22ebe6624bd7c066c8d314145690d08a2acccc9d4a49cd950c4",
+      "dimensions": [
+        1378,
+        1142
+      ],
+      "review": "Content and identity reviewed; raw PNG bytes retained. Final integrated page proof remains required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-act-tariq",
+      "engine_symbol": "sc-tariq",
+      "kind": "activity",
+      "show": "Omar looking at the blank list, happy while talking about his friend Tariq",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "Tariq must not appear",
+        "not a seventh main-story-strip frame"
+      ],
+      "characters": [
+        "omar"
+      ],
+      "uses": [
+        "unit-01 sentence m15b digital context only"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-act-tariq.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "2eeb3ff65f6e246ec64fa710e4a0e5bbec7a18183c81c4dabfe4eafc1953716a",
+      "generation_prompt": null,
+      "review": "Full generated output inspected against slot content, identities, no text and no cropping. Raw bytes retained; final integration-size proof still required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-act-alone",
+      "engine_symbol": "sc-alone",
+      "kind": "activity",
+      "show": "Razan alone with uncertain posture; two empty places signify no friend yet",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no other characters",
+        "not a main-story-strip frame"
+      ],
+      "characters": [
+        "razan"
+      ],
+      "uses": [
+        "unit-01 contrast c2",
+        "unit-01 retrieval r3"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-act-alone.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "18697adb0a2bbde57e47ed5e5d5fb5b588979dc60f9ab3ed0624886471ae055d",
+      "generation_prompt": null,
+      "review": "Full generated output inspected against slot content, identities, no text and no cropping. Raw bytes retained; final integration-size proof still required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-b1-spread",
+      "engine_symbol": "b1-spread",
+      "kind": "spread",
+      "show": "Text-free components for existing B1 phrase scene: Omar, Sara, Huda, Razan/Sara/Rana friendship group, empty chair, blank board; leave room for external Arabic typesetting",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no in-image Arabic",
+        "no invented labels",
+        "not a replacement for typed phrases"
+      ],
+      "characters": [
+        "omar",
+        "sara",
+        "huda",
+        "razan",
+        "rana"
+      ],
+      "uses": [
+        "student B1 input scene; integration retains existing authorized phrase labels outside PNG"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-b1-spread.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "4912c01953a3ede89b9f21515e7b7dd5c1898ed8e5a489c2ec7e1494cd8d6f8c",
+      "dimensions": [
+        1774,
+        887
+      ],
+      "review": "Content and identity reviewed; raw PNG bytes retained. Final integrated page proof remains required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-roster-picture",
+      "engine_symbol": "sc-class",
+      "kind": "functional",
+      "show": "Adult teacher Huda plus exactly seven children: Adam, Rana, Sara, Omar, Razan, Nur, Badr",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no Tariq",
+        "no Karim, Maha, Zayd or Farida",
+        "no labels or gap arrow",
+        "do not place Tariq portrait beside answer field"
+      ],
+      "characters": [
+        "huda",
+        "adam",
+        "rana",
+        "sara",
+        "omar",
+        "razan",
+        "nur",
+        "badr"
+      ],
+      "uses": [
+        "student functional roster scene; existing separately named seven-face row stays"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-roster-picture.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "1671d61de6e15c1bdb2414ae28d4d6250dd135825c07bc34a50c5ab79c056f39",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "review": "Content and identity reviewed; raw PNG bytes retained. Final integrated page proof remains required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-razan",
+      "engine_symbol": "av-razan",
+      "kind": "portrait",
+      "show": "two low round side bundles; teal top/navy trousers",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "razan"
+      ],
+      "uses": [
+        "reference and current face bindings only; not a new standing-cast requirement"
+      ],
+      "delivered": "assets/art/unit2-rich/av-razan.png",
+      "status": "accepted_reuse",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "a715de6e174cae833d55c8d7d8fb46ec64ab73261a74b3cc46d236cb80c0d140",
+      "reference_only": false,
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-omar",
+      "engine_symbol": "av-omar",
+      "kind": "portrait",
+      "show": "straight upward hair spikes; green top/grey trousers",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "omar"
+      ],
+      "uses": [
+        "reference and current face bindings only; not a new standing-cast requirement"
+      ],
+      "delivered": "assets/art/unit2-rich/av-omar.png",
+      "status": "accepted_reuse",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "7e5e9c3b2267aa633ad8f456b1306a6360df0de0dc20f56f32802003f40d49a7",
+      "reference_only": false,
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-sara",
+      "engine_symbol": "av-sara",
+      "kind": "portrait",
+      "show": "girl with hijab, shoulder drape; warm expression",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "sara"
+      ],
+      "uses": [
+        "reference and current face bindings only; not a new standing-cast requirement"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-face-sara.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "aed5d22a8770b2ca4abe67813f39408a5aff96ae4284d77819c7f4efe4d91b19",
+      "review": "Inspected generated output: hijab, white background, no text; matches accepted portrait style. New identity execution within established Unit 1 marker.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-huda",
+      "engine_symbol": "av-huda",
+      "kind": "portrait",
+      "show": "adult teacher, taller than children; bun and glasses",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "huda"
+      ],
+      "uses": [
+        "reference and current face bindings only; not a new standing-cast requirement"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-face-huda.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "3e1bb6123a6e0f90e7de34d49916542184a6ba8f1b1c469ea473cc7225ca4981",
+      "review": "Inspected full generated portrait; required identity markers, no text, white background, accepted Unit 2 rendering. Raw bytes retained.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-rana",
+      "engine_symbol": "av-rana",
+      "kind": "portrait",
+      "show": "chin-length dark bob; mustard top/blue trousers",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "rana"
+      ],
+      "uses": [
+        "reference and current face bindings only; not a new standing-cast requirement"
+      ],
+      "delivered": "assets/art/unit2-rich/av-rana.png",
+      "status": "accepted_reuse",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "99949c0f299d5292145719940a0409e2c59d04638f65da03a50adaec9a065d87",
+      "reference_only": false,
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-karim",
+      "engine_symbol": "av-karim-pen",
+      "kind": "portrait",
+      "show": "Karim crown curls, blue top/tan trousers; pen tucked behind ear; retain Unit 2 identity",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "karim"
+      ],
+      "uses": [
+        "reference and current face bindings only; not a new standing-cast requirement"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-face-karim.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "248a86a0a691547a93e7f4fbb145695f3f7dbb17cac1e68353ceb325c9bf4368",
+      "generation_prompt": "Use case illustration-story. Independent INTALIQ Unit 1 production PNG u1-face-karim. References supply exact accepted Unit 2 rich-cartoon style and any named identity/object. Generate only this content: A head-and-upper-torso portrait of exactly the curly-haired Karim in image 1, same blue top. Add the exact blue clear-barrel capped pen in image 2 tucked behind his visible ear, easily seen. No other props. Pure white. Full-colour dimensional clean cartoon, confident black contours, natural anatomy, shading matching reference; no diagram or geometric clipart look. Square PNG for portraits/objects, landscape PNG for action scenes. No text, watermark, additional characters, clipping, or carried-over scene content. Use current references only.",
+      "review": "Full generated output inspected against slot content, identities, no text and no cropping. Raw bytes retained; final integration-size proof still required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-farida",
+      "engine_symbol": "av-farida",
+      "kind": "portrait",
+      "show": "grandmother: stoop, cane, shawl, bun and glasses",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "farida"
+      ],
+      "uses": [
+        "reference and current face bindings only; not a new standing-cast requirement"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-face-farida.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "8682ed7f40d2d052179435275353952a749574019edf13c4bea2be054a528b24",
+      "review": "Inspected full generated portrait; required identity markers, no text, white background, accepted Unit 2 rendering. Raw bytes retained.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-maha",
+      "engine_symbol": "av-maha",
+      "kind": "portrait",
+      "show": "high tied topknot; coral top/blue trousers",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "maha"
+      ],
+      "uses": [
+        "reference and current face bindings only; not a new standing-cast requirement"
+      ],
+      "delivered": "assets/art/unit2-rich/av-maha.png",
+      "status": "accepted_reuse",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "7f19087cde5db5689b9b7b26d5c3d67ba15a941053a298ae0f0028798888f46a",
+      "reference_only": false,
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-zayd",
+      "engine_symbol": "av-zayd",
+      "kind": "portrait",
+      "show": "grey flat cap; green top/grey trousers",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "zayd"
+      ],
+      "uses": [
+        "reference and current face bindings only; not a new standing-cast requirement"
+      ],
+      "delivered": "assets/art/unit2-rich/av-zayd.png",
+      "status": "accepted_reuse",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "22a0d3cadb2b390c1f89310144612f93cd11543f80b748864b8490c18624513f",
+      "reference_only": false,
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-adam",
+      "engine_symbol": "av-adam",
+      "kind": "portrait",
+      "show": "boy with freckles and short bare-headed hair",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "adam"
+      ],
+      "uses": [
+        "reference and current face bindings only; not a new standing-cast requirement"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-face-adam.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "8882f8811def0342653e525726dd5f5cffe468369d416d43e3c20bee5395f1f3",
+      "review": "Inspected full generated portrait; required identity markers, no text, white background, accepted Unit 2 rendering. Raw bytes retained.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-nur",
+      "engine_symbol": "av-nur",
+      "kind": "portrait",
+      "show": "girl with one plait over a shoulder",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "nur"
+      ],
+      "uses": [
+        "reference and current face bindings only; not a new standing-cast requirement"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-face-nur.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "76ba2c815dd17e854e17444c4b4404c23faa4fa3e8879f482073e31a39f0bb63",
+      "review": "Inspected full generated portrait; required identity markers, no text, white background, accepted Unit 2 rendering. Raw bytes retained.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-badr",
+      "engine_symbol": "av-badr",
+      "kind": "portrait",
+      "show": "boy with side-swept dark fringe",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "badr"
+      ],
+      "uses": [
+        "reference and current face bindings only; not a new standing-cast requirement"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-face-badr.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "3651f873e2a9e17f716d83ffd622ab26d625f766345374753cfbeecdc03fd466",
+      "review": "Inspected full generated portrait; required identity markers, no text, white background, accepted Unit 2 rendering. Raw bytes retained.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-face-tariq",
+      "engine_symbol": "av-tariq",
+      "kind": "portrait",
+      "show": "boy with bare short head and prominent ears",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "no props except Farida's cane or Karim's behind-ear pen where required"
+      ],
+      "characters": [
+        "tariq"
+      ],
+      "uses": [
+        "production identity reference only; no current learner portrait binding; do not add to seven-child row or roster picture"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-face-tariq.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "a1f9eb3951d3692a03234bfb87ef4dfe23f1cf783d4d8d362196399818354dfc",
+      "review": "Inspected full generated portrait; required identity markers, no text, white background, accepted Unit 2 rendering. Raw bytes retained.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-support-list",
+      "engine_symbol": "obj-list",
+      "kind": "object",
+      "show": "blank white class-list sheet with neutral ruled lines, no readable writing",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "white background",
+        "no new language cues"
+      ],
+      "characters": [],
+      "uses": [
+        "existing phrase/item/response references to engine_symbol"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-support-list.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "ec1925e075a290c92f33e8f31e92ec8a78a2ec57301e112f988ac28cfe33b9fe",
+      "generation_prompt": "Use case illustration-story. Independent INTALIQ Unit 1 production PNG u1-support-list. References supply exact accepted Unit 2 rich-cartoon style and any named identity/object. Generate only this content: One white class-list sheet, slight dimensional paper shading, three blank ruled lines and no handwriting, no printed letters/numbers. Center on white with large margin. No clipboard or pen. Full-colour dimensional clean cartoon, confident black contours, natural anatomy, shading matching reference; no diagram or geometric clipart look. Square PNG for portraits/objects, landscape PNG for action scenes. No text, watermark, additional characters, clipping, or carried-over scene content. Use current references only.",
+      "review": "Full generated output inspected against slot content, identities, no text and no cropping. Raw bytes retained; final integration-size proof still required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-support-pen",
+      "engine_symbol": "obj-pen",
+      "kind": "object",
+      "show": "accepted Unit 2 pen",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "white background",
+        "no new language cues"
+      ],
+      "characters": [],
+      "uses": [
+        "existing phrase/item/response references to engine_symbol"
+      ],
+      "delivered": "assets/art/unit2-rich/obj-pen.png",
+      "status": "accepted_reuse",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "b43307003d70420085b80f717c684fa4aa6f09f77e1d65884abdc9a9db37946a",
+      "reference_only": false,
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-support-chair",
+      "engine_symbol": "obj-chair",
+      "kind": "object",
+      "show": "one classroom chair",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "white background",
+        "no new language cues"
+      ],
+      "characters": [],
+      "uses": [
+        "existing phrase/item/response references to engine_symbol"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-support-chair.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "918da59dffc2e49e7e14cbe6592e883ff73b2f9575e2a018abba2a4bd426beae",
+      "generation_prompt": "Use case illustration-story. Independent INTALIQ Unit 1 production PNG u1-support-chair. References supply exact accepted Unit 2 rich-cartoon style and any named identity/object. Generate only this content: One simple classroom chair, wooden seat and back, restrained dark legs, three-quarter view. No person, no writing, no room. Center on pure white with margin. Full-colour dimensional clean cartoon, confident black contours, natural anatomy, shading matching reference; no diagram or geometric clipart look. Square PNG for portraits/objects, landscape PNG for action scenes. No text, watermark, additional characters, clipping, or carried-over scene content. Use current references only.",
+      "review": "Full generated output inspected against slot content, identities, no text and no cropping. Raw bytes retained; final integration-size proof still required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-support-door",
+      "engine_symbol": "obj-door",
+      "kind": "object",
+      "show": "accepted Unit 2 door",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "white background",
+        "no new language cues"
+      ],
+      "characters": [],
+      "uses": [
+        "existing phrase/item/response references to engine_symbol"
+      ],
+      "delivered": "assets/art/unit2-rich/obj-door.png",
+      "status": "accepted_reuse",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "cac89f0f1cbda77a6f816d0d2b9413bc58ddfba1640dbc3e7e4e874fd9c62ad5",
+      "reference_only": false,
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-support-enter",
+      "engine_symbol": "vg-enter",
+      "kind": "phrase",
+      "show": "faceless generic figure stepping through doorway",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "white background",
+        "no new language cues"
+      ],
+      "characters": [],
+      "uses": [
+        "existing phrase/item/response references to engine_symbol"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-support-enter.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "0ca65b2e6473962382e4d0dd2f95c69d9dca2bb206c984a9c17397d96dcf8dcb",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "review": "Content and identity reviewed; raw PNG bytes retained. Final integrated page proof remains required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-support-see",
+      "engine_symbol": "vg-see",
+      "kind": "phrase",
+      "show": "faceless generic figure looking toward one blank list sheet",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "white background",
+        "no new language cues"
+      ],
+      "characters": [],
+      "uses": [
+        "existing phrase/item/response references to engine_symbol"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-support-see.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "e87ef726b5ffd2d48f4ae9387f22234f59f0e0821cc61c958c7586813eb90d63",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "review": "Content and identity reviewed; raw PNG bytes retained. Final integrated page proof remains required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-support-say",
+      "engine_symbol": "vg-say",
+      "kind": "phrase",
+      "show": "faceless generic figure speaking with empty speech bubble",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "white background",
+        "no new language cues"
+      ],
+      "characters": [],
+      "uses": [
+        "existing phrase/item/response references to engine_symbol"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-support-say.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "57d55a21e0349b4d974a23c0bdc54dc80bc483eeff07a4ff0bcf07a3809ae9b5",
+      "generation_prompt": "Use case illustration-story. Independent INTALIQ Unit 1 production PNG u1-support-say. References supply exact accepted Unit 2 rich-cartoon style and any named identity/object. Generate only this content: A faceless generic school-age figure in neutral grey clothing makes a conversational open-hand gesture with one empty speech bubble anchored to its head. No eyes, mouth, nose, text, dots, punctuation or labels. Full body contained on pure white. Full-colour dimensional clean cartoon, confident black contours, natural anatomy, shading matching reference; no diagram or geometric clipart look. Square PNG for portraits/objects, landscape PNG for action scenes. No text, watermark, additional characters, clipping, or carried-over scene content. Use current references only.",
+      "review": "Full generated output inspected against slot content, identities, no text and no cropping. Raw bytes retained; final integration-size proof still required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-support-like",
+      "engine_symbol": "vg-like",
+      "kind": "phrase",
+      "show": "Razan happy about a blank list, cheerful posture; no heart symbol",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "white background",
+        "no new language cues"
+      ],
+      "characters": [
+        "razan"
+      ],
+      "uses": [
+        "existing phrase/item/response references to engine_symbol"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-support-like.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "60c4af732100380cbfb91cdc14be86b1e52822b333164b3f593824e6bf27b22c",
+      "generation_prompt": null,
+      "review": "Full generated output inspected against slot content, identities, no text and no cropping. Raw bytes retained; final integration-size proof still required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-support-friendship",
+      "engine_symbol": "vg-sadiq",
+      "kind": "phrase",
+      "show": "Sara, Razan and Rana together smiling as friends, separate bodies, no touching",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "white background",
+        "no new language cues"
+      ],
+      "characters": [
+        "sara",
+        "razan",
+        "rana"
+      ],
+      "uses": [
+        "existing phrase/item/response references to engine_symbol"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-support-friendship.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "sha256": "64d5ac972120e2f95ff26ca4292c85b415c43b5bef4f947494559fc00c8450cb",
+      "dimensions": [
+        1377,
+        1142
+      ],
+      "review": "Content and identity reviewed; raw PNG bytes retained. Final integrated page proof remains required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    },
+    {
+      "id": "u1-support-friendship-pen",
+      "engine_symbol": "vg-sadiq-pen",
+      "kind": "phrase",
+      "show": "Karim and the same faceless blue pen, friendly relationship gesture; no girls or additional people",
+      "must_not_show": [
+        "no text, letters, numbers or glyphs inside generated PNG",
+        "no additional characters",
+        "no romance-readable pairing",
+        "no clipping or cropping",
+        "white background",
+        "no new language cues"
+      ],
+      "characters": [
+        "karim"
+      ],
+      "uses": [
+        "unit-01p items sadiq and li: bind this variant instead of the current three-girl vg-sadiq"
+      ],
+      "delivered": "assets/art/unit1-rich/u1-support-friendship-pen.png",
+      "status": "accepted_generated",
+      "style": "accepted Unit 2 rich-cartoon PNGs; direct owner adoption for Unit 1",
+      "preserve_raw_png": true,
+      "dimensions_policy": "native high-resolution accepted PNG; CSS fit without cropping; Unit 2 conformed-size exception extended by owner style adoption",
+      "display_check": "118x98 for story/activity scenes; 64x54 for phrase support; identities clear at final display size",
+      "integration_note": "Mechanical picture/phrase fit correction. New art binding for second-reading sadiq/li only; frozen Arabic unchanged.",
+      "sha256": "dd0a66cd61a8e979ad98b7ade3c91e5f256d026c9df08a7b9a902bc4313bb06c",
+      "dimensions": [
+        1377,
+        1142
+      ],
+      "review": "Content and identity reviewed; raw PNG bytes retained. Final integrated page proof remains required.",
+      "reduced_size_review": "Inspected in small-size proof; final page-specific integrated proof remains required."
+    }
+  ],
+  "existing_identity_sheets": {
+    "razan": "assets/art/unit2-rich/sheets/razan.png",
+    "omar": "assets/art/unit2-rich/sheets/omar.png",
+    "rana": "assets/art/unit2-rich/sheets/rana.png",
+    "karim": "assets/art/unit2-rich/sheets/karim.png",
+    "maha": "assets/art/unit2-rich/sheets/maha.png",
+    "zayd": "assets/art/unit2-rich/sheets/zayd.png"
+  },
+  "style_references": [
+    {
+      "path": "assets/art/unit2-rich/u2-s1-4.png",
+      "sha256": "4423060dfd323d2ae76d462d6452ba087f5cf3b7f2a0a461c64dc314b1ce07c5"
+    },
+    {
+      "path": "assets/art/unit2-rich/av-razan.png",
+      "sha256": "a715de6e174cae833d55c8d7d8fb46ec64ab73261a74b3cc46d236cb80c0d140"
+    },
+    {
+      "path": "assets/art/unit2-rich/av-maha.png",
+      "sha256": "7f19087cde5db5689b9b7b26d5c3d67ba15a941053a298ae0f0028798888f46a"
+    }
+  ],
+  "roster_children": [
+    "adam",
+    "rana",
+    "sara",
+    "omar",
+    "razan",
+    "nur",
+    "badr"
+  ],
+  "roster_teacher": "huda",
+  "roster_missing": "tariq",
+  "legacy_report_id_reconciliation": {
+    "reported u1-s1-6/sc-tariq": "u1-act-tariq: digital context, not strip",
+    "reported u1-s1-7/sc-end": "u1-s1-6: actual sixth frame"
+  },
+  "separate_photo_requirements": {
+    "status": "not_delivered",
+    "kind": "real photographs only",
+    "source": "source/units/unit1/INTALIQ1_UNIT1_PHOTO_SUPPLY_SHEET.md"
+  },
+  "unresolved_content_decisions": [],
+  "reconciliation_addendum": "One missing support variant added: second-reading male friendship phrase uses Karim/pen rather than three-girl icon. Total now 36.",
+  "production_summary": {
+    "accepted_reuse": 7,
+    "accepted_generated": 29,
+    "unresolved_content_decisions": [],
+    "integrated": false,
+    "proofs": [
+      "source/cast-and-art/unit1-production-proof/contact-sheet.png",
+      "source/cast-and-art/unit1-production-proof/small-size-proof.png"
+    ],
+    "proof_policy": "QA derivatives only; never substitute for raw production PNGs."
+  }
+}
