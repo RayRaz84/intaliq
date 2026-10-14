@@ -43,3 +43,7 @@ The manifest records raw production paths, dimensions and SHA-256 hashes. Final 
 - `source/cast-and-art/INTALIQ1_ART_PACKAGE_SPEC.md` and `UNIT2_RICH_STYLE_AUTHORITY.md` — content controls, style precedent and byte preservation, extended by the direct owner ruling documented here.
 - `source/pipeline/engine_core.js` and published Version 50 `index.html` — corrected readings, notebook, matching, speaker choices, vocabulary supports and actual bindings.
 - `assets/art/unit2-rich/manifest.json`, `art_assets_map.json`, accepted PNGs and identity sheets — exact reuse and identity references.
+
+## Subsequent integration pass
+
+On the owner’s “continue working” instruction, the accepted PNGs were bound in the source build and rebuilt into `index.html` / `404.html`. The six/three strips reuse the same file paths in student book and notebook. Unit 1’s old SVG consumers are replaced, the roster reference row excludes Tariq, and Unit 1p receives the Karim-and-pen phrase support. Both frozen stories and every non-image engine property are unchanged. The inherited B1 greeting `مَرْحَبًا` escaped the previous SVG-excluding language sweep; integration exposed it as unlicensed. It was mechanically replaced with the unit’s already-authorized CH-01 greeting `السَّلَامُ عَلَيْكُمْ!`, without changing either reading or adding a licence. See `UNIT1_ART_INTEGRATION_2026-10-14.md` for release checks and publication status; the production-only statements above describe the earlier asset-delivery stage.

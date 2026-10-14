@@ -1205,11 +1205,28 @@
     "accepted_reuse": 7,
     "accepted_generated": 29,
     "unresolved_content_decisions": [],
-    "integrated": false,
+    "integrated": true,
     "proofs": [
       "source/cast-and-art/unit1-production-proof/contact-sheet.png",
       "source/cast-and-art/unit1-production-proof/small-size-proof.png"
     ],
-    "proof_policy": "QA derivatives only; never substitute for raw production PNGs."
+    "proof_policy": "QA derivatives only; never substitute for raw production PNGs.",
+    "published": false,
+    "integration_marker": "30d90e8",
+    "studio_version": 50,
+    "publication_blocker": "GitHub push credentials unavailable in this workspace",
+    "integration_verification": {
+      "release_gate_exit": 0,
+      "routes": 14,
+      "pathways_completed": 9,
+      "arabic_tokens_checked": 749,
+      "unknown_arabic_tokens": 0,
+      "student_png_placements": 37,
+      "notebook_png_placements": 9,
+      "mobile_viewport": 390,
+      "main_strip_frames": 6,
+      "second_strip_frames": 3,
+      "report": "source/cast-and-art/UNIT1_ART_INTEGRATION_2026-10-14.md"
+    }
   }
 }

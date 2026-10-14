@@ -25,35 +25,35 @@ const UNIT_01 = {
   /* SC-064: the printed text, verbatim. qc() fails the unit if the sentence array no longer reproduces it. */
   canon:"هُنَاكَ بِنْتٌ اسْمُهَا رَزَان. تَدْخُلُ الْفَصْلَ. رَزَان لَيْسَ لَهَا صَدِيقٌ... وَعِنْدَهَا قَائِمَةٌ.\n\nتَقُولُ: «السَّلَامُ عَلَيْكُمْ! أَنَا رَزَان.» يَقُولُ عُمَر وَسَارَة وَرَنَا: «وَعَلَيْكُمُ السَّلَامُ!»\n\nتَرَى رَزَان الْقَائِمَةَ. هُنَاكَ اسْمٌ: «عُمَر». وَهُنَاكَ اسْمٌ: «سَارَة». تَقُولُ: «مَنْ عُمَر؟ وَمَنْ سَارَة؟ أُرِيدُ صَدِيقًا!»\n\nتَرَى رَزَان هُدَى وَتَقُولُ: «هٰذِهِ سَارَة!»\n\nتَقُولُ هُدَى: «لَا! لَا! لَيْسَ اسْمِي سَارَة! أَنَا هُدَى!»\n\nتَقُولُ رَزَان: «أَهْلًا يَا هُدَى!»\n\nتَرَى رَزَان وَلَدًا. تَقُولُ: «أَنْتَ عُمَر!»\n\nيَقُولُ الْوَلَدُ: «نَعَمْ! أَنَا عُمَر! وَمَنْ أَنْتِ؟»\n\nتَقُولُ رَزَان: «أَنَا رَزَان.»\n\nيَقُولُ عُمَر: «أَهْلًا يَا رَزَان!»\n\nتَرَى رَزَان بِنْتًا. تَقُولُ: «وَأَنْتِ سَارَة!» تَقُولُ الْبِنْتُ: «نَعَمْ! أَنَا سَارَة!»\n\nيَرَى عُمَر الْقَائِمَةَ وَيَقُولُ: «هُنَاكَ اسْمٌ: \"طَارِق\"! لِي صَدِيقٌ: طَارِق!»\n\nتَرَى سَارَة الْقَائِمَةَ وَتَقُولُ: «هُنَاكَ اسْمٌ: \"رَزَان\"! مَنْ هِيَ؟» تَقُولُ رَزَان: «أَنَا! أَنَا رَزَان!» تَقُولُ سَارَة: «أَهْلًا يَا رَزَان! لِي صَدِيقَةٌ: رَزَان!»\n\nوَتَقُولُ رَنَا: «وَأَنَا! لِي صَدِيقَةٌ!» تُحِبُّ رَزَان... الْقَائِمَةَ! تَقُولُ رَزَان: «أَنَا رَزَان... وَلِي صَدِيقَاتٌ!»",
   cast:[
-    {id:"razan", ar:"رَزَان", img:"av-razan"},
-    {id:"omar", ar:"عُمَر", img:"av-omar"},
-    {id:"sara", ar:"سَارَة", img:"av-sara"},
-    {id:"huda", ar:"هُدَى", img:"av-huda"},
-    {id:"rana", ar:"رَنَا", img:"av-rana"}
+    {id:"razan", ar:"رَزَان", img:"assets/art/unit2-rich/av-razan.png"},
+    {id:"omar", ar:"عُمَر", img:"assets/art/unit2-rich/av-omar.png"},
+    {id:"sara", ar:"سَارَة", img:"assets/art/unit1-rich/u1-face-sara.png"},
+    {id:"huda", ar:"هُدَى", img:"assets/art/unit1-rich/u1-face-huda.png"},
+    {id:"rana", ar:"رَنَا", img:"assets/art/unit2-rich/av-rana.png"}
   ],
   items:[
     {id:"salam",  ar:"السَّلَامُ عَلَيْكُمْ", status:"NEW_CORE_TARGET", lemma:"السَّلَامُ عَلَيْكُمْ", kind:"chunk", chunk_ref:"CH-01", forms:["السَّلَامُ عَلَيْكُمْ"], gloss:"hello (greeting)", img:null, dim:"greeting", phrase:"السَّلَامُ عَلَيْكُمْ!", hl:"السَّلَامُ عَلَيْكُمْ"},
     {id:"reply",  ar:"وَعَلَيْكُمُ السَّلَامُ", status:"RECOGNITION_ONLY", lemma:"وَعَلَيْكُمُ السَّلَامُ", kind:"chunk", chunk_ref:"CH-02", forms:["وَعَلَيْكُمُ السَّلَامُ"], gloss:"(the reply)", img:null, dim:"greeting", phrase:"وَعَلَيْكُمُ السَّلَامُ!", hl:"وَعَلَيْكُمُ السَّلَامُ"},
     {id:"ahlan",  ar:"أَهْلًا", status:"NEW_CORE_TARGET", lemma:"أَهْلًا", kind:"lemma", forms:["أَهْلًا"], gloss:"welcome!", img:null, dim:"greeting", phrase:"أَهْلًا يَا رَزَان!", hl:"أَهْلًا"},
     {id:"ana",    ar:"أَنَا", status:"NEW_CORE_TARGET", lemma:"أَنَا", kind:"lemma", forms:["أَنَا","وَأَنَا"], gloss:"I", img:null, dim:"person", phrase:"أَنَا رَزَان.", hl:"أَنَا"},
-    {id:"walad",  ar:"وَلَدٌ", status:"NEW_CORE_TARGET", lemma:"وَلَد", kind:"lemma", forms:["وَلَدًا","الْوَلَدُ"], gloss:"a boy", img:"av-omar", dim:"person", phrase:"هٰذَا وَلَدٌ.", hl:"وَلَدٌ"},
-    {id:"bint",   ar:"بِنْتٌ", status:"NEW_CORE_TARGET", lemma:"بِنْت", kind:"lemma", forms:["بِنْتٌ","بِنْتًا","الْبِنْتُ"], gloss:"a girl", img:"av-sara", dim:"person", phrase:"هٰذِهِ بِنْتٌ.", hl:"بِنْتٌ"},
-    {id:"sadiq",  ar:"صَدِيقٌ", status:"NEW_CORE_TARGET", lemma:"صَدِيق", kind:"lemma", forms:["صَدِيقٌ","صَدِيقًا","صَدِيقَةٌ","صَدِيقَاتٌ"], gloss:"a friend", img:"vg-sadiq", dim:"person", phrase:"رَزَان صَدِيقَتِي!", hl:"صَدِيقَتِي"},
-    {id:"qaima",  ar:"قَائِمَةٌ", status:"COMPREHENSIBLE_SUPPORT", lemma:"قَائِمَة", kind:"lemma", forms:["قَائِمَةٌ","الْقَائِمَةَ"], gloss:"a list", img:"obj-list", dim:"object", phrase:"هٰذِهِ قَائِمَةٌ.", hl:"قَائِمَةٌ"},
+    {id:"walad",  ar:"وَلَدٌ", status:"NEW_CORE_TARGET", lemma:"وَلَد", kind:"lemma", forms:["وَلَدًا","الْوَلَدُ"], gloss:"a boy", img:"assets/art/unit2-rich/av-omar.png", dim:"person", phrase:"هٰذَا وَلَدٌ.", hl:"وَلَدٌ"},
+    {id:"bint",   ar:"بِنْتٌ", status:"NEW_CORE_TARGET", lemma:"بِنْت", kind:"lemma", forms:["بِنْتٌ","بِنْتًا","الْبِنْتُ"], gloss:"a girl", img:"assets/art/unit1-rich/u1-face-sara.png", dim:"person", phrase:"هٰذِهِ بِنْتٌ.", hl:"بِنْتٌ"},
+    {id:"sadiq",  ar:"صَدِيقٌ", status:"NEW_CORE_TARGET", lemma:"صَدِيق", kind:"lemma", forms:["صَدِيقٌ","صَدِيقًا","صَدِيقَةٌ","صَدِيقَاتٌ"], gloss:"a friend", img:"assets/art/unit1-rich/u1-support-friendship.png", dim:"person", phrase:"رَزَان صَدِيقَتِي!", hl:"صَدِيقَتِي"},
+    {id:"qaima",  ar:"قَائِمَةٌ", status:"COMPREHENSIBLE_SUPPORT", lemma:"قَائِمَة", kind:"lemma", forms:["قَائِمَةٌ","الْقَائِمَةَ"], gloss:"a list", img:"assets/art/unit1-rich/u1-support-list.png", dim:"object", phrase:"هٰذِهِ قَائِمَةٌ.", hl:"قَائِمَةٌ"},
     {id:"fasl", ar:"الْفَصْلَ", status:"COMPREHENSIBLE_SUPPORT", lemma:"فَصْل", kind:"lemma", forms:["الْفَصْلَ"], gloss:"the classroom", img:null, dim:"place", phrase:"تَدْخُلُ الْفَصْلَ.", hl:"الْفَصْلَ"},
-    {id:"qalam",  ar:"قَلَمٌ", status:"COMPREHENSIBLE_SUPPORT", lemma:"قَلَم", kind:"lemma", forms:[], gloss:"a pen", img:"obj-pen", dim:"object", phrase:"هٰذَا قَلَمٌ.", hl:"قَلَمٌ"},
+    {id:"qalam",  ar:"قَلَمٌ", status:"COMPREHENSIBLE_SUPPORT", lemma:"قَلَم", kind:"lemma", forms:[], gloss:"a pen", img:"assets/art/unit2-rich/obj-pen.png", dim:"object", phrase:"هٰذَا قَلَمٌ.", hl:"قَلَمٌ"},
     {id:"inda",   ar:"عِنْدَهَا", status:"NEW_CORE_TARGET", lemma:"عِنْدَ", kind:"lemma", forms:["وَعِنْدَهَا"], gloss:"she has (a thing)", img:null, dim:"possession", phrase:"عِنْدَهَا قَائِمَةٌ.", hl:"عِنْدَهَا"},
-    {id:"li",     ar:"لِي", status:"NEW_CORE_TARGET", lemma:"لِـ", kind:"lemma", forms:["لِي","وَلِي"], gloss:"I have (people)", img:"vg-sadiq", dim:"possession", phrase:"لِي صَدِيقَاتٌ!", hl:"لِي"},
+    {id:"li",     ar:"لِي", status:"NEW_CORE_TARGET", lemma:"لِـ", kind:"lemma", forms:["لِي","وَلِي"], gloss:"I have (people)", img:"assets/art/unit1-rich/u1-support-friendship.png", dim:"possession", phrase:"لِي صَدِيقَاتٌ!", hl:"لِي"},
     {id:"urid", ar:"أُرِيدُ", status:"NEW_CORE_TARGET", lemma:"أَرَادَ", kind:"lemma", forms:["أُرِيدُ"], gloss:"I want", img:null, dim:"want", phrase:"أُرِيدُ صَدِيقًا!", hl:"أُرِيدُ"},
     {id:"laysa",  ar:"لَيْسَ", status:"NEW_CORE_TARGET", lemma:"لَيْسَ", kind:"lemma", forms:["لَيْسَ"], gloss:"is not / has no", img:null, dim:"possession", phrase:"لَيْسَ لَهَا صَدِيقٌ.", hl:"لَيْسَ"},
     {id:"laha",   ar:"لَهَا", status:"NEW_CORE_TARGET", lemma:"لِـ", kind:"lemma", forms:["لَهَا"], gloss:"she has (a person)", img:null, dim:"possession", phrase:"لَهَا صَدِيقَةٌ.", hl:"لَهَا"},
-    {id:"yadkhul",ar:"تَدْخُلُ", status:"NEW_CORE_TARGET", lemma:"دَخَلَ", kind:"lemma", forms:["تَدْخُلُ"], gloss:"(she) enters", img:"vg-enter", dim:"action", phrase:"تَدْخُلُ الْفَصْلَ.", hl:"تَدْخُلُ"},
-    {id:"yara",   ar:"تَرَى", status:"NEW_CORE_TARGET", lemma:"رَأَى", kind:"lemma", forms:["تَرَى","يَرَى"], gloss:"(she) sees", img:"vg-see", dim:"action", phrase:"تَرَى رَزَان الْقَائِمَةَ.", hl:"تَرَى"},
-    {id:"yaqul",  ar:"تَقُولُ", status:"NEW_CORE_TARGET", lemma:"قَالَ", kind:"lemma", forms:["تَقُولُ","يَقُولُ","وَتَقُولُ","وَيَقُولُ"], gloss:"(she) says", img:"vg-say", dim:"action", phrase:"تَقُولُ رَزَان: «أَهْلًا!»", hl:"تَقُولُ"},
-    {id:"yuhibb", ar:"تُحِبُّ", status:"NEW_CORE_TARGET", lemma:"أَحَبَّ", kind:"lemma", forms:["تُحِبُّ"], gloss:"(she) likes", img:"vg-like", dim:"action", phrase:"تُحِبُّ رَزَان الْقَائِمَةَ.", hl:"تُحِبُّ"},
+    {id:"yadkhul",ar:"تَدْخُلُ", status:"NEW_CORE_TARGET", lemma:"دَخَلَ", kind:"lemma", forms:["تَدْخُلُ"], gloss:"(she) enters", img:"assets/art/unit1-rich/u1-support-enter.png", dim:"action", phrase:"تَدْخُلُ الْفَصْلَ.", hl:"تَدْخُلُ"},
+    {id:"yara",   ar:"تَرَى", status:"NEW_CORE_TARGET", lemma:"رَأَى", kind:"lemma", forms:["تَرَى","يَرَى"], gloss:"(she) sees", img:"assets/art/unit1-rich/u1-support-see.png", dim:"action", phrase:"تَرَى رَزَان الْقَائِمَةَ.", hl:"تَرَى"},
+    {id:"yaqul",  ar:"تَقُولُ", status:"NEW_CORE_TARGET", lemma:"قَالَ", kind:"lemma", forms:["تَقُولُ","يَقُولُ","وَتَقُولُ","وَيَقُولُ"], gloss:"(she) says", img:"assets/art/unit1-rich/u1-support-say.png", dim:"action", phrase:"تَقُولُ رَزَان: «أَهْلًا!»", hl:"تَقُولُ"},
+    {id:"yuhibb", ar:"تُحِبُّ", status:"NEW_CORE_TARGET", lemma:"أَحَبَّ", kind:"lemma", forms:["تُحِبُّ"], gloss:"(she) likes", img:"assets/art/unit1-rich/u1-support-like.png", dim:"action", phrase:"تُحِبُّ رَزَان الْقَائِمَةَ.", hl:"تُحِبُّ"},
     {id:"hunaka", ar:"هُنَاكَ", status:"NEW_CORE_TARGET", lemma:"هُنَاكَ", kind:"lemma", forms:["هُنَاكَ","وَهُنَاكَ"], gloss:"there is", img:null, dim:"existence", phrase:"هُنَاكَ قَائِمَةٌ.", hl:"هُنَاكَ"},
     {id:"man",    ar:"مَنْ؟", status:"NEW_CORE_TARGET", lemma:"مَنْ", kind:"lemma", forms:["مَنْ","وَمَنْ"], gloss:"who?", img:null, dim:"question", phrase:"مَنْ عُمَر؟", hl:"مَنْ"},
-    {id:"ism",    ar:"اسْمٌ", status:"NEW_CORE_TARGET", lemma:"اِسْم", kind:"lemma", forms:["اسْمٌ","اسْمُهَا","اسْمِي"], gloss:"a name", img:"obj-list", dim:"object", phrase:"هُنَاكَ اسْمٌ: «عُمَر».", hl:"اسْمٌ"},
+    {id:"ism",    ar:"اسْمٌ", status:"NEW_CORE_TARGET", lemma:"اِسْم", kind:"lemma", forms:["اسْمٌ","اسْمُهَا","اسْمِي"], gloss:"a name", img:"assets/art/unit1-rich/u1-support-list.png", dim:"object", phrase:"هُنَاكَ اسْمٌ: «عُمَر».", hl:"اسْمٌ"},
     {id:"la",     ar:"لَا", status:"NEW_CORE_TARGET", lemma:"لَا", kind:"lemma", forms:["لَا"], gloss:"no; not", img:null, dim:"polarity", phrase:"لَا! لَيْسَ اسْمِي سَارَة!", hl:"لَا"},
     {id:"naam",   ar:"نَعَمْ", status:"NEW_CORE_TARGET", lemma:"نَعَمْ", kind:"lemma", forms:["نَعَمْ"], gloss:"yes", img:null, dim:"polarity", phrase:"نَعَمْ! أَنَا عُمَر!", hl:"نَعَمْ"},
     {id:"anta",   ar:"أَنْتَ", status:"NEW_CORE_TARGET", lemma:"أَنْتَ", kind:"lemma", forms:["أَنْتَ","أَنْتِ","وَأَنْتِ"], gloss:"you (m./f.)", img:null, dim:"person", phrase:"أَنْتَ عُمَر!", hl:"أَنْتَ"},
@@ -62,30 +62,30 @@ const UNIT_01 = {
     {id:"hiya",   ar:"هِيَ", status:"RECOGNITION_ONLY", lemma:"هِيَ", kind:"lemma", forms:["هِيَ"], gloss:"she", img:null, dim:"person", phrase:"مَنْ هِيَ؟", hl:"هِيَ"}
   ],
   sentences:[
-    {id:"m00", ar:"هُنَاكَ بِنْتٌ اسْمُهَا رَزَان.", stage:0, items:["hunaka","bint"], img:"sc-door"},
-    {id:"m01", ar:"تَدْخُلُ الْفَصْلَ.", stage:0, items:["yadkhul","fasl"], img:"sc-door"},
-    {id:"m02", ar:"رَزَان لَيْسَ لَهَا صَدِيقٌ... وَعِنْدَهَا قَائِمَةٌ.", stage:0, items:["laysa","laha","inda","sadiq","qaima"], img:"sc-door"},
-    {id:"m03", ar:"تَقُولُ: «السَّلَامُ عَلَيْكُمْ! أَنَا رَزَان.»", stage:0, items:["yaqul","salam","ana"], img:"sc-door"},
-    {id:"m04", ar:"يَقُولُ عُمَر وَسَارَة وَرَنَا: «وَعَلَيْكُمُ السَّلَامُ!»", stage:0, items:["reply"], img:"sc-door"},
-    {id:"m05", ar:"تَرَى رَزَان الْقَائِمَةَ.", stage:0, items:["yara","qaima"], img:"sc-list"},
-    {id:"m06", ar:"هُنَاكَ اسْمٌ: «عُمَر». وَهُنَاكَ اسْمٌ: «سَارَة».", stage:0, items:["hunaka","ism"], img:"sc-list"},
-    {id:"m07", ar:"تَقُولُ: «مَنْ عُمَر؟ وَمَنْ سَارَة؟ أُرِيدُ صَدِيقًا!»", stage:0, items:["yaqul","man","urid","sadiq"], img:"sc-list"},
-    {id:"m08", ar:"تَرَى رَزَان هُدَى وَتَقُولُ: «هٰذِهِ سَارَة!»", stage:1, items:["yara","yaqul","hadha"], img:"sc-huda"},
-    {id:"m09", ar:"تَقُولُ هُدَى: «لَا! لَا! لَيْسَ اسْمِي سَارَة! أَنَا هُدَى!»", stage:1, items:["yaqul","ana","laysa","ism","la"], img:"sc-huda"},
-    {id:"m10", ar:"تَقُولُ رَزَان: «أَهْلًا يَا هُدَى!»", stage:1, items:["yaqul","ahlan"], img:"sc-huda"},
-    {id:"m11", ar:"تَرَى رَزَان وَلَدًا. تَقُولُ: «أَنْتَ عُمَر!»", stage:1, items:["yara","walad","anta"], img:"sc-omar"},
-    {id:"m12", ar:"يَقُولُ الْوَلَدُ: «نَعَمْ! أَنَا عُمَر! وَمَنْ أَنْتِ؟»", stage:1, items:["yaqul","walad","man","naam"], img:"sc-omar"},
-    {id:"m13", ar:"تَقُولُ رَزَان: «أَنَا رَزَان.»", stage:1, items:["yaqul","ana"], img:"sc-omar"},
-    {id:"m13b", ar:"يَقُولُ عُمَر: «أَهْلًا يَا رَزَان!»", stage:1, items:["yaqul","ahlan"], img:"sc-omar"},
-    {id:"m14", ar:"تَرَى رَزَان بِنْتًا. تَقُولُ: «وَأَنْتِ سَارَة!»", stage:2, items:["yara","bint"], img:"sc-sara"},
-    {id:"m15", ar:"تَقُولُ الْبِنْتُ: «نَعَمْ! أَنَا سَارَة!»", stage:2, items:["yaqul","bint"], img:"sc-sara"},
-    {id:"m15b",ar:"يَرَى عُمَر الْقَائِمَةَ وَيَقُولُ: «هُنَاكَ اسْمٌ: \"طَارِق\"! لِي صَدِيقٌ: طَارِق!»", stage:2, items:["yara","yaqul","hunaka","ism","sadiq","qaima","li"], img:"sc-tariq"},
-    {id:"m16", ar:"تَرَى سَارَة الْقَائِمَةَ وَتَقُولُ: «هُنَاكَ اسْمٌ: \"رَزَان\"! مَنْ هِيَ؟»", stage:3, items:["yara","yaqul","hunaka","ism","man","qaima"], img:"sc-end"},
-    {id:"m17", ar:"تَقُولُ رَزَان: «أَنَا! أَنَا رَزَان!»", stage:3, items:["yaqul","ana"], img:"sc-end"},
-    {id:"m18", ar:"تَقُولُ سَارَة: «أَهْلًا يَا رَزَان! لِي صَدِيقَةٌ: رَزَان!»", stage:3, items:["yaqul","ahlan","sadiq","li"], img:"sc-end"},
-    {id:"m18b",ar:"وَتَقُولُ رَنَا: «وَأَنَا! لِي صَدِيقَةٌ!»", stage:3, items:["yaqul","ana","sadiq","li"], img:"sc-end"},
-    {id:"m19", ar:"تُحِبُّ رَزَان... الْقَائِمَةَ!", stage:3, items:["yuhibb","qaima"], img:"sc-end"},
-    {id:"m20", ar:"تَقُولُ رَزَان: «أَنَا رَزَان... وَلِي صَدِيقَاتٌ!»", stage:3, items:["yaqul","ana","li","sadiq"], img:"sc-end"}
+    {id:"m00", ar:"هُنَاكَ بِنْتٌ اسْمُهَا رَزَان.", stage:0, items:["hunaka","bint"], img:"assets/art/unit1-rich/u1-s1-1.png"},
+    {id:"m01", ar:"تَدْخُلُ الْفَصْلَ.", stage:0, items:["yadkhul","fasl"], img:"assets/art/unit1-rich/u1-s1-1.png"},
+    {id:"m02", ar:"رَزَان لَيْسَ لَهَا صَدِيقٌ... وَعِنْدَهَا قَائِمَةٌ.", stage:0, items:["laysa","laha","inda","sadiq","qaima"], img:"assets/art/unit1-rich/u1-s1-1.png"},
+    {id:"m03", ar:"تَقُولُ: «السَّلَامُ عَلَيْكُمْ! أَنَا رَزَان.»", stage:0, items:["yaqul","salam","ana"], img:"assets/art/unit1-rich/u1-s1-1.png"},
+    {id:"m04", ar:"يَقُولُ عُمَر وَسَارَة وَرَنَا: «وَعَلَيْكُمُ السَّلَامُ!»", stage:0, items:["reply"], img:"assets/art/unit1-rich/u1-s1-1.png"},
+    {id:"m05", ar:"تَرَى رَزَان الْقَائِمَةَ.", stage:0, items:["yara","qaima"], img:"assets/art/unit1-rich/u1-s1-2.png"},
+    {id:"m06", ar:"هُنَاكَ اسْمٌ: «عُمَر». وَهُنَاكَ اسْمٌ: «سَارَة».", stage:0, items:["hunaka","ism"], img:"assets/art/unit1-rich/u1-s1-2.png"},
+    {id:"m07", ar:"تَقُولُ: «مَنْ عُمَر؟ وَمَنْ سَارَة؟ أُرِيدُ صَدِيقًا!»", stage:0, items:["yaqul","man","urid","sadiq"], img:"assets/art/unit1-rich/u1-s1-2.png"},
+    {id:"m08", ar:"تَرَى رَزَان هُدَى وَتَقُولُ: «هٰذِهِ سَارَة!»", stage:1, items:["yara","yaqul","hadha"], img:"assets/art/unit1-rich/u1-s1-3.png"},
+    {id:"m09", ar:"تَقُولُ هُدَى: «لَا! لَا! لَيْسَ اسْمِي سَارَة! أَنَا هُدَى!»", stage:1, items:["yaqul","ana","laysa","ism","la"], img:"assets/art/unit1-rich/u1-s1-3.png"},
+    {id:"m10", ar:"تَقُولُ رَزَان: «أَهْلًا يَا هُدَى!»", stage:1, items:["yaqul","ahlan"], img:"assets/art/unit1-rich/u1-s1-3.png"},
+    {id:"m11", ar:"تَرَى رَزَان وَلَدًا. تَقُولُ: «أَنْتَ عُمَر!»", stage:1, items:["yara","walad","anta"], img:"assets/art/unit1-rich/u1-s1-4.png"},
+    {id:"m12", ar:"يَقُولُ الْوَلَدُ: «نَعَمْ! أَنَا عُمَر! وَمَنْ أَنْتِ؟»", stage:1, items:["yaqul","walad","man","naam"], img:"assets/art/unit1-rich/u1-s1-4.png"},
+    {id:"m13", ar:"تَقُولُ رَزَان: «أَنَا رَزَان.»", stage:1, items:["yaqul","ana"], img:"assets/art/unit1-rich/u1-s1-4.png"},
+    {id:"m13b", ar:"يَقُولُ عُمَر: «أَهْلًا يَا رَزَان!»", stage:1, items:["yaqul","ahlan"], img:"assets/art/unit1-rich/u1-s1-4.png"},
+    {id:"m14", ar:"تَرَى رَزَان بِنْتًا. تَقُولُ: «وَأَنْتِ سَارَة!»", stage:2, items:["yara","bint"], img:"assets/art/unit1-rich/u1-s1-5.png"},
+    {id:"m15", ar:"تَقُولُ الْبِنْتُ: «نَعَمْ! أَنَا سَارَة!»", stage:2, items:["yaqul","bint"], img:"assets/art/unit1-rich/u1-s1-5.png"},
+    {id:"m15b",ar:"يَرَى عُمَر الْقَائِمَةَ وَيَقُولُ: «هُنَاكَ اسْمٌ: \"طَارِق\"! لِي صَدِيقٌ: طَارِق!»", stage:2, items:["yara","yaqul","hunaka","ism","sadiq","qaima","li"], img:"assets/art/unit1-rich/u1-act-tariq.png"},
+    {id:"m16", ar:"تَرَى سَارَة الْقَائِمَةَ وَتَقُولُ: «هُنَاكَ اسْمٌ: \"رَزَان\"! مَنْ هِيَ؟»", stage:3, items:["yara","yaqul","hunaka","ism","man","qaima"], img:"assets/art/unit1-rich/u1-s1-6.png"},
+    {id:"m17", ar:"تَقُولُ رَزَان: «أَنَا! أَنَا رَزَان!»", stage:3, items:["yaqul","ana"], img:"assets/art/unit1-rich/u1-s1-6.png"},
+    {id:"m18", ar:"تَقُولُ سَارَة: «أَهْلًا يَا رَزَان! لِي صَدِيقَةٌ: رَزَان!»", stage:3, items:["yaqul","ahlan","sadiq","li"], img:"assets/art/unit1-rich/u1-s1-6.png"},
+    {id:"m18b",ar:"وَتَقُولُ رَنَا: «وَأَنَا! لِي صَدِيقَةٌ!»", stage:3, items:["yaqul","ana","sadiq","li"], img:"assets/art/unit1-rich/u1-s1-6.png"},
+    {id:"m19", ar:"تُحِبُّ رَزَان... الْقَائِمَةَ!", stage:3, items:["yuhibb","qaima"], img:"assets/art/unit1-rich/u1-s1-6.png"},
+    {id:"m20", ar:"تَقُولُ رَزَان: «أَنَا رَزَان... وَلِي صَدِيقَاتٌ!»", stage:3, items:["yaqul","ana","li","sadiq"], img:"assets/art/unit1-rich/u1-s1-6.png"}
   ],
   /* B1 (audit 2026-10-10): the reading is every sentence of the inventory, in inventory order — generated from `sentences`
      by readingOf() and asserted by qc(); a hand-kept list drifted (deleted m10b kept, m00/m13/m13b omitted) and crashed R.read. */
@@ -94,17 +94,17 @@ const UNIT_01 = {
   ],
   /* authored contrast metadata (spec §13): every alternative is canonical or owner-authored unit language */
   contrasts:[
-    {id:"c1", stage:0, img:"sc-list",  a:"عِنْدَهَا قَائِمَةٌ", b:"لَيْسَ عِنْدَهَا قَائِمَةٌ", correct:"a", support:"m05", dim:"possession"},
-    {id:"c2", stage:0, img:"sc-alone", a:"لَيْسَ لَهَا صَدِيقٌ", b:"لَهَا صَدِيقٌ", correct:"a", support:"m02", dim:"possession"},
-    {id:"c3", stage:1, img:"sc-huda",  a:"هٰذِهِ هُدَى", b:"هٰذِهِ سَارَة", correct:"a", support:"m09", dim:"person"},
-    {id:"c4", stage:2, img:"sc-omar",  a:"هٰذَا عُمَر", b:"هٰذِهِ سَارَة", correct:"a", support:"m12", dim:"person"},
-    {id:"c5", stage:3, img:"sc-end",   a:"لَهَا صَدِيقَاتٌ", b:"لَيْسَ لَهَا صَدِيقٌ", correct:"a", support:"m20", dim:"possession"}
+    {id:"c1", stage:0, img:"assets/art/unit1-rich/u1-s1-2.png",  a:"عِنْدَهَا قَائِمَةٌ", b:"لَيْسَ عِنْدَهَا قَائِمَةٌ", correct:"a", support:"m05", dim:"possession"},
+    {id:"c2", stage:0, img:"assets/art/unit1-rich/u1-act-alone.png", a:"لَيْسَ لَهَا صَدِيقٌ", b:"لَهَا صَدِيقٌ", correct:"a", support:"m02", dim:"possession"},
+    {id:"c3", stage:1, img:"assets/art/unit1-rich/u1-s1-3.png",  a:"هٰذِهِ هُدَى", b:"هٰذِهِ سَارَة", correct:"a", support:"m09", dim:"person"},
+    {id:"c4", stage:2, img:"assets/art/unit1-rich/u1-s1-4.png",  a:"هٰذَا عُمَر", b:"هٰذِهِ سَارَة", correct:"a", support:"m12", dim:"person"},
+    {id:"c5", stage:3, img:"assets/art/unit1-rich/u1-s1-6.png",   a:"لَهَا صَدِيقَاتٌ", b:"لَيْسَ لَهَا صَدِيقٌ", correct:"a", support:"m20", dim:"possession"}
   ],
   /* true/false + who-says facts; wording is canonical text or owner-authored unit language */
   facts:[
     {id:"f1", stage:2, ar:"سَارَة بِنْتٌ.", truth:true,  support:"m15", dim:"person"},
     {id:"f2", stage:2, ar:"عُمَر بِنْتٌ.", truth:false, support:"m12", dim:"person"},
-    {id:"f3", stage:1, ar:"هٰذِهِ هُدَى.", truth:true,  support:"m09", img:"av-huda", dim:"person"},
+    {id:"f3", stage:1, ar:"هٰذِهِ هُدَى.", truth:true,  support:"m09", img:"assets/art/unit1-rich/u1-face-huda.png", dim:"person"},
     {id:"f4", stage:3, ar:"رَزَان صَدِيقَةُ سَارَة.", truth:true, support:"m18", dim:"person"}
   ],
   whosays:[
@@ -115,20 +115,20 @@ const UNIT_01 = {
     {id:"w5", stage:3, quote:"«وَأَنَا! لِي صَدِيقَةٌ!»", speaker:"rana", support:"m18b"}
   ],
   events:[ /* sequencing units: meaningful events, picture-first */
-    {id:"e1", order:1, stage:0, img:"sc-door", sentence:"m01"},
-    {id:"e2", order:2, stage:0, img:"sc-list", sentence:"m05"},
-    {id:"e3", order:3, stage:1, img:"sc-huda", sentence:"m09"},
-    {id:"e4", order:4, stage:3, img:"sc-end",  sentence:"m20"}
+    {id:"e1", order:1, stage:0, img:"assets/art/unit1-rich/u1-s1-1.png", sentence:"m01"},
+    {id:"e2", order:2, stage:0, img:"assets/art/unit1-rich/u1-s1-2.png", sentence:"m05"},
+    {id:"e3", order:3, stage:1, img:"assets/art/unit1-rich/u1-s1-3.png", sentence:"m09"},
+    {id:"e4", order:4, stage:3, img:"assets/art/unit1-rich/u1-s1-6.png",  sentence:"m20"}
   ],
   findit:[
-    {id:"fi1", stage:0, img:"sc-list",  prompt_gloss:"Which line says she has NO friend?", answer:"m02", pool:["m01","m02","m03","m07"]},
-    {id:"fi2", stage:1, img:"sc-huda",  prompt_gloss:"Which line shows the guess was WRONG?", answer:"m09", pool:["m08","m09","m10","m11"]},
-    {id:"fi3", stage:3, img:"sc-end",   prompt_gloss:"Which line shows what رزان loves?", answer:"m19", pool:["m17","m18","m19","m20"]}
+    {id:"fi1", stage:0, img:"assets/art/unit1-rich/u1-s1-2.png",  prompt_gloss:"Which line says she has NO friend?", answer:"m02", pool:["m01","m02","m03","m07"]},
+    {id:"fi2", stage:1, img:"assets/art/unit1-rich/u1-s1-3.png",  prompt_gloss:"Which line shows the guess was WRONG?", answer:"m09", pool:["m08","m09","m10","m11"]},
+    {id:"fi3", stage:3, img:"assets/art/unit1-rich/u1-s1-6.png",   prompt_gloss:"Which line shows what رزان loves?", answer:"m19", pool:["m17","m18","m19","m20"]}
   ],
   retrieval:[ /* missing-word choice: blank + choices are canonical surface forms from this unit */
-    {id:"r1", stage:0, sentence:"m05", blank:"الْقَائِمَةَ", choices:["الْقَائِمَةَ","وَلَدًا","بِنْتًا"], img:"sc-list", item:"qaima"},
-    {id:"r2", stage:1, sentence:"m11", blank:"وَلَدًا", choices:["الْقَائِمَةَ","وَلَدًا","بِنْتًا"], img:"sc-omar", item:"walad"},
-    {id:"r3", stage:0, sentence:"m02", blank:"صَدِيقٌ", choices:["صَدِيقٌ","قَائِمَةٌ"], img:"sc-alone", item:"sadiq"}
+    {id:"r1", stage:0, sentence:"m05", blank:"الْقَائِمَةَ", choices:["الْقَائِمَةَ","وَلَدًا","بِنْتًا"], img:"assets/art/unit1-rich/u1-s1-2.png", item:"qaima"},
+    {id:"r2", stage:1, sentence:"m11", blank:"وَلَدًا", choices:["الْقَائِمَةَ","وَلَدًا","بِنْتًا"], img:"assets/art/unit1-rich/u1-s1-4.png", item:"walad"},
+    {id:"r3", stage:0, sentence:"m02", blank:"صَدِيقٌ", choices:["صَدِيقٌ","قَائِمَةٌ"], img:"assets/art/unit1-rich/u1-act-alone.png", item:"sadiq"}
   ]
 };
 
@@ -142,56 +142,56 @@ const UNIT_01P = {
      dialogue and other natural nonpast contexts keep present forms. SC-073 item 3: the past slot licenses NO paradigm —
      each card's `forms` array is the whole licence, and qc() fails any card claiming a form its reading does not print. */
   cast:[
-    {id:"karim",   ar:"كَرِيم", img:"av-karim-pen"},
-    {id:"farida",  ar:"فَرِيدَة", img:"av-farida"},
-    {id:"maha",    ar:"مَهَا", img:"av-maha"},
-    {id:"zayd",    ar:"زَيْد", img:"av-zayd"},
-    {id:"qalam_c", ar:"الْقَلَمُ", img:"obj-pen"}
+    {id:"karim",   ar:"كَرِيم", img:"assets/art/unit1-rich/u1-face-karim.png"},
+    {id:"farida",  ar:"فَرِيدَة", img:"assets/art/unit1-rich/u1-face-farida.png"},
+    {id:"maha",    ar:"مَهَا", img:"assets/art/unit2-rich/av-maha.png"},
+    {id:"zayd",    ar:"زَيْد", img:"assets/art/unit2-rich/av-zayd.png"},
+    {id:"qalam_c", ar:"الْقَلَمُ", img:"assets/art/unit2-rich/obj-pen.png"}
   ],
   items:[
     {id:"salam",  ar:"السَّلَامُ عَلَيْكُمْ", status:"RECYCLED_CORE_TARGET", lemma:"السَّلَامُ عَلَيْكُمْ", kind:"chunk", chunk_ref:"CH-01", forms:["السَّلَامُ عَلَيْكُمْ"], gloss:"hello (greeting)", img:null, dim:"greeting", phrase:"السَّلَامُ عَلَيْكُمْ!", hl:"السَّلَامُ عَلَيْكُمْ"},
-    {id:"dakhala",ar:"دَخَلَ", status:"NEW_CORE_TARGET", g:"G-input_first", output:"copied", lemma:"دَخَلَ", kind:"lemma", forms:["دَخَلَ"], gloss:"(he) entered — past of يَدْخُلُ", img:"vg-enter", dim:"action", phrase:"دَخَلَ كَرِيم.", hl:"دَخَلَ"},
-    {id:"qala",   ar:"قَالَ", status:"NEW_CORE_TARGET", g:"G-input_first", output:"copied", lemma:"قَالَ", kind:"lemma", forms:["قَالَ","قَالَتْ","وَقَالَ"], gloss:"(he) said — past of يَقُولُ", img:"vg-say", dim:"action", phrase:"قَالَ كَرِيم: «أَنَا!»", hl:"قَالَ"},
-    {id:"raa",    ar:"رَأَى", status:"NEW_CORE_TARGET", g:"G-input_first", output:"copied", lemma:"رَأَى", kind:"lemma", forms:["رَأَى"], gloss:"(he) saw — past of يَرَى", img:"vg-see", dim:"action", phrase:"رَأَى كَرِيم الْقَلَمَ.", hl:"رَأَى"},
-    {id:"qalam",  ar:"قَلَمٌ", status:"COMPREHENSIBLE_SUPPORT", lemma:"قَلَم", kind:"lemma", forms:["قَلَمٌ","قَلَمًا","الْقَلَمَ","الْقَلَمُ","قَلَمُ"], gloss:"a pen", img:"obj-pen", dim:"object", phrase:"هٰذَا قَلَمٌ.", hl:"قَلَمٌ"},
+    {id:"dakhala",ar:"دَخَلَ", status:"NEW_CORE_TARGET", g:"G-input_first", output:"copied", lemma:"دَخَلَ", kind:"lemma", forms:["دَخَلَ"], gloss:"(he) entered — past of يَدْخُلُ", img:"assets/art/unit1-rich/u1-support-enter.png", dim:"action", phrase:"دَخَلَ كَرِيم.", hl:"دَخَلَ"},
+    {id:"qala",   ar:"قَالَ", status:"NEW_CORE_TARGET", g:"G-input_first", output:"copied", lemma:"قَالَ", kind:"lemma", forms:["قَالَ","قَالَتْ","وَقَالَ"], gloss:"(he) said — past of يَقُولُ", img:"assets/art/unit1-rich/u1-support-say.png", dim:"action", phrase:"قَالَ كَرِيم: «أَنَا!»", hl:"قَالَ"},
+    {id:"raa",    ar:"رَأَى", status:"NEW_CORE_TARGET", g:"G-input_first", output:"copied", lemma:"رَأَى", kind:"lemma", forms:["رَأَى"], gloss:"(he) saw — past of يَرَى", img:"assets/art/unit1-rich/u1-support-see.png", dim:"action", phrase:"رَأَى كَرِيم الْقَلَمَ.", hl:"رَأَى"},
+    {id:"qalam",  ar:"قَلَمٌ", status:"COMPREHENSIBLE_SUPPORT", lemma:"قَلَم", kind:"lemma", forms:["قَلَمٌ","قَلَمًا","الْقَلَمَ","الْقَلَمُ","قَلَمُ"], gloss:"a pen", img:"assets/art/unit2-rich/obj-pen.png", dim:"object", phrase:"هٰذَا قَلَمٌ.", hl:"قَلَمٌ"},
     {id:"inda",   ar:"عِنْدَهُ", status:"RECYCLED_CORE_TARGET", lemma:"عِنْدَ", kind:"lemma", forms:["عِنْدَهُ","عِنْدِي"], gloss:"he has (a thing)", img:null, dim:"possession", phrase:"عِنْدَهُ قَلَمٌ.", hl:"عِنْدَهُ"},
     {id:"man",    ar:"مَنْ؟", status:"RECYCLED_CORE_TARGET", lemma:"مَنْ", kind:"lemma", forms:["مَنْ"], gloss:"who?", img:null, dim:"question", phrase:"مَنْ عِنْدَهُ قَلَمٌ؟", hl:"مَنْ"},
     {id:"hunaka", ar:"هُنَاكَ", status:"RECYCLED_CORE_TARGET", lemma:"هُنَاكَ", kind:"lemma", forms:["هُنَاكَ"], gloss:"there is", img:null, dim:"existence", phrase:"هُنَاكَ قَلَمٌ!", hl:"هُنَاكَ"},
     {id:"ana",    ar:"أَنَا", status:"RECYCLED_CORE_TARGET", lemma:"أَنَا", kind:"lemma", forms:["أَنَا"], gloss:"I", img:null, dim:"person", phrase:"أَنَا قَلَمٌ!", hl:"أَنَا"},
-    {id:"sadiq",  ar:"صَدِيقٌ", status:"RECYCLED_CORE_TARGET", lemma:"صَدِيق", kind:"lemma", forms:["صَدِيقٌ"], gloss:"a friend", img:"vg-sadiq", dim:"person", phrase:"لِي صَدِيقٌ: كَرِيم!", hl:"صَدِيقٌ"},
+    {id:"sadiq",  ar:"صَدِيقٌ", status:"RECYCLED_CORE_TARGET", lemma:"صَدِيق", kind:"lemma", forms:["صَدِيقٌ"], gloss:"a friend", img:"assets/art/unit1-rich/u1-support-friendship-pen.png", dim:"person", phrase:"لِي صَدِيقٌ: كَرِيم!", hl:"صَدِيقٌ"},
     {id:"urid", ar:"أُرِيدُ", status:"RECYCLED_CORE_TARGET", lemma:"أَرَادَ", kind:"lemma", forms:["أُرِيدُ"], gloss:"I want", img:null, dim:"want", phrase:"أُرِيدُ قَلَمًا.", hl:"أُرِيدُ"},
     {id:"yatakallam", ar:"يَتَكَلَّمُ", status:"RECOGNITION_ONLY", lemma:"تَكَلَّمَ", kind:"lemma", forms:["يَتَكَلَّمُ"], gloss:"(it) speaks", img:null, dim:"verb", phrase:"هُنَاكَ قَلَمٌ يَتَكَلَّمُ!", hl:"يَتَكَلَّمُ"},
     {id:"laysa",  ar:"لَيْسَ", status:"RECYCLED_CORE_TARGET", lemma:"لَيْسَ", kind:"lemma", forms:["لَيْسَ"], gloss:"is not / has no", img:null, dim:"possession", phrase:"لَيْسَ عِنْدِي قَلَمٌ!", hl:"لَيْسَ"},
-    {id:"li",     ar:"لِي", status:"RECYCLED_CORE_TARGET", lemma:"لِـ", kind:"lemma", forms:["وَلِي"], gloss:"I have (a person)", img:"vg-sadiq", dim:"possession", phrase:"لِي صَدِيقٌ: كَرِيم!", hl:"لِي"},
+    {id:"li",     ar:"لِي", status:"RECYCLED_CORE_TARGET", lemma:"لِـ", kind:"lemma", forms:["وَلِي"], gloss:"I have (a person)", img:"assets/art/unit1-rich/u1-support-friendship-pen.png", dim:"possession", phrase:"لِي صَدِيقٌ: كَرِيم!", hl:"لِي"},
     {id:"la",     ar:"لَا", status:"RECYCLED_CORE_TARGET", lemma:"لَا", kind:"lemma", forms:["لَا"], gloss:"no; not", img:null, dim:"polarity", phrase:"لَا! لَيْسَ عِنْدِي قَلَمٌ!", hl:"لَا"},
     {id:"naam",   ar:"نَعَمْ", status:"RECYCLED_CORE_TARGET", lemma:"نَعَمْ", kind:"lemma", forms:["نَعَمْ"], gloss:"yes", img:null, dim:"polarity", phrase:"نَعَمْ يَا كَرِيم", hl:"نَعَمْ"},
     {id:"anta",   ar:"أَنْتَ", status:"RECYCLED_CORE_TARGET", lemma:"أَنْتَ", kind:"lemma", forms:["أَنْتَ"], gloss:"you (m./f.)", img:null, dim:"person", phrase:"مَنْ... مَنْ أَنْتَ؟", hl:"أَنْتَ"},
     {id:"ya",     ar:"يَا", status:"COMPREHENSIBLE_SUPPORT", lemma:"يَا", kind:"lemma", forms:["يَا"], gloss:"O — address particle", img:null, dim:"address", phrase:"لَا يَا كَرِيم!", hl:"يَا"}
   ],
   sentences:[
-    {id:"r01", ar:"دَخَلَ كَرِيم وَقَالَ: «السَّلَامُ عَلَيْكُمْ!»", stage:0, items:["dakhala","qala","salam"], img:"sc-pen1"},
-    {id:"r02", ar:"قَالَتْ فَرِيدَة وَمَهَا وَزَيْد: «وَعَلَيْكُمُ السَّلَامُ!»", stage:0, items:[], img:"sc-pen1"},
-    {id:"r03", ar:"قَالَ كَرِيم: «أُرِيدُ قَلَمًا. مَنْ عِنْدَهُ قَلَمٌ؟»", stage:0, items:["qala","urid","man","inda","qalam"], img:"sc-pen2"},
-    {id:"r04", ar:"قَالَتْ مَهَا: «لَا! لَيْسَ عِنْدِي قَلَمٌ!»", stage:1, items:["laysa","qalam","la"], img:"sc-pen2"},
-    {id:"r05", ar:"قَالَ زَيْد: «أَنَا؟ لَا! لَيْسَ عِنْدِي قَلَمٌ.»", stage:1, items:["qala","ana","laysa","qalam"], img:"sc-pen2"},
-    {id:"r06", ar:"قَالَتْ فَرِيدَة: «لَا يَا كَرِيم! لَيْسَ عِنْدِي قَلَمٌ.»", stage:1, items:["qala","laysa","qalam"], img:"sc-pen2"},
-    {id:"r07", ar:"كَرِيم... لَيْسَ عِنْدَهُ قَلَمٌ.", stage:1, items:["laysa","inda","qalam"], img:"sc-pen2"},
-    {id:"r08", ar:"قَالَ قَلَمٌ: «أَنَا! أَنَا قَلَمٌ!»", stage:2, items:["qala","ana","qalam"], img:"sc-pen3"},
-    {id:"r09", ar:"رَأَى كَرِيم الْقَلَمَ وَقَالَ: «مَنْ... مَنْ أَنْتَ؟»", stage:2, items:["raa","qala","man","anta"], img:"sc-pen3"},
-    {id:"r10", ar:"قَالَ الْقَلَمُ: «أَنَا قَلَمُ كَرِيم! وَلِي صَدِيقٌ: كَرِيم!»", stage:2, items:["qala","ana","sadiq","li"], img:"sc-pen3"},
-    {id:"r11", ar:"قَالَتْ فَرِيدَة: «نَعَمْ يَا كَرِيم... هُنَاكَ قَلَمٌ يَتَكَلَّمُ!»", stage:2, items:["qala","hunaka","qalam","yatakallam","naam"], img:"sc-pen3"}
+    {id:"r01", ar:"دَخَلَ كَرِيم وَقَالَ: «السَّلَامُ عَلَيْكُمْ!»", stage:0, items:["dakhala","qala","salam"], img:"assets/art/unit1-rich/u1-s2-1.png"},
+    {id:"r02", ar:"قَالَتْ فَرِيدَة وَمَهَا وَزَيْد: «وَعَلَيْكُمُ السَّلَامُ!»", stage:0, items:[], img:"assets/art/unit1-rich/u1-s2-1.png"},
+    {id:"r03", ar:"قَالَ كَرِيم: «أُرِيدُ قَلَمًا. مَنْ عِنْدَهُ قَلَمٌ؟»", stage:0, items:["qala","urid","man","inda","qalam"], img:"assets/art/unit1-rich/u1-s2-2.png"},
+    {id:"r04", ar:"قَالَتْ مَهَا: «لَا! لَيْسَ عِنْدِي قَلَمٌ!»", stage:1, items:["laysa","qalam","la"], img:"assets/art/unit1-rich/u1-s2-2.png"},
+    {id:"r05", ar:"قَالَ زَيْد: «أَنَا؟ لَا! لَيْسَ عِنْدِي قَلَمٌ.»", stage:1, items:["qala","ana","laysa","qalam"], img:"assets/art/unit1-rich/u1-s2-2.png"},
+    {id:"r06", ar:"قَالَتْ فَرِيدَة: «لَا يَا كَرِيم! لَيْسَ عِنْدِي قَلَمٌ.»", stage:1, items:["qala","laysa","qalam"], img:"assets/art/unit1-rich/u1-s2-2.png"},
+    {id:"r07", ar:"كَرِيم... لَيْسَ عِنْدَهُ قَلَمٌ.", stage:1, items:["laysa","inda","qalam"], img:"assets/art/unit1-rich/u1-s2-2.png"},
+    {id:"r08", ar:"قَالَ قَلَمٌ: «أَنَا! أَنَا قَلَمٌ!»", stage:2, items:["qala","ana","qalam"], img:"assets/art/unit1-rich/u1-s2-3.png"},
+    {id:"r09", ar:"رَأَى كَرِيم الْقَلَمَ وَقَالَ: «مَنْ... مَنْ أَنْتَ؟»", stage:2, items:["raa","qala","man","anta"], img:"assets/art/unit1-rich/u1-s2-3.png"},
+    {id:"r10", ar:"قَالَ الْقَلَمُ: «أَنَا قَلَمُ كَرِيم! وَلِي صَدِيقٌ: كَرِيم!»", stage:2, items:["qala","ana","sadiq","li"], img:"assets/art/unit1-rich/u1-s2-3.png"},
+    {id:"r11", ar:"قَالَتْ فَرِيدَة: «نَعَمْ يَا كَرِيم... هُنَاكَ قَلَمٌ يَتَكَلَّمُ!»", stage:2, items:["qala","hunaka","qalam","yatakallam","naam"], img:"assets/art/unit1-rich/u1-s2-3.png"}
   ],
   readings:[{id:"parallel", role:"parallel", title:"مَنْ أَنْتَ يَا قَلَم؟", sentence_ids:["r01","r02","r03","r04","r05","r06","r07","r08","r09","r10","r11"]}],
   contrasts:[
-    {id:"rc1", stage:0, img:"sc-pen1", a:"دَخَلَ كَرِيم", b:"رَأَى كَرِيم", correct:"a", support:"r01", dim:"action"},
-    {id:"rc2", stage:2, img:"sc-pen3", a:"أَنَا قَلَمٌ", b:"أَنَا كَرِيم", correct:"a", support:"r08", dim:"person"}, /* the former first-person gender distractor is retired (SC-021) */
-    {id:"rc3", stage:2, img:"sc-pen3", a:"هُنَاكَ قَلَمٌ", b:"هُنَاكَ وَلَدٌ", correct:"a", support:"r11", dim:"existence"},
-    {id:"rc4", stage:1, img:"sc-pen2", a:"لَيْسَ عِنْدِي قَلَمٌ", b:"عِنْدِي قَلَمٌ", correct:"a", support:"r04", dim:"possession"}
+    {id:"rc1", stage:0, img:"assets/art/unit1-rich/u1-s2-1.png", a:"دَخَلَ كَرِيم", b:"رَأَى كَرِيم", correct:"a", support:"r01", dim:"action"},
+    {id:"rc2", stage:2, img:"assets/art/unit1-rich/u1-s2-3.png", a:"أَنَا قَلَمٌ", b:"أَنَا كَرِيم", correct:"a", support:"r08", dim:"person"}, /* the former first-person gender distractor is retired (SC-021) */
+    {id:"rc3", stage:2, img:"assets/art/unit1-rich/u1-s2-3.png", a:"هُنَاكَ قَلَمٌ", b:"هُنَاكَ وَلَدٌ", correct:"a", support:"r11", dim:"existence"},
+    {id:"rc4", stage:1, img:"assets/art/unit1-rich/u1-s2-2.png", a:"لَيْسَ عِنْدِي قَلَمٌ", b:"عِنْدِي قَلَمٌ", correct:"a", support:"r04", dim:"possession"}
   ],
   facts:[
-    {id:"rf1", stage:0, ar:"دَخَلَ كَرِيم.", truth:true, support:"r01", img:"vg-enter", dim:"action"},
-    {id:"rf2", stage:1, ar:"عِنْدَهَا قَلَمٌ.", truth:false, support:"r04", img:"av-maha", dim:"possession"},
-    {id:"rf3", stage:2, ar:"لِلْقَلَمِ صَدِيقٌ: كَرِيم.", truth:true, support:"r10", img:"obj-pen", dim:"person"}
+    {id:"rf1", stage:0, ar:"دَخَلَ كَرِيم.", truth:true, support:"r01", img:"assets/art/unit1-rich/u1-support-enter.png", dim:"action"},
+    {id:"rf2", stage:1, ar:"عِنْدَهَا قَلَمٌ.", truth:false, support:"r04", img:"assets/art/unit2-rich/av-maha.png", dim:"possession"},
+    {id:"rf3", stage:2, ar:"لِلْقَلَمِ صَدِيقٌ: كَرِيم.", truth:true, support:"r10", img:"assets/art/unit2-rich/obj-pen.png", dim:"person"}
   ],
   whosays:[
     {id:"rw1", stage:0, quote:"«مَنْ عِنْدَهُ قَلَمٌ؟»", speaker:"karim", support:"r03"},
@@ -199,15 +199,15 @@ const UNIT_01P = {
     {id:"rw3", stage:2, quote:"«نَعَمْ يَا كَرِيم... هُنَاكَ قَلَمٌ يَتَكَلَّمُ!»", speaker:"farida", support:"r11"}
   ],
   events:[
-    {id:"re1", order:1, stage:0, img:"sc-pen1", sentence:"r01"},
-    {id:"re2", order:2, stage:1, img:"sc-pen2", sentence:"r04"},
-    {id:"re3", order:3, stage:2, img:"sc-pen3", sentence:"r08"}
+    {id:"re1", order:1, stage:0, img:"assets/art/unit1-rich/u1-s2-1.png", sentence:"r01"},
+    {id:"re2", order:2, stage:1, img:"assets/art/unit1-rich/u1-s2-2.png", sentence:"r04"},
+    {id:"re3", order:3, stage:2, img:"assets/art/unit1-rich/u1-s2-3.png", sentence:"r08"}
   ],
   findit:[
-    {id:"rfi1", stage:2, img:"sc-pen3", prompt_gloss:"Which line does the PEN say?", answer:"r08", pool:["r03","r04","r08","r09"]}
+    {id:"rfi1", stage:2, img:"assets/art/unit1-rich/u1-s2-3.png", prompt_gloss:"Which line does the PEN say?", answer:"r08", pool:["r03","r04","r08","r09"]}
   ],
   retrieval:[
-    {id:"rr1", stage:2, sentence:"r08", blank:"أَنَا", choices:["أَنَا","هُوَ"], img:"obj-pen", item:"ana"}
+    {id:"rr1", stage:2, sentence:"r08", blank:"أَنَا", choices:["أَنَا","هُوَ"], img:"assets/art/unit2-rich/obj-pen.png", item:"ana"}
   ]
 };
 

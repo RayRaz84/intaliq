@@ -29,6 +29,18 @@ for (const slot of manifest.slots) {
   if (crypto.createHash('sha256').update(bytes).digest('hex') !== slot.accepted.sha256) throw Error('Accepted bytes changed: ' + slot.id);
 }
 
+/* Unit 1 owner-authorized rich PNGs. Separate inventory preserves Unit 2's frozen map. */
+const u1Art = JSON.parse(read('source/cast-and-art/art_manifest_unit1_readiness.json'));
+const u1Symbols = Object.fromEntries(u1Art.slots.map(s => [s.engine_symbol, s.delivered]));
+if (u1Art.slots.length !== 36 || u1Art.main_strip.length !== 6 || u1Art.second_strip.length !== 3)
+  throw Error('Incomplete Unit 1 art inventory or expanded story strip');
+for (const slot of u1Art.slots) {
+  if (!['accepted_generated', 'accepted_reuse'].includes(slot.status) || !slot.delivered)
+    throw Error('Unaccepted Unit 1 asset: ' + slot.id);
+  const hash = crypto.createHash('sha256').update(fs.readFileSync(path.join(root, slot.delivered))).digest('hex');
+  if (hash !== slot.sha256) throw Error('Accepted Unit 1 bytes changed: ' + slot.id);
+}
+
 /* ---- 2 · the engine: Unit 2 declarations from its build script; Units 1 and 3 live in engine_core.js ---- */
 execFileSync('python3', [path.join(__dirname, 'build_unit02.py'), '--output', path.join(root, 'source/units/unit2/unit02_data.js')], { cwd: root, stdio: 'inherit' });
 const data = read('source/units/unit2/unit02_data.js');
@@ -39,6 +51,20 @@ for (const name of ['UNIT_02', 'UNIT_02P']) {
   engine = engine.replace(new RegExp('^const ' + name + ' = .*;$', 'm'), declaration[0]);
 }
 engine = engine.replace(/\/\* ---- Unit 2[^\n]*\*\//, data.match(/\/\* ---- Unit 2[^\n]*\*\//)[0]);
+/* Persist only Unit 1 image-field assignments, never its Arabic or activity data. */
+let u1End = engine.indexOf('const UNIT_03');
+if (u1End < 0) throw Error('Missing Unit 3 boundary for Unit 1 art assignment');
+engine = engine.slice(0, u1End).replace(/img:"([^"]+)"/g, (all, id) =>
+  u1Symbols[id] ? 'img:"' + u1Symbols[id] + '"' : all) + engine.slice(u1End);
+u1End = engine.indexOf('const UNIT_03');
+const u1pStart = engine.indexOf('const UNIT_01P');
+let u1p = engine.slice(u1pStart, u1End);
+for (const id of ['sadiq', 'li']) {
+  const re = new RegExp('(\\{id:"' + id + '",[^\\n]*?img:")[^"]+("[^\\n]*?\\})');
+  if (!re.test(u1p)) throw Error('Missing Unit 1p friendship support: ' + id);
+  u1p = u1p.replace(re, '$1' + u1Symbols['vg-sadiq-pen'] + '$2');
+}
+engine = engine.slice(0, u1pStart) + u1p + engine.slice(u1End);
 fs.writeFileSync(path.join(__dirname, 'engine_core.js'), engine);
 
 /* evaluate the engine once, in isolation; refuse to build on any unit-level failure (B2) */
@@ -71,7 +97,7 @@ const endLen = '})(typeof window!=="undefined"?window:globalThis);'.length;
 html = html.slice(0, engStart) + engine.trimEnd() + html.slice(engEnd + endLen);
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
-const svgOf = id => `<svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#${id}"/></g></svg>`;
+const svgOf = id => id.startsWith('assets/art/') ? `<img class="rich-art" src="${id}" alt="">` : `<svg viewBox="0 0 120 100"><g transform="translate(10 4) scale(.95)"><use href="#${id}"/></g></svg>`;
 const facesRow = (u, label) => '<div class="picseq" aria-label="' + label + '">' + u.cast.map((c, i) =>
   `<span class="picfr">${svgOf(c.img)}<b>${i + 1} · <bdi lang="ar">${esc(c.ar)}</bdi></b></span>`).join('') + '</div>';
 const whoSays = (u, label) => {
@@ -98,6 +124,7 @@ for (const [key, fn] of Object.entries(GEN)) {
 }
 
 /* ---- 4 · the Unit 2 art assignment (unchanged from Version 43/44) ---- */
+html = require('./integrate_unit1_art.cjs')(html, u1Art);
 html = html.replace(/^  const RICH_UNIT2 = .*;\n/m, '');
 html = html.replace(/  function withRichArt\(unit\)\{[\s\S]*?\n  \}\n(?=  function setU)/, '');
 html = html.replace('U=withRichArt(E.UNITS[unitId]);', 'U=E.UNITS[unitId];');

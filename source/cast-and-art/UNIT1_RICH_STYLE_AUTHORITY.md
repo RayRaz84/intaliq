@@ -22,4 +22,4 @@ Generation is one independent scene/slot per call. Previous scenes are not conte
 
 Inspect each output at its actual display size before accepting. Preserve raw accepted bytes, record hashes and map consumers to those bytes. Do not crop, redraw, procedurally reconstruct or replace accepted PNGs during integration. CSS may scale with containment.
 
-No frozen Arabic, pipeline implementation, Studio version or published site is changed by this readiness reconciliation.
+Frozen Arabic is unchanged. The owner’s subsequent “continue working” instruction authorizes integration of these accepted PNGs into the build and publication. The registered Studio version remains 50; this art update is identified separately by asset commit 30d90e8. The project register must transcribe the owner’s ruling through SC-118 without seeking authorization again.
