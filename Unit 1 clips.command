@@ -63,9 +63,10 @@ while true; do
   2  Generate Unit 1       — all 72 clips in the voice you chose; opens the listener's sheet and the tracker
   3  Record verification   — copy the listener's accepted / retake decisions into the manifest
   4  Retakes               — regenerate named clips (e.g. c_m07,c_r03), then verify them again
-  5  Quit
+  5  Re-voice one reading   — regenerate all of reading 1 or reading 2 in a different voice
+  6  Quit
 MENU
-  printf '\nChoose 1–5: '; read -r CHOICE
+  printf '\nChoose 1–6: '; read -r CHOICE
   case "$CHOICE" in
     1)
       bold "Voices on your account"
@@ -89,8 +90,8 @@ MENU
       [ -z "$V1" ] || [ -z "$V2" ] && { echo "No such number."; pause; continue; }
       ask_model
       echo "Reading 1 → ${VOICE_NAMES[$i1]} · Reading 2 → ${VOICE_NAMES[$i2]} · model $MODEL"
-      python3 "$GEN" generate --unit "$UNIT" --reading 1 --voice "$V1" --model "$MODEL" \
-        && python3 "$GEN" generate --unit "$UNIT" --reading 2 --voice "$V2" --model "$MODEL" \
+      python3 "$GEN" generate --unit "$UNIT" --reading 1 --voice "$V1" --model "$MODEL" --force \
+        && python3 "$GEN" generate --unit "$UNIT" --reading 2 --voice "$V2" --model "$MODEL" --force \
         && { open "$SHEET"; open "$TRACKER"; }
       echo; echo "Listener: play each clip against its line on the sheet; in the tracker enter accepted or retake, your full name and today's date. Then run option 3."
       pause;;
@@ -106,7 +107,17 @@ MENU
       python3 "$GEN" generate --unit "$UNIT" --voice "$VID" --only "$ONLY" --model "$MODEL" && open "$SHEET"
       echo; echo "Verify the redone clips in the tracker, then run option 3 again."
       pause;;
-    5|q|Q) exit 0;;
-    *) echo "Choose 1–5.";;
+    5)
+      bold "Re-voice one reading"
+      load_voices || { pause; continue; }
+      printf '\nWhich reading? 1 = «قَائِمَةُ رَزَان» (46 clips) · 2 = «مَنْ أَنْتَ يَا قَلَم؟» (26 clips): '; read -r RD
+      case "$RD" in 1|2) ;; *) echo "Choose 1 or 2."; pause; continue;; esac
+      printf 'Number of the voice for reading %s: ' "$RD"; read -r n; i=$((n-1)); VID="${VOICE_IDS[$i]}"; [ -z "$VID" ] && { echo "No such number."; pause; continue; }
+      ask_model
+      echo "Reading $RD → ${VOICE_NAMES[$i]} · model $MODEL (previous clips of this reading are replaced; their verification is cleared)"
+      python3 "$GEN" generate --unit "$UNIT" --reading "$RD" --voice "$VID" --model "$MODEL" --force && { open "$SHEET"; open "$TRACKER"; }
+      pause;;
+    6|q|Q) exit 0;;
+    *) echo "Choose 1–6.";;
   esac
 done
