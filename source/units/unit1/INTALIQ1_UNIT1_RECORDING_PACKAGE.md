@@ -1,6 +1,6 @@
 # Intaliq 1 · Unit 1 — Recording package (one batch, 72 clips)
 
-*For the native MSA speaker and the verifying listener. Prepared 2026-10-14 by the Editor (Text role). Synthesised speech is not accepted (SC-028). Every text below is copied mechanically from the course engine; read it exactly as printed.*
+*For the voice — a native MSA speaker, or since **SC-129** a speech synthesiser run against these exact texts — and for the verifying listener, who is a named person in every case. Prepared 2026-10-14 by the Editor (Text role); amended 2026-10-15 (SC-129: synthesised production audio accepted after clip-by-clip human verification; the browser's live preview voice is still not a clip). Every text below is copied mechanically from the course engine; read it exactly as printed.*
 
 ## 1 · What to record
 
@@ -8,7 +8,7 @@
 
 ## 2 · How to read
 
-- **One voice** for all 72 clips: a native speaker of Modern Standard Arabic.
+- **One voice** for all 72 clips: a native speaker of Modern Standard Arabic, or one fixed synthesised voice (SC-129) — name it in the manifest (`voice`), never mix within a unit.
 - **Exactly as printed, fully vocalised.** Pronounce every printed vowel, including the final case endings (no pausal dropping). **Names are printed without final vowels — read them that way** (رَزَان · عُمَر · سَارَة · هُدَى · طَارِق · رَنَا · كَرِيم · فَرِيدَة · مَهَا · زَيْد).
 - **Child-directed pace**: clear and unhurried, not slow-motion. Narration as narration; words inside «…» as speech, with natural feeling (surprise, protest, greeting).
 - «…» inside a line marks a short dramatic pause — make it audible.

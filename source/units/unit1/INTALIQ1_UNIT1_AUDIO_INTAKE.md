@@ -8,11 +8,11 @@
 
 | Property | Requirement |
 |---|---|
-| Voice | one native MSA speaker for the whole unit (one voice per unit; a second voice may be used for the character lines only if the owner rules so) |
+| Voice | **one voice for the whole unit** — a native MSA speaker **or, since SC-129, a speech synthesiser's fixed voice** (named in the manifest as `human: <speaker>` or `synthesised: <engine / voice id>`); a second voice may be used for the character lines only if the owner rules so |
 | Delivery | read exactly as printed, fully vocalised, at a child-directed pace; dialogue read as speech, narration as narration; no words added, dropped or paraphrased — the recording must match the canon word for word, because the learner's response set is the printed text |
 | Format | mono, 44.1 kHz, MP3 ≥128 kbps (or OGG); one file per row; leading/trailing silence ≤ 0.3 s; peak-normalised |
 | Naming | exactly the `src` path in the manifest: `assets/audio/unit-01/m07.mp3`, `assets/audio/unit-01/item_urid.mp3`, `assets/audio/unit-01p/r04.mp3`, … |
-| Not acceptable | synthesised speech of any kind as a shipped clip (SC-028: TTS is a preview aid only); a clip whose text differs from the canon; a clip that covers two rows |
+| Not acceptable | the browser's live preview voice as a shipped clip (SC-028, as narrowed by SC-129); **any clip — human or synthesised — not verified by ear by a named listener**; a clip whose text differs from the canon; a clip that covers two rows; a failing clip patched rather than regenerated or re-recorded |
 
 ## 2 · How a clip becomes "verified"
 
@@ -26,8 +26,8 @@ Three listening families (F9), all input-only: **hear a phrase → tap its pictu
 
 ## 4 · Who decides what
 
-- **Supplying the recordings** is production work outside this session (a speaker and a microphone). The Text role cannot do it and does not simulate it.
-- **One policy point is the owner's, if he wants the gap closed sooner:** SC-028 rules synthesised speech out as shipped audio. If the owner wants a synthesised stopgap ⟨SC-124: there is no pilot⟩, that is a new ruling (it changes SC-028), recorded before any such clip is bound; nothing here assumes it.
+- **Supplying the clips** is production work: a speaker and a microphone, or — since SC-129 — a synthesiser run against the manifest texts. **Verification is a person's work in every case**: a named Arabic-reading listener plays each clip against the printed text and signs the row. The Text role neither verifies clips itself nor simulates verification.
+- ~~**One policy point is the owner's, if he wants the gap closed sooner:** SC-028 rules synthesised speech out as shipped audio …~~ **Ruled — SC-129 (2026-10-15):** synthesised production audio is permitted after clip-by-clip human verification; the human-speaker requirement is replaced, the quality control kept.
 - **Verification** needs a named Arabic-reading listener; the Editor can be that listener for clips supplied to the session, and says so in the rows.
 
 ## 5 · Status

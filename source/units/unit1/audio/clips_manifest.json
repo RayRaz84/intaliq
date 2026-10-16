@@ -1,8 +1,9 @@
 {
-  "_about": "Unit 1 clip manifest, generated from the engine (SC-121). One row per sentence of each reading and per core-item phrase. Fill `src` with the recorded file path under assets/audio/unit-01/…, `sha256` with the file hash, and `verified_by` / `verified_on` once a named person has listened to the clip against the printed text. Then copy the rows into the unit data as audio.clips with audio.verified=true; the build verifies every file and hash, and qc() withholds the unit on any invalid binding. Text is the exact string to record; nothing may be paraphrased.",
+  "_about": "Unit 1 clip manifest, generated from the engine (SC-121). One row per sentence of each reading and per core-item phrase. Fill `src` with the recorded file path under assets/audio/unit-01/…, `sha256` with the file hash, and `verified_by` / `verified_on` once a named person has listened to the clip against the printed text. Then copy the rows into the unit data as audio.clips with audio.verified=true; the build verifies every file and hash, and qc() withholds the unit on any invalid binding. Text is the exact string to record; nothing may be paraphrased. SC-129 (2026-10-15): clips may be recorded by a native speaker or produced by a speech synthesiser; either way a named listener verifies each clip by ear before `verified_by` / `verified_on` are filled. Name the unit's voice in `voice` as `human: <speaker>` or `synthesised: <engine / voice id>` — one voice per unit.",
   "units": {
     "unit-01": {
       "title": "قَائِمَةُ رَزَان",
+      "voice": "",
       "clips": [
         {
           "id": "c_m00",
@@ -469,6 +470,7 @@
     },
     "unit-01p": {
       "title": "مَنْ أَنْتَ يَا قَلَم؟",
+      "voice": "",
       "clips": [
         {
           "id": "c_r01",
