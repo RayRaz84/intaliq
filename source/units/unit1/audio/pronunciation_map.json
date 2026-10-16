@@ -1,0 +1,9 @@
+{
+  "_about": "Pronunciation lock for synthesised clips (SC-129; owner's instruction 2026-10-16: lock a pronunciation by respelling in the generator input). Keys are printed tokens exactly as the manifest prints them; values are what the synthesiser is sent instead. Whole-word substitutions only; applied by source/pipeline/generate_clips.py to the API input and nowhere else — the manifest `text`, the book and the engine never change. Every clip whose input differed records it as `tts_input` in the manifest and in audio_work/generation_log_unit1.json. Fill this after the audition: add an entry only where a voice mis-says a word consistently, and re-audition the line before generating the unit.",
+  "map": {},
+  "_examples_not_active": {
+    "رَزَان": "رَزَانْ  — an explicit sukūn to stop an invented final vowel, if a voice adds one",
+    "هُدَى": "هُدَا  — if the alif maqṣūra is read as a diphthong",
+    "يَا قَلَم": "يَا قَلَمْ  — vocative name, no final vowel"
+  }
+}
