@@ -9,7 +9,7 @@ Run from the repository root, in a Terminal that can reach `api.elevenlabs.io` (
 | Step | Command | Result |
 |---|---|---|
 | 1 · candidates | `python3 source/pipeline/generate_clips.py voices` | the account's voices and labels |
-| 2 · audition | `… audition --unit 1 --voices ID1,ID2,ID3` | five lines per voice → `audio_work/audition/audition.html`; listen side by side, choose one |
+| 2 · audition | `… audition --unit 1 --voices ID1,ID2,ID3 [--model v3]` (model: `v2` = eleven_multilingual_v2 · `v3` = eleven_v3 · `flash`; settings: the voice's own saved settings by default — what the web studio uses — or `--settings house`) | five lines per voice → `audio_work/audition/audition.html`; listen side by side, choose one |
 | 3 · lock | edit `pronunciation_map.json` only where a word is consistently mis-said; re-run step 2 on that line | the map is recorded per clip (`tts_input`) and in the generation log |
 | 4 · generate | `… generate --unit 1 --voice ID` | 72 files at their manifest paths, trimmed (silence ≤ 0.3 s), peak-normalised, mono 44.1 kHz MP3 128k; SHA-256 and the unit's `voice` written to the manifest; `audio_work/listening_sheet_unit1.html` |
 | 5 · verify | the listener opens the sheet, plays each clip against its printed text, and enters `accepted` / `retake` + full name + date in `INTALIQ1_UNIT1_CLIP_TRACKER.csv` | the only human step, and the one that makes a clip shippable |

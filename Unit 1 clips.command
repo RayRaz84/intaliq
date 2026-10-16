@@ -33,6 +33,16 @@ fi
 # ---- 0 · certificates: a python.org Python on macOS has no root store; certifi gives it one (one time, quiet) ----
 python3 -c "import certifi" >/dev/null 2>&1 || python3 -m pip install --quiet --user certifi >/dev/null 2>&1 || true
 
+# ---- helper: ask which ElevenLabs model (the web studio shows its model in a drop-down next to the voice) ----
+ask_model() {
+  echo; echo "  Model (as shown in the ElevenLabs web studio):"
+  echo "    1  Eleven v3                — most natural; what the website usually uses now"
+  echo "    2  Eleven Multilingual v2   — the earlier default"
+  echo "    3  Eleven Flash v2.5"
+  printf '  Choose 1–3 [1]: '; read -r mm
+  case "$mm" in 2) MODEL=v2;; 3) MODEL=flash;; *) MODEL=v3;; esac
+}
+
 # ---- helper: numbered voice list → VOICE_IDS[] / VOICE_NAMES[] ----
 load_voices() {
   VOICE_IDS=(); VOICE_NAMES=()
@@ -66,7 +76,8 @@ MENU
       if [ "$PICK" = "all" ]; then IDS=$(IFS=,; echo "${VOICE_IDS[*]}")
       else for n in $PICK; do i=$((n-1)); [ -n "${VOICE_IDS[$i]}" ] && IDS="$IDS,${VOICE_IDS[$i]}"; done; IDS="${IDS#,}"; fi
       [ -z "$IDS" ] && { echo "Nothing chosen."; pause; continue; }
-      python3 "$GEN" audition --unit "$UNIT" --voices "$IDS" && open audio_work/audition/audition.html
+      ask_model
+      python3 "$GEN" audition --unit "$UNIT" --voices "$IDS" --model "$MODEL" && open audio_work/audition/audition.html
       echo; echo "Listen, choose ONE voice for the whole unit, then run option 2. If a word is said wrong in every voice, tell Claude the word."
       pause;;
     2)
@@ -74,8 +85,9 @@ MENU
       load_voices || { pause; continue; }
       printf '\nNumber of the voice for Unit 1: '; read -r n; i=$((n-1))
       VID="${VOICE_IDS[$i]}"; [ -z "$VID" ] && { echo "No such number."; pause; continue; }
-      echo "Generating 72 clips with: ${VOICE_NAMES[$i]}"
-      python3 "$GEN" generate --unit "$UNIT" --voice "$VID" && { open "$SHEET"; open "$TRACKER"; }
+      ask_model
+      echo "Generating 72 clips with: ${VOICE_NAMES[$i]} · model $MODEL"
+      python3 "$GEN" generate --unit "$UNIT" --voice "$VID" --model "$MODEL" && { open "$SHEET"; open "$TRACKER"; }
       echo; echo "Listener: play each clip against its line on the sheet; in the tracker enter accepted or retake, your full name and today's date. Then run option 3."
       pause;;
     3)
@@ -86,7 +98,8 @@ MENU
       load_voices || { pause; continue; }
       printf '\nNumber of the unit'"'"'s voice: '; read -r n; i=$((n-1)); VID="${VOICE_IDS[$i]}"
       printf 'Clip ids to redo, comma-separated (as listed by option 3): '; read -r ONLY
-      python3 "$GEN" generate --unit "$UNIT" --voice "$VID" --only "$ONLY" && open "$SHEET"
+      ask_model
+      python3 "$GEN" generate --unit "$UNIT" --voice "$VID" --only "$ONLY" --model "$MODEL" && open "$SHEET"
       echo; echo "Verify the redone clips in the tracker, then run option 3 again."
       pause;;
     5|q|Q) exit 0;;

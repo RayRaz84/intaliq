@@ -44,9 +44,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 API = "https://api.elevenlabs.io/v1"
-MODEL = "eleven_multilingual_v2"
+MODEL = os.environ.get("ELEVENLABS_MODEL", "eleven_multilingual_v2")   # overridden by --model
+MODELS = {"v2": "eleven_multilingual_v2", "v3": "eleven_v3", "flash": "eleven_flash_v2_5", "turbo": "eleven_turbo_v2_5"}
 OUTPUT_FORMAT = "mp3_44100_128"            # the recording package's format: mono-ready 44.1 kHz MP3 at 128 kbps
-VOICE_SETTINGS = {"stability": 0.62, "similarity_boost": 0.8, "style": 0.15, "use_speaker_boost": True, "speed": 0.92}
+HOUSE_SETTINGS = {"stability": 0.62, "similarity_boost": 0.8, "style": 0.15, "use_speaker_boost": True, "speed": 0.92}
+VOICE_SETTINGS = None   # resolved per voice by settings_for(): the voice's own saved settings (what the web studio uses) unless --settings house
+SETTINGS_MODE = "voice"
+_settings_cache = {}
 AUDITION_LINES = {  # one narration, one question, one dialogue with exclamation, one name-heavy line, one Reading-2 line
     1: ["c_m00", "c_m07", "c_m09", "c_m16", "c_r11"],
 }
@@ -152,8 +156,24 @@ def run(cmd):
     r = subprocess.run(cmd, capture_output=True, text=True)
     if r.returncode: sys.exit("ffmpeg failed: " + r.stderr[-400:])
 
+def settings_for(voice_id):
+    """`voice`: the settings saved on the voice itself (the web studio starts from these, so API output matches what was
+    heard there); `house`: the fixed house values. eleven_v3 accepts stability only at 0 / 0.5 / 1 and no speed."""
+    if voice_id in _settings_cache: return _settings_cache[voice_id]
+    s = dict(HOUSE_SETTINGS)
+    if SETTINGS_MODE == "voice":
+        try:
+            got = json.loads(api(f"/voices/{voice_id}/settings"))
+            s = {k: got[k] for k in ("stability", "similarity_boost", "style", "use_speaker_boost", "speed") if k in got and got[k] is not None}
+        except SystemExit:
+            print("  (could not read the voice's saved settings; using the house settings)")
+    if MODEL == "eleven_v3":
+        s["stability"] = min((0.0, 0.5, 1.0), key=lambda v: abs(v - float(s.get("stability", 0.5)))); s.pop("speed", None)
+    _settings_cache[voice_id] = s
+    return s
+
 def tts(voice_id, text):
-    body = {"text": text, "model_id": MODEL, "voice_settings": VOICE_SETTINGS}
+    body = {"text": text, "model_id": MODEL, "voice_settings": settings_for(voice_id)}
     return api(f"/text-to-speech/{voice_id}?output_format={OUTPUT_FORMAT}", "POST", body, accept="audio/mpeg")
 
 def voice_name(voice_id):
@@ -177,7 +197,7 @@ def mode_audition(a):
     out = ROOT / "audio_work" / "audition"; out.mkdir(parents=True, exist_ok=True)
     rows = []
     for vid in a.voices.split(","):
-        vid = vid.strip(); name = voice_name(vid); d = out / vid; d.mkdir(exist_ok=True)
+        vid = vid.strip(); name = voice_name(vid); d = out / f"{vid}__{MODEL}"; d.mkdir(exist_ok=True)
         for cid in AUDITION_LINES[a.unit]:
             _, _, c = find_clip(m, cid)
             txt, applied = respell(c["text"], pmap)
@@ -192,12 +212,19 @@ def mode_audition(a):
              "question melody, names said as Arabic, a pace a nine-year-old can follow. One voice will do the whole unit.</p>" % a.unit]
     for vid in a.voices.split(","):
         vid = vid.strip(); name = next(r[1] for r in rows if r[0] == vid)
-        sheet.append(f"<h2>{html.escape(name)} <small>({vid})</small></h2><table>")
+        sheet.append(f"<h2>{html.escape(name)} <small>({vid}) · model {MODEL} · settings {html.escape(json.dumps(settings_for(vid)))}</small></h2><table>")
         for r in [r for r in rows if r[0] == vid]:
             note = (" <small>(sent as: " + html.escape(respell(r[3], pmap)[0]) + ")</small>") if r[4] else ""
-            sheet.append(f"<tr><td style='width:90px'>{r[2]}</td><td class=ar>{html.escape(r[3])}{note}</td><td><audio controls preload=none src='{vid}/{r[2]}.mp3'></audio></td></tr>")
+            sheet.append(f"<tr><td style='width:90px'>{r[2]}</td><td class=ar>{html.escape(r[3])}{note}</td><td><audio controls preload=none src='{vid}__{MODEL}/{r[2]}.mp3'></audio></td></tr>")
         sheet.append("</table>")
-    (out / "audition.html").write_text("\n".join(sheet), encoding="utf-8")
+    # keep earlier auditions (other voices or models) on the same page: append this run's section to any existing sheet
+    sheet_p = out / "audition.html"
+    if sheet_p.exists():
+        prev = sheet_p.read_text(encoding="utf-8")
+        body = "\n".join(sheet[3:])
+        sheet_p.write_text(prev + "\n<hr>\n" + body, encoding="utf-8")
+    else:
+        sheet_p.write_text("\n".join(sheet), encoding="utf-8")
     print(f"\nOpen {out/'audition.html'} and choose. Then: generate --unit {a.unit} --voice <ID>")
 
 def mode_generate(a):
@@ -207,7 +234,7 @@ def mode_generate(a):
     log_p = ROOT / "audio_work" / f"generation_log_unit{a.unit}.json"; log_p.parent.mkdir(exist_ok=True)
     log = load_json(log_p) if log_p.exists() else {"runs": []}
     run_rec = {"when": datetime.datetime.now().isoformat(timespec="seconds"), "voice_id": a.voice, "voice": vname,
-               "model": MODEL, "settings": VOICE_SETTINGS, "clips": []}
+               "model": MODEL, "settings": settings_for(a.voice), "settings_mode": SETTINGS_MODE, "clips": []}
     n = 0
     for ukey, u, c in all_clips(m):
         if only and c["id"] not in only: continue
@@ -305,15 +332,20 @@ def write_sheet(n, m):
 
 # ---------------------------------------------------------------- main
 def main():
+    global MODEL, SETTINGS_MODE
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="mode", required=True)
     sub.add_parser("voices")
     p = sub.add_parser("audition"); p.add_argument("--unit", type=int, default=1); p.add_argument("--voices", required=True)
+    p.add_argument("--model", default=MODEL, help="eleven_multilingual_v2 (default) · eleven_v3 · eleven_flash_v2_5, or v2 / v3 / flash"); p.add_argument("--settings", choices=("voice", "house"), default="voice")
     p = sub.add_parser("generate"); p.add_argument("--unit", type=int, default=1); p.add_argument("--voice", required=True); p.add_argument("--only"); p.add_argument("--force", action="store_true")
+    p.add_argument("--model", default=MODEL); p.add_argument("--settings", choices=("voice", "house"), default="voice")
     p = sub.add_parser("post"); p.add_argument("--unit", type=int, default=1); p.add_argument("--from", dest="src"); p.add_argument("--voice-label")
     p = sub.add_parser("hash"); p.add_argument("--unit", type=int, default=1)
     p = sub.add_parser("record"); p.add_argument("--unit", type=int, default=1); p.add_argument("--tracker", required=True)
     a = ap.parse_args()
+    if getattr(a, "model", None): MODEL = MODELS.get(a.model, a.model)
+    if getattr(a, "settings", None): SETTINGS_MODE = a.settings
     {"voices": mode_voices, "audition": mode_audition, "generate": mode_generate, "post": mode_post, "hash": mode_hash, "record": mode_record}[a.mode](a)
 
 if __name__ == "__main__":
