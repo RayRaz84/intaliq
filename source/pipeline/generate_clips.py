@@ -209,7 +209,7 @@ def mode_audition(a):
              "<style>body{font-family:system-ui;max-width:1000px;margin:24px auto;padding:0 16px}td{padding:8px 10px;vertical-align:top;border-top:1px solid #ddd}"
              ".ar{font-family:'Noto Naskh Arabic','Amiri',serif;font-size:24px;direction:rtl;text-align:right}th{text-align:left}</style>",
              "<h1>Voice audition · Unit %d</h1><p>Same five lines, each candidate voice. Listen for: every printed vowel respected, no invented word-final vowels, "
-             "question melody, names said as Arabic, a pace a nine-year-old can follow. One voice will do the whole unit.</p>" % a.unit]
+             "question melody, names said as Arabic, a pace a nine-year-old can follow. One voice per reading (SC-130).</p>" % a.unit]
     for vid in a.voices.split(","):
         vid = vid.strip(); name = next(r[1] for r in rows if r[0] == vid)
         sheet.append(f"<h2>{html.escape(name)} <small>({vid}) · model {MODEL} · settings {html.escape(json.dumps(settings_for(vid)))}</small></h2><table>")
@@ -234,9 +234,12 @@ def mode_generate(a):
     log_p = ROOT / "audio_work" / f"generation_log_unit{a.unit}.json"; log_p.parent.mkdir(exist_ok=True)
     log = load_json(log_p) if log_p.exists() else {"runs": []}
     run_rec = {"when": datetime.datetime.now().isoformat(timespec="seconds"), "voice_id": a.voice, "voice": vname,
-               "model": MODEL, "settings": settings_for(a.voice), "settings_mode": SETTINGS_MODE, "clips": []}
+               "model": MODEL, "settings": settings_for(a.voice), "settings_mode": SETTINGS_MODE, "reading": getattr(a, "reading", None), "clips": []}
     n = 0
+    keys = list(m["units"].keys())                      # [unit-01, unit-01p] = reading 1, reading 2
+    want_key = keys[a.reading - 1] if getattr(a, "reading", None) else None
     for ukey, u, c in all_clips(m):
+        if want_key and ukey != want_key: continue        # SC-130: one voice per reading
         if only and c["id"] not in only: continue
         dst = ROOT / c["src"]
         if dst.exists() and not a.force and not only: continue
@@ -250,7 +253,7 @@ def mode_generate(a):
         if applied: c["tts_input"] = txt
         else: c.pop("tts_input", None)
         c["verified_by"] = ""; c["verified_on"] = ""          # a new file is an unverified file
-        u["voice"] = f"synthesised: ElevenLabs · {vname} ({a.voice}) · {MODEL}"
+        u["voice"] = f"synthesised: ElevenLabs · {vname} ({a.voice}) · {MODEL} · settings {SETTINGS_MODE}"
         run_rec["clips"].append({"id": c["id"], "src": c["src"], "sha256": c["sha256"], "respelled": applied})
         n += 1; print(f"  {c['id']:10} → {c['src']}  {'(respelled: ' + ', '.join(k for k, _ in applied) + ')' if applied else ''}")
     log["runs"].append(run_rec); save_json(log_p, log); save_json(manifest_path(a.unit), m)
@@ -340,6 +343,7 @@ def main():
     p.add_argument("--model", default=MODEL, help="eleven_multilingual_v2 (default) · eleven_v3 · eleven_flash_v2_5, or v2 / v3 / flash"); p.add_argument("--settings", choices=("voice", "house"), default="voice")
     p = sub.add_parser("generate"); p.add_argument("--unit", type=int, default=1); p.add_argument("--voice", required=True); p.add_argument("--only"); p.add_argument("--force", action="store_true")
     p.add_argument("--model", default=MODEL); p.add_argument("--settings", choices=("voice", "house"), default="voice")
+    p.add_argument("--reading", type=int, choices=(1, 2), help="SC-130: voice only this reading (1 = the unit's main reading, 2 = the second); omit for both")
     p = sub.add_parser("post"); p.add_argument("--unit", type=int, default=1); p.add_argument("--from", dest="src"); p.add_argument("--voice-label")
     p = sub.add_parser("hash"); p.add_argument("--unit", type=int, default=1)
     p = sub.add_parser("record"); p.add_argument("--unit", type=int, default=1); p.add_argument("--tracker", required=True)

@@ -8,7 +8,7 @@
 
 | Property | Requirement |
 |---|---|
-| Voice | **one voice for the whole unit** — a native MSA speaker **or, since SC-129, a speech synthesiser's fixed voice** (named in the manifest as `human: <speaker>` or `synthesised: <engine / voice id>`); a second voice may be used for the character lines only if the owner rules so |
+| Voice | **one voice per reading** ⟨SC-130; SC-129 said per unit⟩ — a native MSA speaker **or a speech synthesiser's fixed voice** (named per reading in the manifest as `human: <speaker>` or `synthesised: <engine · voice · model>`); Unit 1: a female voice for Reading 1, a male voice for Reading 2 (owner, 2026-10-16); no character-line casting inside a reading |
 | Delivery | read exactly as printed, fully vocalised, at a child-directed pace; dialogue read as speech, narration as narration; no words added, dropped or paraphrased — the recording must match the canon word for word, because the learner's response set is the printed text |
 | Format | mono, 44.1 kHz, MP3 ≥128 kbps (or OGG); one file per row; leading/trailing silence ≤ 0.3 s; peak-normalised |
 | Naming | exactly the `src` path in the manifest: `assets/audio/unit-01/m07.mp3`, `assets/audio/unit-01/item_urid.mp3`, `assets/audio/unit-01p/r04.mp3`, … |

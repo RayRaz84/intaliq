@@ -8,7 +8,7 @@
 
 ## 2 · How to read
 
-- **One voice** for all 72 clips: a native speaker of Modern Standard Arabic, or one fixed synthesised voice (SC-129) — name it in the manifest (`voice`), never mix within a unit.
+- **One voice per reading** (SC-130): Reading 1's 46 clips in one voice, Reading 2's 26 in one voice — a native speaker of Modern Standard Arabic or one fixed synthesised voice (SC-129) — named per reading in the manifest (`voice`); never mix within a reading.
 - **Exactly as printed, fully vocalised.** Pronounce every printed vowel, including the final case endings (no pausal dropping). **Names are printed without final vowels — read them that way** (رَزَان · عُمَر · سَارَة · هُدَى · طَارِق · رَنَا · كَرِيم · فَرِيدَة · مَهَا · زَيْد).
 - **Child-directed pace**: clear and unhurried, not slow-motion. Narration as narration; words inside «…» as speech, with natural feeling (surprise, protest, greeting).
 - «…» inside a line marks a short dramatic pause — make it audible.

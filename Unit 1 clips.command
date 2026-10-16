@@ -81,13 +81,17 @@ MENU
       echo; echo "Listen, choose ONE voice for the whole unit, then run option 2. If a word is said wrong in every voice, tell Claude the word."
       pause;;
     2)
-      bold "Which voice?"
+      bold "Which voice for which reading? (SC-130: one voice per reading)"
       load_voices || { pause; continue; }
-      printf '\nNumber of the voice for Unit 1: '; read -r n; i=$((n-1))
-      VID="${VOICE_IDS[$i]}"; [ -z "$VID" ] && { echo "No such number."; pause; continue; }
+      printf '\nNumber of the voice for READING 1 «قَائِمَةُ رَزَان» (46 clips): '; read -r n1; i1=$((n1-1)); V1="${VOICE_IDS[$i1]}"
+      printf 'Number of the voice for READING 2 «مَنْ أَنْتَ يَا قَلَم؟» (26 clips) [same as reading 1 if blank]: '; read -r n2
+      if [ -z "$n2" ]; then i2=$i1; else i2=$((n2-1)); fi; V2="${VOICE_IDS[$i2]}"
+      [ -z "$V1" ] || [ -z "$V2" ] && { echo "No such number."; pause; continue; }
       ask_model
-      echo "Generating 72 clips with: ${VOICE_NAMES[$i]} · model $MODEL"
-      python3 "$GEN" generate --unit "$UNIT" --voice "$VID" --model "$MODEL" && { open "$SHEET"; open "$TRACKER"; }
+      echo "Reading 1 → ${VOICE_NAMES[$i1]} · Reading 2 → ${VOICE_NAMES[$i2]} · model $MODEL"
+      python3 "$GEN" generate --unit "$UNIT" --reading 1 --voice "$V1" --model "$MODEL" \
+        && python3 "$GEN" generate --unit "$UNIT" --reading 2 --voice "$V2" --model "$MODEL" \
+        && { open "$SHEET"; open "$TRACKER"; }
       echo; echo "Listener: play each clip against its line on the sheet; in the tracker enter accepted or retake, your full name and today's date. Then run option 3."
       pause;;
     3)
