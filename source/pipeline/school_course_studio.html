@@ -350,7 +350,7 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
     <h1>Review Library</h1>
     <p>A story-first Arabic course for ages 8–13: two stories a unit, read before anything is explained, with a digital practice engine and a writing notebook built from the same text. This is the review build — every page here is generated from the frozen readings.</p>
     <div class="actions"><a class="hbtn" href="#tour">Overview for reviewers</a><a class="hbtn ghost" href="#unit-03/student">Open Unit 3</a></div>
-    <p style="margin-top:14px"><span class="chip">REVIEW BUILD · NOT YET APPROVED · VERSION 50</span></p>
+    <p style="margin-top:14px"><span class="chip">REVIEW BUILD · NOT YET APPROVED · VERSION 51</span></p>
   </div>
   <div class="lib">
     <div class="card">
@@ -540,6 +540,30 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
       <p>تَرَى سَارَة الْقَائِمَةَ وَتَقُولُ: «هُنَاكَ اسْمٌ: &quot;رَزَان&quot;! مَنْ هِيَ؟» تَقُولُ رَزَان: «أَنَا! أَنَا رَزَان!» تَقُولُ سَارَة: «أَهْلًا يَا رَزَان! لِي صَدِيقَةٌ: رَزَان!»</p>
       <p>وَتَقُولُ رَنَا: «وَأَنَا! لِي صَدِيقَةٌ!» تُحِبُّ رَزَان... الْقَائِمَةَ! تَقُولُ رَزَان: «أَنَا رَزَان... وَلِي صَدِيقَاتٌ!»</p>
     </div>
+    <!-- SC-128 · S15 «اُنْظُرْ مَرَّةً أُخْرَى» — the unit's one noticing task. Sits AFTER the story (meaningful exposure: B1's labels and the
+         story's own «هٰذِهِ سَارَة!») and BEFORE the pop-up (the explanation). Compare → mark the difference → a concise confirmation in
+         pictures and the unit's own Arabic; the pop-up below is unchanged and stays the book's only English (SC-018). -->
+    <div class="acts" style="margin-top:18px;grid-template-columns:1fr">
+      <div class="act" data-format="S15">
+        <div class="rubric"><span class="ico">👀</span><span lang="ar">اُنْظُرْ مَرَّةً أُخْرَى</span> <span class="rubric" lang="ar" style="opacity:.75">— ضَعْ خَطًّا · ○</span></div>
+        <div class="picseq" aria-label="look again — two examples from this unit">
+          <span class="picfr"><img class="rich-art" src="assets/art/unit2-rich/av-omar.png" alt="" ><b lang="ar">هٰذَا عُمَر.</b></span>
+          <span class="picfr"><img class="rich-art" src="assets/art/unit1-rich/u1-face-sara.png" alt="" ><b lang="ar">هٰذِهِ سَارَة.</b></span>
+        </div>
+        <ul lang="ar"><li>1 · ضَعْ خَطًّا: هٰذَا عُمَر. — هٰذِهِ سَارَة.</li></ul>
+        <div class="picseq" aria-label="now you — three people from the story, numbered">
+          <span class="picfr"><img class="rich-art" src="assets/art/unit1-rich/u1-face-huda.png" alt="" ><b>2</b></span>
+          <span class="picfr"><img class="rich-art" src="assets/art/unit2-rich/av-omar.png" alt="" ><b>3</b></span>
+          <span class="picfr"><img class="rich-art" src="assets/art/unit2-rich/av-razan.png" alt="" ><b>4</b></span>
+        </div>
+        <ul lang="ar"><li>2 · ○ هٰذَا / هٰذِهِ هُدَى.</li><li>3 · ○ هٰذَا / هٰذِهِ عُمَر.</li><li>4 · ○ هٰذَا / هٰذِهِ رَزَان.</li></ul>
+        <div class="helpbox" style="margin-top:10px;display:flex;align-items:center;gap:14px;flex-wrap:wrap" aria-label="confirmation">
+          <span class="arabic" lang="ar" style="font-size:20px"><b>هٰذَا</b> ←</span><span class="picfr" style="margin:0"><img class="rich-art" src="assets/art/unit2-rich/av-omar.png" alt="" ><b lang="ar">عُمَر</b></span>
+          <span class="arabic" lang="ar" style="font-size:20px;margin-inline-start:18px"><b>هٰذِهِ</b> ←</span><span class="picfr" style="margin:0"><img class="rich-art" src="assets/art/unit1-rich/u1-face-sara.png" alt="" ><b lang="ar">سَارَة</b></span>
+        </div>
+        <p class="note rev" style="direction:ltr"><b>S15 · language noticing (SC-128).</b> Step 1: two printed examples with the people they point at; the learner underlines the one word that changes. Steps 2–4: the same choice made for three people already met in the story (ring هٰذَا or هٰذِهِ). The box is the <b>confirmation</b> — the two pointing words, each with its person, in pictures and the unit's own Arabic; the explanation that follows is the unchanged pop-up (LC-4; SC-018 — still the book's only English). Nothing here generalises gender from a name, touches roots or word families, or explains عِنْدَ / لِـ; tense policy is not reopened. Digital twin: contrasts <code>c6</code>/<code>c7</code> in the Reading 1 pathway — a face, and «هٰذَا وَلَدٌ» against «هٰذِهِ بِنْتٌ» (both printed on the B1 spread), so the choice turns on the pointing word, not a name. Chrome admitted (SC-046): <span lang="ar">مَرَّةً أُخْرَى</span>.</p>
+      </div>
+    </div>
     <div class="popup"><h4>Look — no “is”!</h4><p>In these present-tense sentences Arabic has no separate word for <i>am / is</i>: <span class="ar" lang="ar">أَنَا رَزَان</span> = I (am) Razanne. <span class="ar" lang="ar">هٰذَا عُمَر</span> = This (is) Omar.<br>The pointing word matches the person or thing it points at: <span class="ar" lang="ar">هٰذَا</span> for a boy or a man, <span class="ar" lang="ar">هٰذِهِ</span> for a girl or a woman — and for <span class="ar" lang="ar">قَائِمَةٌ</span>, a “she” word: <span class="ar" lang="ar">هٰذِهِ قَائِمَةٌ</span>.</p></div>
   </div>
 
@@ -613,6 +637,7 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
 
   <div class="sheet">
     <h3>Functional text + authentic corner</h3>
+    <p class="note rev" style="direction:ltr"><b>Genre strand (SC-128) — two labels, never confused.</b> «قَائِمَةُ الصَّفِّ» is a <b>pedagogically authored genre model</b>: a class roll written for this unit, keeping the genre's purpose (find a name; see who is on the roll), shape (title · teacher · numbered names) and natural Arabic — never presented as an authentic source. The corner «عَرَبِيَّةٌ حَوْلَنَا» is the unit's <b>authentic cultural resource</b>: photographs of real print (SC-020, unchanged). Unit 1's genre was chosen by communicative purpose — identifying classmates, the story's own problem — and it is the resource the newcomer exchange (S6 → C3) uses in Phase 5. Later units name their genre at Gate A (field 16e) and need not match the corner's medium.</p>
     <div class="panels" style="grid-template-columns:auto 1fr">
       <div><div class="roster" lang="ar"><h4>قَائِمَةُ الصَّفِّ</h4>الْمُعَلِّمَةُ: هُدَى<ol><li>آدَم</li><li>رَنَا</li><li>سَارَة</li><li>طَارِق</li><li>عُمَر</li><li>رَزَان</li><li>نُور</li><li>بَدْر</li></ol></div></div>
       <div>
@@ -1037,9 +1062,18 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
     <div class="drawbox"><span class="rubric" lang="ar">اُرْسُمْ</span></div>
     <p class="note rev" style="direction:ltr">The freest rung at U1, and the page where the possessive split is <b>produced</b> rather than read: the bank is split into things and people, so choosing the right line is choosing the right preposition. Nothing says why. <b>Form map (audit 2026-10-10 I4; closed 2026-10-11):</b> every slash choice has a printed model above the frames — يَدْخُلُ / عِنْدَهُ are Unit 1 licences (SC-023, masc./fem. pair = one item). <b>لَهُ was checked against the records and is not licensed in Unit 1</b> (Unit 1's لِـ family is لِي · وَلِي · لَهَا; لَكَ / لَكِ arrive input-first in Unit 2, CH-20; لَهُ becomes productive at Unit 3, SC-109 / CH-21) — the frame now uses the unit's signature sentence «لِي ___» in the character's mouth, which is printed four times in Reading 1 and once in Reading 2. The speech slot gets a small bank of lines the stories print, so a beginner working alone has something to choose rather than invent. "My own story" at this rung is a framed vignette — someone enters, has, has a friend, speaks — not a plotted story; the want–obstacle–resolution shape arrives with the later rungs (SC-096).</p></div></div>
 
-  <div class="sheet"><span class="sheet-tag"><span class="code">S6</span> <span class="rubric" lang="ar">دَوْرِي</span></span><h3>Name poster · page 8 · feeds the classroom share (C3)</h3>
+  <div class="sheet"><span class="sheet-tag"><span class="code">S6</span> <span class="rubric" lang="ar">دَوْرِي</span></span><h3>Class card · page 8 · <b>prepares the newcomer exchange (C3)</b></h3>
     <div class="nb"><p class="arabic" lang="ar" style="font-size:23px">هٰذَا أَنَا. اسْمِي <span class="slot" style="min-width:150px"></span>.<br>لِي صَدِيقٌ / صَدِيقَةٌ: <span class="slot" style="min-width:150px"></span>.</p>
-    <div class="drawbox" style="height:130px"><span class="rubric" lang="ar">اُرْسُمْ نَفْسَكَ</span></div></div></div>
+    <div class="drawbox" style="height:130px"><span class="rubric" lang="ar">اُرْسُمْ نَفْسَكَ</span></div>
+    <!-- SC-128: the card is a resource, not a display. The exchange it serves is printed here as question → answer pairs (prepared before use,
+         as C1 is under SC-124), in the unit's own language: the newcomer reads a name from the list and asks the story's question; the class
+         answers by pointing at the card. Every form is canon or apparatus-licensed. -->
+    <div class="arabic" lang="ar" style="font-size:19px;line-height:2;border-top:1px dashed #D9E0DE;padding-top:8px;margin-top:10px">
+      <span class="nbno">1</span> «مَنْ <span class="slot" style="min-width:70px"></span>؟» ← «هٰذَا <span class="slot" style="min-width:70px"></span>.» / «هٰذِهِ <span class="slot" style="min-width:70px"></span>.»<br>
+      <span class="nbno">2</span> «أَنْتَ <span class="slot" style="min-width:70px"></span>! / أَنْتِ <span class="slot" style="min-width:70px"></span>!» ← «نَعَمْ! أَنَا <span class="slot" style="min-width:70px"></span>!»
+    </div>
+    <p class="arabic" lang="ar" style="margin-top:8px">هٰذِهِ صَفْحَتِي! <span style="font-size:15px;color:#5A6B72">⬜</span></p>
+    <p class="note rev" style="direction:ltr"><b>S6 → C3, given a shared outcome (SC-128).</b> The page is the <b>class card</b> — the same lines as before (nothing added to what the learner writes) — but it now prepares a use rather than a wall display: in Phase 5 a partner plays the newcomer, holds the class list (the printed roll, or the five names of their own p. 9 grid), and must find the people. The two exchanges printed above are the story's own: «مَنْ عُمَر؟» → «هٰذَا عُمَر.», and the confirmation «أَنْتَ عُمَر!» → «نَعَمْ! أَنَا عُمَر!» (Reading 1, m07 · m11–m12; هٰذَا licensed by SC-075; هٰذِهِ canon). This is the noticed pattern (S15) put to work. C3's rubric line «هٰذِهِ صَفْحَتِي!» is printed where the format happens (SC-049). Default audience: a classmate, in the room — zero prep, zero props, no photographs; another class or a family member is an optional extension, never a completion requirement. C1 and its feed into N2 are untouched. The teacher's page carries the model.</p></div></div>
 
   <div class="sheet"><span class="sheet-tag"><span class="code">C1</span> <span class="rubric" lang="ar">اِسْأَلْ أَصْدِقَاءَكَ</span></span><h3>Survey grid · page 9 · <b>Phase 3, filled in class before page 5</b></h3>
     <div class="nb" style="background-image:none">
@@ -1415,7 +1449,12 @@ const UNIT_01 = {
     {id:"c2", stage:0, img:"assets/art/unit1-rich/u1-act-alone.png", a:"لَيْسَ لَهَا صَدِيقٌ", b:"لَهَا صَدِيقٌ", correct:"a", support:"m02", dim:"possession"},
     {id:"c3", stage:1, img:"assets/art/unit1-rich/u1-s1-3.png",  a:"هٰذِهِ هُدَى", b:"هٰذِهِ سَارَة", correct:"a", support:"m09", dim:"person"},
     {id:"c4", stage:2, img:"assets/art/unit1-rich/u1-s1-4.png",  a:"هٰذَا عُمَر", b:"هٰذِهِ سَارَة", correct:"a", support:"m12", dim:"person"},
-    {id:"c5", stage:3, img:"assets/art/unit1-rich/u1-s1-6.png",   a:"لَهَا صَدِيقَاتٌ", b:"لَيْسَ لَهَا صَدِيقٌ", correct:"a", support:"m20", dim:"possession"}
+    {id:"c5", stage:3, img:"assets/art/unit1-rich/u1-s1-6.png",   a:"لَهَا صَدِيقَاتٌ", b:"لَيْسَ لَهَا صَدِيقٌ", correct:"a", support:"m20", dim:"possession"},
+    /* SC-128 — the digital side of the unit's noticing task (S15 «اُنْظُرْ مَرَّةً أُخْرَى»): the face is the prompt and both
+       alternatives are the unit's own printed phrases (B1 labels), so the choice turns on the pointing word, not on a name.
+       No new engine format: these are ordinary either_or contrasts along the licensed `person` dimension. */
+    {id:"c6", stage:1, img:"assets/art/unit2-rich/av-omar.png",     a:"هٰذَا وَلَدٌ", b:"هٰذِهِ بِنْتٌ", correct:"a", support:"m11", dim:"person"},
+    {id:"c7", stage:2, img:"assets/art/unit1-rich/u1-face-sara.png", a:"هٰذِهِ بِنْتٌ", b:"هٰذَا وَلَدٌ", correct:"a", support:"m14", dim:"person"}
   ],
   /* true/false + who-says facts; wording is canonical text or owner-authored unit language */
   facts:[

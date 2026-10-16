@@ -98,7 +98,12 @@ const UNIT_01 = {
     {id:"c2", stage:0, img:"assets/art/unit1-rich/u1-act-alone.png", a:"لَيْسَ لَهَا صَدِيقٌ", b:"لَهَا صَدِيقٌ", correct:"a", support:"m02", dim:"possession"},
     {id:"c3", stage:1, img:"assets/art/unit1-rich/u1-s1-3.png",  a:"هٰذِهِ هُدَى", b:"هٰذِهِ سَارَة", correct:"a", support:"m09", dim:"person"},
     {id:"c4", stage:2, img:"assets/art/unit1-rich/u1-s1-4.png",  a:"هٰذَا عُمَر", b:"هٰذِهِ سَارَة", correct:"a", support:"m12", dim:"person"},
-    {id:"c5", stage:3, img:"assets/art/unit1-rich/u1-s1-6.png",   a:"لَهَا صَدِيقَاتٌ", b:"لَيْسَ لَهَا صَدِيقٌ", correct:"a", support:"m20", dim:"possession"}
+    {id:"c5", stage:3, img:"assets/art/unit1-rich/u1-s1-6.png",   a:"لَهَا صَدِيقَاتٌ", b:"لَيْسَ لَهَا صَدِيقٌ", correct:"a", support:"m20", dim:"possession"},
+    /* SC-128 — the digital side of the unit's noticing task (S15 «اُنْظُرْ مَرَّةً أُخْرَى»): the face is the prompt and both
+       alternatives are the unit's own printed phrases (B1 labels), so the choice turns on the pointing word, not on a name.
+       No new engine format: these are ordinary either_or contrasts along the licensed `person` dimension. */
+    {id:"c6", stage:1, img:"assets/art/unit2-rich/av-omar.png",     a:"هٰذَا وَلَدٌ", b:"هٰذِهِ بِنْتٌ", correct:"a", support:"m11", dim:"person"},
+    {id:"c7", stage:2, img:"assets/art/unit1-rich/u1-face-sara.png", a:"هٰذِهِ بِنْتٌ", b:"هٰذَا وَلَدٌ", correct:"a", support:"m14", dim:"person"}
   ],
   /* true/false + who-says facts; wording is canonical text or owner-authored unit language */
   facts:[

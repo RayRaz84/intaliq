@@ -1,12 +1,12 @@
 {
-  "version": 50,
+  "version": 51,
   "units": {
     "unit-01": {
       "words": 138,
-      "generated": 128,
+      "generated": 130,
       "blocked": false,
       "vocab": 48,
-      "reading": 46
+      "reading": 48
     },
     "unit-01p": {
       "words": 71,

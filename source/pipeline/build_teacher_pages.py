@@ -17,7 +17,8 @@ Output: intaliq1_teacher_pages.artifact-body.html (body, no skeleton — the Tex
         (Name chosen to differ by more than letter case — audit 2026-10-10 §11: the old pair collided on a
          case-insensitive filesystem.)
 Phase order (owner's decision, SC-119): input → reading → consolidation AND scaffolded interaction (C1) →
-notebook output → fuller communication and transfer (C3, C4).
+notebook output → fuller communication and transfer (C3, C4). SC-128 adds, inside the same phases: one noticing
+task (S15) before the unit's pop-up, a genre label on the functional text, and a shared use for S6 → C3.
 """
 import json, subprocess, html, datetime, pathlib, sys, re
 
@@ -43,7 +44,7 @@ UNITS = [
   n=1, label="Unit 1", ar="الْوَحْدَةُ ١", status="Frozen · Unit 1 is the pre-calibration unit (SC-093)",
   r1=dict(key="unit-01", title="قَائِمَةُ رَزَان", tense="present", frames=6),
   r2=dict(key="unit-01p", title="مَنْ أَنْتَ يَا قَلَم؟", tense="past", frames=3),
-  pictures="In-house stick figures (SC-034); rich-cartoon redraw queued (SC-113). No verified audio: there are no listening tasks.",
+  pictures="Accepted rich-cartoon PNGs (owner adoption 2026-10-14; `data-u1-art-release` 30d90e8) in the book, notebook and digital practice. No verified audio: there are no listening tasks.",
   flow=[
    ("Input", "The learner, alone",
     ["Digital · الْمُفْرَدَات — every core item met, recognised and met again in a sentence ({v1} tasks, planned sequence).",
@@ -54,24 +55,29 @@ UNITS = [
      "Reading 2 «مَنْ أَنْتَ يَا قَلَم؟» — {w2} words, past narration, dialogue in the present — then its sets, ending with الْآنَ أَمْ قَبْلُ؟ (sort each line into story 1 or story 2 — the titles are the categories). Digital · الْقِرَاءَة ٢ ({p2} tasks selected from {a2} generated)."],
     "Readings are read cold — there is no oral pre-telling in this course. Every set is self-checking against the page it sits on; nothing to mark."),
    ("Consolidation and scaffolded interaction", "The learner; then the class, with you facilitating",
-    ["The pop-up «Look — no “is”!» — the book's only English (LC-4: one per unit, no rule drilled).",
-     "قَائِمَةُ الصَّفِّ — the class roll as functional text (اِسْتَعْمِلِ النَّصَّ), with the named row of faces; أَسْتَطِيعُ! — the can-do page the learner ticks by saying the lines.",
+    ["اُنْظُرْ مَرَّةً أُخْرَى — the noticing task (S15, SC-128), printed between Reading 1 and the pop-up: two examples with their people («هٰذَا عُمَر.» · «هٰذِهِ سَارَة.»); the learner underlines the word that changes, then rings هٰذَا or هٰذِهِ for three story people, and reads the confirmation box. Let them find it; do not pre-teach it.",
+     "The pop-up «Look — no “is”!» — the book's only English (LC-4: one per unit, no rule drilled). It is the explanation that follows the noticing, not a substitute for it.",
+     "قَائِمَةُ الصَّفِّ — the class roll as functional text (اِسْتَعْمِلِ النَّصَّ), with the named row of faces. Label it rightly if asked: a class roll written for this book (a genre model), not a real school's list; the real Arabic is the corner's photographs (عَرَبِيَّةٌ حَوْلَنَا — not yet supplied). أَسْتَطِيعُ! — the can-do page the learner ticks by saying the lines.",
      "C1 · اِسْأَلْ أَصْدِقَاءَكَ — notebook p. 9: «مَنْ أَنْتَ؟ / مَنْ أَنْتِ؟» · «هَلْ عِنْدَكَ / عِنْدَكِ قَلَمٌ؟» · «هَلْ عِنْدَكَ / عِنْدَكِ قَائِمَةٌ؟» — rehearsed from the printed line, then asked of five real classmates. Its names feed p. 5."],
     "Scaffolded interaction comes BEFORE notebook writing (owner's decision, SC-119): run C1 here, not after the notebook. A learner who missed it completes p. 5 from the printed class list instead."),
    ("Output", "The learner, alone — begun in class, finishable at home",
     ["Notebook p. 2–3 · اُكْتُبِ الْقِصَّةَ: «قَائِمَةُ رَزَان» — six frames, one line per frame, bank printed (Captions rung, SC-096).",
      "Notebook p. 4 · اُكْتُبِ الْقِصَّةَ: «مَنْ أَنْتَ يَا قَلَم؟» — three frames; the past forms are copied from the bank, never built.",
      "Notebook p. 5–6 · قِصَّتِي الْمُوَازِيَةُ — the same story about the learner's real class, using the names collected in C1.",
-     "Notebook p. 7 · قِصَّتِي — starters, printed models for every choice, a split bank (things / people / a line to say). p. 8 · دَوْرِي — the name poster, which prepares the share.",
+     "Notebook p. 7 · قِصَّتِي — starters, printed models for every choice, a split bank (things / people / a line to say). p. 8 · دَوْرِي — the class card («هٰذَا أَنَا. اسْمِي ___.»), which prepares the newcomer exchange of Phase 5; the two exchanges it will serve are printed on the page.",
      "Notebook p. 10 · هَلْ تَذْكُرُ؟ — blank at Unit 1 by design (it draws on earlier units only)."],
     "Every page here is completable alone (P-3). Do not mark; the pages are shown, not graded."),
    ("Fuller communication and transfer", "The teacher facilitates — zero prep, no props",
-    ["C3 · هٰذِهِ صَفْحَتِي! — the last line of p. 6, and the poster on p. 8: show a partner, who asks one question.",
+    ["C3 · هٰذِهِ صَفْحَتِي! — the newcomer exchange (SC-128): cards (p. 8) laid out; a partner plays the new student, holds the class list, reads a name and asks «مَنْ ___؟»; the class answers by pointing at the card «هٰذَا ___. / هٰذِهِ ___.»; the newcomer confirms «أَنْتَ ___! / أَنْتِ ___!» → «نَعَمْ! أَنَا ___!». Then p. 5–6 is shown and one question asked, as before.",
      "C4 · نُعِيدُ الْقِصَّةَ بِالصُّوَرِ — printed under the six-frame strip in the book; run it here, after both readings, not when the strip is first met.",
      "Transfer — the same language in a new small situation: a classmate's pen, a list of another class."],
     "Everything here runs on pages the unit has already produced. Nothing is made, cut or printed. At the Captions rung you cue each frame of C4 and the class supplies the language."),
   ],
-  c3_example="«مَنْ هٰذَا؟» · «هَلْ عِنْدَكَ قَلَمٌ؟»",
+  c3_example="«مَنْ عُمَر؟» · «هَلْ عِنْدَكَ قَلَمٌ؟»",
+  c3_procedure=[
+   "Model it first, with the book: hold the class roll (p. 9's five names, or the printed قَائِمَةُ الصَّفِّ), read one name — «مَنْ سَارَة؟» — and let the class point at a card and answer «هٰذِهِ سَارَة.»; then «أَنْتِ سَارَة!» → «نَعَمْ! أَنَا سَارَة!». Once each way, a boy and a girl. Do not translate.",
+   "In pairs or small groups, cards (p. 8) on the desks. One learner is the newcomer with the list; the others answer by pointing at cards. Every name on the list is found and ticked. Swap the newcomer. This is Razan's problem from the story, done for real.",
+   "Then the finished page (p. 5–6) is held up with «هٰذِهِ صَفْحَتِي!» and the partner asks one question from the unit's own set, e.g. {c3ex}. If there is a wall, the cards go on it afterwards; nothing is marked. Another class or a family member may play the newcomer as an extension — never required."],
   notes=[]),
  dict(
   n=2, label="Unit 2", ar="الْوَحْدَةُ ٢", status="Frozen (revision 6) · texts signed off (SC-105) · Gate B closes on the pop-up · rich-cartoon illustrations live (SC-113, SC-117)",
@@ -200,6 +206,8 @@ def render_unit(u):
   </li>''')
     out.append('</ol>\n <h3>Procedures <small>the three teacher-run formats; three lines each</small></h3>\n <div class="procs">')
     for code, (rub, en, lines) in PROCEDURES.items():
+        if code == "C3" and u.get("c3_procedure"):           # SC-128: a unit may carry its own C3 use (Unit 1: the newcomer exchange)
+            lines = u["c3_procedure"]; en = "Share your page — the newcomer exchange (Phase 5)"
         ls = "".join(f"<li>{esc(l.format(c3ex=u['c3_example']))}</li>" for l in lines)
         out.append(f'''
   <article class="proc"><header><span class="code">{code}</span><span class="rub">{ar(rub)}</span><span class="en">{esc(en)}</span></header><ol>{ls}</ol></article>''')
