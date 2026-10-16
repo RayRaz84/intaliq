@@ -30,6 +30,9 @@ if ! command -v ffmpeg >/dev/null 2>&1; then
   fi
 fi
 
+# ---- 0 · certificates: a python.org Python on macOS has no root store; certifi gives it one (one time, quiet) ----
+python3 -c "import certifi" >/dev/null 2>&1 || python3 -m pip install --quiet --user certifi >/dev/null 2>&1 || true
+
 # ---- helper: numbered voice list → VOICE_IDS[] / VOICE_NAMES[] ----
 load_voices() {
   VOICE_IDS=(); VOICE_NAMES=()

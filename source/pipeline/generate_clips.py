@@ -39,6 +39,7 @@ output is kept and the manifest row is marked `post: "none"`, which the record m
 Standard library only; no third-party Python packages.
 """
 import argparse, csv, datetime, hashlib, html, json, os, re, shutil, subprocess, sys, time, urllib.request, urllib.error
+import ssl
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent.parent
@@ -69,7 +70,23 @@ def api_key():
     if not k: sys.exit("No API key: set ELEVENLABS_API_KEY or put the key in .secrets/elevenlabs.key (git-excluded).")
     return k
 
+def ssl_context():
+    """A Python installed from python.org on macOS ships without root certificates (its own 'Install Certificates.command'
+    fixes that); rather than depend on it, trust certifi if present, else the Mac's own bundle."""
+    ctx = ssl.create_default_context()
+    try:
+        import certifi; ctx.load_verify_locations(certifi.where()); return ctx
+    except Exception: pass
+    for cafile in ("/etc/ssl/cert.pem", "/private/etc/ssl/cert.pem", "/etc/ssl/certs/ca-certificates.crt"):
+        if os.path.exists(cafile):
+            try: ctx.load_verify_locations(cafile)
+            except Exception: pass
+    return ctx
+
+SSL_CTX = None
 def api(path, method="GET", body=None, accept="application/json"):
+    global SSL_CTX
+    if SSL_CTX is None: SSL_CTX = ssl_context()
     req = urllib.request.Request(API + path, method=method)
     req.add_header("xi-api-key", api_key()); req.add_header("Accept", accept)
     data = None
@@ -77,12 +94,14 @@ def api(path, method="GET", body=None, accept="application/json"):
         req.add_header("Content-Type", "application/json"); data = json.dumps(body).encode("utf-8")
     for attempt in range(4):
         try:
-            with urllib.request.urlopen(req, data=data, timeout=120) as r: return r.read()
+            with urllib.request.urlopen(req, data=data, timeout=120, context=SSL_CTX) as r: return r.read()
         except urllib.error.HTTPError as e:
             msg = e.read().decode("utf-8", "replace")[:300]
             if e.code in (429, 500, 502, 503) and attempt < 3: time.sleep(3 * (attempt + 1)); continue
             sys.exit(f"API error {e.code} on {path}: {msg}")
         except urllib.error.URLError as e:
+            if "CERTIFICATE_VERIFY_FAILED" in str(e.reason):
+                sys.exit("Python cannot verify the ElevenLabs certificate: its root-certificate store is empty. Fix once with:  python3 -m pip install certifi   (or run 'Install Certificates.command' in your Python's folder under /Applications), then try again.")
             sys.exit(f"Cannot reach the ElevenLabs API ({e.reason}). Run this where api.elevenlabs.io is reachable — your own Terminal, not a sandboxed shell.")
 
 def all_clips(m):
