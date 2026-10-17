@@ -328,7 +328,12 @@ def write_sheet(n, m):
             p = ROOT / c["src"]; rel = os.path.relpath(p, out.parent)
             st = f"<span class=ok>verified · {html.escape(c['verified_by'])} · {c['verified_on']}</span>" if c.get("verified_by") else ("<span class=no>awaiting verification</span>" if p.exists() else "<small>no file</small>")
             sent = f"<br><small>sent to the synthesiser as: <span class=ar style='font-size:16px'>{html.escape(c['tts_input'])}</span></small>" if c.get("tts_input") else ""
-            audio = f"<audio controls preload=none src='{html.escape(rel)}'></audio>" if p.exists() else ""
+            # the clip is embedded (base64) so the sheet plays wherever it is opened — a browser that refuses relative
+            # file:// paths, a copy mailed to the listener; the file on disk is still the one that ships and is hashed
+            if p.exists():
+                import base64; b64 = base64.b64encode(p.read_bytes()).decode("ascii")
+                audio = f"<audio controls preload=none src='data:audio/mpeg;base64,{b64}'></audio><br><small>{html.escape(rel)}</small>"
+            else: audio = ""
             rows.append(f"<tr><td>{i}</td><td><code>{c['id']}</code><br><small>{c['kind']} · {c['ref']}</small></td><td class=ar>{html.escape(c['text'])}{sent}</td><td>{audio}</td><td>{st}</td></tr>")
         rows.append("</table>")
     out.write_text("\n".join(rows), encoding="utf-8")
