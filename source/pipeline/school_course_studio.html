@@ -350,7 +350,7 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
     <h1>Review Library</h1>
     <p>A story-first Arabic course for ages 8–13: two stories a unit, read before anything is explained, with a digital practice engine and a writing notebook built from the same text. This is the review build — every page here is generated from the frozen readings.</p>
     <div class="actions"><a class="hbtn" href="#tour">Overview for reviewers</a><a class="hbtn ghost" href="#unit-03/student">Open Unit 3</a></div>
-    <p style="margin-top:14px"><span class="chip">REVIEW BUILD · NOT YET APPROVED · VERSION 52</span></p>
+    <p style="margin-top:14px"><span class="chip">REVIEW BUILD · NOT YET APPROVED · VERSION 53</span></p>
   </div>
   <div class="lib">
     <div class="card">
@@ -2023,7 +2023,14 @@ const SCP=(function(){
   let U=null,N=null,queue=[],qi=0,sessionStage=0,compDone=false,phase="";
   const $=id=>document.getElementById(id);
   const esc=s=>String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;");
-  const say=t=>{try{if(!window.speechSynthesis)return;const u=new SpeechSynthesisUtterance(String(t).replace(/[«»"]/g,''));u.lang='ar-SA';u.rate=.85;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}};
+  /* Verified clip first (SC-028 as amended by SC-129/SC-130, 2026-10-18): when the text to be spoken is exactly a sentence or
+     item phrase that has a verified clip bound in the current unit, the clip plays — explore cards, the reading page's 🔊,
+     the correction help. Only text with no verified clip falls back to the browser's preview voice, which is still a preview aid. */
+  let CLIPS={}; let clipAudio=null;
+  const indexClips=(u,n)=>{CLIPS={}; const a=u&&u.audio; if(!a||!a.verified||!Array.isArray(a.clips)) return;
+    a.clips.forEach(c=>{const txt=c.kind==="sentence"?(n.S[c.ref]||{}).ar:(n.I[c.ref]?(n.I[c.ref].phrase||n.I[c.ref].ar):null); if(txt&&!CLIPS[txt]) CLIPS[txt]=c.src;});};
+  const say=t=>{try{const src=CLIPS[String(t)]; if(src){ if(window.speechSynthesis)speechSynthesis.cancel(); if(clipAudio){clipAudio.pause();} clipAudio=new Audio(src); clipAudio.play().catch(()=>{}); return; }
+    if(!window.speechSynthesis)return;const u=new SpeechSynthesisUtterance(String(t).replace(/[«»"]/g,''));u.lang='ar-SA';u.rate=.85;speechSynthesis.cancel();speechSynthesis.speak(u);}catch(e){}};
   const img=(id,cls)=>id?(id.startsWith("assets/art/")?`<img class="${cls||'timg'} rich-art" src="${id}" alt="">`:`<svg class="${cls||'timg'}" viewBox="0 0 120 100" aria-hidden="true"><use href="#${id}"/></svg>`):"";
   /* SC-038: an item is met inside a phrase whenever one exists; hl marks the target inside it */
   const ph=it=>it.phrase||it.ar;
@@ -2033,7 +2040,7 @@ const SCP=(function(){
   /* one Digital entry per unit: the second reading's engine unit is reached from the hub, never from the library */
   const PAIRS={"unit-01":"unit-01p","unit-02":"unit-02p","unit-03":"unit-03p"};
   let base=null;
-  function setU(unitId){document.getElementById("v-practice").dataset.artUnit=unitId;U=E.UNITS[unitId];N=E.normalize(U);sessionStage=0;compDone=false;queue=[];qi=0;$("pr-title").textContent=U.title;}
+  function setU(unitId){document.getElementById("v-practice").dataset.artUnit=unitId;U=E.UNITS[unitId];N=E.normalize(U);indexClips(U,N);sessionStage=0;compDone=false;queue=[];qi=0;$("pr-title").textContent=U.title;}
   function mount(unitId){
     base=PAIRS[unitId]?unitId:(Object.keys(PAIRS).find(k=>PAIRS[k]===unitId)||unitId);
     setU(base);
