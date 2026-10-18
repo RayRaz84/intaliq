@@ -95,9 +95,12 @@ const UNIT_01 = {
     {id:"urid", ar:"أُرِيدُ", status:"NEW_CORE_TARGET", lemma:"أَرَادَ", kind:"lemma", forms:["أُرِيدُ"], gloss:"I want", img:null, dim:"want", phrase:"أُرِيدُ صَدِيقًا!", hl:"أُرِيدُ"},
     {id:"laysa",  ar:"لَيْسَ", status:"NEW_CORE_TARGET", lemma:"لَيْسَ", kind:"lemma", forms:["لَيْسَ"], gloss:"is not / has no", img:null, dim:"possession", phrase:"لَيْسَ لَهَا صَدِيقٌ.", hl:"لَيْسَ"},
     {id:"laha",   ar:"لَهَا", status:"NEW_CORE_TARGET", lemma:"لِـ", kind:"lemma", forms:["لَهَا"], gloss:"she has (a person)", img:null, dim:"possession", phrase:"لَهَا صَدِيقَةٌ.", hl:"لَهَا"},
-    {id:"yadkhul",ar:"تَدْخُلُ", status:"NEW_CORE_TARGET", lemma:"دَخَلَ", kind:"lemma", forms:["تَدْخُلُ"], gloss:"(she) enters", img:"assets/art/unit1-rich/u1-support-enter.png", dim:"action", phrase:"تَدْخُلُ الْفَصْلَ.", hl:"تَدْخُلُ"},
-    {id:"yara",   ar:"تَرَى", status:"NEW_CORE_TARGET", lemma:"رَأَى", kind:"lemma", forms:["تَرَى","يَرَى"], gloss:"(she) sees", img:"assets/art/unit1-rich/u1-support-see.png", dim:"action", phrase:"تَرَى رَزَان الْقَائِمَةَ.", hl:"تَرَى"},
-    {id:"yaqul",  ar:"تَقُولُ", status:"NEW_CORE_TARGET", lemma:"قَالَ", kind:"lemma", forms:["تَقُولُ","يَقُولُ","وَتَقُولُ","وَيَقُولُ"], gloss:"(she) says", img:"assets/art/unit1-rich/u1-support-say.png", dim:"action", phrase:"تَقُولُ رَزَان: «أَهْلًا!»", hl:"تَقُولُ"},
+    /* 2026-10-18 (owner: "the picture that is supposed to be Razan is a boy"): the three Unit 1 verb items whose phrase names or implies
+       رَزَان now show Razan herself (frames 1–2 of the accepted strip; her talking face from the accepted Unit 2 set) instead of the
+       faceless generic verb figure (vg-enter / vg-see / vg-say), which stays in use for Reading 2's Karim and for the print verb glyphs. */
+    {id:"yadkhul",ar:"تَدْخُلُ", status:"NEW_CORE_TARGET", lemma:"دَخَلَ", kind:"lemma", forms:["تَدْخُلُ"], gloss:"(she) enters", img:"assets/art/unit1-rich/u1-s1-1.png", dim:"action", phrase:"تَدْخُلُ الْفَصْلَ.", hl:"تَدْخُلُ"},
+    {id:"yara",   ar:"تَرَى", status:"NEW_CORE_TARGET", lemma:"رَأَى", kind:"lemma", forms:["تَرَى","يَرَى"], gloss:"(she) sees", img:"assets/art/unit1-rich/u1-s1-2.png", dim:"action", phrase:"تَرَى رَزَان الْقَائِمَةَ.", hl:"تَرَى"},
+    {id:"yaqul",  ar:"تَقُولُ", status:"NEW_CORE_TARGET", lemma:"قَالَ", kind:"lemma", forms:["تَقُولُ","يَقُولُ","وَتَقُولُ","وَيَقُولُ"], gloss:"(she) says", img:"assets/art/unit2-rich/av-razan-talk.png", dim:"action", phrase:"تَقُولُ رَزَان: «أَهْلًا!»", hl:"تَقُولُ"},
     {id:"yuhibb", ar:"تُحِبُّ", status:"NEW_CORE_TARGET", lemma:"أَحَبَّ", kind:"lemma", forms:["تُحِبُّ"], gloss:"(she) likes", img:"assets/art/unit1-rich/u1-support-like.png", dim:"action", phrase:"تُحِبُّ رَزَان الْقَائِمَةَ.", hl:"تُحِبُّ"},
     {id:"hunaka", ar:"هُنَاكَ", status:"NEW_CORE_TARGET", lemma:"هُنَاكَ", kind:"lemma", forms:["هُنَاكَ","وَهُنَاكَ"], gloss:"there is", img:null, dim:"existence", phrase:"هُنَاكَ قَائِمَةٌ.", hl:"هُنَاكَ"},
     {id:"man",    ar:"مَنْ؟", status:"NEW_CORE_TARGET", lemma:"مَنْ", kind:"lemma", forms:["مَنْ","وَمَنْ"], gloss:"who?", img:null, dim:"question", phrase:"مَنْ عُمَر؟", hl:"مَنْ"},
