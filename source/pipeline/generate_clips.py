@@ -240,7 +240,7 @@ def mode_generate(a):
     want_key = keys[a.reading - 1] if getattr(a, "reading", None) else None
     for ukey, u, c in all_clips(m):
         if want_key and ukey != want_key: continue        # SC-130: one voice per reading
-        if only and c["id"] not in only: continue
+        if only and c["id"] not in only and f"{ukey}:{c['id']}" not in only: continue
         dst = ROOT / c["src"]
         if dst.exists() and not a.force and not only: continue
         if c.get("verified_by") and not a.force:
@@ -296,7 +296,10 @@ def mode_record(a):
             status = row.get(cols.get("status", "status"), "").strip().lower()
             who = row.get(cols.get("verified_by", "verified_by"), "").strip()
             when = row.get(cols.get("verified_on", "verified_on"), "").strip()
-            _, u, c = find_clip(m, cid)
+            unit_key = row.get(cols.get("unit", "unit"), "").strip()     # item ids repeat across the two readings (c_salam …): match by unit + id
+            hit = [(k, u, c) for k, u, c in all_clips(m) if c["id"] == cid and (not unit_key or k == unit_key)]
+            if not hit: sys.exit(f"no clip {cid} in {unit_key or 'the manifest'}")
+            _, u, c = hit[0]
             if status.startswith("accept"):
                 if not (who and re.match(r"^\d{4}-\d{2}-\d{2}$", when)): missing.append(cid); continue
                 if not (ROOT / c["src"]).exists() or sha256(ROOT / c["src"]) != c.get("sha256"):
