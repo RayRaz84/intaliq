@@ -350,7 +350,7 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
     <h1>Review Library</h1>
     <p>A story-first Arabic course for ages 8–13: two stories a unit, read before anything is explained, with a digital practice engine and a writing notebook built from the same text. This is the review build — every page here is generated from the frozen readings.</p>
     <div class="actions"><a class="hbtn" href="#tour">Overview for reviewers</a><a class="hbtn ghost" href="#unit-03/student">Open Unit 3</a></div>
-    <p style="margin-top:14px"><span class="chip">REVIEW BUILD · NOT YET APPROVED · VERSION 51</span></p>
+    <p style="margin-top:14px"><span class="chip">REVIEW BUILD · NOT YET APPROVED · VERSION 52</span></p>
   </div>
   <div class="lib">
     <div class="card">
@@ -1372,7 +1372,55 @@ const STATUS = {
    spoiler_stage: 0 arrival · 1 the mix-up · 2 omar & sara found · 3 the discovery. */
 
 const UNIT_01 = {
-  unit_id:"unit-01", title:"قَائِمَةُ رَزَان", audio:{verified:false},
+  unit_id:"unit-01", title:"قَائِمَةُ رَزَان", audio:{verified:true, /* SC-129/SC-130: synthesised: ElevenLabs · Candy - Young and Sweet (Nggzl2QAXh3OijoXD116) · eleven_v3 · settings voice — bound 2026-10-17 from source/units/unit1/audio/clips_manifest.json; the build and the gate check file and hash */
+   clips:[
+    {id:"c_m00", kind:"sentence", ref:"m00", src:"assets/audio/unit-01/m00.mp3", sha256:"4cef58895311f8e19c916479cb60ffd2e19e34bfc46d9be7711a5a0cb1fef138", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m01", kind:"sentence", ref:"m01", src:"assets/audio/unit-01/m01.mp3", sha256:"c4f4bfeaaba77cea3db1713a369a7b4aade7100c9819ea5538340b78962f5b18", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m02", kind:"sentence", ref:"m02", src:"assets/audio/unit-01/m02.mp3", sha256:"97993f03878273a8a3f3d07133836cfd5c46b426a860ff467d3cf3a42ef50ec2", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m03", kind:"sentence", ref:"m03", src:"assets/audio/unit-01/m03.mp3", sha256:"e81c7d2ea16bb9ee90d5068d09210dd7c66a70b429c59d02cd3b1caab90f5145", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m04", kind:"sentence", ref:"m04", src:"assets/audio/unit-01/m04.mp3", sha256:"1fe37f20e821b3cd24184eb9bba974ebcfc8ebd3874774d93a92ff5cc504ac87", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m05", kind:"sentence", ref:"m05", src:"assets/audio/unit-01/m05.mp3", sha256:"b98316e16e056030428b02c6e21529ec24401414b0806da0ff9f0764b490210f", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m06", kind:"sentence", ref:"m06", src:"assets/audio/unit-01/m06.mp3", sha256:"52f57dedcc7fd52938e70888c609519801f3cfc98fe9efa83840671066210a81", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m07", kind:"sentence", ref:"m07", src:"assets/audio/unit-01/m07.mp3", sha256:"7b68c2fd7152eaec987383edbc74762d6ad4f2d0b1e0637bf311c0576534ac9f", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m08", kind:"sentence", ref:"m08", src:"assets/audio/unit-01/m08.mp3", sha256:"b2b7f8380e77e89e1feef959128fb158ae88b01d3bd0ac79cc9de6e8375c1067", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m09", kind:"sentence", ref:"m09", src:"assets/audio/unit-01/m09.mp3", sha256:"c3bb0ccc141e05f8b8ca88ea98b26ce904ad0ecfca6e24795b47481ef721feca", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m10", kind:"sentence", ref:"m10", src:"assets/audio/unit-01/m10.mp3", sha256:"c4658f451c9e78fa82c963a54685087c634d94ac548457aefbcde3842865168d", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m11", kind:"sentence", ref:"m11", src:"assets/audio/unit-01/m11.mp3", sha256:"5321c5a2b6bf77904d3a48f207e39486229efc76b1cf5193cbee0201ceb34357", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m12", kind:"sentence", ref:"m12", src:"assets/audio/unit-01/m12.mp3", sha256:"253a21f6829fcfdc18488bdee7c9ba84043d17ca53aa3fcb216f3e5dcf2129d5", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m13", kind:"sentence", ref:"m13", src:"assets/audio/unit-01/m13.mp3", sha256:"e2e5c67e5bcb49fd9c123684fb8659f533d22e537bc7bf350aa412c205aca4ce", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m13b", kind:"sentence", ref:"m13b", src:"assets/audio/unit-01/m13b.mp3", sha256:"dbe7f6e0943a3684897eea0357eb8529a00854a2bd3bd7e21683667bdc2d11ba", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m14", kind:"sentence", ref:"m14", src:"assets/audio/unit-01/m14.mp3", sha256:"b658733cae61133fc5777f08e74faf445a9f20a898895371d701014ceed04e74", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m15", kind:"sentence", ref:"m15", src:"assets/audio/unit-01/m15.mp3", sha256:"73a853ea0faeca8d3e6a27a75500d76c9aebf1c3a855b0c1727e192abb2ee63b", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m15b", kind:"sentence", ref:"m15b", src:"assets/audio/unit-01/m15b.mp3", sha256:"628332544b20b1e50c3c0432e8b10f82c663d349711a061940c0f3923dd25dfb", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m16", kind:"sentence", ref:"m16", src:"assets/audio/unit-01/m16.mp3", sha256:"8fb4321c8d9282f0bd4d50d128c0cef196ac0f240fea0e46d00ff69adc6b99d9", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m17", kind:"sentence", ref:"m17", src:"assets/audio/unit-01/m17.mp3", sha256:"3ccad4de5441eec3dfe50e4617d3946bb3e09aebd8385dd93f20eb4e65c27393", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m18", kind:"sentence", ref:"m18", src:"assets/audio/unit-01/m18.mp3", sha256:"e0220fdc6ec94959c2338ac7b970eb9e94159eecb5a8bcda57cd0d41de6c9025", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m18b", kind:"sentence", ref:"m18b", src:"assets/audio/unit-01/m18b.mp3", sha256:"3b617d1805ecf363d7049c19d2d485417cfc06a88589100a2a8ae285c4213c2e", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m19", kind:"sentence", ref:"m19", src:"assets/audio/unit-01/m19.mp3", sha256:"1f06fd003429b48064721b31b542d37dc540e81e107dfbb880afde70dfd4f30b", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_m20", kind:"sentence", ref:"m20", src:"assets/audio/unit-01/m20.mp3", sha256:"732b4653dbe9eacba722ef1518b71a116785a72bf9cc027c4146345b2a3c9876", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_salam", kind:"item", ref:"salam", src:"assets/audio/unit-01/item_salam.mp3", sha256:"eefdcafd90c2d4a07dddfe83b783d7ff209da7a324f40ab589e6d0b9351f0a96", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_ahlan", kind:"item", ref:"ahlan", src:"assets/audio/unit-01/item_ahlan.mp3", sha256:"9b7a42384518acd197c4a3bde6ff1742a72db63e3e757b6e6c21f56a1c77c362", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_ana", kind:"item", ref:"ana", src:"assets/audio/unit-01/item_ana.mp3", sha256:"7295882b3edfeed4753f66b15f5632c82492bd564678b77ef15d6d22f3df9203", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_walad", kind:"item", ref:"walad", src:"assets/audio/unit-01/item_walad.mp3", sha256:"3460be82be1cd70ad6227974543802606f460c46060486154f3c01ad43ef7d3e", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_bint", kind:"item", ref:"bint", src:"assets/audio/unit-01/item_bint.mp3", sha256:"ba658894b51bfd152b700e50c49a01e89f4676dba73f9921244e26a8cf08c45a", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_sadiq", kind:"item", ref:"sadiq", src:"assets/audio/unit-01/item_sadiq.mp3", sha256:"8cef2a63c27902e3cf8c40b980e569d1dd4f39217811c8fc4a5cc9fd0cb2fb0f", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_inda", kind:"item", ref:"inda", src:"assets/audio/unit-01/item_inda.mp3", sha256:"9804ed6c7ff2253672cba04d703b7c44c87d4f0be637bb43a84c7cf712d6060f", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_li", kind:"item", ref:"li", src:"assets/audio/unit-01/item_li.mp3", sha256:"143da67927fb01aa8dcac640a64f4c7906885d51e01bf558875fb0425b687978", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_urid", kind:"item", ref:"urid", src:"assets/audio/unit-01/item_urid.mp3", sha256:"8f7bb511c448e8cfb49cea473fd0d4f0d94de4cd511f2ba7cbf33e4342898b7a", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_laysa", kind:"item", ref:"laysa", src:"assets/audio/unit-01/item_laysa.mp3", sha256:"5e1dc92d0c5c5c8967315a770e5bf668c8720a1481a49ce6584d51652478a558", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_laha", kind:"item", ref:"laha", src:"assets/audio/unit-01/item_laha.mp3", sha256:"cc056f2b37101db079d9d68902913e477e513687734a95cdb4f3f4dd2dec63fd", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_yadkhul", kind:"item", ref:"yadkhul", src:"assets/audio/unit-01/item_yadkhul.mp3", sha256:"8406ffd3906504e263ab73736beba15780e57696fdc4c21e5ff82796bb232791", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_yara", kind:"item", ref:"yara", src:"assets/audio/unit-01/item_yara.mp3", sha256:"1f372486253fba37b4fb502ad00bc725ed71caa3065cd66ec567d41bc463dcea", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_yaqul", kind:"item", ref:"yaqul", src:"assets/audio/unit-01/item_yaqul.mp3", sha256:"7b03a437d90818da93b84c160090483bde9a02af01167dc3c34781b17f70f915", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_yuhibb", kind:"item", ref:"yuhibb", src:"assets/audio/unit-01/item_yuhibb.mp3", sha256:"4277d94ee86af854c3ebfe5595bbdb5898f159c2246574e8752fcafc0d4a4f01", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_hunaka", kind:"item", ref:"hunaka", src:"assets/audio/unit-01/item_hunaka.mp3", sha256:"b89f09b5c1f911f57f6459c88d45443dd0f86c7a972ba0dde68fb3f353cdff99", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_man", kind:"item", ref:"man", src:"assets/audio/unit-01/item_man.mp3", sha256:"7a999105a37a3950a7963aff5871734c67cbd30fbb38cfaaa5fcb6e787309a02", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_ism", kind:"item", ref:"ism", src:"assets/audio/unit-01/item_ism.mp3", sha256:"027a87076cc4a6643d8d22af472f0ca8a3bc79f58c8dc0c39024ce60fd82e45e", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_la", kind:"item", ref:"la", src:"assets/audio/unit-01/item_la.mp3", sha256:"6e593c7edb8dc6190da3f8634cbf2daba466b2019ac68ef8857fe241e5706794", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_naam", kind:"item", ref:"naam", src:"assets/audio/unit-01/item_naam.mp3", sha256:"cbe00cb8535ddbfec53c17f32987ed45efc014d73db3500d19ee57a1c4b5edbe", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_anta", kind:"item", ref:"anta", src:"assets/audio/unit-01/item_anta.mp3", sha256:"bb53517b5cf11e2f90aa7f8d62b259fb23fd8ddce1a9697a8e3cd142d4c9a7d2", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_hadha", kind:"item", ref:"hadha", src:"assets/audio/unit-01/item_hadha.mp3", sha256:"95c82975048c5e65e2ad0a40b3e6d4c867cf3f2f9b43606fe02d0fb162ebb2f8", verified_by:"Adam Ziad", verified_on:"2026-10-17"}
+  ]},
   /* SC-064: the printed text, verbatim. qc() fails the unit if the sentence array no longer reproduces it. */
   canon:"هُنَاكَ بِنْتٌ اسْمُهَا رَزَان. تَدْخُلُ الْفَصْلَ. رَزَان لَيْسَ لَهَا صَدِيقٌ... وَعِنْدَهَا قَائِمَةٌ.\n\nتَقُولُ: «السَّلَامُ عَلَيْكُمْ! أَنَا رَزَان.» يَقُولُ عُمَر وَسَارَة وَرَنَا: «وَعَلَيْكُمُ السَّلَامُ!»\n\nتَرَى رَزَان الْقَائِمَةَ. هُنَاكَ اسْمٌ: «عُمَر». وَهُنَاكَ اسْمٌ: «سَارَة». تَقُولُ: «مَنْ عُمَر؟ وَمَنْ سَارَة؟ أُرِيدُ صَدِيقًا!»\n\nتَرَى رَزَان هُدَى وَتَقُولُ: «هٰذِهِ سَارَة!»\n\nتَقُولُ هُدَى: «لَا! لَا! لَيْسَ اسْمِي سَارَة! أَنَا هُدَى!»\n\nتَقُولُ رَزَان: «أَهْلًا يَا هُدَى!»\n\nتَرَى رَزَان وَلَدًا. تَقُولُ: «أَنْتَ عُمَر!»\n\nيَقُولُ الْوَلَدُ: «نَعَمْ! أَنَا عُمَر! وَمَنْ أَنْتِ؟»\n\nتَقُولُ رَزَان: «أَنَا رَزَان.»\n\nيَقُولُ عُمَر: «أَهْلًا يَا رَزَان!»\n\nتَرَى رَزَان بِنْتًا. تَقُولُ: «وَأَنْتِ سَارَة!» تَقُولُ الْبِنْتُ: «نَعَمْ! أَنَا سَارَة!»\n\nيَرَى عُمَر الْقَائِمَةَ وَيَقُولُ: «هُنَاكَ اسْمٌ: \"طَارِق\"! لِي صَدِيقٌ: طَارِق!»\n\nتَرَى سَارَة الْقَائِمَةَ وَتَقُولُ: «هُنَاكَ اسْمٌ: \"رَزَان\"! مَنْ هِيَ؟» تَقُولُ رَزَان: «أَنَا! أَنَا رَزَان!» تَقُولُ سَارَة: «أَهْلًا يَا رَزَان! لِي صَدِيقَةٌ: رَزَان!»\n\nوَتَقُولُ رَنَا: «وَأَنَا! لِي صَدِيقَةٌ!» تُحِبُّ رَزَان... الْقَائِمَةَ! تَقُولُ رَزَان: «أَنَا رَزَان... وَلِي صَدِيقَاتٌ!»",
   cast:[
@@ -1491,7 +1539,35 @@ const UNIT_01 = {
 /* second data unit — the parallel story packaged independently: proves cross-unit reuse (spec §27).
    Items debuted in unit-01 arrive here as RECYCLED_CORE_TARGET. */
 const UNIT_01P = {
-  unit_id:"unit-01p", title:"مَنْ أَنْتَ يَا قَلَم؟", audio:{verified:false},
+  unit_id:"unit-01p", title:"مَنْ أَنْتَ يَا قَلَم؟", audio:{verified:true, /* SC-129/SC-130: synthesised: ElevenLabs · Sunny - Bubbly, Children Narrator  (FgiNpTIapnCbaD6xiqIo) · eleven_v3 · settings voice — bound 2026-10-17 from source/units/unit1/audio/clips_manifest.json; the build and the gate check file and hash */
+   clips:[
+    {id:"c_r01", kind:"sentence", ref:"r01", src:"assets/audio/unit-01p/r01.mp3", sha256:"3dde7b87b5019ece39c0983e16880ec0ba162ebdfcf65cd1e97ecfb25e345a19", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_r02", kind:"sentence", ref:"r02", src:"assets/audio/unit-01p/r02.mp3", sha256:"76f0b1f4f87771787eb1e25866a86f583d6138d55102160ee8b3ccb4a52ca94e", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_r03", kind:"sentence", ref:"r03", src:"assets/audio/unit-01p/r03.mp3", sha256:"f1abb496e3ec4fd8f56afc9063c18592d08d0b553caabc1040b13fc295ef8415", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_r04", kind:"sentence", ref:"r04", src:"assets/audio/unit-01p/r04.mp3", sha256:"b54f433a6806d1f58b7447341d1660cd323493d2ab87795573e1ac6178255833", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_r05", kind:"sentence", ref:"r05", src:"assets/audio/unit-01p/r05.mp3", sha256:"dffcbc27e75814bd0d40531227c1188f6faa4fff9254f7a80bcd524262a5f6c8", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_r06", kind:"sentence", ref:"r06", src:"assets/audio/unit-01p/r06.mp3", sha256:"76eebc5e1b35b06a99e560bbd5b8ec4cc2d19cff86db8f5e26d2ba71e89305f3", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_r07", kind:"sentence", ref:"r07", src:"assets/audio/unit-01p/r07.mp3", sha256:"d1a2f1ab8cdf60a8c4abd81ba4befa563e2dc8e63591e5a3a06f28beb0310c17", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_r08", kind:"sentence", ref:"r08", src:"assets/audio/unit-01p/r08.mp3", sha256:"24d1754a699095567f29db84e2cdefe668bf60ebe7d5f021a1ff0a434bd46db6", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_r09", kind:"sentence", ref:"r09", src:"assets/audio/unit-01p/r09.mp3", sha256:"3b446b2fec0a17e761a07ad30276201dc4f72a900d33f075184e61228e8930a4", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_r10", kind:"sentence", ref:"r10", src:"assets/audio/unit-01p/r10.mp3", sha256:"32d8df2db21934e344b3ffa087acfc0681623050c389ad7ff55710b5ca7b0074", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_r11", kind:"sentence", ref:"r11", src:"assets/audio/unit-01p/r11.mp3", sha256:"c6fa37f716067f4c959fd5b0edd33ff25518cb89c7e25d212cd688f07d2b644f", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_salam", kind:"item", ref:"salam", src:"assets/audio/unit-01p/item_salam.mp3", sha256:"3e23f68df16194c9f82898bdd06f5d9082b0f3f8846e4021faa61aeb9a962843", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_dakhala", kind:"item", ref:"dakhala", src:"assets/audio/unit-01p/item_dakhala.mp3", sha256:"373d8af3ee36f8665a4da7a445a86e7375c8f4931d016e8bad813053445cf081", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_qala", kind:"item", ref:"qala", src:"assets/audio/unit-01p/item_qala.mp3", sha256:"4a9fce0fda97cb5a3959955a3eb9266ab80af7749916e25adea1bbc3c6f663f6", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_raa", kind:"item", ref:"raa", src:"assets/audio/unit-01p/item_raa.mp3", sha256:"3d859a45a0e00faefb6751b5b5088d72003ec3381c1b95e3995098b835430c59", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_inda", kind:"item", ref:"inda", src:"assets/audio/unit-01p/item_inda.mp3", sha256:"9051938cc52c2a78533beec66c515881e589f694fb436e15d655b5189a97908c", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_man", kind:"item", ref:"man", src:"assets/audio/unit-01p/item_man.mp3", sha256:"037872c001f9b9a81c26be2d12a91a5daa4f9d343dc66e670808f711f4ab3212", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_hunaka", kind:"item", ref:"hunaka", src:"assets/audio/unit-01p/item_hunaka.mp3", sha256:"ad2b895bee36e1437267875a7384c50df9b75646bacb88a79fe273d767bf8d74", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_ana", kind:"item", ref:"ana", src:"assets/audio/unit-01p/item_ana.mp3", sha256:"1a6ebf83186a4e629bd615df065bd22f10afe94c7d05cdf30907fc9ce5349332", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_sadiq", kind:"item", ref:"sadiq", src:"assets/audio/unit-01p/item_sadiq.mp3", sha256:"32535fcbd99af9f24182d3c85f36a492d0bbfc963377022f8d7a0ecf56c8eab6", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_urid", kind:"item", ref:"urid", src:"assets/audio/unit-01p/item_urid.mp3", sha256:"08ee33f2c782da2dda8adad1bc85ab70479e4066e676b32ba2a0aa2316beb75b", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_laysa", kind:"item", ref:"laysa", src:"assets/audio/unit-01p/item_laysa.mp3", sha256:"e7649990824ee9c58db831dcbb7b3cf3d03640df10962e1b7f68743836c96e5f", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_li", kind:"item", ref:"li", src:"assets/audio/unit-01p/item_li.mp3", sha256:"a52543e562a7d1c59cd234b898a45a15e38b6c7a88d62fe9474cc5bb45e0b3ad", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_la", kind:"item", ref:"la", src:"assets/audio/unit-01p/item_la.mp3", sha256:"cc98e886fdd3c7ca35accedcf98269bf975fc658b7c83920ccd3acb0de67c6b0", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_naam", kind:"item", ref:"naam", src:"assets/audio/unit-01p/item_naam.mp3", sha256:"9e6dd225a617812b9818bccc2e481df9cd1e1c133f9adfe2f28ef2974501fc5b", verified_by:"Adam Ziad", verified_on:"2026-10-17"},
+    {id:"c_anta", kind:"item", ref:"anta", src:"assets/audio/unit-01p/item_anta.mp3", sha256:"bc1faad4088c44bbe3924fa092750c4c590809066c3b987fde2e97e28f7394b5", verified_by:"Adam Ziad", verified_on:"2026-10-17"}
+  ]},
   /* SC-064: the printed text, verbatim. qc() fails the unit if the sentence array no longer reproduces it. */
   canon:"دَخَلَ كَرِيم وَقَالَ: «السَّلَامُ عَلَيْكُمْ!» قَالَتْ فَرِيدَة وَمَهَا وَزَيْد: «وَعَلَيْكُمُ السَّلَامُ!»\n\nقَالَ كَرِيم: «أُرِيدُ قَلَمًا. مَنْ عِنْدَهُ قَلَمٌ؟» قَالَتْ مَهَا: «لَا! لَيْسَ عِنْدِي قَلَمٌ!» قَالَ زَيْد: «أَنَا؟ لَا! لَيْسَ عِنْدِي قَلَمٌ.» قَالَتْ فَرِيدَة: «لَا يَا كَرِيم! لَيْسَ عِنْدِي قَلَمٌ.» كَرِيم... لَيْسَ عِنْدَهُ قَلَمٌ.\n\nقَالَ قَلَمٌ: «أَنَا! أَنَا قَلَمٌ!» رَأَى كَرِيم الْقَلَمَ وَقَالَ: «مَنْ... مَنْ أَنْتَ؟» قَالَ الْقَلَمُ: «أَنَا قَلَمُ كَرِيم! وَلِي صَدِيقٌ: كَرِيم!» قَالَتْ فَرِيدَة: «نَعَمْ يَا كَرِيم... هُنَاكَ قَلَمٌ يَتَكَلَّمُ!»",
   /* SC-041, confirmed by SC-073 (2026-09-15): the unit's SECOND reading is narrated in the PAST, in every unit from Unit 1;

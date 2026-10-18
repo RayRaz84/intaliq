@@ -206,6 +206,12 @@ with sync_playwright() as p:
         case 'who_says': { const w=U.whosays.find(x=>x.id===a.quote); const n=document.querySelectorAll('[data-c]').length; return (n>=2&&click(`[data-c="${w.speaker}"]`))?a.type:'who-says-faces-'+n; }
         case 'find_it': { const f=U.findit.find(x=>x.id===a.findit); return click(`[data-c="${f.answer}"]`)?a.type:'missing-choice'; }
         case 'retrieval': { const r=U.retrieval.find(x=>x.id===a.retrieval); return click(`[data-c="${r.blank}"]`)?a.type:'missing-choice'; }
+        /* F9 listening (live from Version 52, SC-129/SC-130): the recording is the prompt — the task must carry a bound clip
+           with a src, and the response set is answered by the engine's own correct id / speaker */
+        case 'listen_tap': case 'listen_which': { const au=document.getElementById('t-audio'); if(!au||!au.getAttribute('src')) return 'listen-no-clip';
+          (window.__clipSrcs=window.__clipSrcs||[]).push(au.getAttribute('src')); return click(`[data-c="${a.correct}"]`)?a.type:'missing-choice'; }
+        case 'listen_who': { const au=document.getElementById('t-audio'); if(!au||!au.getAttribute('src')) return 'listen-no-clip';
+          (window.__clipSrcs=window.__clipSrcs||[]).push(au.getAttribute('src')); const w=U.whosays.find(x=>x.id===a.quote); return click(`[data-c="${w.speaker}"]`)?a.type:'missing-choice'; }
         case 'sequence': { const rows=[...document.querySelectorAll('.seqrow')]; const texts=rows.map(r=>r.querySelector('.seqar').textContent.trim());
           const want=[...U.events].sort((x,y)=>x.order-y.order).map(e=>U.sentences.find(s=>s.id===e.sentence).ar.trim());
           const idx=want.map(t=>texts.indexOf(t)); if(idx.includes(-1)) return 'sequence-text-mismatch';
@@ -227,9 +233,13 @@ with sync_playwright() as p:
             for _ in range(600):
                 if pg.evaluate("() => !!document.querySelector('.donebig')"): done = True; break
                 k = pg.evaluate(ANSWER_JS); kinds[k] = kinds.get(k, 0) + 1; steps += 1
-                if k.startswith(("missing", "who-says-faces", "unknown", "sequence-text", "explore-missing", "read-missing")): last = k; break
+                if k.startswith(("missing", "who-says-faces", "unknown", "sequence-text", "explore-missing", "read-missing", "listen-no-clip")): last = k; break
                 pg.wait_for_timeout(720 if k not in ("read-more", "sequence-step") else 120)
             completed = pg.evaluate("() => SCP.current().index")
+            # every clip the pathway played must be served by the deploy folder (the build hashed it; this proves the route)
+            for src in sorted(set(pg.evaluate("() => window.__clipSrcs||[]"))):
+                f = deploy / src
+                if not f.exists() or f.stat().st_size == 0: blockers.append(f"{unit_base}/{card}: listening clip not in the deploy folder: {src}")
             pathways.append((unit_base, card, planned, completed, done, dict(sorted(kinds.items())), last))
             if not done: blockers.append(f"{unit_base}/{card}: pathway did not reach its end (stopped at {last or 'step limit'} after {steps} actions; {completed} of {planned} tasks)")
     b.close()

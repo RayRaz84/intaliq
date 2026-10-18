@@ -35,6 +35,6 @@ Three listening families (F9), all input-only: **hear a phrase → tap its pictu
 | | |
 |---|---|
 | Machinery | built, tested (`source/pipeline/test_listening.js`; the release gate re-runs it against the deployed engine) |
-| Manifest | generated, 72 rows, every `src`/`sha256`/`verified_by` empty |
-| Recordings | **none** |
-| Unit 1 listening | **not delivered**; the unit is not complete until it is |
+| Manifest | 72 rows, every `src`/`sha256`/`verified_by`/`verified_on` filled (2026-10-17) |
+| Recordings | **72 synthesised clips** (ElevenLabs `eleven_v3`; Reading 1 «Candy – Young and Sweet», Reading 2 «Sunny – Bubbly, Children Narrator»; SC-129, SC-130), post-processed (silence ≤ 0.3 s, peak −1 dBFS, mono 44.1 kHz MP3 128k), **verified clip by clip by Adam Ziad, 2026-10-17** |
+| Unit 1 listening | **DELIVERED — Studio Version 52**: bound (`audio.verified=true`), build and gate check every file and hash; listen_tap · listen_which · listen_who live; vocabulary pathway sound-first. Condition SC-124 (d) 1 met; the unit still owes the 3 photographs and the SC-009 review |
