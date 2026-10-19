@@ -41,7 +41,7 @@ for k, v in meta.items():
 # ---------- 2 · per-unit data (no answers anywhere) ----------
 UNITS = [
  dict(
-  n=1, label="Unit 1", ar="الْوَحْدَةُ ١", status="Frozen · Unit 1 is the pre-calibration unit (SC-093)",
+  n=1, label="Unit 1", ar="الْوَحْدَةُ ١", status="COMPLETE (SC-132) · Unit 1 is the pre-calibration unit (SC-093)",
   r1=dict(key="unit-01", title="قَائِمَةُ رَزَان", tense="present", frames=6),
   r2=dict(key="unit-01p", title="مَنْ أَنْتَ يَا قَلَم؟", tense="past", frames=3),
   pictures="Accepted rich-cartoon PNGs (owner adoption 2026-10-14; `data-u1-art-release` 30d90e8) in the book, notebook and digital practice. Audio: 72 clips, synthesised (ElevenLabs; Reading 1 one child voice, Reading 2 another — SC-129, SC-130) and verified clip by clip by a named listener (2026-10-17); the listening tasks are live.",
@@ -80,7 +80,7 @@ UNITS = [
    "Then the finished page (p. 5–6) is held up with «هٰذِهِ صَفْحَتِي!» and the partner asks one question from the unit's own set, e.g. {c3ex}. If there is a wall, the cards go on it afterwards; nothing is marked. Another class or a family member may play the newcomer as an extension — never required."],
   notes=[]),
  dict(
-  n=2, label="Unit 2", ar="الْوَحْدَةُ ٢", status="Frozen (revision 6) · texts signed off (SC-105) · Gate B closes on the pop-up · rich-cartoon illustrations live (SC-113, SC-117)",
+  n=2, label="Unit 2", ar="الْوَحْدَةُ ٢", status="Frozen (revision 6) · Gate B closed (SC-105, pop-up SC-134) · rich-cartoon illustrations live (SC-113, SC-117) · clips owed",
   r1=dict(key="unit-02", title="أَيْنَ مِفْتَاحِي؟", tense="present", frames=8),
   r2=dict(key="unit-02p", title="صُورَةُ رَزَان وَخَدِيجَة", tense="past", frames=6),
   pictures="Rich-cartoon illustrations, 69 accepted files (SC-113; bag corrected SC-117). No verified audio: there are no listening tasks.",
@@ -116,7 +116,7 @@ UNITS = [
   c3_example="«أَيْنَ مِفْتَاحُكَ؟» · «مَنْ عِنْدَ الْبَابِ؟»",
   notes=[]),
  dict(
-  n=3, label="Unit 3", ar="الْوَحْدَةُ ٣", status="Revision 1 · Gate A approved (SC-109) · Gate B pending · illustrations held",
+  n=3, label="Unit 3", ar="الْوَحْدَةُ ٣", status="Frozen (revision 3, SC-135) · Gate B closed · illustrations and clips owed",
   r1=dict(key="unit-03", title="مَنْ عِنْدَهُ الْكُرَةُ؟", tense="present", frames=8),
   r2=dict(key="unit-03p", title="هَدِيَّةُ رَزَان", tense="past", frames=6),
   pictures="Not yet illustrated — strips print as empty numbered frames until Gate B freezes the texts (SC-113). No verified audio: there are no listening tasks.",

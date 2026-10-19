@@ -273,3 +273,7 @@ SC-116 corrects generic learner-facing `obj-bag` from black to brown in Version 
 ## 20 · 2026-10-13 — evidence status ⟨SC-122⟩
 
 Per the Learning Effectiveness Standard, reported separately and never merged: **technical verification — run** (Studio Version 46, release gate exit 0, 2026-10-11; Unit 2 pathways walked to their end) · **design review — not run** (no panel calibration recorded for Unit 2; Gate B's sign-off SC-105 is the owner's content approval, not a panel review) · **observed learner performance — not observed** · **delayed performance — not observed** · **transfer — not observed**. Listening: not delivered (no verified recording). ~~Unit 2 has no evidence plan: it was briefed before SC-122; its plan is written when its first sitting is scheduled, on the template, and the record opens then.~~ ⟨SC-124: no evidence plan or record is required; outward status — technically verified · design review not yet recorded · learner effectiveness untested.⟩ Gate B remains open on the pop-up ruling (SC-105).
+
+## Gate B closed — 2026-10-18 ⟨SC-134⟩
+
+Owner approved the pop-up («Look — now, or before?») as printed since SC-105; Gate B is closed. The speechless line `s19` «...!» is synthesised from `[gasps]` (owner: "a short breath"). Owed to completion (SC-131 (4)): 76 clips verified and bound (manifest written, SC-133) · gate · closing entry; no corner (LC-5 optional slot). Studio Version 57.

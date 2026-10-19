@@ -1,4 +1,7 @@
 {
   "_about": "Pronunciation lock (SC-129): printed token → what the synthesiser is sent. Whole words only; applied to the API input, never to the book.",
-  "map": {}
+  "map": {
+    "«...!»": "[gasps]"
+  },
+  "_s19": "SC-134 (owner, 2026-10-18: \"a short breath\"): Story 1 sentence s19 «...!» — Karim speechless — is synthesised from the audio tag [gasps] (eleven_v3); the printed text is unchanged; the listener verifies it like any clip."
 }

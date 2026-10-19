@@ -51,3 +51,7 @@ Phrase page 18 items · recombination page 10 texts · personal questions 10 · 
 ## 9 · 2026-10-14 — `هَلْ` built ahead of the freeze ⟨SC-125⟩
 
 Owner: *"for unit 3, approve هَلْ"*. Story 1 revision 2 (161 words; three `هَلْ` questions) and the apparatus yes/no questions are in the engine and the Studio; C1 p. 9 prints each question with both answers, masculine and feminine. Studio Version 49, release gate exit 0; Unit 3 remains *rev 2, not frozen* — F-2, titles and pop-up still open at Gate B.
+
+## Gate B closed — 2026-10-18 ⟨SC-135⟩
+
+Owner: "B apply; approve titles; approve pop up." F-2 applied to Story 1 (revision 3, 164 words; canon file, data, engine, Studio rebuilt; QC clean), titles «مَنْ عِنْدَهُ الْكُرَةُ؟» · «هَدِيَّةُ رَزَان» confirmed, pop-up approved. **Texts frozen.** Unlocked: the visual plan and slot list for the illustration producer; the clip manifest. Owed to completion (SC-131 (4)): art integrated · clips verified and bound · gate · closing entry. Studio Version 57.

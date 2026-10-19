@@ -30,7 +30,7 @@
 
 يَنْظُرُ يُوسُف. الْمِفْتَاحُ عَلَى الْأَرْضِ بِجَانِبِ الْبَابِ... تَحْتَ الْقِطِّ!
 
-يَأْخُذُ يُوسُف الْمِفْتَاحَ وَيُعْطِيهِ أَبُوهُ الْقَلَمَ. يَرْجِعُ يُوسُف إِلَى أُمِّهِ وَيُعْطِيهَا الْقَلَمَ. تُعْطِيهِ أُمُّهُ الْكِتَابَ. يَرْجِعُ إِلَى أُخْتِهِ لَيْلَى وَيُعْطِيهَا الْكِتَابَ. تُعْطِيهِ لَيْلَى الْكُرَةَ.
+يَأْخُذُ يُوسُف الْمِفْتَاحَ. «يَا أَبِي، الْمِفْتَاحُ!» يُعْطِيهِ أَبُوهُ الْقَلَمَ. يَرْجِعُ يُوسُف إِلَى أُمِّهِ وَيُعْطِيهَا الْقَلَمَ. تُعْطِيهِ أُمُّهُ الْكِتَابَ. يَرْجِعُ إِلَى أُخْتِهِ لَيْلَى وَيُعْطِيهَا الْكِتَابَ. تُعْطِيهِ لَيْلَى الْكُرَةَ.
 
 «الْكُرَةُ مَعِي!» يَضْحَكُ يُوسُف.
 
@@ -297,3 +297,5 @@ Every possession line is true when spoken; each object has exactly one holder at
 **Not yet in the engine or the Studio.** The live build (Version 44, SC-117 — an art correction) still carries revision 1; the engine `canon`, the Studio student page, the phrase page, the sets and the teacher's page are rebuilt once as **Version 45** (SC-118) after Gate B closes, so that F-2, the titles and the pop-up — still owed to the owner (SC-110) — land in the same build. Until then the printed product and this file deliberately differ, and this log is the record of it.
 
 **Status ⟨SC-125, 2026-10-14⟩:** the owner approved `هَلْ` for Unit 3 (*"for unit 3, approve هَلْ"*). Revision 2 of Story 1 and the apparatus yes/no questions above are **built** (Studio Version 49): engine canon, canon file `u3r1_s1.txt` (filename kept; contents are revision 2), data build, Studio, teacher's page. C1 (p. 9) now prints each question with both answers. Gate B items F-2, the titles and the pop-up remain open; the texts are not frozen.
+
+**Status ⟨SC-135, 2026-10-18⟩ — FROZEN.** F-2 applied (the hand-over spoken; Story 1 = revision 3, 164 words), titles confirmed, pop-up approved; Gate B closed. Story 2 revision 1 (118 words) unchanged. The printed text above is the canon.
