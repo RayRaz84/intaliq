@@ -180,7 +180,7 @@ with sync_playwright() as p:
       const st=document.getElementById('v-student'); const nb=document.getElementById('v-note');
       const acts=[...st.querySelectorAll('.act')].map(a=>({rubric:!!a.querySelector('.rubric [lang=ar]'), items:a.querySelectorAll('ul[lang=ar] li').length, english:[...a.querySelectorAll('p.note:not(.rev)')].length}));
       const pages=[...nb.querySelectorAll('.sheet')].map(s=>({tag:!!s.querySelector('.sheet-tag [lang=ar]'), hasNb:!!s.querySelector('.nb')}));
-      const corner=document.getElementById('authentic-corner'); const slots=corner?[...corner.querySelectorAll('.photo')].map(p=>!!p.querySelector('img')):[];
+      const corner=document.getElementById('authentic-corner'); const slots=corner?[...corner.querySelectorAll('.photo,.drawbox')].map(p=>corner.dataset.status==='learner-sourced'||!!p.querySelector('img')):[];
       return {acts, pages, corner: corner?{status:corner.dataset.status, slots}:null};
     }""")
     for i, a in enumerate(forms["acts"]):
@@ -189,7 +189,10 @@ with sync_playwright() as p:
     for i, pgc in enumerate(forms["pages"]):
         if not pgc["tag"]: blockers.append(f"Unit 1 notebook sheet #{i+1}: no Arabic rubric tag")
     corner = forms["corner"]
-    if corner is None or not all(corner["slots"]): warnings.append("Unit 1 authentic corner: NOT DELIVERED — " + (f"{sum(1 for s in (corner or {}).get('slots', []) if s)} of 3 photographs present" if corner else "block missing") + " (Batch 2; the unit is not complete)")
+    # SC-131 (2026-10-18): the corner is learner-sourced — three boxes the child fills from real print around them; it must be present with its three boxes and three tasks
+    if corner is None: blockers.append("Unit 1 authentic corner: block missing")
+    elif corner["status"] == "learner-sourced" and len(corner["slots"]) != 3: blockers.append(f"Unit 1 authentic corner: {len(corner['slots'])} boxes, expected 3")
+    elif corner["status"] != "learner-sourced" and not all(corner["slots"]): warnings.append("Unit 1 authentic corner: photographs not all present")
 
     # --- B1 / I7: walk every digital pathway to its end
     ANSWER_JS = r"""() => {

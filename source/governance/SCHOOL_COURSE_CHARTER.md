@@ -63,7 +63,7 @@ The course starts with the line's paid-for toolkit, each item subordinate to thi
 
 - **Own decision register, opened on day one**, append-only, numbered in its own series. This charter and the Design Description are its first two entries by reference. Nothing is approved by relay; a decision exists when it is recorded (Ruling 1's method). Build tooling never emits approval banners (Ruling 4). No approval is recorded against an unversioned working state (Ruling 5).
 - **Gates.** The four-gate structure (concept → design → draft → release) is adopted in principle; the course's gate definitions are written with the Level 1 spec.
-- **Verification is by expert panel (SC-009).** The Program Owner and a panel of educators verify the product; no classroom pilot is required. The recorded residual: panel review verifies the design, and the materials' behavior in untrained hands in live classrooms remains a known-open question until real classrooms use the product.
+- **Verification (SC-009 as amended by SC-131, 2026-10-18).** No classroom pilot (SC-009, SC-124) and no panel review (SC-131) is required to complete, approve or publish a unit: verification is the release gate and content checks run on every build, and the owner's closing entry in the register. ~~The Program Owner and a panel of educators verify the product.~~ The recorded residual: panel review verifies the design, and the materials' behavior in untrained hands in live classrooms remains a known-open question until real classrooms use the product.
 
 ## 9. Open decisions
 
