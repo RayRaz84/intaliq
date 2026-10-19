@@ -2,7 +2,7 @@
 
 *One voice per reading ⟨SC-130⟩ — narration and dialogue alike, so every listening task, which draws on one reading, turns on the words and not the timbre; Unit 1 casts a female voice for Reading 1 and a male voice for Reading 2. Pronunciation is locked by respelling the generator's input, never the book (`pronunciation_map.json`). Verification is a named person's work, clip by clip; the generator never fills it in.*
 
-**Easiest route (2026-10-16):** double-click `Unit 1 clips.command` at the repository root in Finder. It asks for the API key once (stored in the git-ignored `.secrets/`), installs `ffmpeg` if Homebrew is present, and offers the steps below as a numbered menu: audition → generate → record → retakes. The commands below are what it runs.
+**Easiest route (2026-10-16):** double-click `Intaliq clips.command` at the repository root in Finder (renamed 2026-10-18; it now asks which unit, and writes a unit's manifest and tracker from the engine when none exists). It asks for the API key once (stored in the git-ignored `.secrets/`), installs `ffmpeg` if Homebrew is present, and offers the steps below as a numbered menu: audition → generate → record → retakes. The commands below are what it runs.
 
 Run from the repository root, in a Terminal that can reach `api.elevenlabs.io` (the sandboxed shells cannot). The key stays out of the repository and the chat: `export ELEVENLABS_API_KEY=…` for the session, or a file `.secrets/elevenlabs.key` (git-ignored). `ffmpeg` on PATH (`brew install ffmpeg`).
 

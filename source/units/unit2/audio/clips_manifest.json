@@ -1,0 +1,779 @@
+{
+  "_about": "Unit 2 clip manifest, generated from the engine. One row per sentence of each reading and per core-item phrase. `src` is the file the build expects under assets/audio/; `sha256` is written by the generator; `verified_by` / `verified_on` are entered by a named listener after hearing each clip against the printed text (SC-129). Name each reading's voice in its `voice` as `human: <speaker>` or `synthesised: <engine · voice · model>` — one voice per reading (SC-130).",
+  "units": {
+    "unit-02": {
+      "title": "أَيْنَ مِفْتَاحِي؟",
+      "voice": "",
+      "clips": [
+        {
+          "id": "c_s00",
+          "kind": "sentence",
+          "ref": "s00",
+          "text": "هُنَاكَ وَلَدٌ اسْمُهُ كَرِيم. عِنْدَهُ حَقِيبَةٌ كَبِيرَةٌ. فِي الْحَقِيبَةِ كِتَابٌ وَقَلَمٌ... وَمِفْتَاحُ الْبَيْتِ.",
+          "src": "assets/audio/unit-02/s00.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s01",
+          "kind": "sentence",
+          "ref": "s01",
+          "text": "يَذْهَبُ كَرِيم إِلَى الْبَيْتِ.",
+          "src": "assets/audio/unit-02/s01.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s02",
+          "kind": "sentence",
+          "ref": "s02",
+          "text": "يَرَى كَرِيم مِفْتَاحًا عَلَى الْأَرْضِ.",
+          "src": "assets/audio/unit-02/s02.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s03",
+          "kind": "sentence",
+          "ref": "s03",
+          "text": "«مِفْتَاحٌ! لِمَنْ هٰذَا الْمِفْتَاحُ؟»",
+          "src": "assets/audio/unit-02/s03.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s04",
+          "kind": "sentence",
+          "ref": "s04",
+          "text": "يَضَعُ كَرِيم الْمِفْتَاحَ فِي حَقِيبَتِهِ. «هَلْ هٰذَا مِفْتَاحُ زَيْد؟ أَذْهَبُ إِلَى بَيْتِ زَيْد!»",
+          "src": "assets/audio/unit-02/s04.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s05",
+          "kind": "sentence",
+          "ref": "s05",
+          "text": "يَذْهَبُ كَرِيم إِلَى بَيْتِ زَيْد. «يَا زَيْد! هَلْ هٰذَا مِفْتَاحُكَ؟»",
+          "src": "assets/audio/unit-02/s05.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s06",
+          "kind": "sentence",
+          "ref": "s06",
+          "text": "يَقُولُ زَيْد: «لَا. مِفْتَاحِي فِي حَقِيبَتِي. أَضَعُ مِفْتَاحِي فِي حَقِيبَتِي.»",
+          "src": "assets/audio/unit-02/s06.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s07",
+          "kind": "sentence",
+          "ref": "s07",
+          "text": "يَذْهَبُ كَرِيم إِلَى بَيْتِ مَهَا. «يَا مَهَا! هَلْ هٰذَا مِفْتَاحُكِ؟»",
+          "src": "assets/audio/unit-02/s07.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s08",
+          "kind": "sentence",
+          "ref": "s08",
+          "text": "تَقُولُ مَهَا: «لَا. مِفْتَاحِي تَحْتَ الْكِتَابِ. أَضَعُ مِفْتَاحِي تَحْتَ الْكِتَابِ.»",
+          "src": "assets/audio/unit-02/s08.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s09",
+          "kind": "sentence",
+          "ref": "s09",
+          "text": "يَذْهَبُ كَرِيم إِلَى بَيْتِ عُمَر. «يَا عُمَر! هَلْ هٰذَا مِفْتَاحُكَ؟»",
+          "src": "assets/audio/unit-02/s09.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s10",
+          "kind": "sentence",
+          "ref": "s10",
+          "text": "يَقُولُ عُمَر: «لَا. مِفْتَاحِي عَلَى الْبَابِ. أَضَعُ مِفْتَاحِي عَلَى الْبَابِ! ... وَأَنْتَ يَا كَرِيم، أَيْنَ تَضَعُ مِفْتَاحَكَ؟»",
+          "src": "assets/audio/unit-02/s10.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s11",
+          "kind": "sentence",
+          "ref": "s11",
+          "text": "«أَنَا؟ أَضَعُ مِفْتَاحِي فِي حَقِيبَتِي.»",
+          "src": "assets/audio/unit-02/s11.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s12",
+          "kind": "sentence",
+          "ref": "s12",
+          "text": "يَرْجِعُ كَرِيم إِلَى بَيْتِهِ. هُنَاكَ قِطٌّ عِنْدَ الْبَابِ...",
+          "src": "assets/audio/unit-02/s12.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s13",
+          "kind": "sentence",
+          "ref": "s13",
+          "text": "يَقُولُ الْقِطُّ: «يَا كَرِيم. هٰذَا الْمِفْتَاحُ مِفْتَاحُكَ.»",
+          "src": "assets/audio/unit-02/s13.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s14",
+          "kind": "sentence",
+          "ref": "s14",
+          "text": "«مِفْتَاحِي؟! ... أَنْتَ قِطٌّ!»",
+          "src": "assets/audio/unit-02/s14.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s15",
+          "kind": "sentence",
+          "ref": "s15",
+          "text": "يَقُولُ الْقِطُّ: «نَعَمْ. أَنَا قِطٌّ. وَهٰذَا مِفْتَاحُكَ.»",
+          "src": "assets/audio/unit-02/s15.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s16",
+          "kind": "sentence",
+          "ref": "s16",
+          "text": "يَنْظُرُ كَرِيم فِي حَقِيبَتِهِ. هُنَاكَ كِتَابٌ وَقَلَمٌ... وَلٰكِنْ أَيْنَ مِفْتَاحُ الْبَيْتِ؟",
+          "src": "assets/audio/unit-02/s16.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s17",
+          "kind": "sentence",
+          "ref": "s17",
+          "text": "يَنْظُرُ إِلَى الْمِفْتَاحِ فِي يَدِهِ. «هٰذَا مِفْتَاحِي؟!»",
+          "src": "assets/audio/unit-02/s17.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s18",
+          "kind": "sentence",
+          "ref": "s18",
+          "text": "يَقُولُ الْقِطُّ: «نَعَمْ، هٰذَا مِفْتَاحُكَ يَا كَرِيم.»",
+          "src": "assets/audio/unit-02/s18.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s19",
+          "kind": "sentence",
+          "ref": "s19",
+          "text": "«...!»",
+          "src": "assets/audio/unit-02/s19.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s20",
+          "kind": "sentence",
+          "ref": "s20",
+          "text": "يَضْحَكُ كَرِيم. يَضَعُ الْمِفْتَاحَ فِي الْبَابِ. وَيَدْخُلُ الْبَيْتَ.",
+          "src": "assets/audio/unit-02/s20.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s21",
+          "kind": "sentence",
+          "ref": "s21",
+          "text": "وَالْقِطُّ؟ يَدْخُلُ الْبَيْتَ أَيْضًا.",
+          "src": "assets/audio/unit-02/s21.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_ayna",
+          "kind": "item",
+          "ref": "ayna",
+          "text": "أَيْنَ الْمِفْتَاحُ؟",
+          "src": "assets/audio/unit-02/item_ayna.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_fi",
+          "kind": "item",
+          "ref": "fi",
+          "text": "فِي الْحَقِيبَةِ",
+          "src": "assets/audio/unit-02/item_fi.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_ala",
+          "kind": "item",
+          "ref": "ala",
+          "text": "عَلَى الْبَابِ",
+          "src": "assets/audio/unit-02/item_ala.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_tahta",
+          "kind": "item",
+          "ref": "tahta",
+          "text": "تَحْتَ الْكِتَابِ",
+          "src": "assets/audio/unit-02/item_tahta.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_dhahab",
+          "kind": "item",
+          "ref": "dhahab",
+          "text": "يَذْهَبُ إِلَى الْبَيْتِ",
+          "src": "assets/audio/unit-02/item_dhahab.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_ila",
+          "kind": "item",
+          "ref": "ila",
+          "text": "يَذْهَبُ إِلَى الْبَيْتِ",
+          "src": "assets/audio/unit-02/item_ila.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_rajaa",
+          "kind": "item",
+          "ref": "rajaa",
+          "text": "يَرْجِعُ إِلَى بَيْتِهِ",
+          "src": "assets/audio/unit-02/item_rajaa.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_wadaa",
+          "kind": "item",
+          "ref": "wadaa",
+          "text": "أَضَعُ مِفْتَاحِي فِي حَقِيبَتِي",
+          "src": "assets/audio/unit-02/item_wadaa.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_hunaka",
+          "kind": "item",
+          "ref": "hunaka",
+          "text": "هُنَاكَ وَلَدٌ اسْمُهُ كَرِيم.",
+          "src": "assets/audio/unit-02/item_hunaka.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_walad",
+          "kind": "item",
+          "ref": "walad",
+          "text": "هُنَاكَ وَلَدٌ اسْمُهُ كَرِيم.",
+          "src": "assets/audio/unit-02/item_walad.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_ism",
+          "kind": "item",
+          "ref": "ism",
+          "text": "هُنَاكَ وَلَدٌ اسْمُهُ كَرِيم.",
+          "src": "assets/audio/unit-02/item_ism.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_inda",
+          "kind": "item",
+          "ref": "inda",
+          "text": "عِنْدَهُ حَقِيبَةٌ كَبِيرَةٌ.",
+          "src": "assets/audio/unit-02/item_inda.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_yara",
+          "kind": "item",
+          "ref": "yara",
+          "text": "يَرَى كَرِيم مِفْتَاحًا عَلَى الْأَرْضِ.",
+          "src": "assets/audio/unit-02/item_yara.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_yaqul",
+          "kind": "item",
+          "ref": "yaqul",
+          "text": "يَقُولُ زَيْد: «لَا.",
+          "src": "assets/audio/unit-02/item_yaqul.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_yadkhul",
+          "kind": "item",
+          "ref": "yadkhul",
+          "text": "وَيَدْخُلُ الْبَيْتَ.",
+          "src": "assets/audio/unit-02/item_yadkhul.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_la",
+          "kind": "item",
+          "ref": "la",
+          "text": "يَقُولُ زَيْد: «لَا.",
+          "src": "assets/audio/unit-02/item_la.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_naam",
+          "kind": "item",
+          "ref": "naam",
+          "text": "يَقُولُ الْقِطُّ: «نَعَمْ.",
+          "src": "assets/audio/unit-02/item_naam.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_anta",
+          "kind": "item",
+          "ref": "anta",
+          "text": "وَأَنْتَ يَا كَرِيم، أَيْنَ تَضَعُ مِفْتَاحَكَ؟»",
+          "src": "assets/audio/unit-02/item_anta.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_hadha",
+          "kind": "item",
+          "ref": "hadha",
+          "text": "لِمَنْ هٰذَا الْمِفْتَاحُ؟»",
+          "src": "assets/audio/unit-02/item_hadha.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_ana",
+          "kind": "item",
+          "ref": "ana",
+          "text": "«أَنَا؟",
+          "src": "assets/audio/unit-02/item_ana.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_man",
+          "kind": "item",
+          "ref": "man",
+          "text": "لِمَنْ هٰذَا الْمِفْتَاحُ؟»",
+          "src": "assets/audio/unit-02/item_man.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_qalam",
+          "kind": "item",
+          "ref": "qalam",
+          "text": "فِي الْحَقِيبَةِ كِتَابٌ وَقَلَمٌ...",
+          "src": "assets/audio/unit-02/item_qalam.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        }
+      ],
+      "count": 44
+    },
+    "unit-02p": {
+      "title": "صُورَةُ رَزَان وَخَدِيجَة",
+      "voice": "",
+      "clips": [
+        {
+          "id": "c_s00",
+          "kind": "sentence",
+          "ref": "s00",
+          "text": "عِنْدَ رَزَان صُورَةٌ. فِي الصُّورَةِ رَزَان وَخَدِيجَة.",
+          "src": "assets/audio/unit-02p/s00.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s01",
+          "kind": "sentence",
+          "ref": "s01",
+          "text": "خَدِيجَة صَدِيقَةُ رَزَان. خَدِيجَة تَضْحَكُ فِي الصُّورَةِ.",
+          "src": "assets/audio/unit-02p/s01.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s02",
+          "kind": "sentence",
+          "ref": "s02",
+          "text": "قَالَتْ رَزَان: «الصُّورَةُ لِخَدِيجَة! أَذْهَبُ إِلَى بَيْتِ خَدِيجَة.»",
+          "src": "assets/audio/unit-02p/s02.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s03",
+          "kind": "sentence",
+          "ref": "s03",
+          "text": "وَضَعَتْ رَزَان الصُّورَةَ فِي حَقِيبَتِهَا وَذَهَبَتْ إِلَى بَيْتِ خَدِيجَة.",
+          "src": "assets/audio/unit-02p/s03.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s04",
+          "kind": "sentence",
+          "ref": "s04",
+          "text": "«يَا خَدِيجَة! أَنَا هُنَا!»",
+          "src": "assets/audio/unit-02p/s04.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s05",
+          "kind": "sentence",
+          "ref": "s05",
+          "text": "... «خَدِيجَة لَيْسَتْ فِي الْبَيْتِ!»",
+          "src": "assets/audio/unit-02p/s05.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s06",
+          "kind": "sentence",
+          "ref": "s06",
+          "text": "رَأَتْ رَزَان رَنَا. قَالَتْ رَنَا: «خَدِيجَة؟ ذَهَبَتْ خَدِيجَة إِلَى بَيْتِكِ!»",
+          "src": "assets/audio/unit-02p/s06.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s07",
+          "kind": "sentence",
+          "ref": "s07",
+          "text": "«إِلَى بَيْتِي؟!»",
+          "src": "assets/audio/unit-02p/s07.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s08",
+          "kind": "sentence",
+          "ref": "s08",
+          "text": "رَجَعَتْ رَزَان إِلَى بَيْتِهَا. «يَا خَدِيجَة! أَنَا هُنَا!»",
+          "src": "assets/audio/unit-02p/s08.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s09",
+          "kind": "sentence",
+          "ref": "s09",
+          "text": "... «خَدِيجَة لَيْسَتْ هُنَا أَيْضًا!»",
+          "src": "assets/audio/unit-02p/s09.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s10",
+          "kind": "sentence",
+          "ref": "s10",
+          "text": "رَزَان حَزِينَةٌ.",
+          "src": "assets/audio/unit-02p/s10.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s11",
+          "kind": "sentence",
+          "ref": "s11",
+          "text": "رَجَعَتْ رَزَان إِلَى بَيْتِ خَدِيجَة... وَرَأَتْ خَدِيجَة!",
+          "src": "assets/audio/unit-02p/s11.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s12",
+          "kind": "sentence",
+          "ref": "s12",
+          "text": "قَالَتْ خَدِيجَة: «رَزَان! أَنَا أَذْهَبُ إِلَى بَيْتِكِ!»",
+          "src": "assets/audio/unit-02p/s12.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s13",
+          "kind": "sentence",
+          "ref": "s13",
+          "text": "قَالَتْ رَزَان: «وَأَنَا أَذْهَبُ إِلَى بَيْتِكِ!»",
+          "src": "assets/audio/unit-02p/s13.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s14",
+          "kind": "sentence",
+          "ref": "s14",
+          "text": "ضَحِكَتْ رَزَان. أَعْطَتْهَا الصُّورَةَ. «هٰذِهِ لَكِ.»",
+          "src": "assets/audio/unit-02p/s14.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s15",
+          "kind": "sentence",
+          "ref": "s15",
+          "text": "رَأَتْ خَدِيجَة الصُّورَةَ وَقَالَتْ: «وَأَنَا... عِنْدِي صُورَةٌ لَكِ أَيْضًا!»",
+          "src": "assets/audio/unit-02p/s15.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s16",
+          "kind": "sentence",
+          "ref": "s16",
+          "text": "أَعْطَتْهَا خَدِيجَة صُورَةً أَيْضًا.",
+          "src": "assets/audio/unit-02p/s16.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s17",
+          "kind": "sentence",
+          "ref": "s17",
+          "text": "«رَزَان وَخَدِيجَة!»",
+          "src": "assets/audio/unit-02p/s17.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s18",
+          "kind": "sentence",
+          "ref": "s18",
+          "text": "«وَهٰذِهِ أَيْضًا... رَزَان وَخَدِيجَة!»",
+          "src": "assets/audio/unit-02p/s18.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_s19",
+          "kind": "sentence",
+          "ref": "s19",
+          "text": "ضَحِكَتْ رَزَان. وَضَحِكَتْ خَدِيجَة.",
+          "src": "assets/audio/unit-02p/s19.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_fi",
+          "kind": "item",
+          "ref": "fi",
+          "text": "فِي الْحَقِيبَةِ",
+          "src": "assets/audio/unit-02p/item_fi.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_huna",
+          "kind": "item",
+          "ref": "huna",
+          "text": "أَنَا هُنَا!",
+          "src": "assets/audio/unit-02p/item_huna.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_dhahab",
+          "kind": "item",
+          "ref": "dhahab",
+          "text": "ذَهَبَتْ إِلَى بَيْتِ خَدِيجَة",
+          "src": "assets/audio/unit-02p/item_dhahab.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_ila",
+          "kind": "item",
+          "ref": "ila",
+          "text": "يَذْهَبُ إِلَى الْبَيْتِ",
+          "src": "assets/audio/unit-02p/item_ila.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_rajaa",
+          "kind": "item",
+          "ref": "rajaa",
+          "text": "رَجَعَتْ إِلَى بَيْتِهَا",
+          "src": "assets/audio/unit-02p/item_rajaa.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_wadaa",
+          "kind": "item",
+          "ref": "wadaa",
+          "text": "وَضَعَتْ الصُّورَةَ فِي حَقِيبَتِهَا",
+          "src": "assets/audio/unit-02p/item_wadaa.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_inda",
+          "kind": "item",
+          "ref": "inda",
+          "text": "عِنْدَ رَزَان صُورَةٌ.",
+          "src": "assets/audio/unit-02p/item_inda.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_yara",
+          "kind": "item",
+          "ref": "yara",
+          "text": "رَأَتْ رَزَان رَنَا.",
+          "src": "assets/audio/unit-02p/item_yara.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_yaqul",
+          "kind": "item",
+          "ref": "yaqul",
+          "text": "قَالَتْ رَزَان: «الصُّورَةُ لِخَدِيجَة!",
+          "src": "assets/audio/unit-02p/item_yaqul.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_hadha",
+          "kind": "item",
+          "ref": "hadha",
+          "text": "«هٰذِهِ لَكِ.»",
+          "src": "assets/audio/unit-02p/item_hadha.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_ana",
+          "kind": "item",
+          "ref": "ana",
+          "text": "أَنَا هُنَا!»",
+          "src": "assets/audio/unit-02p/item_ana.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        },
+        {
+          "id": "c_sadiq",
+          "kind": "item",
+          "ref": "sadiq",
+          "text": "خَدِيجَة صَدِيقَةُ رَزَان.",
+          "src": "assets/audio/unit-02p/item_sadiq.mp3",
+          "sha256": "",
+          "verified_by": "",
+          "verified_on": ""
+        }
+      ],
+      "count": 32
+    }
+  }
+}

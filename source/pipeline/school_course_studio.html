@@ -47,6 +47,7 @@ button:focus-visible,a:focus-visible{outline:3px solid var(--amber);outline-offs
 .viewbar .vt{font-weight:800;font-size:17px}
 .viewbar .vsub{color:#BFD9D7;font-size:12.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
 .viewbar .draft{margin-left:auto;background:var(--amber);color:#5C3E06;border-radius:999px;font-size:11.5px;font-weight:800;padding:3px 12px;letter-spacing:.06em}
+.viewbar .draft.done,.ribbon.done{background:#DCEFE2;color:#1F5A33}
 main{max-width:1020px;margin:0 auto;padding:26px 18px 80px}
 .view{display:none}.view.on{display:block}
 .lede{max-width:66ch;color:var(--ink-soft);font-size:15px;margin:2px 0 22px}
@@ -348,13 +349,13 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
   <div class="hero">
     <div class="eyebrow">Intaliq · The School Course · Level 1</div>
     <h1>Review Library</h1>
-    <p>A story-first Arabic course for ages 8–13: two stories a unit, read before anything is explained, with a digital practice engine and a writing notebook built from the same text. This is the review build — every page here is generated from the frozen readings.</p>
+    <p>A story-first Arabic course for ages 8–13: two stories a unit, read before anything is explained, with a digital practice engine and a writing notebook built from the same text. Every page here is generated from the readings. Status is per unit (SC-133): Unit 1 is complete; Units 2 and 3 are review builds until their own closing entries.</p>
     <div class="actions"><a class="hbtn" href="#tour">Overview for reviewers</a><a class="hbtn ghost" href="#unit-03/student">Open Unit 3</a></div>
-    <p style="margin-top:14px"><span class="chip">REVIEW BUILD · NOT YET APPROVED · VERSION 55</span></p>
+    <p style="margin-top:14px"><span class="chip">VERSION 56 · UNIT 1 COMPLETE (SC-132) · UNITS 2–3 IN REVIEW</span></p>
   </div>
   <div class="lib">
     <div class="card">
-      <span class="ribbon">BUILT · v8</span>
+      <span class="ribbon done">COMPLETE · SC-132</span>
       <span class="ucode">UNIT 1</span>
       <h2>This is me; who is this?</h2>
       <div class="ar" lang="ar">تَدْخُلُ الْفَصْلَ. لَيْسَ لَهَا صَدِيقٌ... وَعِنْدَهَا قَائِمَةٌ.</div>
@@ -499,7 +500,7 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
 
 <!-- ================= STUDENT ================= -->
 <section class="view" id="v-student">
-  <div class="viewbar"><div class="viewbar-in"><a class="back" href="#">← Library</a><div><div class="vt">Unit 1 · Student book</div><div class="vsub">illustrations → reading → activities</div></div><span class="draft">DRAFT</span></div></div>
+  <div class="viewbar"><div class="viewbar-in"><a class="back" href="#">← Library</a><div><div class="vt">Unit 1 · Student book</div><div class="vsub">illustrations → reading → activities</div></div><span class="draft done">COMPLETE · SC-132</span></div></div>
   <main class="rtl">
 
   <div class="sheet">
@@ -974,7 +975,7 @@ footer{max-width:1020px;margin:0 auto;padding:0 18px 40px;color:var(--ink-soft);
 
 <!-- ================= NOTEBOOK ================= -->
 <section class="view" id="v-note">
-  <div class="viewbar"><div class="viewbar-in"><a class="back" href="#">← Library</a><div><div class="vt">Unit 1 · Notebook</div><div class="vsub">Phase 4 · the output ladder (the survey on p. 9 is Phase 3 and comes first)</div></div><span class="draft">DRAFT</span></div></div>
+  <div class="viewbar"><div class="viewbar-in"><a class="back" href="#">← Library</a><div><div class="vt">Unit 1 · Notebook</div><div class="vsub">Phase 4 · the output ladder (the survey on p. 9 is Phase 3 and comes first)</div></div><span class="draft done">COMPLETE · SC-132</span></div></div>
   <main class="rtl">
   <p class="lede rev" style="direction:ltr"><b>Ten pages: ask your friends (p. 9, in class) → write the story you read → write your parallel story → write your own → show it.</b> Every writing page is completable by a student alone (P-3); the survey is the one page that needs classmates, and it comes <b>before</b> the parallel story that uses its names (owner's decision: scaffolded interaction, including C1, precedes notebook writing — SC-119). Each retell is titled <span lang="ar">اُكْتُبِ الْقِصَّةَ</span> plus the story's own name, and its <span lang="ar">بَنْكُ الْكَلِمَاتِ</span> supplies the missing word. Every frame prints the possessive split correctly — <span lang="ar">عِنْدَ</span> for things, <span lang="ar">لِـ</span> for people (SC-039).</p>
 
@@ -2047,6 +2048,7 @@ const SCP=(function(){
   function mount(unitId){
     base=PAIRS[unitId]?unitId:(Object.keys(PAIRS).find(k=>PAIRS[k]===unitId)||unitId);
     setU(base);
+    (function(){const tag=document.querySelector("#v-practice .viewbar .draft"); if(tag){const done=base==="unit-01"; tag.textContent=done?"COMPLETE · SC-132":"DRAFT"; tag.classList.toggle("done",done);}})();
     $("pr-sub").textContent=base==="unit-03"?"Unit 3 practice · المنصّة · rev 2, no illustrations yet":base==="unit-02"?"Unit 2 practice · المنصّة · rev 6, Unit 2 rich-cartoon art complete":"Unit 1 practice · المنصّة";
     hub();
   }

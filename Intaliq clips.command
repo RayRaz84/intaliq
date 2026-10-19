@@ -1,13 +1,19 @@
 #!/bin/bash
-# Unit 1 clips.command — double-click in Finder. A menu around source/pipeline/generate_clips.py (SC-129).
+# Unit clips.command — double-click in Finder; asks which unit. A menu around source/pipeline/generate_clips.py (SC-129).
 # Nothing here changes the book, the manifest's texts or any licence; it only runs the generator's modes in order.
 cd "$(dirname "$0")" || exit 1
 GEN="source/pipeline/generate_clips.py"
-UNIT=1
-TRACKER="source/units/unit1/INTALIQ1_UNIT1_CLIP_TRACKER.csv"
-SHEET="audio_work/listening_sheet_unit1.html"
-
 bold() { printf '\n\033[1m%s\033[0m\n' "$1"; }
+bold "Which unit?"
+printf '  1 · Unit 1 (complete)   2 · Unit 2   3 · Unit 3\n  Unit [2]: '; read -r UNIT
+case "$UNIT" in 1|2|3) ;; "") UNIT=2;; *) echo "Choose 1, 2 or 3."; exit 1;; esac
+TRACKER="source/units/unit${UNIT}/INTALIQ1_UNIT${UNIT}_CLIP_TRACKER.csv"
+SHEET="audio_work/listening_sheet_unit${UNIT}.html"
+if [ ! -f "source/units/unit${UNIT}/audio/clips_manifest.json" ]; then
+  echo "No clip manifest for Unit $UNIT yet — writing it from the engine (one row per sentence and per core-item phrase)…"
+  python3 "$GEN" manifest --unit "$UNIT" || exit 1
+fi
+
 pause() { printf '\nPress Return to go back to the menu. '; read -r _; }
 
 # ---- 0 · the API key (kept in .secrets/, which git ignores; never in the chat, never in the repository) ----
@@ -57,10 +63,10 @@ load_voices() {
 }
 
 while true; do
-  bold "Intaliq · Unit 1 clips"
+  bold "Intaliq · Unit $UNIT clips"
   cat <<'MENU'
   1  Audition voices       — five Unit 1 lines in each voice, side by side in your browser
-  2  Generate Unit 1       — all 72 clips in the voice you chose; opens the listener's sheet and the tracker
+  2  Generate the unit     — every clip of both readings in the voices you choose; opens the listener's sheet and the tracker
   3  Record verification   — copy the listener's accepted / retake decisions into the manifest
   4  Retakes               — regenerate named clips (e.g. c_m07,c_r03), then verify them again
   5  Re-voice one reading   — regenerate all of reading 1 or reading 2 in a different voice
@@ -84,8 +90,8 @@ MENU
     2)
       bold "Which voice for which reading? (SC-130: one voice per reading)"
       load_voices || { pause; continue; }
-      printf '\nNumber of the voice for READING 1 «قَائِمَةُ رَزَان» (46 clips): '; read -r n1; i1=$((n1-1)); V1="${VOICE_IDS[$i1]}"
-      printf 'Number of the voice for READING 2 «مَنْ أَنْتَ يَا قَلَم؟» (26 clips) [same as reading 1 if blank]: '; read -r n2
+      printf '\nNumber of the voice for READING 1 (the main story): '; read -r n1; i1=$((n1-1)); V1="${VOICE_IDS[$i1]}"
+      printf 'Number of the voice for READING 2 (the second story) [same as reading 1 if blank]: '; read -r n2
       if [ -z "$n2" ]; then i2=$i1; else i2=$((n2-1)); fi; V2="${VOICE_IDS[$i2]}"
       [ -z "$V1" ] || [ -z "$V2" ] && { echo "No such number."; pause; continue; }
       ask_model
@@ -110,7 +116,7 @@ MENU
     5)
       bold "Re-voice one reading"
       load_voices || { pause; continue; }
-      printf '\nWhich reading? 1 = «قَائِمَةُ رَزَان» (46 clips) · 2 = «مَنْ أَنْتَ يَا قَلَم؟» (26 clips): '; read -r RD
+      printf '\nWhich reading? 1 = the main story · 2 = the second story: '; read -r RD
       case "$RD" in 1|2) ;; *) echo "Choose 1 or 2."; pause; continue;; esac
       printf 'Number of the voice for reading %s: ' "$RD"; read -r n; i=$((n-1)); VID="${VOICE_IDS[$i]}"; [ -z "$VID" ] && { echo "No such number."; pause; continue; }
       ask_model

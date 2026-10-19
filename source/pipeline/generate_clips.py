@@ -56,6 +56,54 @@ AUDITION_LINES = {  # one narration, one question, one dialogue with exclamation
 }
 
 # ---------------------------------------------------------------- helpers
+def audition_lines(n, m):
+    """the unit's listed lines, or five picked from the manifest: first narration, a question, an exclamation, the longest line, a reading-2 line"""
+    keys = list(m["units"].keys())
+    if n in AUDITION_LINES: return [(keys[0] if not cid.startswith("c_r") else keys[-1], cid) for cid in AUDITION_LINES[n]]
+    r1 = [c for c in m["units"][keys[0]]["clips"] if c["kind"] == "sentence" and len(c["text"]) > 8]
+    r2 = [c for c in m["units"][keys[1]]["clips"] if c["kind"] == "sentence" and len(c["text"]) > 8] if len(keys) > 1 else r1
+    pick = [(keys[0], r1[0]["id"])]
+    for cond in (lambda c: "؟" in c["text"], lambda c: "!" in c["text"]):
+        hit = next((c for c in r1 if cond(c) and (keys[0], c["id"]) not in pick), None)
+        if hit: pick.append((keys[0], hit["id"]))
+    longest = max((c for c in r1 if (keys[0], c["id"]) not in pick), key=lambda c: len(c["text"]), default=None)
+    if longest: pick.append((keys[0], longest["id"]))
+    pick.append((keys[-1], r2[-1]["id"]))
+    return pick
+
+def mode_manifest(a):
+    """write source/units/unitN/audio/clips_manifest.json (+ an empty pronunciation map and the clip tracker CSV) from the engine:
+    one row per sentence of each reading and per core-item phrase — the same inventory rule as Unit 1 (SC-121)."""
+    eng = ROOT / "source" / "pipeline" / "engine_core.js"
+    node = ("const E=require(process.argv[1]);const out={};for(const [k,u] of Object.entries(E.UNITS)){out[k]={title:u.title,"
+            "sentences:u.sentences.map(s=>({id:s.id,ar:s.ar})),items:u.items.filter(i=>/CORE_TARGET$/.test(i.status)).map(i=>({id:i.id,text:i.phrase||i.ar}))};}"
+            "process.stdout.write(JSON.stringify(out));")
+    data = json.loads(subprocess.check_output(["node", "-e", node, str(eng)], text=True))
+    k1 = f"unit-{a.unit:02d}"; keys = [k1, k1 + "p"] if (k1 + "p") in data else [k1]
+    if manifest_path(a.unit).exists() and not a.force: sys.exit(f"{manifest_path(a.unit)} exists — pass --force to regenerate (verification fields would be lost)")
+    m = {"_about": f"Unit {a.unit} clip manifest, generated from the engine. One row per sentence of each reading and per core-item phrase. "
+                   "`src` is the file the build expects under assets/audio/; `sha256` is written by the generator; `verified_by` / `verified_on` are entered by a named listener "
+                   "after hearing each clip against the printed text (SC-129). Name each reading's voice in its `voice` as `human: <speaker>` or `synthesised: <engine · voice · model>` — one voice per reading (SC-130).",
+         "units": {}}
+    total = 0
+    for k in keys:
+        u = data[k]; clips = []
+        for s in u["sentences"]:
+            clips.append({"id": "c_" + s["id"], "kind": "sentence", "ref": s["id"], "text": s["ar"], "src": f"assets/audio/{k}/{s['id']}.mp3", "sha256": "", "verified_by": "", "verified_on": ""})
+        for it in u["items"]:
+            clips.append({"id": "c_" + it["id"], "kind": "item", "ref": it["id"], "text": it["text"], "src": f"assets/audio/{k}/item_{it['id']}.mp3", "sha256": "", "verified_by": "", "verified_on": ""})
+        m["units"][k] = {"title": u["title"], "voice": "", "clips": clips, "count": len(clips)}; total += len(clips)
+    unit_dir(a.unit).mkdir(parents=True, exist_ok=True); save_json(manifest_path(a.unit), m)
+    if not pmap_path(a.unit).exists():
+        save_json(pmap_path(a.unit), {"_about": "Pronunciation lock (SC-129): printed token → what the synthesiser is sent. Whole words only; applied to the API input, never to the book.", "map": {}})
+    tracker = ROOT / "source" / "units" / f"unit{a.unit}" / f"INTALIQ1_UNIT{a.unit}_CLIP_TRACKER.csv"
+    if not tracker.exists() or a.force:
+        with open(tracker, "w", encoding="utf-8-sig", newline="") as f:
+            w = csv.writer(f); w.writerow(["#", "clip_id", "unit", "kind", "ref", "text", "file", "supplied (Y/N)", "supplied_on", "status (accepted / retake)", "retake_reason", "retake_supplied_on", "verified_by (listener full name)", "verified_on (YYYY-MM-DD)", "notes"])
+            i = 0
+            for k, u, c in all_clips(m):
+                i += 1; w.writerow([i, c["id"], k, c["kind"], c["ref"], c["text"], c["src"], "", "", "", "", "", "", "", ""])
+    print(f"Unit {a.unit}: {total} clips in {manifest_path(a.unit).relative_to(ROOT)} · tracker {tracker.relative_to(ROOT)}")
 def unit_dir(n): return ROOT / "source" / "units" / f"unit{n}" / "audio"
 def manifest_path(n): return unit_dir(n) / "clips_manifest.json"
 def pmap_path(n): return unit_dir(n) / "pronunciation_map.json"
@@ -198,8 +246,8 @@ def mode_audition(a):
     rows = []
     for vid in a.voices.split(","):
         vid = vid.strip(); name = voice_name(vid); d = out / f"{vid}__{MODEL}"; d.mkdir(exist_ok=True)
-        for cid in AUDITION_LINES[a.unit]:
-            _, _, c = find_clip(m, cid)
+        for ukey, cid in audition_lines(a.unit, m):
+            c = next(c for c in m["units"][ukey]["clips"] if c["id"] == cid)
             txt, applied = respell(c["text"], pmap)
             raw = d / f"{cid}.raw.mp3"; raw.write_bytes(tts(vid, txt))
             post_process(raw, d / f"{cid}.mp3"); raw.unlink()
@@ -354,11 +402,12 @@ def main():
     p.add_argument("--reading", type=int, choices=(1, 2), help="SC-130: voice only this reading (1 = the unit's main reading, 2 = the second); omit for both")
     p = sub.add_parser("post"); p.add_argument("--unit", type=int, default=1); p.add_argument("--from", dest="src"); p.add_argument("--voice-label")
     p = sub.add_parser("hash"); p.add_argument("--unit", type=int, default=1)
+    p = sub.add_parser("manifest"); p.add_argument("--unit", type=int, required=True); p.add_argument("--force", action="store_true")
     p = sub.add_parser("record"); p.add_argument("--unit", type=int, default=1); p.add_argument("--tracker", required=True)
     a = ap.parse_args()
     if getattr(a, "model", None): MODEL = MODELS.get(a.model, a.model)
     if getattr(a, "settings", None): SETTINGS_MODE = a.settings
-    {"voices": mode_voices, "audition": mode_audition, "generate": mode_generate, "post": mode_post, "hash": mode_hash, "record": mode_record}[a.mode](a)
+    {"voices": mode_voices, "audition": mode_audition, "generate": mode_generate, "post": mode_post, "hash": mode_hash, "record": mode_record, "manifest": mode_manifest}[a.mode](a)
 
 if __name__ == "__main__":
     main()
