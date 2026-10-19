@@ -1,4 +1,4 @@
-# Intaliq 1 — Unit 1 consolidated supply list (what is still owed from outside the Text session)
+# ⟨CLOSED — 2026-10-18: clips delivered (SC-129/130, Version 52); photographs withdrawn (SC-131); Unit 1 complete (SC-132)⟩ Intaliq 1 — Unit 1 consolidated supply list (what is still owed from outside the Text session)
 
 *Editor (Text role) · 2026-10-13 · under SC-121/SC-122. One list, nothing else to read: the 72 recordings and the 3 photographs Unit 1 needs before it can be called complete, each with its exact text or specification, the filename the build expects, how it is verified, and the task it serves. **None of it exists yet.** Synthesised speech ~~is not acceptable as a shipped clip (SC-028)~~ **is acceptable as a shipped clip once a named listener has verified it clip by clip (SC-129, 2026-10-15; the live browser voice remains a preview aid only)**; mock or generated "authentic" realia are not acceptable in the corner (SC-020); neither can be changed by the Text role. All independent source work is done: the listening families, sound-first pathways, corner tasks and slots are built and switch on by themselves when these inputs are bound.*
 

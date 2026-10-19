@@ -1,4 +1,4 @@
-# Intaliq 1 · Unit 1 — Photograph supply sheet (one batch, 3 photographs)
+# ⟨RETIRED — SC-131, 2026-10-18: the corner is learner-sourced; no photographs are owed⟩ Intaliq 1 · Unit 1 — Photograph supply sheet (one batch, 3 photographs)
 
 *For the page «عَرَبِيَّةٌ حَوْلَنَا» (the authentic-text corner). Prepared 2026-10-14. Real photographs of real objects only — no mock-ups, composites, edited signage or generated images (SC-020). Status: **none supplied — the corner stays marked not delivered.***
 

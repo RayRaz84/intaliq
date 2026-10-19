@@ -1,4 +1,4 @@
-# Intaliq 1 — Unit 1 authentic-text corner: intake (Batch 2, not yet delivered)
+# ⟨RETIRED — SC-131, 2026-10-18: the corner is learner-sourced; the course supplies no photographs⟩ Intaliq 1 — Unit 1 authentic-text corner: intake (Batch 2, not yet delivered)
 
 *Editor (Text role) · 2026-10-11 · SC-121. The corner's three recognition tasks are printed on the page and its three slots are wired; what is missing is the three real photographs. **Nothing is claimed delivered.** The release gate reports the corner as *not delivered* while any slot is empty.*
 

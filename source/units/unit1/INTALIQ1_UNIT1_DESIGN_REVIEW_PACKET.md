@@ -1,4 +1,4 @@
-# Intaliq 1 · Unit 1 — Design review packet (SC-009)
+# ⟨RETIRED — SC-131, 2026-10-18: the panel review is withdrawn as a condition; the Editor pre-check below was applied in Version 50; F-3: the owner left the title as printed⟩ Intaliq 1 · Unit 1 — Design review packet (SC-009)
 
 *Prepared 2026-10-14 by the Editor (Text role) for the review that SC-009 assigns to **the Program Owner and a panel of educators**. It is a review of the materials as designed — no learners, no simulated learners, no survey (SC-124). The Editor's pre-check below was carried out on Studio Version 50; it is **not** the SC-009 review and approves nothing.*
 
