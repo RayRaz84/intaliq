@@ -1,0 +1,495 @@
+{
+ "unit": "unit-03",
+ "style": "rich-cartoon",
+ "status": "ISSUED 2026-11-04 by the Art role after the SC-135 freeze — plan, not image authorization; portraits wait on the owner's marker confirmation",
+ "text_authority": "frozen rev 3 (SC-135), sentence ids as in source/units/unit3/audio/clips_manifest.json",
+ "style_authority": "SC-113 rich-cartoon; Art Package Spec (590×490 frames); UNIT2_RICH_STYLE_AUTHORITY.md",
+ "reuse_unchanged": [
+  "av-razan",
+  "av-razan-happy",
+  "av-razan-talk",
+  "av-razan-q",
+  "av-khadija",
+  "av-khadija-happy",
+  "obj-book",
+  "obj-pen",
+  "obj-key",
+  "obj-door",
+  "obj-house",
+  "u2-ph-01",
+  "u2-ph-02",
+  "u2-ph-03",
+  "u2-ph-04",
+  "u2-ph-05",
+  "u2-ph-06",
+  "u2-ph-08",
+  "u2-ph-16"
+ ],
+ "slots": [
+  {
+   "id": "av-yusuf",
+   "kind": "portrait",
+   "character": "يُوسُف",
+   "identity": "boy; PROPOSED marker: short black hair with one swirl at the crown; fixed green top",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-yusuf-q",
+   "kind": "portrait",
+   "character": "يُوسُف",
+   "identity": "boy; PROPOSED marker: short black hair with one swirl at the crown; fixed green top",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-yusuf-talk",
+   "kind": "portrait",
+   "character": "يُوسُف",
+   "identity": "boy; PROPOSED marker: short black hair with one swirl at the crown; fixed green top",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-yusuf-laugh",
+   "kind": "portrait",
+   "character": "يُوسُف",
+   "identity": "boy; PROPOSED marker: short black hair with one swirl at the crown; fixed green top",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-layla",
+   "kind": "portrait",
+   "character": "لَيْلَى",
+   "identity": "girl, his little sister (smaller than Yusuf); PROPOSED marker: two short high pigtails with yellow bobbles; fixed yellow dress",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-layla-talk",
+   "kind": "portrait",
+   "character": "لَيْلَى",
+   "identity": "girl, his little sister (smaller than Yusuf); PROPOSED marker: two short high pigtails with yellow bobbles; fixed yellow dress",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-umm",
+   "kind": "portrait",
+   "character": "أُمُّهُ",
+   "identity": "adult woman, tall; PROPOSED marker: long dark hair in a low side ponytail over one shoulder; fixed plum top",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-umm-talk",
+   "kind": "portrait",
+   "character": "أُمُّهُ",
+   "identity": "adult woman, tall; PROPOSED marker: long dark hair in a low side ponytail over one shoulder; fixed plum top",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-ab",
+   "kind": "portrait",
+   "character": "أَبُوهُ",
+   "identity": "adult man, tall; PROPOSED marker: short dark beard and moustache; fixed grey shirt",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-ab-q",
+   "kind": "portrait",
+   "character": "أَبُوهُ",
+   "identity": "adult man, tall; PROPOSED marker: short dark beard and moustache; fixed grey shirt",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-sami",
+   "kind": "portrait",
+   "character": "سَامِي",
+   "identity": "small boy, Khadija's little brother (clearly smaller than Razan); PROPOSED marker: round short hair with a front tuft; fixed red striped top",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-sami-want",
+   "kind": "portrait",
+   "character": "سَامِي",
+   "identity": "small boy, Khadija's little brother (clearly smaller than Razan); PROPOSED marker: round short hair with a front tuft; fixed red striped top",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-sami-happy",
+   "kind": "portrait",
+   "character": "سَامِي",
+   "identity": "small boy, Khadija's little brother (clearly smaller than Razan); PROPOSED marker: round short hair with a front tuft; fixed red striped top",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-qitt3",
+   "kind": "portrait",
+   "character": "الْقِطُّ (Unit 3)",
+   "identity": "a BIG cat, distinct from Unit 2's orange-and-white cat (owner question Q1); PROPOSED: grey tabby with white socks",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "av-qitt3-walk",
+   "kind": "portrait",
+   "character": "الْقِطُّ (Unit 3)",
+   "identity": "a BIG cat, distinct from Unit 2's orange-and-white cat (owner question Q1); PROPOSED: grey tabby with white socks",
+   "status": "new — marker awaits owner confirmation"
+  },
+  {
+   "id": "obj-kura",
+   "kind": "object",
+   "show": "one ball, a single fixed drawing (PROPOSED: red-and-white panelled ball), no text",
+   "status": "new"
+  },
+  {
+   "id": "obj-hadiya",
+   "kind": "object",
+   "show": "the gift: obj-book drawn smaller with a ribbon tied round it, book still recognisable",
+   "status": "new"
+  },
+  {
+   "id": "obj-house-big",
+   "kind": "object",
+   "show": "a visibly bigger house than obj-house, same door drawing, same roof line",
+   "status": "new"
+  },
+  {
+   "id": "u3-s1-1",
+   "kind": "frame",
+   "story": "«مَنْ عِنْدَهُ الْكُرَةُ؟»",
+   "paragraphs": "s00",
+   "event": "يُوسُف lives in a big house with his mother, father, little sister لَيْلَى and a big cat; the cat lives beside the door",
+   "show": "the big house (av-yusuf, av-umm, av-ab, av-layla all neutral, standing apart); the big cat (av-qitt3) sitting beside the door",
+   "must_not_show": "the ball, the book, the pen, the key — nobody holds anything",
+   "risks": "four people + cat in one frame: keep everyone small and separated; the cat must read as big (about a child's waist height)"
+  },
+  {
+   "id": "u3-s1-2",
+   "kind": "frame",
+   "story": "«مَنْ عِنْدَهُ الْكُرَةُ؟»",
+   "paragraphs": "s01",
+   "event": "Yusuf wants the ball and does not have it",
+   "show": "Yusuf (-q) alone, both hands open and empty",
+   "must_not_show": "the ball anywhere; Layla",
+   "risks": "the empty hands are the whole meaning"
+  },
+  {
+   "id": "u3-s1-3",
+   "kind": "frame",
+   "story": "«مَنْ عِنْدَهُ الْكُرَةُ؟»",
+   "paragraphs": "s02–s06",
+   "event": "Layla has the ball; she wants his book; his book is with their mother",
+   "show": "Yusuf (-talk) facing Layla (neutral) who holds obj-kura against her chest",
+   "must_not_show": "the book (it is elsewhere); the mother",
+   "risks": "the ball must be held by Layla, not between them"
+  },
+  {
+   "id": "u3-s1-4",
+   "kind": "frame",
+   "story": "«مَنْ عِنْدَهُ الْكُرَةُ؟»",
+   "paragraphs": "s07–s08",
+   "event": "The mother has his book; she needs her pen; the father has it",
+   "show": "Yusuf facing the mother (av-umm-talk) who holds obj-book",
+   "must_not_show": "the pen; the father; the ball",
+   "risks": "the book is the same drawing as obj-book everywhere"
+  },
+  {
+   "id": "u3-s1-5",
+   "kind": "frame",
+   "story": "«مَنْ عِنْدَهُ الْكُرَةُ؟»",
+   "paragraphs": "s09–s10",
+   "event": "At the door: the father has the pen; he needs his key and does not have it",
+   "show": "the father (av-ab-q) at the door holding obj-pen, free hand open; Yusuf beside him; the big cat sitting beside the door, neutral",
+   "must_not_show": "the key — not under, behind or near the cat; the cat looking at anything in particular",
+   "risks": "the cat is present (as in frame 1) but gives nothing away"
+  },
+  {
+   "id": "u3-s1-6",
+   "kind": "frame",
+   "story": "«مَنْ عِنْدَهُ الْكُرَةُ؟»",
+   "paragraphs": "s11",
+   "event": "The reveal: the key is on the floor beside the door — under the cat",
+   "show": "Yusuf (-q) looking down; the cat sitting; obj-key's bow and teeth visible under the cat",
+   "must_not_show": "—",
+   "risks": "the key must be legible at strip size under the cat: show bow + teeth"
+  },
+  {
+   "id": "u3-s1-7",
+   "kind": "frame",
+   "story": "«مَنْ عِنْدَهُ الْكُرَةُ؟»",
+   "paragraphs": "s12–s13",
+   "event": "The chain runs back: key to father, pen to mother, book to Layla, ball to Yusuf — he laughs",
+   "show": "Yusuf (-laugh) holding obj-kura; behind him, small: the father with obj-key, the mother with obj-pen, Layla with obj-book",
+   "must_not_show": "the cat near the ball",
+   "risks": "each of the four objects in exactly one pair of hands; nothing else in frame"
+  },
+  {
+   "id": "u3-s1-8",
+   "kind": "frame",
+   "story": "«مَنْ عِنْدَهُ الْكُرَةُ؟»",
+   "paragraphs": "s14–s15",
+   "event": "The cat looks at the ball, takes it and goes; Yusuf calls after it",
+   "show": "the big cat walking away with obj-kura (in its mouth or pushed by a paw); Yusuf (-talk) reaching after it",
+   "must_not_show": "—",
+   "risks": "the cat's knowing look is allowed only here"
+  },
+  {
+   "id": "u3-s2-1",
+   "kind": "frame",
+   "story": "«هَدِيَّةُ رَزَان»",
+   "paragraphs": "s00",
+   "event": "Razan has a gift for Khadija — a small book — and goes to her house with it",
+   "show": "av-razan-happy walking toward obj-house holding obj-hadiya",
+   "must_not_show": "Sami; Khadija; the ball",
+   "risks": "the gift must read as a small book (ribbon round obj-book, smaller)"
+  },
+  {
+   "id": "u3-s2-2",
+   "kind": "frame",
+   "story": "«هَدِيَّةُ رَزَان»",
+   "paragraphs": "s01–s03",
+   "event": "By the door, Khadija's little brother Sami sees the gift and wants it; Razan says it is for Khadija",
+   "show": "av-sami (-want) by the open door, reaching; av-razan-talk holding obj-hadiya back a little",
+   "must_not_show": "Khadija; the ball; Sami holding anything",
+   "risks": "Sami must read as clearly smaller and younger than Razan"
+  },
+  {
+   "id": "u3-s2-3",
+   "kind": "frame",
+   "story": "«هَدِيَّةُ رَزَان»",
+   "paragraphs": "s04–s05",
+   "event": "Razan looks at Sami — small, no book — and gives him the book",
+   "show": "av-razan handing obj-hadiya to av-sami",
+   "must_not_show": "Khadija; the ball",
+   "risks": "the hand-over is the beat: the book between their hands"
+  },
+  {
+   "id": "u3-s2-4",
+   "kind": "frame",
+   "story": "«هَدِيَّةُ رَزَان»",
+   "paragraphs": "s06–s07",
+   "event": "Sami laughs, takes the book inside; Razan goes in too; Khadija is there; the book is with Sami",
+   "show": "inside: av-sami-happy holding the book; av-khadija (neutral); av-razan entering",
+   "must_not_show": "the ball",
+   "risks": "first frame with Khadija"
+  },
+  {
+   "id": "u3-s2-5",
+   "kind": "frame",
+   "story": "«هَدِيَّةُ رَزَان»",
+   "paragraphs": "s08–s09",
+   "event": "Razan explains, unsure; Khadija laughs: this is my little brother — I have a book, he doesn't",
+   "show": "av-razan-q facing av-khadija-happy; Sami small in the background with the book",
+   "must_not_show": "the ball",
+   "risks": "Razan's -q face is the only uncertain face in the strip"
+  },
+  {
+   "id": "u3-s2-6",
+   "kind": "frame",
+   "story": "«هَدِيَّةُ رَزَان»",
+   "paragraphs": "s10–s11",
+   "event": "Sami comes back with a ball and gives it to Razan; she goes home with it",
+   "show": "av-sami-happy holding obj-kura out to av-razan-happy; Khadija behind",
+   "must_not_show": "—",
+   "risks": "the ball is obj-kura, the same drawing as Story 1's"
+  },
+  {
+   "id": "u3-ph-01",
+   "kind": "phrase",
+   "phrase": "هٰذَا أَبِي",
+   "show": "the father alone (av-ab), neutral",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-02",
+   "kind": "phrase",
+   "phrase": "هٰذِهِ أُمِّي",
+   "show": "the mother alone (av-umm), neutral",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-03",
+   "kind": "phrase",
+   "phrase": "هٰذَا أَخِي الصَّغِيرُ",
+   "show": "Sami alone (av-sami), neutral",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-04",
+   "kind": "phrase",
+   "phrase": "هٰذِهِ أُخْتِي",
+   "show": "Layla alone (av-layla), neutral",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-05",
+   "kind": "phrase",
+   "phrase": "عِنْدِي كُرَةٌ",
+   "show": "a child's hands holding obj-kura, no face (first person is the reader)",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-06",
+   "kind": "phrase",
+   "phrase": "لَيْسَ عِنْدِي كِتَابٌ",
+   "show": "a child's two empty open hands; no book in frame",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-07",
+   "kind": "phrase",
+   "phrase": "عِنْدَهُ قَلَمٌ",
+   "show": "the father holding obj-pen",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-08",
+   "kind": "phrase",
+   "phrase": "عِنْدَهَا كِتَابٌ",
+   "show": "the mother holding obj-book",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-09",
+   "kind": "phrase",
+   "phrase": "أُرِيدُ الْكُرَةَ",
+   "show": "two hands reaching toward obj-kura, no face",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-10",
+   "kind": "phrase",
+   "phrase": "مَاذَا تُرِيدُ؟",
+   "show": "Layla (-talk), palms up, asking",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-11",
+   "kind": "phrase",
+   "phrase": "أَحْتَاجُ إِلَى قَلَمِي",
+   "show": "an open hand held out toward obj-pen just out of reach, no face",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-12",
+   "kind": "phrase",
+   "phrase": "يُعْطِيهَا الْكِتَابَ",
+   "show": "Yusuf handing obj-book to Layla",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-13",
+   "kind": "phrase",
+   "phrase": "يَأْخُذُ الْمِفْتَاحَ",
+   "show": "a hand picking obj-key up from the floor line — no cat, no door",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-14",
+   "kind": "phrase",
+   "phrase": "يَعِيشُ فِي بَيْتٍ كَبِيرٍ",
+   "show": "obj-house-big alone",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-15",
+   "kind": "phrase",
+   "phrase": "مَعِي",
+   "show": "a child's hands holding obj-kura close to the chest, no face",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-16",
+   "kind": "phrase",
+   "phrase": "هٰذِهِ هَدِيَّةٌ",
+   "show": "obj-hadiya alone",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-17",
+   "kind": "phrase",
+   "phrase": "بِجَانِبِ الْبَابِ",
+   "show": "obj-kura on the floor beside obj-door — no cat, no key",
+   "must_not_show": "anything the phrase does not name"
+  },
+  {
+   "id": "u3-ph-18",
+   "kind": "phrase",
+   "phrase": "الْكُرَةُ لَيْسَتْ مَعِي",
+   "show": "Yusuf (-q) alone, empty hands, no ball in frame",
+   "must_not_show": "anything the phrase does not name"
+  }
+ ],
+ "engine_assignments": {
+  "unit-03": {
+   "items": {
+    "umm": "av-umm",
+    "ab": "av-ab",
+    "ukht": "av-layla",
+    "inda": "u3-ph-07",
+    "laysa": "u3-ph-06",
+    "maa": "u3-ph-15",
+    "aata": "u3-ph-12",
+    "akhadha": "u3-ph-13",
+    "ihtaja": "u3-ph-11",
+    "aasha": "u3-ph-14",
+    "arada": "u3-ph-09",
+    "walad": "av-yusuf",
+    "kitab": "obj-book",
+    "miftah": "obj-key",
+    "qitt": "av-qitt3",
+    "kabir": "obj-house-big",
+    "kura": "obj-kura",
+    "bijanib": "u3-ph-17",
+    "madha": "u3-ph-10",
+    "bayt": "obj-house",
+    "ayna": "u2-ph-01",
+    "fi": "u2-ph-02",
+    "ala": "u2-ph-03",
+    "tahta": "u2-ph-04",
+    "dhahab": "u2-ph-06",
+    "rajaa": "u2-ph-08",
+    "ard": "u2-ph-16",
+    "saghir": "av-layla",
+    "yadhak": "av-yusuf-laugh"
+   },
+   "cast": {
+    "yusuf": "av-yusuf",
+    "layla": "av-layla",
+    "umm": "av-umm",
+    "ab": "av-ab",
+    "qitt": "av-qitt3"
+   },
+   "sentences": "s00→u3-s1-1 · s01→2 · s02–s06→3 · s07–s08→4 · s09–s10→5 · s11→6 · s12–s13→7 · s14–s15→8"
+  },
+  "unit-03p": {
+   "items": {
+    "akh": "u3-ph-03",
+    "inda": "u3-ph-07",
+    "laysa": "u3-ph-06",
+    "maa": "u3-ph-15",
+    "aata": "u3-ph-12",
+    "akhadha": "u3-ph-13",
+    "kitab": "obj-book",
+    "saghir": "av-sami",
+    "kura": "obj-kura",
+    "hadiya": "obj-hadiya",
+    "bijanib": "u3-ph-17",
+    "huna": "u2-ph-05",
+    "dhahab": "u2-ph-06",
+    "rajaa": "u2-ph-08",
+    "walad": "av-sami",
+    "yadhak": "av-sami-happy"
+   },
+   "cast": {
+    "razan": "av-razan",
+    "khadija": "av-khadija",
+    "sami": "av-sami"
+   },
+   "sentences": "s00→u3-s2-1 · s01–s03→2 · s04–s05→3 · s06–s07→4 · s08–s09→5 · s10–s11→6"
+  },
+  "notebook": "N1 strip pages take u3-s1-1…8 and u3-s2-1…6 byte-identical (SC-100); p.10 retrieval keeps its four bound Unit 2 frames",
+  "text_only": "function words with no faithful single picture (ism, naam, anta, ana, man, ya, hunaka, hadha, li, aydan, walakin, yanzur, aasha/arada in 03p) stay picture-free, as in Units 1–2"
+ },
+ "owner_questions": [
+  "Q1 Is Unit 3's big cat a new cat (proposed) or Unit 2's orange-and-white cat? R-1 forbids carrying plot history, and Unit 2's cat lives at Karim's door.",
+  "Q2 Confirm or replace the five proposed people markers (and whether any SC-111 Unit 3 drawings should be transcribed instead).",
+  "Q3 Version A/B for Unit 3: the Studio line ('A keeps the cast and moves the key; B changes the setting and the object') was carried from Unit 2 and has no Unit 3 strips — draw Version A/B for Unit 3, or drop the line?"
+ ]
+}
