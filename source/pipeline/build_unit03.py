@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Unit 3 engine data (SC-109) — built from the revision-1 texts; no illustrations (img:None) by standing instruction.
+# Unit 3 engine data (SC-109) — built from the frozen texts (Story 1 revision 4, SC-138); no illustrations (img:None) by standing instruction.
 import re, json
 s1=open("u3r1_s1.txt",encoding="utf8").read().strip()
 s2=open("u3r1_s2.txt",encoding="utf8").read().strip()
@@ -21,7 +21,7 @@ ITEMS = {
  "laysa":  ("لَيْسَ","N","lemma","is not / has no","polarity",None,["لَيْسَ","لَيْسَتْ","وَلَيْسَ"],{"chunk_ref":"CH-05"}),
  "li":     ("لِـ","N","lemma","for (you / me)","possession",None,["لَكَ","لَكِ","لِي","لِخَدِيجَة","لِسَامِي","لِكَرِيم","لِلْقِطِّ"],{}),
  # target verbs (verb track)
- "aata":   ("أَعْطَى","N","lemma","gives / gave","action",None,["يُعْطِيهِ","وَيُعْطِيهِ","يُعْطِيهَا","وَيُعْطِيهَا","تُعْطِيهِ","تُعْطِي","أَعْطَتْ","أَعْطَاهَا"],{}),
+ "aata":   ("أَعْطَى","N","lemma","gives / gave","action",None,["يُعْطِيهِ","وَيُعْطِيهِ","يُعْطِيهَا","وَيُعْطِيهَا","تُعْطِيهِ","تُعْطِي","يُعْطِي","تُعْطِينِي","أَعْطَتْ","أَعْطَاهَا"],{}),
  "akhadha":("أَخَذَ","N","lemma","takes / took","action",None,["يَأْخُذُ","وَيَأْخُذُ","أَخَذَ","وَأَخَذَ"],{}),
  "ihtaja": ("اِحْتَاجَ","N","lemma","needs","action",None,["أَحْتَاجُ","تَحْتَاجُ"],{"chunk_ref":"CH-23"}),
  "aasha":  ("عَاشَ","N","lemma","lives","action",None,["يَعِيشُ","تَعِيشُ"],{}),
@@ -33,7 +33,7 @@ ITEMS = {
  "tahta":  ("تَحْتَ","R","lemma","under","place",None,["تَحْتَ"],{}),
  "huna":   ("هُنَا","R","lemma","here","place",None,["هُنَا"],{}),
  "hunaka": ("هُنَاكَ","R","lemma","there is / there","existence",None,["هُنَاكَ"],{}),
- "dhahab": ("ذَهَبَ","R","lemma","goes / went","action",None,["يَذْهَبُ","وَيَذْهَبُ","ذَهَبَتْ"],{"chunk_ref":"CH-18"}),
+ "dhahab": ("ذَهَبَ","R","lemma","goes / went","action",None,["يَذْهَبُ","وَيَذْهَبُ","تَذْهَبُ","ذَهَبَتْ"],{"chunk_ref":"CH-18"}),
  "ila":    ("إِلَى","R","lemma","to","place",None,["إِلَى"],{}),
  "rajaa":  ("رَجَعَ","R","lemma","comes back / came back","action",None,["يَرْجِعُ","رَجَعَ","وَرَجَعَ","رَجَعَتْ","وَرَجَعَتْ"],{}),
  "walad":  ("وَلَد","R","lemma","a boy","person",None,["وَلَدٌ"],{}),
@@ -64,6 +64,7 @@ ITEMS = {
  "bijanib":("بِجَانِبِ","S","lemma","beside","place",None,["بِجَانِبِ"],{}),
  "yanzur": ("نَظَرَ","S","lemma","looks / looked","action",None,["يَنْظُرُ","نَظَرَ","وَنَظَرَتْ"],{}),
  "yadhak": ("ضَحِكَ","S","lemma","laughs / laughed","action",None,["يَضْحَكُ","ضَحِكَ","ضَحِكَتْ"],{}),
+ "yalab":  ("لَعِبَ","S","lemma","plays","action",None,["يَلْعَبُ"],{}),
  "aydan":  ("أَيْضًا","S","lemma","too","addition",None,["أَيْضًا"],{}),
  "madha":  ("مَاذَا","S","lemma","what?","question",None,["مَاذَا"],{"chunk_ref":"CH-22"}),
  "walakin":("وَلٰكِنْ","G","lemma","but","connector",None,["وَلٰكِنْ"],{}),
@@ -83,7 +84,7 @@ PHRASES={
  "ihtaja":[("أَحْتَاجُ إِلَى قَلَمِي","أَحْتَاجُ")],
  "aasha":[("يَعِيشُ فِي بَيْتٍ كَبِيرٍ","يَعِيشُ")],
  "arada":[("أُرِيدُ الْكُرَةَ","أُرِيدُ")],
- "madha":[("مَاذَا تُرِيدُ؟","مَاذَا")],
+ "madha":[("مَاذَا تُعْطِينِي؟","مَاذَا")],
  "kura":[("عِنْدِي كُرَةٌ","كُرَةٌ"),("أُرِيدُ الْكُرَةَ","الْكُرَةَ")],
  "hadiya":[("هٰذِهِ هَدِيَّةٌ","هَدِيَّةٌ")],
  "bijanib":[("بِجَانِبِ الْبَابِ","بِجَانِبِ")],
@@ -117,40 +118,40 @@ def build(unit_id,title,text,castlist,stages,extras):
 
 cast1=[{"id":"yusuf","ar":"يُوسُف","img":None},{"id":"layla","ar":"لَيْلَى","img":None},{"id":"umm","ar":"أُمُّهُ","img":None},{"id":"ab","ar":"أَبُوهُ","img":None},{"id":"qitt","ar":"الْقِطُّ","img":None}]
 cast2=[{"id":"razan","ar":"رَزَان","img":"av-razan"},{"id":"khadija","ar":"خَدِيجَة","img":None},{"id":"sami","ar":"سَامِي","img":None}]
-st1=[0,0, 1,1,1,1,1, 1,1, 2,2, 2, 3,3,3,3]
+st1=[0,0, 1,1,1, 1,1,1, 2,2,2, 2, 3,3, 3,3,3,3]
 st2=[0,0, 1,1,1, 2,2, 2,2,2, 3,3]
 ex1={"reading_id":"main","role":"main",
  "contrasts":[
   {"id":"c1","stage":0,"img":None,"a":"يَعِيشُ الْقِطُّ بِجَانِبِ الْبَابِ","b":"يَعِيشُ الْقِطُّ فِي الْحَقِيبَةِ","correct":"a","support":"s00","dim":"place"},
   {"id":"c2","stage":1,"img":None,"a":"الْكُرَةُ عِنْدَ لَيْلَى","b":"الْكُرَةُ عِنْدَ يُوسُف","correct":"a","support":"s03","dim":"possession"},
-  {"id":"c3","stage":1,"img":None,"a":"أُمِّي عِنْدَهَا كِتَابِي","b":"أُمِّي عِنْدَهَا قَلَمِي","correct":"a","support":"s06","dim":"possession"},
+  {"id":"c3","stage":1,"img":None,"a":"أُمِّي عِنْدَهَا كِتَابِي","b":"أُمِّي عِنْدَهَا قَلَمِي","correct":"a","support":"s04","dim":"possession"},
   {"id":"c4","stage":2,"img":None,"a":"الْمِفْتَاحُ تَحْتَ الْقِطِّ","b":"الْمِفْتَاحُ تَحْتَ الْكِتَابِ","correct":"a","support":"s11","dim":"place"},
-  {"id":"c5","stage":3,"img":None,"a":"يَأْخُذُ الْقِطُّ الْكُرَةَ","b":"يَأْخُذُ الْقِطُّ الْمِفْتَاحَ","correct":"a","support":"s14","dim":"object"}],
+  {"id":"c5","stage":3,"img":None,"a":"الْكُرَةُ عِنْدَ الْقِطِّ","b":"الْكُرَةُ عِنْدَ لَيْلَى","correct":"a","support":"s17","dim":"possession"}],
  "facts":[
   {"id":"f1","stage":0,"ar":"يُوسُف وَلَدٌ.","truth":True,"support":"s00","dim":"person"},
   {"id":"f2","stage":0,"ar":"لَيْلَى أُمُّ يُوسُف.","truth":False,"support":"s00","dim":"person"},
   {"id":"f3","stage":1,"ar":"الْكُرَةُ عِنْدَ لَيْلَى.","truth":True,"support":"s03","dim":"possession"},
-  {"id":"f4","stage":1,"ar":"الْكِتَابُ عِنْدَ يُوسُف.","truth":False,"support":"s06","dim":"possession"},
+  {"id":"f4","stage":1,"ar":"الْكِتَابُ عِنْدَ يُوسُف.","truth":False,"support":"s04","dim":"possession"},
   {"id":"f5","stage":2,"ar":"الْمِفْتَاحُ تَحْتَ الْقِطِّ.","truth":True,"support":"s11","dim":"place"},
-  {"id":"f6","stage":3,"ar":"يَأْخُذُ الْقِطُّ الْكُرَةَ.","truth":True,"support":"s14","dim":"object"}],
+  {"id":"f6","stage":3,"ar":"يُعْطِي يُوسُف الْقِطَّ الْكُرَةَ.","truth":True,"support":"s15","dim":"possession"}],
  "whosays":[
-  {"id":"w1","stage":1,"quote":"«نَعَمْ، الْكُرَةُ عِنْدِي. وَأَنْتَ، مَاذَا تُرِيدُ؟»","speaker":"layla","support":"s03"},
-  {"id":"w2","stage":1,"quote":"«نَعَمْ، كِتَابُكَ عِنْدِي. وَأَنَا أَحْتَاجُ إِلَى قَلَمِي.»","speaker":"umm","support":"s08"},
-  {"id":"w3","stage":2,"quote":"«نَعَمْ، الْقَلَمُ مَعِي. وَأَنَا أَحْتَاجُ إِلَى مِفْتَاحِي.»","speaker":"ab","support":"s10"},
-  {"id":"w4","stage":3,"quote":"«يَا قِطُّ! أُرِيدُ الْكُرَةَ!»","speaker":"yusuf","support":"s15"}],
+  {"id":"w1","stage":1,"quote":"«نَعَمْ، الْكُرَةُ عِنْدِي. وَأَنْتَ، مَاذَا تُعْطِينِي؟ أَنَا أُرِيدُ كِتَابَكَ.»","speaker":"layla","support":"s03"},
+  {"id":"w2","stage":1,"quote":"«نَعَمْ، كِتَابُكَ عِنْدِي. وَأَنَا أَحْتَاجُ إِلَى قَلَمِي.»","speaker":"umm","support":"s06"},
+  {"id":"w3","stage":2,"quote":"«نَعَمْ، الْقَلَمُ مَعِي. وَأَنَا أَحْتَاجُ إِلَى مِفْتَاحِي.»","speaker":"ab","support":"s09"},
+  {"id":"w4","stage":3,"quote":"«الْكُرَةُ لَيْسَتْ عِنْدِي... الْكُرَةُ عِنْدَ الْقِطِّ!»","speaker":"yusuf","support":"s17"}],
  "events":[
   {"id":"e1","order":1,"stage":1,"img":None,"sentence":"s02"},
-  {"id":"e2","order":2,"stage":1,"img":None,"sentence":"s07"},
+  {"id":"e2","order":2,"stage":1,"img":None,"sentence":"s05"},
   {"id":"e3","order":3,"stage":2,"img":None,"sentence":"s11"},
-  {"id":"e4","order":4,"stage":3,"img":None,"sentence":"s14"}],
+  {"id":"e4","order":4,"stage":3,"img":None,"sentence":"s15"}],
  "findit":[
   {"id":"fi1","stage":1,"img":None,"prompt_gloss":"Which line says where the cat lives?","answer":"s00","pool":["s00","s01","s02","s03"]},
-  {"id":"fi2","stage":1,"img":None,"prompt_gloss":"Which line says who has the book?","answer":"s06","pool":["s04","s05","s06","s07"]},
+  {"id":"fi2","stage":1,"img":None,"prompt_gloss":"Which line says who has the book?","answer":"s04","pool":["s04","s05","s06","s07"]},
   {"id":"fi3","stage":2,"img":None,"prompt_gloss":"Which line says where the key is?","answer":"s11","pool":["s08","s09","s10","s11"]}],
  "retrieval":[
   {"id":"r1","stage":1,"sentence":"s03","blank":"عِنْدِي","choices":["عِنْدِي","عِنْدَكَ","عِنْدَهُ"],"img":None,"item":"inda"},
-  {"id":"r2","stage":1,"sentence":"s06","blank":"أُمِّي","choices":["أُمِّي","أَبِي","أُخْتِي"],"img":None,"item":"umm"},
-  {"id":"r3","stage":2,"sentence":"s10","blank":"مَعِي","choices":["مَعِي","مَعَهَا","مَعَهُ"],"img":None,"item":"maa"},
+  {"id":"r2","stage":1,"sentence":"s04","blank":"أُمِّي","choices":["أُمِّي","أَبِي","أُخْتِي"],"img":None,"item":"umm"},
+  {"id":"r3","stage":2,"sentence":"s09","blank":"مَعِي","choices":["مَعِي","مَعَهَا","مَعَهُ"],"img":None,"item":"maa"},
   {"id":"r4","stage":3,"sentence":"s12","blank":"يَأْخُذُ","choices":["يَأْخُذُ","يُعْطِيهَا","يَرْجِعُ"],"img":None,"item":"akhadha"}]}
 ex2={"reading_id":"second","role":"second",
  "contrasts":[

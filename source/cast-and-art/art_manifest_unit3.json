@@ -1,8 +1,8 @@
 {
  "unit": "unit-03",
  "style": "rich-cartoon",
- "status": "ISSUED 2026-11-04 by the Art role after the SC-135 freeze — plan, not image authorization; portraits wait on the owner's marker confirmation",
- "text_authority": "frozen rev 3 (SC-135), sentence ids as in source/units/unit3/audio/clips_manifest.json",
+ "status": "ISSUED 2026-11-04 by the Art role after the SC-135 freeze — plan, not image authorization; portraits wait on the owner's marker confirmation · amended 2026-11-08 for Story 1 revision 4 (frames 3, 4, 5, 8; phrase 10)",
+ "text_authority": "frozen: Story 1 revision 4 (SC-138), Story 2 revision 3 (SC-135); sentence ids as in source/units/unit3/audio/clips_manifest.json",
  "style_authority": "SC-113 rich-cartoon; Art Package Spec (590×490 frames); UNIT2_RICH_STYLE_AUTHORITY.md",
  "reuse_unchanged": [
   "av-razan",
@@ -173,9 +173,9 @@
    "id": "u3-s1-3",
    "kind": "frame",
    "story": "«مَنْ عِنْدَهُ الْكُرَةُ؟»",
-   "paragraphs": "s02–s06",
-   "event": "Layla has the ball; she wants his book; his book is with their mother",
-   "show": "Yusuf (-talk) facing Layla (neutral) who holds obj-kura against her chest",
+   "paragraphs": "s02–s04",
+   "event": "Layla has the ball and asks what he will give her — she wants his book; his book is with their mother",
+   "show": "Yusuf (-talk) facing Layla (-talk) who holds obj-kura against her chest, her free palm held out",
    "must_not_show": "the book (it is elsewhere); the mother",
    "risks": "the ball must be held by Layla, not between them"
   },
@@ -183,21 +183,21 @@
    "id": "u3-s1-4",
    "kind": "frame",
    "story": "«مَنْ عِنْدَهُ الْكُرَةُ؟»",
-   "paragraphs": "s07–s08",
-   "event": "The mother has his book; she needs her pen; the father has it",
-   "show": "Yusuf facing the mother (av-umm-talk) who holds obj-book",
+   "paragraphs": "s05–s07",
+   "event": "The mother has his book; she needs her pen to write; the father has it; Yusuf: «the pen too?!» and she laughs",
+   "show": "the mother (av-umm-talk, laughing) at a table with a blank sheet of paper and NO pen, holding obj-book out; Yusuf facing her",
    "must_not_show": "the pen; the father; the ball",
-   "risks": "the book is the same drawing as obj-book everywhere"
+   "risks": "the empty paper is the mother's reason for the pen — it must read at strip size"
   },
   {
    "id": "u3-s1-5",
    "kind": "frame",
    "story": "«مَنْ عِنْدَهُ الْكُرَةُ؟»",
-   "paragraphs": "s09–s10",
-   "event": "At the door: the father has the pen; he needs his key and does not have it",
-   "show": "the father (av-ab-q) at the door holding obj-pen, free hand open; Yusuf beside him; the big cat sitting beside the door, neutral",
+   "paragraphs": "s08–s10",
+   "event": "At the door: the father, ready to go out, has the pen and needs his key; Yusuf sums up everyone's wants and the father laughs",
+   "show": "the father (av-ab, laughing) dressed to go out (jacket on) at the door holding obj-pen, free hand open; Yusuf beside him; the big cat sitting beside the door, neutral",
    "must_not_show": "the key — not under, behind or near the cat; the cat looking at anything in particular",
-   "risks": "the cat is present (as in frame 1) but gives nothing away"
+   "risks": "the jacket and the door are the father's reason for the key; the cat gives nothing away"
   },
   {
    "id": "u3-s1-6",
@@ -223,11 +223,11 @@
    "id": "u3-s1-8",
    "kind": "frame",
    "story": "«مَنْ عِنْدَهُ الْكُرَةُ؟»",
-   "paragraphs": "s14–s15",
-   "event": "The cat looks at the ball, takes it and goes; Yusuf calls after it",
-   "show": "the big cat walking away with obj-kura (in its mouth or pushed by a paw); Yusuf (-talk) reaching after it",
-   "must_not_show": "—",
-   "risks": "the cat's knowing look is allowed only here"
+   "paragraphs": "s14–s17",
+   "event": "The cat looks at the ball; Yusuf gives it the ball and they play; the ball ends under the cat; Layla asks who has it",
+   "show": "Yusuf (-laugh) and the big cat playing by the door, obj-kura under the cat's paws; Layla (-talk) in the doorway",
+   "must_not_show": "the cat running off with the ball (revision 3's ending)",
+   "risks": "the ball under the cat must echo frame 6's key under the cat"
   },
   {
    "id": "u3-s2-1",
@@ -355,8 +355,8 @@
   {
    "id": "u3-ph-10",
    "kind": "phrase",
-   "phrase": "مَاذَا تُرِيدُ؟",
-   "show": "Layla (-talk), palms up, asking",
+   "phrase": "مَاذَا تُعْطِينِي؟",
+   "show": "Layla (-talk) holding obj-kura, her other palm held out, asking",
    "must_not_show": "anything the phrase does not name"
   },
   {
@@ -456,7 +456,7 @@
     "ab": "av-ab",
     "qitt": "av-qitt3"
    },
-   "sentences": "s00→u3-s1-1 · s01→2 · s02–s06→3 · s07–s08→4 · s09–s10→5 · s11→6 · s12–s13→7 · s14–s15→8"
+   "sentences": "s00→u3-s1-1 · s01→2 · s02–s04→3 · s05–s07→4 · s08–s10→5 · s11→6 · s12–s13→7 · s14–s17→8"
   },
   "unit-03p": {
    "items": {

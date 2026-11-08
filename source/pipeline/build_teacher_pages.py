@@ -116,7 +116,7 @@ UNITS = [
   c3_example="«أَيْنَ مِفْتَاحُكَ؟» · «مَنْ عِنْدَ الْبَابِ؟»",
   notes=[]),
  dict(
-  n=3, label="Unit 3", ar="الْوَحْدَةُ ٣", status="Frozen (revision 3, SC-135) · Gate B closed · illustrations and clips owed",
+  n=3, label="Unit 3", ar="الْوَحْدَةُ ٣", status="Frozen (Story 1 revision 4, SC-138; Story 2 revision 3, SC-135) · Gate B closed · illustrations and clips owed",
   r1=dict(key="unit-03", title="مَنْ عِنْدَهُ الْكُرَةُ؟", tense="present", frames=8),
   r2=dict(key="unit-03p", title="هَدِيَّةُ رَزَان", tense="past", frames=6),
   pictures="Not yet illustrated — strips print as empty numbered frames until Gate B freezes the texts (SC-113). No verified audio: there are no listening tasks.",

@@ -1,6 +1,6 @@
-# Unit 3 Story 1 — revision 4 DRAFT (not adopted)
+# Unit 3 Story 1 — revision 4 (ADOPTED, SC-138)
 
-*2026-11-08, Intaliq Text, from the owner's draft «يُوسُفُ وَالْكُرَةُ» and the NQS evaluation of the same day. **Not adopted: revision 3 stays frozen (SC-135) and live until the owner rules.** Engine, clips and art are untouched.*
+*2026-11-08, Intaliq Text, from the owner's draft «يُوسُفُ وَالْكُرَةُ» and the NQS evaluation of the same day. **Adopted 2026-11-08 (SC-138) with one change asked by the owner: Layla's line reads «نَعَمْ، الْكُرَةُ عِنْدِي. وَأَنْتَ، مَاذَا تُعْطِينِي؟ أَنَا أُرِيدُ كِتَابَكَ.» (keeps مَاذَا), and «يَرْجِعُ إِلَى أُخْتِهِ لَيْلَى» as in revision 3. The built text (225 words) is `source/units/unit3/canon/u3r1_s1.txt`.** The text below is the draft as first shown.*
 
 ## Text (226 words)
 

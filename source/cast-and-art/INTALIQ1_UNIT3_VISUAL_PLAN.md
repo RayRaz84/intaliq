@@ -1,6 +1,6 @@
 # Intaliq 1 — Unit 3 Visual Plan and Slot List
 
-*Issued 2026-11-04 by the Art role, after the SC-135 freeze (texts rev 3). **A plan, not an illustration — plan approval is not image authorization.** Machine-readable twin: `source/cast-and-art/art_manifest_unit3.json` (the producer reads that file; where the two differ, the JSON governs). Style: SC-113 rich-cartoon, Art Package Spec sizes (frames 590 × 490). Sentence ids are the engine's (`s00`…), as in the Unit 3 clip manifest.*
+*Issued 2026-11-04 by the Art role, after the SC-135 freeze; **amended 2026-11-08 for Story 1 revision 4 (SC-138)** — frames 3, 4, 5 and 8 and phrase 10. **A plan, not an illustration — plan approval is not image authorization.** Machine-readable twin: `source/cast-and-art/art_manifest_unit3.json` (the producer reads that file; where the two differ, the JSON governs). Style: SC-113 rich-cartoon, Art Package Spec sizes (frames 590 × 490). Sentence ids are the engine's (`s00`…), as in the Unit 3 clip manifest.*
 
 ## 0 · Three owner questions before portraits are drawn
 
@@ -12,7 +12,7 @@ Frames and phrase pictures can be planned now; nothing is generated until Q1–Q
 
 ## 1 · Spoiler rules
 
-- **Story 1 «مَنْ عِنْدَهُ الْكُرَةُ؟»:** the key is never visible before frame 6 — not under, near or behind the cat. The cat sits beside the door in frames 1 and 5 looking at nothing in particular; its interest in the ball shows only in frame 8. Frame 1 shows nobody holding anything.
+- **Story 1 «مَنْ عِنْدَهُ الْكُرَةُ؟»:** the key is never visible before frame 6 — not under, near or behind the cat. The cat sits beside the door in frames 1 and 5 looking at nothing in particular; its interest in the ball shows only in frame 8, where Yusuf shares the ball and it ends up under the cat. Frame 1 shows nobody holding anything.
 - **Story 2 «هَدِيَّةُ رَزَان»:** the ball does not exist in any frame before 6; خَدِيجَة does not appear before frame 4.
 - **Phrase page** (read before the strip): phrase 13 takes the key from a bare floor — no cat, no door; phrase 17 puts the *ball* beside the door, not the cat or the key.
 
@@ -52,12 +52,12 @@ Collision check against the Cast Bible reservation table: none of the proposed m
 |---|---|---|---|---|---|
 | `u3-s1-1` | s00 | يُوسُف lives in a big house with his mother, father, little sister لَيْلَى and a big cat; the cat lives beside the door | the big house (av-yusuf, av-umm, av-ab, av-layla all neutral, standing apart); the big cat (av-qitt3) sitting beside the door | the ball, the book, the pen, the key — nobody holds anything | four people + cat in one frame: keep everyone small and separated; the cat must read as big (about a child's waist height) |
 | `u3-s1-2` | s01 | Yusuf wants the ball and does not have it | Yusuf (-q) alone, both hands open and empty | the ball anywhere; Layla | the empty hands are the whole meaning |
-| `u3-s1-3` | s02–s06 | Layla has the ball; she wants his book; his book is with their mother | Yusuf (-talk) facing Layla (neutral) who holds obj-kura against her chest | the book (it is elsewhere); the mother | the ball must be held by Layla, not between them |
-| `u3-s1-4` | s07–s08 | The mother has his book; she needs her pen; the father has it | Yusuf facing the mother (av-umm-talk) who holds obj-book | the pen; the father; the ball | the book is the same drawing as obj-book everywhere |
-| `u3-s1-5` | s09–s10 | At the door: the father has the pen; he needs his key and does not have it | the father (av-ab-q) at the door holding obj-pen, free hand open; Yusuf beside him; the big cat sitting beside the door, neutral | the key — not under, behind or near the cat; the cat looking at anything in particular | the cat is present (as in frame 1) but gives nothing away |
+| `u3-s1-3` | s02–s04 | Layla has the ball and asks what he will give her — she wants his book; his book is with their mother | Yusuf (-talk) facing Layla (-talk) who holds obj-kura against her chest, her free palm held out | the book (it is elsewhere); the mother | the ball must be held by Layla, not between them |
+| `u3-s1-4` | s05–s07 | The mother has his book; she needs her pen to write; the father has it; Yusuf: «the pen too?!» and she laughs | the mother (av-umm-talk, laughing) at a table with a blank sheet of paper and NO pen, holding obj-book out; Yusuf facing her | the pen; the father; the ball | the empty paper is the mother's reason for the pen — it must read at strip size |
+| `u3-s1-5` | s08–s10 | At the door: the father, ready to go out, has the pen and needs his key; Yusuf sums up everyone's wants and the father laughs | the father (av-ab, laughing) dressed to go out (jacket on) at the door holding obj-pen, free hand open; Yusuf beside him; the big cat sitting beside the door, neutral | the key — not under, behind or near the cat; the cat looking at anything in particular | the jacket and the door are the father's reason for the key; the cat gives nothing away |
 | `u3-s1-6` | s11 | The reveal: the key is on the floor beside the door — under the cat | Yusuf (-q) looking down; the cat sitting; obj-key's bow and teeth visible under the cat | — | the key must be legible at strip size under the cat: show bow + teeth |
 | `u3-s1-7` | s12–s13 | The chain runs back: key to father, pen to mother, book to Layla, ball to Yusuf — he laughs | Yusuf (-laugh) holding obj-kura; behind him, small: the father with obj-key, the mother with obj-pen, Layla with obj-book | the cat near the ball | each of the four objects in exactly one pair of hands; nothing else in frame |
-| `u3-s1-8` | s14–s15 | The cat looks at the ball, takes it and goes; Yusuf calls after it | the big cat walking away with obj-kura (in its mouth or pushed by a paw); Yusuf (-talk) reaching after it | — | the cat's knowing look is allowed only here |
+| `u3-s1-8` | s14–s17 | The cat looks at the ball; Yusuf gives it the ball and they play; the ball ends under the cat; Layla asks who has it | Yusuf (-laugh) and the big cat playing by the door, obj-kura under the cat's paws; Layla (-talk) in the doorway | the cat running off with the ball (revision 3's ending) | the ball under the cat must echo frame 6's key under the cat |
 
 ## 4 · Story 2 — «هَدِيَّةُ رَزَان» — six frames
 
@@ -83,7 +83,7 @@ Collision check against the Cast Bible reservation table: none of the proposed m
 | `u3-ph-07` | عِنْدَهُ قَلَمٌ | the father holding obj-pen |
 | `u3-ph-08` | عِنْدَهَا كِتَابٌ | the mother holding obj-book |
 | `u3-ph-09` | أُرِيدُ الْكُرَةَ | two hands reaching toward obj-kura, no face |
-| `u3-ph-10` | مَاذَا تُرِيدُ؟ | Layla (-talk), palms up, asking |
+| `u3-ph-10` | مَاذَا تُعْطِينِي؟ | Layla (-talk) holding obj-kura, her other palm held out, asking |
 | `u3-ph-11` | أَحْتَاجُ إِلَى قَلَمِي | an open hand held out toward obj-pen just out of reach, no face |
 | `u3-ph-12` | يُعْطِيهَا الْكِتَابَ | Yusuf handing obj-book to Layla |
 | `u3-ph-13` | يَأْخُذُ الْمِفْتَاحَ | a hand picking obj-key up from the floor line — no cat, no door |
@@ -96,7 +96,7 @@ Collision check against the Cast Bible reservation table: none of the proposed m
 ## 6 · Engine and notebook assignments
 
 - **unit-03** items: `umm`→`av-umm` · `ab`→`av-ab` · `ukht`→`av-layla` · `inda`→`u3-ph-07` · `laysa`→`u3-ph-06` · `maa`→`u3-ph-15` · `aata`→`u3-ph-12` · `akhadha`→`u3-ph-13` · `ihtaja`→`u3-ph-11` · `aasha`→`u3-ph-14` · `arada`→`u3-ph-09` · `walad`→`av-yusuf` · `kitab`→`obj-book` · `miftah`→`obj-key` · `qitt`→`av-qitt3` · `kabir`→`obj-house-big` · `kura`→`obj-kura` · `bijanib`→`u3-ph-17` · `madha`→`u3-ph-10` · `bayt`→`obj-house` · `ayna`→`u2-ph-01` · `fi`→`u2-ph-02` · `ala`→`u2-ph-03` · `tahta`→`u2-ph-04` · `dhahab`→`u2-ph-06` · `rajaa`→`u2-ph-08` · `ard`→`u2-ph-16` · `saghir`→`av-layla` · `yadhak`→`av-yusuf-laugh`
-  cast: `yusuf`→`av-yusuf` · `layla`→`av-layla` · `umm`→`av-umm` · `ab`→`av-ab` · `qitt`→`av-qitt3`; sentences: s00→u3-s1-1 · s01→2 · s02–s06→3 · s07–s08→4 · s09–s10→5 · s11→6 · s12–s13→7 · s14–s15→8
+  cast: `yusuf`→`av-yusuf` · `layla`→`av-layla` · `umm`→`av-umm` · `ab`→`av-ab` · `qitt`→`av-qitt3`; sentences: s00→u3-s1-1 · s01→2 · s02–s04→3 · s05–s07→4 · s08–s10→5 · s11→6 · s12–s13→7 · s14–s17→8
 - **unit-03p** items: `akh`→`u3-ph-03` · `inda`→`u3-ph-07` · `laysa`→`u3-ph-06` · `maa`→`u3-ph-15` · `aata`→`u3-ph-12` · `akhadha`→`u3-ph-13` · `kitab`→`obj-book` · `saghir`→`av-sami` · `kura`→`obj-kura` · `hadiya`→`obj-hadiya` · `bijanib`→`u3-ph-17` · `huna`→`u2-ph-05` · `dhahab`→`u2-ph-06` · `rajaa`→`u2-ph-08` · `walad`→`av-sami` · `yadhak`→`av-sami-happy`
   cast: `razan`→`av-razan` · `khadija`→`av-khadija` · `sami`→`av-sami`; sentences: s00→u3-s2-1 · s01–s03→2 · s04–s05→3 · s06–s07→4 · s08–s09→5 · s10–s11→6
 - Picture-free: function words with no faithful single picture (ism, naam, anta, ana, man, ya, hunaka, hadha, li, aydan, walakin, yanzur, aasha/arada in 03p) stay picture-free, as in Units 1–2.
