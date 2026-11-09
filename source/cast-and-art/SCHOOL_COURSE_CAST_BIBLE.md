@@ -121,7 +121,12 @@ Markers are the whole identification system, so **no two characters may share on
 | single shoulder plait | نُور |
 | side-swept dark fringe | بَدْر |
 | bare head, prominent ears | طَارِق |
-| *Unit 3 people — drawn by the external art tool and accepted by SC-111; markers **owed**: to be transcribed from `assets/art/` when the files are in session and checked for collision against this table:* | يُوسُف (a boy who wants the ball) · لَيْلَى (his little sister) · his mother · his father · سَامِي (خَدِيجَة's small brother) — identity may include a fixed clothing colour (SC-111), never a colour that varies between frames |
+| short black hair with one swirl at the crown · green top | يُوسُف *(Unit 3, SC-140)* |
+| two short high pigtails with yellow bobbles · yellow dress; smaller than يُوسُف | لَيْلَى *(Unit 3, SC-140)* |
+| long dark hair in a low side ponytail over one shoulder · plum top · adult height | أُمُّ يُوسُف *(adult, Unit 3, SC-140)* — check beside نُور's single plait at 48 px |
+| short dark beard and moustache · grey shirt · adult height | أَبُو يُوسُف *(adult, Unit 3, SC-140)* |
+| round short hair with a front tuft · red striped top; clearly smaller than رَزَان | سَامِي *(Unit 3, SC-140)* |
+| grey tabby with white socks, big (about a child's waist) — not Unit 2's orange-and-white cat | الْقِطُّ of يُوسُف's house *(Unit 3, SC-140)* |
 | tall + glasses + bun | هُدَى *(adult)* |
 | stoop + cane + shawl + bun + glasses | فَرِيدَة *(adult)* |
 

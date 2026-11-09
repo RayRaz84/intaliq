@@ -4,11 +4,11 @@
 
 ## 0 · Three owner questions before portraits are drawn
 
-- **Q1** Is Unit 3's big cat a new cat (proposed) or Unit 2's orange-and-white cat? R-1 forbids carrying plot history, and Unit 2's cat lives at Karim's door.
-- **Q2** Confirm or replace the five proposed people markers (and whether any SC-111 Unit 3 drawings should be transcribed instead).
+- **Q1 — answered (SC-140):** a new big cat, grey tabby with white socks.
+- **Q2 — answered (SC-140):** the five proposed people markers are approved.
 - **Q3** Version A/B for Unit 3: the Studio line ('A keeps the cast and moves the key; B changes the setting and the object') was carried from Unit 2 and has no Unit 3 strips — draw Version A/B for Unit 3, or drop the line?
 
-Frames and phrase pictures can be planned now; nothing is generated until Q1–Q2 are answered, because every frame depends on the cast sheets.
+Q1–Q2 are answered: cast sheets may be produced. Q3 is open.
 
 ## 1 · Spoiler rules
 
@@ -20,29 +20,29 @@ Frames and phrase pictures can be planned now; nothing is generated until Q1–Q
 
 Reused unchanged (Unit 2 accepted files): `av-razan` · `av-razan-happy` · `av-razan-talk` · `av-razan-q` · `av-khadija` · `av-khadija-happy` · `obj-book` · `obj-pen` · `obj-key` · `obj-door` · `obj-house` · `u2-ph-01` · `u2-ph-02` · `u2-ph-03` · `u2-ph-04` · `u2-ph-05` · `u2-ph-06` · `u2-ph-08` · `u2-ph-16`.
 
-| slot | character | identity (PROPOSED until confirmed) |
+| slot | character | identity (confirmed SC-140) |
 |---|---|---|
-| `av-yusuf` | يُوسُف | boy; PROPOSED marker: short black hair with one swirl at the crown; fixed green top |
+| `av-yusuf` | يُوسُف | boy; marker: short black hair with one swirl at the crown; fixed green top |
 | `av-yusuf-q` | يُوسُف |  |
 | `av-yusuf-talk` | يُوسُف |  |
 | `av-yusuf-laugh` | يُوسُف |  |
-| `av-layla` | لَيْلَى | girl, his little sister (smaller than Yusuf); PROPOSED marker: two short high pigtails with yellow bobbles; fixed yellow dress |
+| `av-layla` | لَيْلَى | girl, his little sister (smaller than Yusuf); marker: two short high pigtails with yellow bobbles; fixed yellow dress |
 | `av-layla-talk` | لَيْلَى |  |
-| `av-umm` | أُمُّهُ | adult woman, tall; PROPOSED marker: long dark hair in a low side ponytail over one shoulder; fixed plum top |
+| `av-umm` | أُمُّهُ | adult woman, tall; marker: long dark hair in a low side ponytail over one shoulder; fixed plum top |
 | `av-umm-talk` | أُمُّهُ |  |
-| `av-ab` | أَبُوهُ | adult man, tall; PROPOSED marker: short dark beard and moustache; fixed grey shirt |
+| `av-ab` | أَبُوهُ | adult man, tall; marker: short dark beard and moustache; fixed grey shirt |
 | `av-ab-q` | أَبُوهُ |  |
-| `av-sami` | سَامِي | small boy, Khadija's little brother (clearly smaller than Razan); PROPOSED marker: round short hair with a front tuft; fixed red striped top |
+| `av-sami` | سَامِي | small boy, Khadija's little brother (clearly smaller than Razan); marker: round short hair with a front tuft; fixed red striped top |
 | `av-sami-want` | سَامِي |  |
 | `av-sami-happy` | سَامِي |  |
-| `av-qitt3` | الْقِطُّ (Unit 3) | a BIG cat, distinct from Unit 2's orange-and-white cat (owner question Q1); PROPOSED: grey tabby with white socks |
+| `av-qitt3` | الْقِطُّ (Unit 3) | a BIG cat, distinct from Unit 2's orange-and-white cat (owner question Q1); grey tabby with white socks |
 | `av-qitt3-walk` | الْقِطُّ (Unit 3) |  |
 
 Collision check against the Cast Bible reservation table: none of the proposed markers is taken (swirl at the crown ≠ Karim's three curls or Omar's spikes; high pigtails ≠ Razan's low side bundles or Maha's topknot; the mother's low side ponytail ≠ Nur's single plait — **closest pair, check at 48 px**; beard is new; Sami's front tuft ≠ Badr's side-swept fringe). Gender convention holds (gathered hair → girl).
 
 | object | drawing |
 |---|---|
-| `obj-kura` | one ball, a single fixed drawing (PROPOSED: red-and-white panelled ball), no text |
+| `obj-kura` | one ball, a single fixed drawing (red-and-white panelled ball), no text |
 | `obj-hadiya` | the gift: obj-book drawn smaller with a ribbon tied round it, book still recognisable |
 | `obj-house-big` | a visibly bigger house than obj-house, same door drawing, same roof line |
 

@@ -1,7 +1,7 @@
 {
  "unit": "unit-03",
  "style": "rich-cartoon",
- "status": "ISSUED 2026-11-04 by the Art role after the SC-135 freeze — plan, not image authorization; portraits wait on the owner's marker confirmation · amended 2026-11-08 for Story 1 revision 4 (frames 3, 4, 5, 8; phrase 10)",
+ "status": "ISSUED 2026-11-04 by the Art role after the SC-135 freeze — plan, not image authorization; cast confirmed SC-140 · amended 2026-11-08 for Story 1 revision 4 (frames 3, 4, 5, 8; phrase 10)",
  "text_authority": "frozen: Story 1 revision 4 (SC-138), Story 2 revision 3 (SC-135); sentence ids as in source/units/unit3/audio/clips_manifest.json",
  "style_authority": "SC-113 rich-cartoon; Art Package Spec (590×490 frames); UNIT2_RICH_STYLE_AUTHORITY.md",
  "reuse_unchanged": [
@@ -30,106 +30,106 @@
    "id": "av-yusuf",
    "kind": "portrait",
    "character": "يُوسُف",
-   "identity": "boy; PROPOSED marker: short black hair with one swirl at the crown; fixed green top",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "boy; marker: short black hair with one swirl at the crown; fixed green top",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-yusuf-q",
    "kind": "portrait",
    "character": "يُوسُف",
-   "identity": "boy; PROPOSED marker: short black hair with one swirl at the crown; fixed green top",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "boy; marker: short black hair with one swirl at the crown; fixed green top",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-yusuf-talk",
    "kind": "portrait",
    "character": "يُوسُف",
-   "identity": "boy; PROPOSED marker: short black hair with one swirl at the crown; fixed green top",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "boy; marker: short black hair with one swirl at the crown; fixed green top",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-yusuf-laugh",
    "kind": "portrait",
    "character": "يُوسُف",
-   "identity": "boy; PROPOSED marker: short black hair with one swirl at the crown; fixed green top",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "boy; marker: short black hair with one swirl at the crown; fixed green top",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-layla",
    "kind": "portrait",
    "character": "لَيْلَى",
-   "identity": "girl, his little sister (smaller than Yusuf); PROPOSED marker: two short high pigtails with yellow bobbles; fixed yellow dress",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "girl, his little sister (smaller than Yusuf); marker: two short high pigtails with yellow bobbles; fixed yellow dress",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-layla-talk",
    "kind": "portrait",
    "character": "لَيْلَى",
-   "identity": "girl, his little sister (smaller than Yusuf); PROPOSED marker: two short high pigtails with yellow bobbles; fixed yellow dress",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "girl, his little sister (smaller than Yusuf); marker: two short high pigtails with yellow bobbles; fixed yellow dress",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-umm",
    "kind": "portrait",
    "character": "أُمُّهُ",
-   "identity": "adult woman, tall; PROPOSED marker: long dark hair in a low side ponytail over one shoulder; fixed plum top",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "adult woman, tall; marker: long dark hair in a low side ponytail over one shoulder; fixed plum top",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-umm-talk",
    "kind": "portrait",
    "character": "أُمُّهُ",
-   "identity": "adult woman, tall; PROPOSED marker: long dark hair in a low side ponytail over one shoulder; fixed plum top",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "adult woman, tall; marker: long dark hair in a low side ponytail over one shoulder; fixed plum top",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-ab",
    "kind": "portrait",
    "character": "أَبُوهُ",
-   "identity": "adult man, tall; PROPOSED marker: short dark beard and moustache; fixed grey shirt",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "adult man, tall; marker: short dark beard and moustache; fixed grey shirt",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-ab-q",
    "kind": "portrait",
    "character": "أَبُوهُ",
-   "identity": "adult man, tall; PROPOSED marker: short dark beard and moustache; fixed grey shirt",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "adult man, tall; marker: short dark beard and moustache; fixed grey shirt",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-sami",
    "kind": "portrait",
    "character": "سَامِي",
-   "identity": "small boy, Khadija's little brother (clearly smaller than Razan); PROPOSED marker: round short hair with a front tuft; fixed red striped top",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "small boy, Khadija's little brother (clearly smaller than Razan); marker: round short hair with a front tuft; fixed red striped top",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-sami-want",
    "kind": "portrait",
    "character": "سَامِي",
-   "identity": "small boy, Khadija's little brother (clearly smaller than Razan); PROPOSED marker: round short hair with a front tuft; fixed red striped top",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "small boy, Khadija's little brother (clearly smaller than Razan); marker: round short hair with a front tuft; fixed red striped top",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-sami-happy",
    "kind": "portrait",
    "character": "سَامِي",
-   "identity": "small boy, Khadija's little brother (clearly smaller than Razan); PROPOSED marker: round short hair with a front tuft; fixed red striped top",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "small boy, Khadija's little brother (clearly smaller than Razan); marker: round short hair with a front tuft; fixed red striped top",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-qitt3",
    "kind": "portrait",
    "character": "الْقِطُّ (Unit 3)",
-   "identity": "a BIG cat, distinct from Unit 2's orange-and-white cat (owner question Q1); PROPOSED: grey tabby with white socks",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "a BIG cat, distinct from Unit 2's orange-and-white cat (owner question Q1); grey tabby with white socks",
+   "status": "confirmed SC-140"
   },
   {
    "id": "av-qitt3-walk",
    "kind": "portrait",
    "character": "الْقِطُّ (Unit 3)",
-   "identity": "a BIG cat, distinct from Unit 2's orange-and-white cat (owner question Q1); PROPOSED: grey tabby with white socks",
-   "status": "new — marker awaits owner confirmation"
+   "identity": "a BIG cat, distinct from Unit 2's orange-and-white cat (owner question Q1); grey tabby with white socks",
+   "status": "confirmed SC-140"
   },
   {
    "id": "obj-kura",
@@ -488,8 +488,8 @@
   "text_only": "function words with no faithful single picture (ism, naam, anta, ana, man, ya, hunaka, hadha, li, aydan, walakin, yanzur, aasha/arada in 03p) stay picture-free, as in Units 1–2"
  },
  "owner_questions": [
-  "Q1 Is Unit 3's big cat a new cat (proposed) or Unit 2's orange-and-white cat? R-1 forbids carrying plot history, and Unit 2's cat lives at Karim's door.",
-  "Q2 Confirm or replace the five proposed people markers (and whether any SC-111 Unit 3 drawings should be transcribed instead).",
+  "Q1 answered SC-140: a new big cat (grey tabby, white socks).",
+  "Q2 answered SC-140: the five people markers approved.",
   "Q3 Version A/B for Unit 3: the Studio line ('A keeps the cast and moves the key; B changes the setting and the object') was carried from Unit 2 and has no Unit 3 strips — draw Version A/B for Unit 3, or drop the line?"
  ]
 }
