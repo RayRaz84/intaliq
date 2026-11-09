@@ -230,6 +230,16 @@
    "risks": "the ball under the cat must echo frame 6's key under the cat"
   },
   {
+   "id": "u3-va-6",
+   "kind": "frame",
+   "story": "Version A of «مَنْ عِنْدَهُ الْكُرَةُ؟»",
+   "paragraphs": "(S11)",
+   "event": "Version A: the key is under Layla, not under the cat",
+   "show": "u3-s1-6 redrawn with exactly one change: Layla sitting on the floor beside the door, obj-key's bow and teeth visible under her; the cat sitting nearby with nothing under it",
+   "must_not_show": "any other difference from u3-s1-6",
+   "risks": "the other seven Version A frames are the Story 1 files unchanged (pixel-identical); one difference only"
+  },
+  {
    "id": "u3-s2-1",
    "kind": "frame",
    "story": "«هَدِيَّةُ رَزَان»",
@@ -490,6 +500,6 @@
  "owner_questions": [
   "Q1 answered SC-140: a new big cat (grey tabby, white socks).",
   "Q2 answered SC-140: the five people markers approved.",
-  "Q3 Version A/B for Unit 3: the Studio line ('A keeps the cast and moves the key; B changes the setting and the object') was carried from Unit 2 and has no Unit 3 strips — draw Version A/B for Unit 3, or drop the line?"
+  "Q3 answered SC-141: Version A drawn as one changed frame (u3-va-6); Version B stays text (the learner writes the changed lines)."
  ]
 }

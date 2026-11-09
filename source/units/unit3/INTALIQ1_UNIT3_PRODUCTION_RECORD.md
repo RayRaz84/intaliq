@@ -59,3 +59,7 @@ Owner: "B apply; approve titles; approve pop up." F-2 applied to Story 1 (revisi
 ## Story 1 revision 4 — 2026-11-08 ⟨SC-138⟩
 
 Owner, on the revision 4 draft (`INTALIQ1_UNIT3_S1_REV4_DRAFT_2026-11-08.md`): *"ok"*; then, asked about Layla's line, *"Keep مَاذَا"*. Story 1 rebuilt at 225 words (owner's draft «يُوسُفُ وَالْكُرَةُ» merged with revision 3 under the NQS, SC-137; score 81). Data, engine, Studio, notebook p. 2–3 and teacher's page rebuilt; Story 2 untouched. Studio Version 58, gate exit 0. Clip manifest regenerated (78); art plan amended. Owed: licence check of `تُعْطِينِي` — **closed SC-139 (licensed)**. Under SC-139 the NQS binds from Unit 3: **Story 2 owes an NQS evaluation** before the closing entry.
+
+## Cast, Version A, Story 2 NQS — 2026-11-08 ⟨SC-140, SC-141⟩
+
+Cast confirmed (new big cat; five markers). Version A: one drawn frame `u3-va-6`; Version B text. Story 2 NQS 85, passes. Owed to close: art integrated · clips verified and bound · gate · closing entry.

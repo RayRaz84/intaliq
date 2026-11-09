@@ -6,9 +6,9 @@
 
 - **Q1 — answered (SC-140):** a new big cat, grey tabby with white socks.
 - **Q2 — answered (SC-140):** the five proposed people markers are approved.
-- **Q3** Version A/B for Unit 3: the Studio line ('A keeps the cast and moves the key; B changes the setting and the object') was carried from Unit 2 and has no Unit 3 strips — draw Version A/B for Unit 3, or drop the line?
+- **Q3 — answered (SC-141):** Version A is drawn as one changed frame, `u3-va-6`; the other seven Version A frames are the Story 1 files unchanged. Version B stays text — at this rung the learner writes the changed lines.
 
-Q1–Q2 are answered: cast sheets may be produced. Q3 is open.
+Q1–Q3 are answered: production may begin.
 
 ## 1 · Spoiler rules
 
@@ -58,6 +58,7 @@ Collision check against the Cast Bible reservation table: none of the proposed m
 | `u3-s1-6` | s11 | The reveal: the key is on the floor beside the door — under the cat | Yusuf (-q) looking down; the cat sitting; obj-key's bow and teeth visible under the cat | — | the key must be legible at strip size under the cat: show bow + teeth |
 | `u3-s1-7` | s12–s13 | The chain runs back: key to father, pen to mother, book to Layla, ball to Yusuf — he laughs | Yusuf (-laugh) holding obj-kura; behind him, small: the father with obj-key, the mother with obj-pen, Layla with obj-book | the cat near the ball | each of the four objects in exactly one pair of hands; nothing else in frame |
 | `u3-s1-8` | s14–s17 | The cat looks at the ball; Yusuf gives it the ball and they play; the ball ends under the cat; Layla asks who has it | Yusuf (-laugh) and the big cat playing by the door, obj-kura under the cat's paws; Layla (-talk) in the doorway | the cat running off with the ball (revision 3's ending) | the ball under the cat must echo frame 6's key under the cat |
+| `u3-va-6` | (S11) | Version A: the key is under Layla, not under the cat | u3-s1-6 redrawn with one change: Layla sitting on the floor beside the door, the key's bow and teeth visible under her; the cat nearby with nothing under it | any other difference from u3-s1-6 | the other seven frames are the Story 1 files, pixel-identical |
 
 ## 4 · Story 2 — «هَدِيَّةُ رَزَان» — six frames
 
