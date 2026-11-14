@@ -80,7 +80,7 @@ UNITS = [
    "Then the finished page (p. 5–6) is held up with «هٰذِهِ صَفْحَتِي!» and the partner asks one question from the unit's own set, e.g. {c3ex}. If there is a wall, the cards go on it afterwards; nothing is marked. Another class or a family member may play the newcomer as an extension — never required."],
   notes=[]),
  dict(
-  n=2, label="Unit 2", ar="الْوَحْدَةُ ٢", status="Frozen (revision 6) · Gate B closed (SC-105, pop-up SC-134) · rich-cartoon illustrations live (SC-113, SC-117) · clips owed",
+  n=2, label="Unit 2", ar="الْوَحْدَةُ ٢", status="Frozen (revision 6) · Gate B closed (SC-105, pop-up SC-134) · rich-cartoon illustrations live (SC-113, SC-117) · 76 verified clips live · COMPLETE (SC-145)",
   r1=dict(key="unit-02", title="أَيْنَ مِفْتَاحِي؟", tense="present", frames=8),
   r2=dict(key="unit-02p", title="صُورَةُ رَزَان وَخَدِيجَة", tense="past", frames=6),
   pictures="Rich-cartoon illustrations, 69 accepted files (SC-113; bag corrected SC-117). No verified audio: there are no listening tasks.",

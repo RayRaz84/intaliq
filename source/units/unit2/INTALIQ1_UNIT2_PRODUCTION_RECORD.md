@@ -277,3 +277,7 @@ Per the Learning Effectiveness Standard, reported separately and never merged: *
 ## Gate B closed — 2026-10-18 ⟨SC-134⟩
 
 Owner approved the pop-up («Look — now, or before?») as printed since SC-105; Gate B is closed. The speechless line `s19` «...!» is synthesised from `[gasps]` (owner: "a short breath"). Owed to completion (SC-131 (4)): 76 clips verified and bound (manifest written, SC-133) · gate · closing entry; no corner (LC-5 optional slot). Studio Version 57.
+
+## Unit 2 complete — 2026-11-13 ⟨SC-145⟩
+
+Owner: *"accept all"* after listening to the 76 clips (Ibrahim 44 · Habibah 32, ElevenLabs MCP, `eleven_v3`). Verified by Adam Ziad, 2026-11-13; bound through `build_unit02.py`; listening tasks live (unit-02 274 activities, unit-02p 177, 0 blocked). Studio Version 59, gate exit 0. **Unit 2 complete.**

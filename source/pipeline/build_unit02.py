@@ -6,6 +6,19 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--art-map', type=Path, default=ROOT / 'art_assets_map.json')
 parser.add_argument('--output', type=Path, default=Path('unit02_data.js'))
 args = parser.parse_args()
+
+def audio_for(unit_id):
+    """Bind the unit's clips only when every clip in the manifest names its listener (SC-129); else unverified."""
+    import json as _j, os as _o
+    p=_o.path.join("source","units","unit2","audio","clips_manifest.json")
+    if not _o.path.exists(p): return {"verified":False}
+    v=_j.load(open(p,encoding="utf-8"))["units"].get(unit_id)
+    if not v or not v["clips"] or not all(c.get("verified_by") and c.get("verified_on") and c.get("sha256") for c in v["clips"]):
+        return {"verified":False}
+    keys=("id","kind","ref","src","sha256","verified_by","verified_on")
+    return {"verified":True,"note":"SC-129/SC-130: "+v.get("voice","")+" — bound from source/units/unit2/audio/clips_manifest.json; the build and the gate check file and hash",
+            "clips":[{k:c[k] for k in keys} for c in v["clips"]]}
+
 def canon(name):
     local = Path(name)
     return (local if local.exists() else ROOT / 'source/units/unit2/canon' / name).read_text(encoding='utf8').strip()
@@ -104,7 +117,7 @@ def build(unit_id,title,text,castlist,stages,extras):
     for k,p in enumerate(P):
         pt=set(toks(p)); refs=[i["id"] for i in items if any(f in pt for f in i["forms"])]
         sents.append({"id":f"s{k:02d}","ar":p,"stage":stages[k],"items":refs,"img":None})
-    u={"unit_id":unit_id,"title":title,"audio":{"verified":False},"canon":text,"cast":castlist,"items":items,"sentences":sents,
+    u={"unit_id":unit_id,"title":title,"audio":audio_for(unit_id),"canon":text,"cast":castlist,"items":items,"sentences":sents,
        "readings":[{"id":extras["reading_id"],"role":extras["role"],"title":title,"sentence_ids":[s["id"] for s in sents]}]}
     u.update({k:v for k,v in extras.items() if k not in("reading_id","role")})
     return u

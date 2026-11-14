@@ -4,8 +4,9 @@
 
 ---
 
-## Intaliq Text — last updated: 2026-11-12
+## Intaliq Text — last updated: 2026-11-13
 
+- **UNIT 2 COMPLETE — SC-145 (2026-11-13), Studio Version 59, gate exit 0.** 76 clips (Ibrahim 44 · Habibah 32, ElevenLabs MCP) verified by Adam Ziad and bound; `build_unit02.py` binds verified clips from the manifest. **Remaining in Unit 3:** 51 pictures (Mac producer) · 78 clips (generate, verify by ear) · gate · closing entry.
 - **SC-142 (2026-11-12): division of labour.** ChatGPT audits and sends concrete instructions (relayed by the owner); Claude implements, updates records and materials, rebuilds, gates, publishes when authorised, and flags conflicts between governing sources; the owner decides policy (authorised language, unit contents, completion). Routine fixes do not go back to the owner. **SC-143:** approved work that passes the gate is published without asking; Unit 3 art from the Mac producer, checked and integrated here. Session protocol update owed.
 - **SC-141:** Unit 3 Story 2 passes the NQS (85). **Unit 3 now owes, to close:** art (51 slots) produced and integrated · 78 clips generated (menu → unit 3), verified by ear and bound · gate · closing entry.
 - **SC-139 recorded 2026-11-08:** `تُعْطِينِي` licensed (owed check closed) · NQS binds from Unit 3 on; Units 1–2 not re-evaluated. **Owed:** NQS evaluation of Unit 3 Story 2 «هَدِيَّةُ رَزَان» before Unit 3 closes. Art questions Q1–Q3 put to the owner again.
@@ -33,7 +34,7 @@
 - ~~Unit 1 is not complete.~~ **Complete — SC-132, 2026-10-18.**
 - waiting on the owner: his Unit 1–2 audit list · Unit 3 Gate B (F-2, titles, pop-up) · the Unit 2 pop-up ruling · F-3 · recordings / photographs · the SC-009 design review of Unit 1 · ~~confirmation of the Unit 1 rich-style adoption~~ (recorded SC-136, 2026-11-05).
 - next in order: (Version 55 live — Unit 1 complete) → supply list (clips, photographs) and the SC-009 review → owner's findings → Unit 3 freeze (F-2, titles, pop-up) → next Version → Units 2–3 `.rev` marking, form-licence tables and apparatus licences → when clips land: bind, build, gate, push.
-- rulings recorded: SC-113, SC-114, SC-118, SC-119, SC-120, SC-121 (SC-115–SC-117 transcribed from Codex's repository entries). SC-122, SC-123, SC-124 recorded 2026-10-13; SC-125, SC-126, SC-127 recorded 2026-10-14; SC-128 and SC-129 recorded 2026-10-15; **SC-130 recorded 2026-10-16; **SC-131 … SC-135 recorded 2026-10-18; SC-136 recorded 2026-11-05; SC-137 … SC-141 recorded 2026-11-08; SC-142 … SC-144 recorded 2026-11-12.**
+- rulings recorded: SC-113, SC-114, SC-118, SC-119, SC-120, SC-121 (SC-115–SC-117 transcribed from Codex's repository entries). SC-122, SC-123, SC-124 recorded 2026-10-13; SC-125, SC-126, SC-127 recorded 2026-10-14; SC-128 and SC-129 recorded 2026-10-15; **SC-130 recorded 2026-10-16; **SC-131 … SC-135 recorded 2026-10-18; SC-136 recorded 2026-11-05; SC-137 … SC-141 recorded 2026-11-08; SC-142 … SC-144 recorded 2026-11-12; SC-145 recorded 2026-11-13.**
 
 ## Intaliq Art — last updated: 2026-11-08
 
